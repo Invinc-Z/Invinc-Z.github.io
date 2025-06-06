@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -238,7 +238,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/LaTeX%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -256,7 +256,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/latex/LaTeX%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="post-title-link" itemprop="url">未命名</a>
+          <a href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之文档元素（三）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -267,14 +267,27 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-06-05 23:30:11" itemprop="dateCreated datePublished" datetime="2025-06-05T23:30:11+08:00">2025-06-05</time>
+      <time title="创建时间：2025-01-03 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-03T05:12:18+08:00">2025-01-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-05-18 23:27:49" itemprop="dateModified" datetime="2025-05-18T23:27:49+08:00">2025-05-18</time>
+      <time title="修改时间：2025-06-06 13:13:05" itemprop="dateModified" datetime="2025-06-06T13:13:05+08:00">2025-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
+        </span>
     </span>
 
   
@@ -284,14 +297,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
+      <span>8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>29 分钟</span>
     </span>
 </div>
 
@@ -302,128 +315,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1
-id="latex编译运行常见报错及解决方案">LaTeX编译运行常见报错及解决方案</h1>
-<hr />
-<h2 id="常见问题">常见问题</h2>
-<h3 id="环境变量">0. 环境变量</h3>
-<p>首先查看系统环境变量Path是否正常，以下为常用值，最后texlive为你本地的安装路径。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">C:\Windows\system32</span><br><span class="line">C:\Windows</span><br><span class="line">C:\Windows\System32\Wbem</span><br><span class="line">C:\Windows\System32\WindowsPowerShell\v1.0\</span><br><span class="line">C:\Windows\System32\OpenSSH\</span><br><span class="line">C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common</span><br><span class="line">D:\install\texlive\2024\bin\windows</span><br></pre></td></tr></table></figure>
-<h3 id="latex-error-file-picins.sty-not-found.">1. LaTeX Error: File
-`picins.sty’ not found.</h3>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20240905124943012.png" alt="image-20240905124943012" style="zoom:50%;" /></p>
-<p><strong>原因：</strong>picins.sty宏包缺失。</p>
-<p><strong>解决方法：</strong>添加picins.sty宏包。</p>
-<p><strong>步骤：</strong></p>
-<ol type="1">
-<li>从https://ctan.org/ 下载宏包；</li>
-</ol>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20240905153702004.png" alt="image-20240905153702004" style="zoom: 25%;" /></p>
-<ol start="2" type="1">
-<li><p>解压到<strong>\</strong>目录下，并打开64miktex-console_admin.exe，点击<strong>任务-刷新文件名数据库</strong>，更新宏包库（相当于激活该宏包）；</p>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20240905155622980.png" alt="image-20240905155622980" style="zoom:50%;" /></p></li>
-</ol>
-<h3 id="winedt编译提示pdf文件打不开cannot-run-pdf">2.
-WinEdt编译提示pdf文件打不开，Cannot Run pdf</h3>
-<p><strong>原因：</strong>遇到这个问题是因为其他的PDF阅读器强制占用了winedt的pdf打开程序。</p>
-<p><strong>解决方法：</strong>重新添加阅读器SumatraPDF。</p>
-<p><strong>步骤：</strong></p>
-<ol type="1">
-<li>在安装CTEX的文件夹搜索SumatraPDF.exe，一般在D:Files</li>
-</ol>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20240901105058347.png" alt="image-20240901105058347" style="zoom:50%;" /></p>
-<ol start="2" type="1">
-<li><p>复制路径，D:Files.exe，注意要加上SumatraPDF.exe。</p></li>
-<li><p>打开WinEdt，option-&gt;execution modes-&gt;pdf
-viewer，修改路径后确认一下</p></li>
-</ol>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20240901105515360.png" alt="image-20240901105515360" style="zoom:50%;" /></p>
-<h3 id="应用程序无法正常启动0xc000007b">3.
-应用程序无法正常启动0xc000007b</h3>
-<p><strong>原因：</strong>缺少c++文件或者系统dll文件缺失</p>
-<p><strong>解决方法：</strong>http://www.zjkweiqi.cn/news/58112.html</p>
-<ol type="1">
-<li>命令行c:&gt;后边输入【sfc
-/scannow】（中间有空格），然后点击键盘上的回车（enter键），就会“开始系统扫描”。</li>
-<li>电脑通过下载DirectX Repair修复工具来检测并修复。</li>
-</ol>
-<h3
-id="miktex更新后无法打开报错this-application-failed-to-start-because-no-qt-platform-plugin-could-be-initialized.-reinstalling-the-application-may-fix-this-problem.">4.
-miktex更新后无法打开，报错：This application failed to start because no
-Qt platform plugin could be initialized. Reinstalling the application
-may fix this problem.</h3>
-<p><strong>解决方法：</strong>原文链接：https://blog.csdn.net/Etincelle/article/details/140025280</p>
-<ol type="1">
-<li><p>点击<span class="exturl" data-url="aHR0cHM6Ly9jdGFuLm5ldC9zeXN0ZW1zL3dpbjMyL21pa3RleC90bS9wYWNrYWdlcy8=">链接<i class="fa fa-external-link-alt"></i></span>，下载miktex-qt6-bin-x64.tar.lzma</p>
-<p>（该文件Windows下不容易解压，已将其中的x64文件夹转换为windows下容易解压的rar格式）链接：https://pan.baidu.com/s/1ZAb0rtBvEUF3PPaMUXIsUw?pwd=c7oc
-提取码：c7oc</p></li>
-<li><p>解压程序包后，进入此文件夹，找到</p></li>
-<li><p>找到MikTeX安装文件夹，进入，将步骤2的x64文件夹替换步骤3的x64文件夹</p></li>
-</ol>
-<h3 id="中文用户名-卡在狮子页面不动">5. 中文用户名 卡在狮子页面不动</h3>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250417145624162.png" alt="image-20250417145624162" style="zoom:50%;" /></p>
-<p><strong>解决方法：</strong></p>
-<ol type="1">
-<li><p>右击电脑- -&gt;属性- -&gt; 高级系统设置-
--&gt;在[高级]下点击[环境变量]，</p></li>
-<li><p>在<strong>用户变量</strong>和<strong>系统变量</strong>栏里，
-找到TEMP与TMP， 分别双击，设置如下：</p>
-<p>变量名：TEMP 变量值：%SystemRoot%</p>
-<p>变量名：TMP变量值：%SystemRoot%</p></li>
-</ol>
-<p>注意：若用户和系统变量栏里没有TEMP与TMP，新建即可。</p>
-<h3 id="minted的使用">6. minted的使用</h3>
-<h3 id="please-ignore-spurious-matches-unrelated-to-tex.">7. Please
-ignore spurious matches unrelated to TeX.</h3>
-<p><strong>问题现象：</strong></p>
-<p>Please ignore spurious matches unrelated to TeX. (To omit this check,
-set the environment variable TEXLIVE_INSTALL_ENV_NOCHECK.) CCHZPATH=D:
-CCPKPATH=D:$d II=D:\2022</p>
-<p><strong>解决方案：</strong>设置环境变量</p>
-<ol type="1">
-<li>打开“控制面板” &gt; “系统和安全” &gt;
-“系统”，然后点击左侧的“高级系统设置”。</li>
-<li>在“系统属性”窗口中，点击“环境变量”。</li>
-<li>在“环境变量”窗口下的“系统变量”部分，点击“新建”。</li>
-<li>在“变量名”中输入：<code>TEXLIVE_INSTALL_ENV_NOCHECK</code></li>
-<li>在“变量值”中输入：<code>1</code></li>
-<li>点击“确定”保存设置。</li>
-</ol>
-<p>设置完成后，再次运行 TeX Live
-安装程序即可。这将避免在安装过程中显示与 TeX
-无关的匹配警告，使安装过程更顺畅</p>
-<h3
-id="vars-expected-but-powershell-不是内部或外部命令也不是可运行的程序-found">8.
-‘vars’ expected but ‘powershell’ 不是内部或外部命令，也不是可运行的程序
-found</h3>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250102195322647.png" alt="image-20250102195322647" style="zoom:50%;" /></p>
-<p><strong>解决方案：</strong>添加环境变量Path
-<code>C:\Windows\System32\WindowsPowerShell\v1.0\</code></p>
-<h3 id="字体问题">9. 字体问题</h3>
-<p>kpathsea: Running mktextfm STFangsong/OT The command name is D:\2024
-name = STFangsong/OT, rootname = STFangsong/OT, pointsize = mktexmf:
-empty or non-existent rootfile! kpathsea: Running mktexmf
-STFangsong/OT.mf The command name is D:\2024Cannot find
-STFangsong/OT.mf. kpathsea: Appending font creation commands to
-missfont.log.</p>
-<p><strong>解决方案：</strong>下载对应字体，并选择<strong>为所有用户安装</strong>，（或者尝试在字体命令后加上.ttf）</p>
-<h3
-id="macos中latex提示没有相关字体怎么办">10.MacOS中LaTeX提示没有相关字体怎么办</h3>
-<p><strong>解决方案：</strong>完全使用Windows那套字体解决方案，避免MacOS字体库管理混乱问题。</p>
-<blockquote>
-<ol type="1">
-<li><p>将别人的整个Windows字体包压缩发送到MacOS，并且解压到<code>~/Library/Fonts_Windows/Fonts</code>文件夹下（可选择其他路径，后续配置需要用）；</p></li>
-<li><p>终端通过<code>kpsewhich -var-value TEXMFROOT</code>命令定位TeX
-Live
-的根目录，比如<code>/usr/local/texlive/2025</code>，打开<code>texmf.cnf</code>文件（需超级用户权限）添加字体路径（上一步解压的路径）<code>OSFONTDIR = /home/user/Library/Fonts_Windows/Fonts//</code>，保存关闭；</p></li>
-<li><p>更新字体数据库：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mktexlsr  <span class="comment"># TeX Live (Linux/macOS)</span></span><br><span class="line">initexmf --update-fndb  <span class="comment"># MiKTeX</span></span><br></pre></td></tr></table></figure></li>
-<li><p>在文件开头的<code>\documentclass</code>里面直接加入<code>fontset=windows</code>属性，给编译器指定使用Windows方案的字体编译。</p></li>
-<li><p>如果后续编译报找不到<code>.ttc</code>后缀的字体，把<code>.ttf</code>的后缀直接改成<code>.ttc</code>即可。</p>
-<p>如果编译之后的pdf显示有问题，可以双击下载的三个字体进行安装。用于MacOS系统显示效果用。</p></li>
-</ol>
-</blockquote>
-
+          <p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -478,14 +380,14 @@ Live
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-02 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-02T05:12:18+08:00">2025-01-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 01:14:23" itemprop="dateModified" datetime="2025-06-05T01:14:23+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-06 11:09:21" itemprop="dateModified" datetime="2025-06-06T11:09:21+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -539,7 +441,7 @@ class="math inline">\(\texttt{CJK}\)</span>等）日渐退出舞台，<span
 class="math inline">\(\texttt{xelatex}\)</span> 和 <span
 class="math inline">\(\texttt{lualatex}\)</span> 编译命令配合 <span
 class="math inline">\(\texttt{ctex}\)</span>
-宏包/文档类的方式成为当前的主流中文排版支持方式。
+宏包/文档类的方式成为当前的主流中文排版支持方式。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/latex/02_%E7%94%A8LaTeX%E6%8E%92%E7%89%88%E6%96%87%E5%AD%97/#more" rel="contents">
@@ -602,14 +504,14 @@ class="math inline">\(\texttt{ctex}\)</span>
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-01 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-01T05:12:18+08:00">2025-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 01:16:08" itemprop="dateModified" datetime="2025-06-05T01:16:08+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-06 10:23:05" itemprop="dateModified" datetime="2025-06-06T10:23:05+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -632,7 +534,7 @@ class="math inline">\(\texttt{ctex}\)</span>
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.1k</span>
+      <span>4.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -660,117 +562,6 @@ class="math inline">\(\LaTeX{}\)</span>源代码生成文档的方法，以及�
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/latex/01_LaTeX%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Invinc-Z">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Invinc-Z Blog">
-      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Invinc-Z Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之文档元素（三）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:16:55" itemprop="dateModified" datetime="2025-06-03T20:16:55+08:00">2025-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>29 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在知道了如何输入文字后，在本章了解一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1025,6 +816,120 @@ class="math inline">\(\LaTeX{}\)</span>源代码生成文档的方法，以及�
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Invinc-Z">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Invinc-Z Blog">
+      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Invinc-Z Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之绘图功能（七）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-03 20:19:32" itemprop="dateModified" datetime="2025-06-03T20:19:32+08:00">2025-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>除了排版文字，<span class="math inline">\(\LaTeX{}\)</span>
+也支持用代码表示图形。不同的扩展已极大丰富了 <span
+class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
+就是其中之一。本章将带你了解一些基本的绘图功能。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/06_LaTeX%E4%B9%8B%E7%89%B9%E8%89%B2%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8A%9F%E8%83%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1140,120 +1045,6 @@ class="math inline">\(\texttt{makeindex}\)</span>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Invinc-Z">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Invinc-Z Blog">
-      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Invinc-Z Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之绘图功能（七）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:19:32" itemprop="dateModified" datetime="2025-06-03T20:19:32+08:00">2025-06-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>11 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>除了排版文字，<span class="math inline">\(\LaTeX{}\)</span>
-也支持用代码表示图形。不同的扩展已极大丰富了 <span
-class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
-就是其中之一。本章将带你了解一些基本的绘图功能。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/08_LaTeX%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89LaTeX%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8A%9F%E8%83%BD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1335,6 +1126,118 @@ class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/latex/08_LaTeX%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89LaTeX%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8A%9F%E8%83%BD/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/10_LaTeX%E4%B9%8B%E6%8E%92%E9%99%A4%E9%94%99%E8%AF%AF%E5%92%8C%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Invinc-Z">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Invinc-Z Blog">
+      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Invinc-Z Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/latex/10_LaTeX%E4%B9%8B%E6%8E%92%E9%99%A4%E9%94%99%E8%AF%AF%E5%92%8C%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9/" class="post-title-link" itemprop="url">$LaTeX{}$ 之排除错误和寻求帮助（十）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-03 20:21:07" itemprop="dateModified" datetime="2025-06-03T20:21:07+08:00">2025-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本章首先总结了常见的 <span class="math inline">\(\LaTeX{}\)</span>
+错误及应对的办法。
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/latex/10_LaTeX%E4%B9%8B%E6%8E%92%E9%99%A4%E9%94%99%E8%AF%AF%E5%92%8C%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1493,13 +1396,13 @@ class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:40</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

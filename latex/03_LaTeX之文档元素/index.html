@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="在知道了如何输入文字后，在本章了解一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX{}$ 之文档元素（三）">
 <meta property="og:url" content="https://invinc-z.com/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="在知道了如何输入文字后，在本章了解一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114201008937.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114202135903.png">
@@ -73,8 +73,8 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115160703778.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115161039696.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115161220429.png">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:16:55.133Z">
+<meta property="article:published_time" content="2025-01-02T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-06T05:13:05.333Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -206,7 +206,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -316,14 +316,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-03 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-03T05:12:18+08:00">2025-01-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:16:55" itemprop="dateModified" datetime="2025-06-03T20:16:55+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-06 13:13:05" itemprop="dateModified" datetime="2025-06-06T13:13:05+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -363,17 +363,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>在知道了如何输入文字后，在本章了解一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。
-<span id="more"></span> # 03_<span class="math inline">\(\LaTeX{}\)</span>
-之文档元素 本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>在知道了如何输入文字后，在本章了解一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。</p>
+<p>在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。</p>
+<span id="more"></span>
 <hr />
 <h2 id="章节和目录">章节和目录</h2>
 <h3 id="章节标题">章节标题</h3>
 <p>一篇结构化的、条理清晰文档一定是层次分明的，通过不同的命令分割为章、节、小节。三个标准文档类
 <code>article</code>、<code>report</code> 和 <code>book</code>
-提供了划分章节的命令： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\chapter</span>&#123;⟨title⟩&#125; <span class="keyword">\section</span>&#123;⟨title⟩&#125; <span class="keyword">\subsection</span>&#123;⟨title⟩&#125;</span><br><span class="line"><span class="keyword">\subsubsection</span>&#123;⟨title⟩&#125; <span class="keyword">\paragraph</span>&#123;⟨title⟩&#125; <span class="keyword">\subparagraph</span>&#123;⟨title⟩&#125;</span><br></pre></td></tr></table></figure></p>
+提供了划分章节的命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\chapter</span>&#123;⟨title⟩&#125; <span class="keyword">\section</span>&#123;⟨title⟩&#125; <span class="keyword">\subsection</span>&#123;⟨title⟩&#125;</span><br><span class="line"><span class="keyword">\subsubsection</span>&#123;⟨title⟩&#125; <span class="keyword">\paragraph</span>&#123;⟨title⟩&#125; <span class="keyword">\subparagraph</span>&#123;⟨title⟩&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>\chapter</code> <strong>只在 <code>report</code> 和
 <code>book</code>
 文档类有定义</strong>。这些命令生成章节标题，并能够自动编号。除此之外
@@ -382,11 +382,11 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <code>\chapter</code> 或 <code>\section</code> 等的编号。</p>
 <p>上述命令除了生成带编号的标题之外，还向目录中添加条目，并影响页眉页脚的内容。每个命令有两种变体：</p>
 <ul>
-<li><p>带可选参数的变体：<code>\section[&lt;short title&gt;]&#123;&lt;title&gt;&#125;</code></p>
-<p>标题使用 &lt;title&gt; 参数，在目录和页眉页脚中使用 &lt;short
-title&gt; 参数；</p></li>
+<li><p>带可选参数的变体：<code>\section[&lt;short title&gt;]&#123;&lt;title&gt;&#125;</code>
+，标题使用 <code>&lt;title&gt;</code> 参数，在目录和页眉页脚中使用
+<code>&lt;short title&gt;</code>参数；</p></li>
 <li><p>带星号的变体：<code>\section*&#123;&lt;title&gt;&#125;</code>
-标题不带编号，也不生成目录项和页眉页脚。</p></li>
+，标题不带编号，也不生成目录项和页眉页脚。</p></li>
 </ul>
 <p>较低层次如 <code>\paragraph</code> 和 <code>\subparagraph</code>
 即使不用带星号的变体，生成的标题默认也不带编号，事实上，除
@@ -406,12 +406,12 @@ title&gt; 参数；</p></li>
 等宏包修改设置。</p>
 <p>正确生成目录项，一般需要 <strong>编译两次源代码</strong>。</p>
 <p>有时使用了 <code>\chapter*</code> 或 <code>\section*</code>
-这样不生成目录项的章节标题命令，而又想手动生成该章节的目录项，可以在标题命令后面使用：</p>
+这样不生成章节编号和目录项的章节标题命令，而又想手动生成该章节的目录项，可以在标题命令后面使用：</p>
 <p><code>\addcontentsline&#123;toc&#125;&#123;&lt;level&gt;&#125;&#123;&lt;title&gt;&#125;</code></p>
-<p>其中 &lt;level&gt; 为章节层次 <span
+<p>其中 <code>&lt;level&gt;</code> 为章节层次 <span
 class="math inline">\(\texttt{chapter}\)</span> 或 <span
-class="math inline">\(\texttt{section}\)</span> 等，&lt;title&gt;
-为出现于目录项的章节标题。</p>
+class="math inline">\(\texttt{section}\)</span>
+等，<code>&lt;title&gt;</code> 为出现于目录项的章节标题。</p>
 <p><code>titletoc</code>、<code>tocloft</code>
 等宏包提供了具体定制目录项格式的功能，详情请参考宏包的帮助文档。</p>
 <h3 id="文档结构的划分">文档结构的划分</h3>
@@ -432,6 +432,7 @@ class="math inline">\(\texttt{section}\)</span> 等，&lt;title&gt;
 命令结合，生成有前言、正文、附录、后记四部分的文档。</p>
 <p>下面的源代码是一份完整的文档结构。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;book&#125;</span><br><span class="line"><span class="comment">% 导言区，加载宏包和各项设置，包括参考文献、索引等</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;makeidx&#125;        <span class="comment">% 调用 makeidx 宏包，用来处理索引</span></span><br><span class="line"><span class="keyword">\makeindex</span>                  <span class="comment">% 开启索引的收集</span></span><br><span class="line"><span class="keyword">\bibliographystyle</span>&#123;plain&#125;   <span class="comment">% 指定参考文献样式为 plain</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\title</span>&#123;Languages&#125;</span><br><span class="line"><span class="keyword">\author</span>&#123;someone&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\frontmatter</span>         <span class="comment">% 前言部分</span></span><br><span class="line"><span class="keyword">\maketitle</span>           <span class="comment">% 标题页</span></span><br><span class="line"><span class="keyword">\include</span>&#123;preface&#125;    <span class="comment">% 前言章节 preface.tex</span></span><br><span class="line"><span class="keyword">\tableofcontents</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\mainmatter</span>          <span class="comment">% 正文部分</span></span><br><span class="line"><span class="keyword">\include</span>&#123;chapter1&#125;   <span class="comment">% 第一章 chapter1.tex</span></span><br><span class="line"><span class="keyword">\include</span>&#123;chapter2&#125;   <span class="comment">% 第二章 chapter2.tex</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">\appendix</span>            <span class="comment">% 附录</span></span><br><span class="line"><span class="keyword">\include</span>&#123;appendixA&#125;  <span class="comment">% 附录 A appendixA.tex</span></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">\backmatter</span>          <span class="comment">% 后记部分</span></span><br><span class="line"><span class="keyword">\include</span>&#123;epilogue&#125;   <span class="comment">% 后记 epilogue.tex</span></span><br><span class="line"><span class="keyword">\bibliography</span>&#123;books&#125; <span class="comment">% 利用 BibTeX 工具从数据库文件 books.bib 生成参考文献</span></span><br><span class="line"><span class="keyword">\printindex</span>          <span class="comment">% 利用 makeindex 工具生成索引</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<hr />
 <h2 id="标题页">标题页</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 支持生成简单的标题页。首先需要给定标题和作者等信息：</p>
@@ -472,13 +473,16 @@ class="math inline">\(\texttt{titlepage}\)</span> 环境。</p>
 <code>\title</code> 和 <code>\author</code>
 以外的命令给定信息，用法也可能与标准文档类的不一致（甚至有些模板可能没有定义
 <span class="math inline">\(\texttt{titlepage}\)</span> 等环境）。</p>
-<p>==<strong>使用文档模板前一定要仔细阅读文档模板的帮助文档。</strong>==</p>
+<p><strong>使用文档模板前一定要仔细阅读文档模板的帮助文档。</strong></p>
+<hr />
 <h2 id="交叉引用">交叉引用</h2>
 <p>交叉引用是 <span class="math inline">\(\LaTeX{}\)</span>
 强大的自动排版功能的体现之一。在能够被交叉引用的地方，如章节、公式、图表、定理等位置使用
-<code>\label</code> 命令： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\label</span>&#123;&lt;label-name&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\label</code> 命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\label</span>&#123;&lt;label-name&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>之后可以在别处使用 <code>\ref</code> 或 <code>\pageref</code>
-命令，分别生成交叉引用的编号和页码： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\ref</span>&#123;&lt;label-name&gt;&#125;	<span class="keyword">\pageref</span>&#123;&lt;label-name&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+命令，分别生成交叉引用的编号和页码：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\ref</span>&#123;&lt;label-name&gt;&#125;	<span class="keyword">\pageref</span>&#123;&lt;label-name&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114202135903.png" alt="image-20250114202135903" style="zoom:67%;" /></p>
 <p>为了生成正确的交叉引用，一般也需要
 <strong>多次编译源代码</strong>。</p>
@@ -500,6 +504,7 @@ class="math inline">\(\texttt{enumerate}\)</span> 环境的每个
 <p>在使用不记编号的命令形式（<code>\section*</code>、<code>\caption*</code>、带可选参数的
 <code>\item</code> 命令等）时不要使用 <code>\label</code>
 命令，否则生成的引用编号不正确。</p>
+<hr />
 <h2 id="脚注和边注">脚注和边注</h2>
 <p>使用 <code>\footnote</code>
 命令可以在页面底部生成一个脚注。假如输入以下文字和命令：</p>
@@ -530,25 +535,28 @@ class="math inline">\(\texttt{enumerate}\)</span> 和 <span
 class="math inline">\(\texttt{itemize}\)</span>，两者用法类似，都用
 <code>\item</code> 标明每个列表项。<span
 class="math inline">\(\texttt{enumerate}\)</span>
-环境会自动对列表项编号。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line"><span class="keyword">\item</span> …</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br></pre></td></tr></table></figure></p>
+环境会自动对列表项编号。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line"><span class="keyword">\item</span> …</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>\item</code>
 可带一个可选参数，将有序列表的计数或者无序列表的符号替换成自定义的符号。列表可以嵌套使用，最多嵌套四层。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">  <span class="keyword">\item</span> An item.</span><br><span class="line">  <span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">    <span class="keyword">\item</span> A nested item.<span class="keyword">\label</span>&#123;itref&#125;</span><br><span class="line">    <span class="keyword">\item</span>[*] A starred item.</span><br><span class="line">  <span class="keyword">\end</span>&#123;enumerate&#125;</span><br><span class="line">  <span class="keyword">\item</span> Reference(<span class="keyword">\ref</span>&#123;itref&#125;).</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114212322245.png" alt="image-20250114212322245" style="zoom:67%;" /></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> An item.</span><br><span class="line">  <span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">    <span class="keyword">\item</span> A nested item.</span><br><span class="line">    <span class="keyword">\item</span>[+] A `plus&#x27; item.</span><br><span class="line">    <span class="keyword">\item</span> Another item.</span><br><span class="line">  <span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> Go back to upper level.</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114212430376.png" alt="image-20250114212430376" style="zoom:67%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114212430376.png" alt="image-20250114212430376" style="zoom:67%;"/></p>
 <p>关键字环境 <span class="math inline">\(\texttt{description}\)</span>
 的用法与以上两者类似，不同的是 <code>\item</code>
-后的可选参数用来写关键字，以粗体显示，一般是必填的： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;description&#125;</span><br><span class="line"><span class="keyword">\item</span>[⟨item title⟩] …</span><br><span class="line"><span class="keyword">\end</span>&#123;description&#125;</span><br></pre></td></tr></table></figure></p>
+后的可选参数用来写关键字，以粗体显示，一般是必填的：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;description&#125;</span><br><span class="line"><span class="keyword">\item</span>[⟨item title⟩] …</span><br><span class="line"><span class="keyword">\end</span>&#123;description&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;description&#125;</span><br><span class="line">  <span class="keyword">\item</span>[Enumerate] Numbered list.</span><br><span class="line">  <span class="keyword">\item</span>[Itemize] Non-numbered list.</span><br><span class="line"><span class="keyword">\end</span>&#123;description&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114212752393.png" alt="image-20250114212752393" style="zoom:67%;" /></p>
 <p>各级无序列表的符号由命令 <code>\labelitemi</code> 到
-<code>\labelitemiv</code> 定义，可以简单地重新定义它们：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelitemi</span>&#125;&#123;<span class="keyword">\ddag</span>&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelitemii</span>&#125;&#123;<span class="keyword">\dag</span>&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> First item</span><br><span class="line">  <span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">    <span class="keyword">\item</span> Subitem</span><br><span class="line">    <span class="keyword">\item</span> Subitem</span><br><span class="line">  <span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> Second item</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\labelitemiv</code> 定义，可以简单地重新定义它们：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelitemi</span>&#125;&#123;<span class="keyword">\ddag</span>&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelitemii</span>&#125;&#123;<span class="keyword">\dag</span>&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> First item</span><br><span class="line">  <span class="keyword">\begin</span>&#123;itemize&#125;</span><br><span class="line">    <span class="keyword">\item</span> Subitem</span><br><span class="line">    <span class="keyword">\item</span> Subitem</span><br><span class="line">  <span class="keyword">\end</span>&#123;itemize&#125;</span><br><span class="line">  <span class="keyword">\item</span> Second item</span><br><span class="line"><span class="keyword">\end</span>&#123;itemize&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114213005038.png" alt="image-20250114213005038" style="zoom:67%;" /></p>
 <p>有序列表的符号由命令 <code>\labelenumi</code> 到
-<code>\labelenumiv</code> 定义，重新定义这些命令需要用到计数器相关命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelenumi</span>&#125;<span class="comment">%</span></span><br><span class="line">  &#123;<span class="keyword">\Alph</span>&#123;enumi&#125;&gt;&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">  <span class="keyword">\item</span> First item</span><br><span class="line">  <span class="keyword">\item</span> Second item</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\labelenumiv</code>
+定义，重新定义这些命令需要用到计数器相关命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\labelenumi</span>&#125;<span class="comment">%</span></span><br><span class="line">  &#123;<span class="keyword">\Alph</span>&#123;enumi&#125;&gt;&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;enumerate&#125;</span><br><span class="line">  <span class="keyword">\item</span> First item</span><br><span class="line">  <span class="keyword">\item</span> Second item</span><br><span class="line"><span class="keyword">\end</span>&#123;enumerate&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114213232649.png" alt="image-20250114213232649" style="zoom:67%;" /></p>
 <p>默认的列表间距比较宽，<span class="math inline">\(\LaTeX{}\)</span>
 本身也未提供方便的定制功能，可用 <code>enumitem</code>
@@ -558,18 +566,21 @@ class="math inline">\(\texttt{enumerate}\)</span>
 <p><span class="math inline">\(\texttt{center}\)</span>、<span
 class="math inline">\(\texttt{flushleft}\)</span> 和 <span
 class="math inline">\(\texttt{flushright}\)</span>
-环境分别用于生成居中、左对齐和右对齐的文本环境。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;center&#125; … <span class="keyword">\end</span>&#123;center&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushleft&#125; … <span class="keyword">\end</span>&#123;flushleft&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushright&#125; … <span class="keyword">\end</span>&#123;flushright&#125;</span><br></pre></td></tr></table></figure></p>
+环境分别用于生成居中、左对齐和右对齐的文本环境。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;center&#125; … <span class="keyword">\end</span>&#123;center&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushleft&#125; … <span class="keyword">\end</span>&#123;flushleft&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushright&#125; … <span class="keyword">\end</span>&#123;flushright&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;center&#125;</span><br><span class="line">Centered text using a</span><br><span class="line"><span class="keyword">\verb</span>|<span class="string">center</span>| environment.</span><br><span class="line"><span class="keyword">\end</span>&#123;center&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushleft&#125;</span><br><span class="line">Left-aligned text using a</span><br><span class="line"><span class="keyword">\verb</span>|<span class="string">flushleft</span>| environment.</span><br><span class="line"><span class="keyword">\end</span>&#123;flushleft&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;flushright&#125;</span><br><span class="line">Right-aligned text using a</span><br><span class="line"><span class="keyword">\verb</span>|<span class="string">flushright</span>| environment.</span><br><span class="line"><span class="keyword">\end</span>&#123;flushright&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114214234722.png" alt="image-20250114214234722" style="zoom:67%;" /></p>
-<p>除此之外，还可以用以下命令直接改变文字的对齐方式： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\centering</span>	 <span class="keyword">\raggedright</span> 	<span class="keyword">\raggedleft</span></span><br></pre></td></tr></table></figure></p>
+<p>除此之外，还可以用以下命令直接改变文字的对齐方式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\centering</span>	 <span class="keyword">\raggedright</span> 	<span class="keyword">\raggedleft</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\centering</span></span><br><span class="line">Centered text paragraph.</span><br><span class="line"></span><br><span class="line"><span class="keyword">\raggedright</span></span><br><span class="line">Left-aligned text paragraph.</span><br><span class="line"></span><br><span class="line"><span class="keyword">\raggedleft</span></span><br><span class="line">Right-aligned text paragraph.</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114214436517.png" alt="image-20250114214436517" style="zoom:67%;" /></p>
 <p>三个命令和对应的环境经常被误用，有直接用所谓 <code>\flushleft</code>
 命令或者 <code>raggedright</code>
 环境的，都是不甚严格的用法（即使它们可能有效）。有一点可以将两者区分开来：<span
 class="math inline">\(\texttt{center}\)</span>
-等环境会在上下文产生一个额外间距，而 <code>\centering</code>
-等命令不产生，只是改变对齐方式。比如在浮动体环境 <span
+等<strong>环境会在上下文产生一个额外间距</strong>，而
+<code>\centering</code>
+等<strong>命令不产生，只是改变对齐方式</strong>。比如在浮动体环境 <span
 class="math inline">\(\texttt{table}\)</span> 或 <span
 class="math inline">\(\texttt{figure}\)</span> 内实现居中对齐，用
 <code>\centering</code> 命令即可，没必要再用 <span
@@ -580,15 +591,15 @@ class="math inline">\(\texttt{center}\)</span> 环境。</p>
 class="math inline">\(\texttt{quote}\)</span>
 用于引用较短的文字，首行不缩进；<span
 class="math inline">\(\texttt{quotation}\)</span>
-用于引用若干段文字，首行缩进。引用环境较一般文字有额外的左右缩进。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Francis Bacon says:</span><br><span class="line"><span class="keyword">\begin</span>&#123;quote&#125;</span><br><span class="line">Knowledge is power.</span><br><span class="line"><span class="keyword">\end</span>&#123;quote&#125;</span><br></pre></td></tr></table></figure></p>
+用于引用若干段文字，首行缩进。引用环境较一般文字有额外的左右缩进。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Francis Bacon says:</span><br><span class="line"><span class="keyword">\begin</span>&#123;quote&#125;</span><br><span class="line">Knowledge is power.</span><br><span class="line"><span class="keyword">\end</span>&#123;quote&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114215152828.png" alt="image-20250114215152828" style="zoom:67%;" /></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">《木兰诗》：</span><br><span class="line"><span class="keyword">\begin</span>&#123;quotation&#125;</span><br><span class="line">万里赴戎机，关山度若飞。</span><br><span class="line">朔气传金柝，寒光照铁衣。</span><br><span class="line">将军百战死，壮士十年归。</span><br><span class="line"></span><br><span class="line">归来见天子，天子坐明堂。</span><br><span class="line">策勋十二转，赏赐百千强。……</span><br><span class="line"><span class="keyword">\end</span>&#123;quotation&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114215308777.png" alt="image-20250114215308777" style="zoom:67%;" /></p>
 <p><span class="math inline">\(\texttt{verse}\)</span> 用于排版诗歌，与
 <span class="math inline">\(\texttt{quotation}\)</span> 恰好相反，<span
-class="math inline">\(\texttt{verse}\)</span> 是首行悬挂缩进的。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Rabindranath Tagore&#x27;s short poem:</span><br><span class="line"><span class="keyword">\begin</span>&#123;verse&#125;</span><br><span class="line">Beauty is truth&#x27;s smile</span><br><span class="line">when she beholds her own face in</span><br><span class="line">a perfect mirror.</span><br><span class="line"><span class="keyword">\end</span>&#123;verse&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{verse}\)</span> 是首行悬挂缩进的。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Rabindranath Tagore&#x27;s short poem:</span><br><span class="line"><span class="keyword">\begin</span>&#123;verse&#125;</span><br><span class="line">Beauty is truth&#x27;s smile</span><br><span class="line">when she beholds her own face in</span><br><span class="line">a perfect mirror.</span><br><span class="line"><span class="keyword">\end</span>&#123;verse&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114215501957.png" alt="image-20250114215501957" style="zoom:67%;" /></p>
 <h3 id="摘要环境">摘要环境</h3>
 <p>摘要环境 <span class="math inline">\(\texttt{abstract}\)</span>
@@ -608,42 +619,42 @@ class="math inline">\(\texttt{verbatim}\)</span>，它以等宽字体排版代�
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114220451842.png" alt="image-20250114220451842" style="zoom:67%;" /></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;verbatim*&#125;<span class="string"></span></span><br><span class="line"><span class="string">for (int i=0; i&lt;4; ++i)</span></span><br><span class="line"><span class="string">  printf(&quot;Number %d\n&quot;,i);</span></span><br><span class="line"><span class="string"></span><span class="keyword">\end</span>&#123;verbatim*&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114220636123.png" alt="image-20250114220636123" style="zoom:67%;" /></p>
-<p>要排版简短的代码或关键字，可使用 <code>\verb</code> 命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\verb</span>⟨<span class="string">delim⟩</span>⟨code⟩⟨delim⟩</span><br></pre></td></tr></table></figure></p>
-<p>&lt;delim&gt;
+<p>要排版简短的代码或关键字，可使用 <code>\verb</code> 命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\verb</span>⟨<span class="string">delim⟩</span>⟨code⟩⟨delim⟩</span><br></pre></td></tr></table></figure>
+<p><code>&lt;delim&gt;</code>
 标明代码的分界位置，前后必须一致，除字母、空格或星号外，可任意选择使得不与代码本身冲突，习惯上使用
 <span class="math inline">\(\texttt|\)</span> 符号。</p>
 <p>同 <span class="math inline">\(\texttt{verbatim}\)</span>
-环境，<code>\verb</code> 后也可以带一个星号，以显示空格：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\verb</span>|<span class="string">\LaTeX</span>| <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\verb</span>+<span class="string">(a || b)</span>+ <span class="keyword">\verb</span>*<span class="string">+(a || b)+</span></span><br></pre></td></tr></table></figure></p>
+环境，<code>\verb</code> 后也可以带一个星号，以显示空格：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\verb</span>|<span class="string">\LaTeX</span>| <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\verb</span>+<span class="string">(a || b)</span>+ <span class="keyword">\verb</span>*<span class="string">+(a || b)+</span></span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114220953291.png" alt="image-20250114220953291" style="zoom:67%;" /></p>
-<p><code>\verb</code> 命令对符号的处理比较复杂，一般
-<strong>不能用在其它命令的参数里</strong>，否则多半会出错。</p>
+<p><code>\verb</code>
+命令对符号的处理比较复杂，一般<strong>不能用在其它命令的参数里</strong>，否则多半会出错。</p>
 <p><span class="math inline">\(\texttt{verbatim}\)</span> 宏包优化了
 <span class="math inline">\(\texttt{verbatim}\)</span>
 环境的内部命令，并提供了 <code>\verbatiminput</code>
 命令用来直接读入文件生成代码环境。 <span
 class="math inline">\(\texttt{fancyvrb}\)</span> 宏包提供了可定制格式的
 <span class="math inline">\(\texttt{Verbatim}\)</span> 环境；<span
-class="math inline">\(\texttt{listings}\)</span>
+class="math inline">\(\texttt{listings}\)</span> 和 <span
+class="math inline">\(\texttt{minted}\)</span>
 宏包更进一步，可生成关键字高亮的代码环境，支持各种程序设计语言的语法和关键字。详情请参考各自的帮助文档。</p>
 <hr />
 <h2 id="表格">表格</h2>
 <p>排版表格最基本的 <span
-class="math inline">\(\texttt{tabular}\)</span> 环境用法为：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[⟨align⟩]&#123;⟨column-spec⟩&#125;</span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中 &lt;column-spec&gt;
-是列格式标记，在接下来的内容将仔细介绍；<span
-class="math inline">\(\texttt\&amp;\)</span>
+class="math inline">\(\texttt{tabular}\)</span> 环境用法为：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[⟨align⟩]&#123;⟨column-spec⟩&#125;</span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;column-spec&gt;</code>
+是列格式标记，在接下来的内容将仔细介绍；<code>&amp;</code>
 用来分隔单元格；<code>\\</code> 用来换行；<code>\hline</code>
 用来在行与行之间绘制横线。</p>
 <p>直接使用 <span class="math inline">\(\texttt{tabular}\)</span>
 环境的话，会 <strong>和周围的文字混排</strong>。此时可用一个可选参数
-&lt;align&gt; 控制垂直对齐：<span
+<code>&lt;align&gt;</code> 控制垂直对齐：<span
 class="math inline">\(\verb|t|\)</span> 和 <span
 class="math inline">\(\verb|b|\)</span>
-分别表示按表格顶部、底部对齐，其他参数或省略不写（默认）表示居中对齐。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  center-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[t]&#123;|c|&#125;</span><br><span class="line">  top-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[b]&#123;|c|&#125;</span><br><span class="line">  bottom-<span class="keyword">\\</span> aligned<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125; tabulars.</span><br></pre></td></tr></table></figure></p>
+分别表示按表格顶部、底部对齐，其他参数或省略不写（默认）表示居中对齐。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  center-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[t]&#123;|c|&#125;</span><br><span class="line">  top-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[b]&#123;|c|&#125;</span><br><span class="line">  bottom-<span class="keyword">\\</span> aligned<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125; tabulars.</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114222501332.png" alt="image-20250114222501332" style="zoom:67%;" /></p>
 <p>但是通常情况下 <span class="math inline">\(\texttt{tabular}\)</span>
 环境很少与文字直接混排，而是会放在 <span
@@ -651,8 +662,7 @@ class="math inline">\(\texttt{table}\)</span> 浮动体环境中，并用
 <code>\caption</code> 命令加标题。</p>
 <h3 id="列格式">列格式</h3>
 <p><span class="math inline">\(\texttt{tabular}\)</span> 环境使用
-&lt;column-spec&gt;
-参数指定表格的列数以及每列的格式。基本的列格式见下表。</p>
+<code>&lt;column-spec&gt;</code>参数指定表格的列数以及每列的格式。基本的列格式见下表。</p>
 <table>
 <thead>
 <tr>
@@ -670,40 +680,43 @@ class="math inline">\(\texttt{table}\)</span> 浮动体环境中，并用
 <td style="text-align: left;"><span
 class="math inline">\(\texttt{p\{&lt;width&gt;\}}\)</span></td>
 <td style="text-align: left;">单元格宽度固定为
-&lt;width&gt;，可自动折行</td>
+<code>&lt;width&gt;</code>，可自动折行</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline">\(|\)</span></td>
+class="math inline">\(\mid\)</span></td>
 <td style="text-align: left;">绘制竖线</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline">\(@\{&lt;string&gt;\}\)</span></td>
-<td style="text-align: left;">自定义内容 &lt;string&gt;</td>
+class="math inline">\(\texttt{@\{&lt;string&gt;\}}\)</span></td>
+<td style="text-align: left;">自定义内容
+<code>&lt;string&gt;</code></td>
 </tr>
 </tbody>
 </table>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;lcr|p&#123;6em&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  left <span class="built_in">&amp;</span> center <span class="built_in">&amp;</span> right</span><br><span class="line">       <span class="built_in">&amp;</span> par box with fixed width<span class="keyword">\\</span></span><br><span class="line">  L    <span class="built_in">&amp;</span> C      <span class="built_in">&amp;</span> R     <span class="built_in">&amp;</span> P <span class="keyword">\\</span></span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115130809432.png" alt="image-20250115130809432" style="zoom:67%;" /></p>
-<p>表格中每行的单元格数目不能多于列格式里 $ $
+<p>表格中每行的单元格数目不能多于列格式里 <span
+class="math inline">\(\texttt{l/c/r/p}\)</span>
 的总数（可以少于这个总数），否则出错。</p>
 <p><span class="math inline">\(\texttt{@}\)</span>
 格式可在单元格前后插入任意的文本，但同时它也消除了单元格前后额外添加的间距。<span
 class="math inline">\(\texttt{@}\)</span>
 格式可以适当使用以充当“竖线”。特别地，<span
 class="math inline">\(\texttt{@\{\}}\)</span>
-可直接用来消除单元格前后的间距： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;@&#123;&#125; r@&#123;:&#125;lr @&#123;&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1  <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> one <span class="keyword">\\</span></span><br><span class="line">  11 <span class="built_in">&amp;</span> 3 <span class="built_in">&amp;</span> eleven <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+可直接用来消除单元格前后的间距：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;@&#123;&#125; r@&#123;:&#125;lr @&#123;&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1  <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> one <span class="keyword">\\</span></span><br><span class="line">  11 <span class="built_in">&amp;</span> 3 <span class="built_in">&amp;</span> eleven <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115131115056.png" alt="image-20250115131115056" style="zoom:67%;" /></p>
-<p>另外还提供了简便的将格式参数重复的写法 <span
-class="math inline">\(\texttt*\{&lt;n&gt;\}\{&lt;columnspec&gt;\}\)</span>，比如以下两种写法是等效的：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|c|c|p&#123;4em&#125;|p&#123;4em&#125;|&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|*&#123;5&#125;&#123;c|&#125;*&#123;2&#125;&#123;p&#123;4em&#125;|&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>另外还提供了简便的将格式参数重复的写法
+<code>*&#123;&lt;n&gt;&#125;&#123;&lt;columnspec&gt;&#125;</code>，比如以下两种写法是等效的：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|c|c|p&#123;4em&#125;|p&#123;4em&#125;|&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|*&#123;5&#125;&#123;c|&#125;*&#123;2&#125;&#123;p&#123;4em&#125;|&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>有时需要为整列修饰格式，比如整列改变为粗体，如果每个单元格都加上
-<code>\bfseries&#125;</code> 命令会比较麻烦。<code>array</code>
+<code>\bfseries</code> 命令会比较麻烦。<code>array</code>
 宏包提供了辅助格式 <span class="math inline">\(\texttt&gt;\)</span> 和
 <span
-class="math inline">\(\texttt&lt;\)</span>，用于给列格式前后加上修饰命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;&gt;&#123;<span class="keyword">\itshape</span>&#125;r&lt;&#123;*&#125;l&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  italic <span class="built_in">&amp;</span> normal <span class="keyword">\\</span></span><br><span class="line">  column <span class="built_in">&amp;</span> column <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt&lt;\)</span>，用于给列格式前后加上修饰命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;&gt;&#123;<span class="keyword">\itshape</span>&#125;r&lt;&#123;*&#125;l&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  italic <span class="built_in">&amp;</span> normal <span class="keyword">\\</span></span><br><span class="line">  column <span class="built_in">&amp;</span> column <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115131903387.png" alt="image-20250115131903387" style="zoom:67%;" /></p>
 <p>辅助格式甚至支持插入 <code>\centering</code> 等命令改变 <span
 class="math inline">\(\texttt{p}\)</span>
@@ -730,7 +743,8 @@ class="math inline">\(\texttt{tabular*}\)</span>
 环境用来排版定宽表格，但是不太方便使用，比如要用到 <span
 class="math inline">\(\texttt{@}\)</span>
 格式插入额外命令，令单元格之间的间距为
-<code>\fill</code>，但即使这样仍然有瑕疵： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular*&#125;&#123;14em&#125;<span class="comment">%</span></span><br><span class="line">&#123;@&#123;<span class="keyword">\extracolsep</span>&#123;<span class="keyword">\fill</span>&#125;&#125;|c|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="built_in">&amp;</span> D <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="built_in">&amp;</span> d <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular*&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\fill</code>，但即使这样仍然有瑕疵：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular*&#125;&#123;14em&#125;<span class="comment">%</span></span><br><span class="line">&#123;@&#123;<span class="keyword">\extracolsep</span>&#123;<span class="keyword">\fill</span>&#125;&#125;|c|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="built_in">&amp;</span> D <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="built_in">&amp;</span> d <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular*&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115132953911.png" alt="image-20250115132953911" style="zoom:67%;" /></p>
 <p><code>tabularx</code> 宏包为我们提供了方便的解决方案。它引入了一个
 <span class="math inline">\(\texttt{X}\)</span> 列格式，类似 <span
@@ -743,8 +757,9 @@ class="math inline">\(\texttt{X}\)</span> 列格式也可以用
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115133221441.png" alt="image-20250115133221441" style="zoom:67%;" /></p>
 <h3 id="横线">横线</h3>
 <p>在之前的例子见过许多次绘制表格线的 <code>\hline</code> 命令。另外
-<code>\cline&#123;&lt;i&gt;-&lt;j&gt;&#125;</code> 用来绘制跨越部分单元格的横线：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> 9 <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">  3 <span class="built_in">&amp;</span> 5 <span class="built_in">&amp;</span> 7 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;1-1&#125;</span><br><span class="line">  8 <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 6 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\cline&#123;&lt;i&gt;-&lt;j&gt;&#125;</code>
+用来绘制跨越部分单元格的横线：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> 9 <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">  3 <span class="built_in">&amp;</span> 5 <span class="built_in">&amp;</span> 7 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;1-1&#125;</span><br><span class="line">  8 <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 6 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <figure>
 <img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115133628644.png"
 alt="image-20250115133628644" />
@@ -754,19 +769,21 @@ alt="image-20250115133628644" />
 <code>booktabs</code> 宏包支持，它提供了
 <code>\toprule</code>、<code>\midrule</code> 和 <code>\bottomrule</code>
 命令用以排版三线表的三条线，以及和 <code>\cline</code> 对应的
-<code>\cmidrule</code>。除此之外，最好不要用其它横线以及竖线：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;booktabs&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;cccc&#125;</span><br><span class="line">  <span class="keyword">\toprule</span></span><br><span class="line">   <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;3&#125;&#123;c&#125;&#123;Numbers&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cmidrule</span>&#123;2-4&#125;</span><br><span class="line">           <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\midrule</span></span><br><span class="line">  Alphabet <span class="built_in">&amp;</span> A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="keyword">\\</span></span><br><span class="line">  Roman    <span class="built_in">&amp;</span> I <span class="built_in">&amp;</span> II<span class="built_in">&amp;</span> III <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\cmidrule</code>。除此之外，最好不要用其它横线以及竖线：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;booktabs&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;cccc&#125;</span><br><span class="line">  <span class="keyword">\toprule</span></span><br><span class="line">   <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;3&#125;&#123;c&#125;&#123;Numbers&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cmidrule</span>&#123;2-4&#125;</span><br><span class="line">           <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\midrule</span></span><br><span class="line">  Alphabet <span class="built_in">&amp;</span> A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="keyword">\\</span></span><br><span class="line">  Roman    <span class="built_in">&amp;</span> I <span class="built_in">&amp;</span> II<span class="built_in">&amp;</span> III <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115140704162.png" alt="image-20250115140704162" style="zoom:67%;" /></p>
 <h3 id="合并单元格">合并单元格</h3>
-<p>横向合并单元格由 <code>\multicolumn</code> 命令实现： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\multicolumn</span>&#123;⟨n⟩&#125;&#123;⟨column-spec⟩&#125;&#123;⟨item⟩&#125;</span><br></pre></td></tr></table></figure>
-其中 &lt;n&gt; 为要合并的列数，&lt;column-spec&gt;
+<p>横向合并单元格由 <code>\multicolumn</code> 命令实现：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\multicolumn</span>&#123;⟨n⟩&#125;&#123;⟨column-spec⟩&#125;&#123;⟨item⟩&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;n&gt;</code>
+为要合并的列数，<code>&lt;column-spec&gt;</code>
 为合并单元格后的列格式，只允许出现一个 <span
 class="math inline">\(\texttt{l/c/r}\)</span> 或 <span
 class="math inline">\(\texttt{p}\)</span>
 格式。如果合并前的单元格前后带表格线 <span
 class="math inline">\(\texttt|\)</span>，合并后的列格式也要带 <span
-class="math inline">\(\texttt|\)</span> 以使得表格的竖线一致。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> Center <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;|c|&#125;&#123;3&#125; <span class="built_in">&amp;</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;r|&#125;&#123;Right&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;C&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt|\)</span> 以使得表格的竖线一致。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> Center <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;|c|&#125;&#123;3&#125; <span class="built_in">&amp;</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;r|&#125;&#123;Right&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;C&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115142430321.png" alt="image-20250115142430321" style="zoom:67%;" /></p>
 <p><strong>纵向合并单元格</strong> 需要用到 <code>multirow</code>
 宏包提供的 <code>\multirow</code> 命令：</p>
@@ -774,7 +791,8 @@ class="math inline">\(\texttt|\)</span> 以使得表格的竖线一致。
 <p><width> 为合并后单元格的宽度，可以填 <span
 class="math inline">\(\texttt{*}\)</span> 以使用自然宽度。</p>
 <p>我们看一个结合 <code>\cline</code>、<code>\multicolumn</code> 和
-<code>\multirow</code> 命令的例子： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;multirow&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;ccc&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multirow</span>&#123;2&#125;&#123;*&#125;&#123;Item&#125; <span class="built_in">&amp;</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c&#125;&#123;Value&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">    <span class="built_in">&amp;</span> First <span class="built_in">&amp;</span> Second <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> 1     <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\multirow</code> 命令的例子：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;multirow&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;ccc&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multirow</span>&#123;2&#125;&#123;*&#125;&#123;Item&#125; <span class="built_in">&amp;</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c&#125;&#123;Value&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">    <span class="built_in">&amp;</span> First <span class="built_in">&amp;</span> Second <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> 1     <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115142135335.png" alt="image-20250115142135335" style="zoom:67%;" /></p>
 <h3 id="嵌套表格">嵌套表格</h3>
 <p>在以下的例子中，注意要用 <code>\multicolumn</code> 命令配合 <span
@@ -789,11 +807,12 @@ class="math inline">\(\texttt{@\{\}}\)</span>
 <h3 id="行距控制">行距控制</h3>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 生成的表格看起来通常比较紧凑。修改参数 <code>\arraystretch</code>
-可以得到行距更加宽松的表格。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\arraystretch</span>&#123;1.8&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Really loose <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  tabular rows.<span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;example&#125;</span><br></pre></td></tr></table></figure></p>
+可以得到行距更加宽松的表格。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\arraystretch</span>&#123;1.8&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Really loose <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  tabular rows.<span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;example&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115143416039.png" alt="image-20250115143416039" style="zoom:67%;" /></p>
 <p>另一种增加间距的办法是给换行命令 <code>\\</code>
-添加可选参数，在这一行下面加额外的间距，适合用于在行间不加横线的表格：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;c&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Head lines <span class="keyword">\\</span>[6pt]</span><br><span class="line">  tabular lines <span class="keyword">\\</span></span><br><span class="line">  tabular lines <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure></p>
+添加可选参数，在这一行下面加额外的间距，适合用于在行间不加横线的表格：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;c&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Head lines <span class="keyword">\\</span>[6pt]</span><br><span class="line">  tabular lines <span class="keyword">\\</span></span><br><span class="line">  tabular lines <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115143537544.png" alt="image-20250115143537544" style="zoom:67%;" /></p>
 <p>但是这种换行方式的存在导致了一个缺陷——从第二行开始，表格的首个单元格不能直接使用中括号
 <span class="math inline">\(\texttt{[]}\)</span>，否则 <code>\\</code>
@@ -816,14 +835,16 @@ class="math inline">\(\texttt{pdflatex}\)</span>
 class="math inline">\(\texttt{xelatex}\)</span> 命令是最推荐的方式。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115144839982.png" alt="image-20250115144839982" style="zoom:67%;" /></p>
 <p>在调用了 <code>graphicx</code> 宏包以后，就可以使用
-<code>\includegraphics</code> 命令加载图片了： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[⟨options⟩]&#123;⟨filename⟩&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\includegraphics</code> 命令加载图片了：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\includegraphics</span>[⟨options⟩]&#123;⟨filename⟩&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 &lt;filename&gt;
 为图片文件名，文件名可能需要用相对路径或绝对路径表示。图片文件的扩展名一般可不写。另外一定要注意，<strong>文件名里既不要有空格也不要有多余的英文点号</strong>，否则宏包在解析文件名的过程中会出错。</p>
 <p>另外 <code>graphicx</code> 宏包还提供了 <code>graphicspath</code>
-命令，用于声明一个或多个图片文件存放的目录，使用这些目录里的图片时可不用写路径：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 假设主要的图片放在 figures 子目录下，标志放在 logo 子目录下</span></span><br><span class="line"><span class="keyword">\graphicspath</span>&#123;&#123;figures/&#125;&#123;logo/&#125;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在 <code>\includegraphics</code> 命令的可选参数 &lt;options&gt;
-中可以使用 &lt;key&gt; = &lt;value&gt; 的形式，常用的参数如下：</p>
+命令，用于声明一个或多个图片文件存放的目录，使用这些目录里的图片时可不用写路径：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 假设主要的图片放在 figures 子目录下，标志放在 logo 子目录下</span></span><br><span class="line"><span class="keyword">\graphicspath</span>&#123;&#123;figures/&#125;&#123;logo/&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>在 <code>\includegraphics</code> 命令的可选参数
+<code>&lt;options&gt;</code> 中可以使用
+<code>&lt;key&gt;=&lt;value&gt;</code> 的形式，常用的参数如下：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115145631351.png" alt="image-20250115145631351" style="zoom:67%;" /></p>
 <p><code>graphicx</code> 宏包也支持 <span
 class="math inline">\(\texttt{draft}\)</span>/<span
@@ -838,12 +859,14 @@ class="math inline">\(\texttt{draft}\)</span>
 <p>不管如何，<span class="math inline">\(\LaTeX{}\)</span>
 提供了一些命令让我们手动生成一些有特定用途的盒子。</p>
 <h3 id="水平盒子">水平盒子</h3>
-<p>生成水平盒子的命令如下： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\mbox</span>&#123;…&#125;</span><br><span class="line"><span class="keyword">\makebox</span>[⟨width⟩][⟨align⟩]&#123;…&#125;</span><br></pre></td></tr></table></figure></p>
+<p>生成水平盒子的命令如下：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\mbox</span>&#123;…&#125;</span><br><span class="line"><span class="keyword">\makebox</span>[⟨width⟩][⟨align⟩]&#123;…&#125;</span><br></pre></td></tr></table></figure>
 <p><code>\mbox</code>
-生成一个基本的水平盒子，内容只有一行，不允许分段（除非嵌套其它盒子，比如后文的垂直盒子）。外表看上去，
+生成一个基本的水平盒子，内容只有一行，不允许分段（除非嵌套其它盒子，比如后文的垂直盒子）。外表看上去，<code>\mbox</code>
 的内容与正常的文本无二，不过断行时文字不会从盒子里断开。</p>
 <p><code>\makebox</code> 更进一步，可以加上可选参数用于控制盒子的宽度
-&lt;width&gt;，以及内容的对齐方式 &lt;align&gt;，可选居中 <span
+<code>&lt;width&gt;</code>，以及内容的对齐方式
+<code>&lt;align&gt;</code>，可选居中 <span
 class="math inline">\(\texttt{c}\)</span>（默认值）、左对齐 <span
 class="math inline">\(\texttt{l}\)</span>、右对齐 <span
 class="math inline">\(\texttt{r}\)</span> 和分散对齐 <span
@@ -858,15 +881,17 @@ class="math inline">\(\texttt{s}\)</span>。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fbox</span>&#123;Test some words.&#125;<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\framebox</span>[10em][r]&#123;Test some words.&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115151302157.png" alt="image-20250115151302157" style="zoom:67%;" /></p>
 <p>可以通过 <code>\setlength</code> 命令调节边框的宽度
-<code>\fboxrule</code> 和内边距 <code>\fboxsep</code>：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\framebox</span>[10em][r]&#123;Test box&#125;<span class="keyword">\\</span>[1ex]</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\fboxrule</span>&#125;&#123;1.6pt&#125;</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\fboxsep</span>&#125;&#123;1em&#125;</span><br><span class="line"><span class="keyword">\framebox</span>[10em][r]&#123;Test box&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\fboxrule</code> 和内边距 <code>\fboxsep</code>：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\framebox</span>[10em][r]&#123;Test box&#125;<span class="keyword">\\</span>[1ex]</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\fboxrule</span>&#125;&#123;1.6pt&#125;</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\fboxsep</span>&#125;&#123;1em&#125;</span><br><span class="line"><span class="keyword">\framebox</span>[10em][r]&#123;Test box&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115151733062.png" alt="image-20250115151733062" style="zoom:67%;" /></p>
 <h3 id="垂直盒子">垂直盒子</h3>
 <p>如果需要排版一个文字可以换行的盒子，<span
-class="math inline">\(\LaTeX{}\)</span> 提供了两种方式：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\parbox</span>[⟨align⟩][⟨height⟩][⟨inner-align⟩]&#123;⟨width⟩&#125;&#123;…&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[⟨align⟩][⟨height⟩][⟨inner-align⟩]&#123;⟨width⟩&#125;</span><br><span class="line">…</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure></p>
-<p>其中 &lt;align&gt; 为盒子和周围文字的对齐情况；&lt;height&gt; 和
-&lt;inner-align&gt; 设置盒子的高度和内容的对齐方式，&lt;inner-align&gt;
+class="math inline">\(\LaTeX{}\)</span> 提供了两种方式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\parbox</span>[⟨align⟩][⟨height⟩][⟨inner-align⟩]&#123;⟨width⟩&#125;&#123;…&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[⟨align⟩][⟨height⟩][⟨inner-align⟩]&#123;⟨width⟩&#125;</span><br><span class="line">…</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;align&gt;</code>
+为盒子和周围文字的对齐情况；<code>&lt;height&gt;</code> 和
+<code>&lt;inner-align&gt;</code>
+设置盒子的高度和内容的对齐方式，<code>&lt;inner-align&gt;</code>
 接受的参数是顶部 <span class="math inline">\(\texttt{t}\)</span>、底部
 <span class="math inline">\(\texttt{b}\)</span>、居中 <span
 class="math inline">\(\texttt{c}\)</span> 和分散对齐 <span
@@ -878,8 +903,9 @@ class="math inline">\(\texttt{s}\)</span>。</p>
 <span class="math inline">\(\texttt{minipage}\)</span>
 环境之被称为“迷你页”（Mini-page）的原因。而在 <code>\parbox</code>
 里无法正常使用 <code>\footnote</code> 命令，只能在盒子里使用
-<code>\footnotemark</code>，在盒子外使用 <code>\footnotetext</code>。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fbox</span>&#123;<span class="keyword">\begin</span>&#123;minipage&#125;&#123;15em&#125;<span class="comment">%</span></span><br><span class="line">  这是一个垂直盒子的测试。</span><br><span class="line">  <span class="keyword">\footnote</span>&#123;脚注来自 minipage。&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\footnotemark</code>，在盒子外使用
+<code>\footnotetext</code>。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fbox</span>&#123;<span class="keyword">\begin</span>&#123;minipage&#125;&#123;15em&#125;<span class="comment">%</span></span><br><span class="line">  这是一个垂直盒子的测试。</span><br><span class="line">  <span class="keyword">\footnote</span>&#123;脚注来自 minipage。&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250115153544989.png" alt="image-20250115153544989" style="zoom:67%;" /></p>
 <h3 id="标尺盒子">标尺盒子</h3>
 <p><code>\rule</code>
@@ -900,9 +926,11 @@ class="math inline">\(\texttt{table}\)</span>
 里放表格，但并没有严格限制，可以在任何一个浮动体里放置文字、公式、表格、图片等等任意内容。</p>
 <p>以 <span class="math inline">\(\texttt{table}\)</span>
 环境的用法举例，<span class="math inline">\(\texttt{figure}\)</span>
-同理： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[⟨placement⟩]</span><br><span class="line">…</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure></p>
-<p>&lt;placement&gt; 参数提供了一些符号用来表示浮动体允许排版的位置，如
-<span class="math inline">\(\texttt{hbp}\)</span>
+同理：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[⟨placement⟩]</span><br><span class="line">…</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&lt;placement&gt;</code>
+参数提供了一些符号用来表示浮动体允许排版的位置，如 <span
+class="math inline">\(\texttt{hbp}\)</span>
 允许浮动体排版在当前位置、底部或者单独成页。<span
 class="math inline">\(\texttt{table}\)</span> 和 <span
 class="math inline">\(\texttt{figure}\)</span> 浮动体的默认设置为 <span
@@ -914,8 +942,8 @@ class="math inline">\(\texttt{figure*}\)</span> 环境用来排版
 <strong>跨栏</strong> 的浮动体。用法与 <span
 class="math inline">\(\texttt{table}\)</span> 和 <span
 class="math inline">\(\texttt{figure}\)</span> 一样，不同之处为双栏的
-<placement> 参数只能用 <span class="math inline">\(\texttt{tp}\)</span>
-两个位置。</p>
+<code>&lt;placement&gt;</code> 参数只能用 <span
+class="math inline">\(\texttt{tp}\)</span> 两个位置。</p>
 <p>浮动体的位置选取受到先后顺序的限制。如果某个浮动体由于参数限制、空间限制等原因在当前页无法放置，就要推迟到之后处理，并使得之后的同类浮动体一并推迟。<code>\clearpage</code>
 命令会在另起一页之前，先将所有推迟处理的浮动体排版成页，此时 <span
 class="math inline">\(\texttt{htbp}\)</span> 等位置限制被完全忽略。</p>
@@ -968,7 +996,7 @@ class="math inline">\(\texttt{figure}\)</span>
 <hr />
 <h2 id="参考博文">参考博文</h2>
 <p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
-2024. https://github.com/CTeX-org/lshort-zh-cn</p>
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -1105,14 +1133,11 @@ role="doc-backlink">↩︎</a></p></li>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/latex/04_LaTeX%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" rel="prev" title="$\LaTeX{}$ 之数学公式（四）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之数学公式（四）
+                <a href="/latex/02_%E7%94%A8LaTeX%E6%8E%92%E7%89%88%E6%96%87%E5%AD%97/" rel="prev" title="用 $\LaTeX{}$ 排版文字（二）">
+                  <i class="fa fa-angle-left"></i> 用 $\LaTeX{}$ 排版文字（二）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/latex/01_LaTeX%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" rel="next" title="$\LaTeX{}$ 的基本概念（一）">
-                  $\LaTeX{}$ 的基本概念（一） <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -1143,13 +1168,13 @@ role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:40</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

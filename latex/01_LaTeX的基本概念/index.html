@@ -29,8 +29,8 @@
 <meta property="og:site_name" content="Invinc-Z Blog">
 <meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 欢迎使用 \(\LaTeX{}\)！本文开头介绍了\(\LaTeX{}\)的来源，然后介绍了\(\LaTeX{}\)源代码的写法，编译\(\LaTeX{}\)源代码生成文档的方法，以及理解接下来的章节的一些必要知识。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-04T17:16:08.975Z">
+<meta property="article:published_time" content="2024-12-31T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-06T02:23:05.993Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -147,7 +147,7 @@
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tex"><span class="nav-number">1.1.</span> <span class="nav-text">\(\TeX\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex"><span class="nav-number">1.2.</span> <span class="nav-text">\(\LaTeX{}\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">1.3.</span> <span class="nav-text">\(\LaTeX{}\)
-的优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">2.</span> <span class="nav-text">Hello, World!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">\(\LaTeX{}\) 命令和代码结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E5%91%BD%E4%BB%A4%E5%92%8C%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">\(\LaTeX{}\)
+的优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hello-world"><span class="nav-number">2.</span> <span class="nav-text">Hello, World</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">\(\LaTeX{}\) 命令和代码结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E5%91%BD%E4%BB%A4%E5%92%8C%E7%8E%AF%E5%A2%83"><span class="nav-number">3.1.</span> <span class="nav-text">\(\LaTeX{}\)
 命令和环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E6%BA%90%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">\(\LaTeX{}\)
 源代码结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%AE%8F%E5%8C%85%E5%92%8C%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number">4.</span> <span class="nav-text">\(\LaTeX{}\) 宏包和文档类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number">4.1.</span> <span class="nav-text">文档类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8F%E5%8C%85"><span class="nav-number">4.2.</span> <span class="nav-text">宏包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%80%E8%A7%88"><span class="nav-number">5.</span> <span class="nav-text">\(\LaTeX{}\) 用到的文件一览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%84%E7%BB%87%E6%96%B9%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">文件的组织方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%92%8C-tex-%E7%9B%B8%E5%85%B3%E7%9A%84%E6%9C%AF%E8%AF%AD%E5%92%8C%E6%A6%82%E5%BF%B5"><span class="nav-number">7.</span> <span class="nav-text">\(\LaTeX{}\) 和 \(\TeX{}\) 相关的术语和概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
@@ -164,7 +164,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -274,14 +274,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-01 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-01T05:12:18+08:00">2025-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 01:16:08" itemprop="dateModified" datetime="2025-06-05T01:16:08+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-06 10:23:05" itemprop="dateModified" datetime="2025-06-06T10:23:05+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>4.1k</span>
+      <span>4.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -344,7 +344,8 @@ class="math inline">\(\TeX{}\)</span>，发掘当时刚刚用于出版工业的�
 的特性而著称。它的版本号不断趋近于 <span
 class="math inline">\(\pi\)</span>，当前为 3.141592653。</p>
 <h3 id="latex"><span class="math inline">\(\LaTeX{}\)</span></h3>
-<p><span class="math inline">\(\LaTeX{}\)</span> 是一种使用 $ $
+<p><span class="math inline">\(\LaTeX{}\)</span> 是一种使用 <span
+class="math inline">\(\TeX{}\)</span>
 程序作为排版引擎的格式，可以粗略地将它理解成是对 <span
 class="math inline">\(\TeX{}\)</span> 的一层封装。 <span
 class="math inline">\(\LaTeX{}\)</span>
@@ -386,19 +387,22 @@ class="math inline">\(\TeX{}\)</span>
 <li>相比“所见即所得”的模式有一些不便，为了查看生成文档的效果，用户总要不停地编译。</li>
 </ul>
 </blockquote>
-<h2 id="hello-world">Hello, World!</h2>
+<h2 id="hello-world">Hello, World</h2>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">``Hello world!&#x27;&#x27; from <span class="keyword">\LaTeX</span>.</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <p>这里首先介绍如何编译使用这份源代码，在后续小节中再介绍源代码的细节。你可以将这份源代码保存为helloworld.tex，而后编译。具体来说:</p>
 <ul>
 <li><p>如果使用TeXworks 或TeXstudio
 等编辑器，可以使用编辑器提供的“编译”或“排版”按钮。建议使用 pdfLaTeX 或
 XeLaTeX 作为默认的编译方式。</p></li>
-<li><p>如果使用命令行方式进行编译，打开终端，在源代码所在的目录下输入：
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdflatex helloworld</span><br></pre></td></tr></table></figure> 或者 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xelatex helloworld</span><br></pre></td></tr></table></figure> 如果编译成功，可以在helloworld.tex
-所在目录看到生成的helloworld.pdf 以及一些其它文件。</p>
-<p>下面是排版中文的一个最简示例。编译的方式与上一份源代码相同，但需使用
-XeLaTeX编译方式。</p></li>
+<li><p>如果使用命令行方式进行编译，打开终端，在源代码所在的目录下输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdflatex helloworld</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xelatex helloworld</span><br></pre></td></tr></table></figure>
+<p>如果编译成功，可以在helloworld.tex 所在目录看到生成的helloworld.pdf
+以及一些其它文件。</p></li>
 </ul>
+<p>下面是排版中文的一个最简示例。编译的方式与上一份源代码相同，但需使用
+XeLaTeX编译方式。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;ctexart&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">“你好，世界！”来自<span class="keyword">\LaTeX</span>&#123;&#125; 的问候。</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <hr />
 <h2 id="latex-命令和代码结构"><span
@@ -408,7 +412,7 @@ class="math inline">\(\LaTeX{}\)</span> 命令和代码结构</h2>
 <h3 id="latex-命令和环境"><span class="math inline">\(\LaTeX{}\)</span>
 命令和环境</h3>
 <p><span class="math inline">\(\LaTeX{}\)</span> 中命令以反斜线
- 开头，为以下两种形式之一：</p>
+<code>\</code> 开头，为以下两种形式之一：</p>
 <ul>
 <li><p>反斜线和后面的一串字母，如
 <code>\&#123;LaTeX&#125;</code>。它们以任意非字母符号（空格、数字、标点等）为界限。</p></li>
@@ -434,7 +438,8 @@ role="doc-noteref"><sup>2</sup></a>。还有些命令可以带一个星号
 <p><span class="math inline">\(\LaTeX{}\)</span>
 中还包括<strong>环境</strong>，用以令一些效果在局部生效，或是生成特殊的文档元素。<span
 class="math inline">\(\LaTeX{}\)</span> 环境的用法为一对命令
-<code>\begin</code> 和 <code>\end</code>： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;&lt;environment name&gt;&#125;[&lt;optional arguments&gt;]&#123;&lt;mandatory arguments&gt;&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">\end</span>&#123;&lt;environment name&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\begin</code> 和 <code>\end</code>：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;&lt;environment name&gt;&#125;[&lt;optional arguments&gt;]&#123;&lt;mandatory arguments&gt;&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">\end</span>&#123;&lt;environment name&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>有些命令（如
 <code>\bfseries</code>）会对其后所有内容产生作用。若要限制其作用范围，则需要使用<strong>分组</strong>。<span
 class="math inline">\(\LaTeX{}\)</span> 使用一对花括号{ }
@@ -450,9 +455,9 @@ class="math inline">\(\LaTeX{}\)</span>
 命令作为开头，它指定了文档使用的<strong>文档类</strong>。<code>document</code>
 环境当中的内容是文档正文。 在 <code>\documentclass</code> 和
 <code>\begin&#123;document&#125;</code> 之间的位置称为<strong>导言区</strong>。
-在导言区中常会使用 <code>\&#123;usepackage&#125;</code>
+在导言区中常会使用 <code>\usepackage&#123;&#125;</code>
 命令调用<strong>宏包</strong>，还会进行文档的全局设置。</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;...&#125;  <span class="comment">% ... 为某文档类</span></span><br><span class="line"><span class="comment">% 导言区</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="comment">% 正文内容</span></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br><span class="line"><span class="comment">% 此后内容会被忽略</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;...&#125;  <span class="comment">% ... 为某文档类</span></span><br><span class="line"><span class="comment">% 导言区</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;comment&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="comment">% 正文内容</span></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br><span class="line"><span class="comment">% 此后内容会被忽略</span></span><br></pre></td></tr></table></figure>
 <hr />
 <h2 id="latex-宏包和文档类"><span
 class="math inline">\(\LaTeX{}\)</span> 宏包和文档类</h2>
@@ -463,7 +468,7 @@ class="math inline">\(\LaTeX{}\)</span>
 class="math inline">\(\LaTeX{}\)</span>
 源代码的开头须用<code>\documentclass</code>指定文档类：
 <code>\documentclass[&lt;options&gt;]&#123;&lt;class-name&gt;&#125;</code>
-其中<class-name>为文档类的名称，如 <span
+其中<code>&lt;class-name&gt;</code>为文档类的名称，如 <span
 class="math inline">\(\LaTeX{}\)</span> 提供的
 <code>article</code>、<code>report</code>、<code>book</code>，在其基础上派生的一些文档类，如支持中文排版的
 <code>ctexart</code>、<code>ctexrep</code>、<code>ctexbook</code>，或者有其它功能的文档类，如
@@ -477,12 +482,16 @@ class="math inline">\(\LaTeX{}\)</span>
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: left;">article</th>
-<th
-style="text-align: left;">文章格式的文档类，广泛用于科技论文、报告、说明文档等。</th>
+<th style="text-align: left;">文档类</th>
+<th style="text-align: left;">说明</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;">article</td>
+<td
+style="text-align: left;">文章格式的文档类，广泛用于科技论文、报告、说明文档等。</td>
+</tr>
 <tr>
 <td style="text-align: left;">report</td>
 <td
@@ -509,7 +518,7 @@ style="text-align: left;">一个极其精简的文档类，只设定了纸张大
 </tr>
 </tbody>
 </table>
-<p>可选参数 <options>
+<p>可选参数 <code>&lt;options&gt;</code>
 为文档类指定选项，以全局地规定一些排版的参数，如字号、纸张大小、单双面等等。比如调用
 <code>article</code> 文档类排版文章，指定纸张为 A4 大小，基本字号为
 11pt，双面排版：
@@ -523,13 +532,17 @@ style="text-align: left;">一个极其精简的文档类，只设定了纸张大
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: left;"><span class="math inline">\(\texttt{10pt,
-11pt, 12pt}\)</span></th>
-<th style="text-align: left;">指定文档的基本字号。默认为 <span
-class="math inline">\(\texttt{10pt}\)</span>。</th>
+<th style="text-align: left;">options</th>
+<th style="text-align: left;">含义</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;"><span class="math inline">\(\texttt{10pt,
+11pt, 12pt}\)</span></td>
+<td style="text-align: left;">指定文档的基本字号。默认为 <span
+class="math inline">\(\texttt{10pt}\)</span>。</td>
+</tr>
 <tr>
 <td style="text-align: left;"><span
 class="math inline">\(\texttt{a4paper,letterpaper,...}\)</span></td>
@@ -662,13 +675,17 @@ class="math inline">\(\texttt{.bst}\)</span></td>
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: left;"><span
-class="math inline">\(\texttt{.log}\)</span></th>
-<th
-style="text-align: left;">排版引擎生成的日志文件，供排查错误使用。</th>
+<th style="text-align: left;">中间文件</th>
+<th style="text-align: left;">作用</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.log}\)</span></td>
+<td
+style="text-align: left;">排版引擎生成的日志文件，供排查错误使用。</td>
+</tr>
 <tr>
 <td style="text-align: left;"><span
 class="math inline">\(\texttt{.aux}\)</span></td>
@@ -733,7 +750,7 @@ class="math inline">\(\texttt{.out}\)</span></td>
 <span class="math inline">\(\LaTeX{}\)</span> 提供了命令
 <code>\include</code> 用来在源代码里插入文件：</p>
 <p><code>\include&#123;&lt;filename&gt;&#125;</code></p>
-<p><filename> 为文件名（不带 <span
+<p><code>&lt;filename&gt;</code> 为文件名（不带 <span
 class="math inline">\(\texttt{.tex}\)</span> 扩展名）<a href="#fn5"
 class="footnote-ref" id="fnref5"
 role="doc-noteref"><sup>5</sup></a>，如果和要编译的主文件不在一个目录中，则要加上相对或绝对路径，例如：</p>
@@ -749,14 +766,15 @@ class="math inline">\(\texttt{.tex}\)</span> 文件中，再用
 <p><span class="math inline">\(\LaTeX{}\)</span> 还提供了一个
 <code>\includeonly</code>
 命令来组织文件，用于导言区，指定只载入某些文件。导言区使用了
-<code>\&#123;includeonly</code> 后，正文中不在其列表范围的
+<code>\includeonly</code> 后，正文中不在其列表范围的
 <code>\include</code> 命令不会起效：</p>
 <p><code>\includeonly&#123;&lt;filename1&gt;,&lt;filename2&gt;,...&#125;</code></p>
 <p>需要注意的是，使用 <code>\include</code> 和 <code>\input</code>
 命令载入的文件名最好不要加空格和特殊字符，也尽量避免使用中文名，否则很可能会出错。</p>
 <p>最后介绍一个实用的工具宏包<code>syntonly</code>。加载这个宏包后，在导言区使用
 <code>\syntaxonly</code> 命令，可令编译后不生成 DVI 或者 PDF
-文档，只排查错误，编译速度会快不少： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;syntonly&#125;</span><br><span class="line"><span class="keyword">\syntaxonly</span></span><br></pre></td></tr></table></figure></p>
+文档，只排查错误，编译速度会快不少：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;syntonly&#125;</span><br><span class="line"><span class="keyword">\syntaxonly</span></span><br></pre></td></tr></table></figure>
 <p>如果想生成文档，则用 % 注释掉 <code>\syntaxonly</code> 命令即可。</p>
 <hr />
 <h2 id="latex-和-tex-相关的术语和概念"><span
@@ -766,8 +784,9 @@ class="math inline">\(\TeX{}\)</span> 相关的术语和概念</h2>
 <ul>
 <li><strong>引擎</strong>
 全称为排版引擎，是编译源代码并生成文档的程序，如 pdfTeX、XeTeX等
-。有时也称为<strong>编译器</strong>。</li>
-<li><strong>格式</strong> 是定义了一组命令的代码集。<span
+。有时也称为<strong>编译器</strong>(类似于GCC、MSVC的功能)。</li>
+<li><strong>格式</strong>
+是定义了一组命令的代码集（类似于库函数）。<span
 class="math inline">\(\LaTeX{}\)</span>
 就是最广泛应用的一个格式，高德纳本人还编写了一个简单的 plain TeX
 格式，没有定义诸如 <code>\documentclass</code> 和 <code>\section</code>
@@ -775,7 +794,7 @@ class="math inline">\(\LaTeX{}\)</span>
 <li><strong>编译命令</strong> 是实际调用的、结合了引擎和格式的命令。如
 <span class="math inline">\(\texttt{xelatex}\)</span> 命令是结合
 XeTeX引擎和 <span class="math inline">\(\LaTeX{}\)</span>
-格式的一个编译命令。</li>
+格式的一个编译命令（类似于编译并链接库函数的过程）。</li>
 </ul>
 <p>常见的引擎、格式和编译命令的关系总结于下表。</p>
 <table>
@@ -837,17 +856,21 @@ class="math inline">\(\LaTeX{}\)</span> 格式往往容易混淆，在讨论关�
 </colgroup>
 <thead>
 <tr>
-<th style="text-align: left;"><span
-class="math inline">\(\texttt{latex}\)</span></th>
-<th style="text-align: left;">虽然名为 <span
+<th style="text-align: left;">编译命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{latex}\)</span></td>
+<td style="text-align: left;">虽然名为 <span
 class="math inline">\(\texttt{latex}\)</span> 命令，底层调用的引擎其实是
 pdfTeX。 该命令生成 <span
 class="math inline">\(\texttt{dvi}\)</span>格式的文档, 用 <span
 class="math inline">\(\texttt{dvipdfmx}\)</span> 命令可以将其转为 <span
-class="math inline">\(\texttt{pdf}\)</span>。</th>
+class="math inline">\(\texttt{pdf}\)</span>。</td>
 </tr>
-</thead>
-<tbody>
 <tr>
 <td style="text-align: left;"><span
 class="math inline">\(\texttt{pdflatex}\)</span></td>
@@ -877,13 +900,13 @@ class="math inline">\(\texttt{lualatex}\)</span>
 <hr />
 <h2 id="参考文献">参考文献</h2>
 <p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
-2024. https://github.com/CTeX-org/lshort-zh-cn</p>
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>https://www.latex-project.org<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p><code>https://www.latex-project.org</code><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li
 id="fn2"><p>以单个字符作为命令的参数时，可以不加括号。例如，在数学环境下，<code>\frac12</code>
 和 <code>\frac&#123;1\&#125;\&#123;2&#125;</code> 的效果是一样的。<a href="#fnref2"
@@ -1028,8 +1051,8 @@ role="doc-backlink">↩︎</a></p></li>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/" rel="prev" title="$\LaTeX{}$ 之文档元素（三）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之文档元素（三）
+                <a href="/latex/04_LaTeX%E4%B9%8B%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" rel="prev" title="$\LaTeX{}$ 之数学公式（四）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之数学公式（四）
                 </a>
             </div>
             <div class="post-nav-item">
@@ -1066,13 +1089,13 @@ role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:40</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

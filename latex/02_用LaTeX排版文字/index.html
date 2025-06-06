@@ -39,8 +39,8 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173234392.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114174307171.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114180103541.png">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-04T17:14:23.956Z">
+<meta property="article:published_time" content="2025-01-01T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-06T03:09:21.357Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -173,7 +173,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -283,14 +283,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-02 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-02T05:12:18+08:00">2025-01-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-05 01:14:23" itemprop="dateModified" datetime="2025-06-05T01:14:23+08:00">2025-06-05</time>
+      <time title="修改时间：2025-06-06 11:09:21" itemprop="dateModified" datetime="2025-06-06T11:09:21+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -343,7 +343,8 @@ class="math inline">\(\texttt{CJK}\)</span>等）日渐退出舞台，<span
 class="math inline">\(\texttt{xelatex}\)</span> 和 <span
 class="math inline">\(\texttt{lualatex}\)</span> 编译命令配合 <span
 class="math inline">\(\texttt{ctex}\)</span>
-宏包/文档类的方式成为当前的主流中文排版支持方式。 <span id="more"></span></p>
+宏包/文档类的方式成为当前的主流中文排版支持方式。</p>
+<span id="more"></span>
 <hr />
 <h2 id="latex中的字符"><span
 class="math inline">\(\LaTeX{}\)</span>中的字符</h2>
@@ -353,22 +354,19 @@ class="math inline">\(\LaTeX{}\)</span>中的字符</h2>
 <code>\par</code>命令分段。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114165512239.png" alt="image-20250114165512239" style="zoom: 50%;" /></p>
 <h3 id="注释">注释</h3>
-<ol type="1">
+<ul>
 <li>用 %
 字符作为注释。在这个字符之后直到行末，所有的字符都被忽略，行末的换行符也不引入空格。</li>
-</ol>
-<p>texstudio快捷键 <code>Ctrl + T</code>
-快速注释/取消注释光标所在行。</p>
-<ol start="2" type="1">
+<li>texstudio快捷键 <code>Ctrl + T</code>
+快速注释/取消注释光标所在行。</li>
 <li><code>\iffalse</code> 和 <code>\fi</code>
 是一个常用的方法，适合注释大段文字或代码。</li>
-</ol>
+</ul>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\iffalse</span></span><br><span class="line">这里是被注释掉的内容。</span><br><span class="line">无论是文字、公式还是代码，都会被忽略。</span><br><span class="line"><span class="keyword">\fi</span></span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
+<ul>
 <li><code>comment</code>
-宏包提供了方便的注释方式，可以直接注释任意内容。</li>
-</ol>
-<p>在导言区引入宏包：<code>\usepackage&#123;comment&#125;</code></p>
+宏包提供了方便的注释方式，可以直接注释任意内容。在导言区引入宏包：<code>\usepackage&#123;comment&#125;</code></li>
+</ul>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;comment&#125;</span><br><span class="line">这里是大段注释内容。</span><br><span class="line">你可以注释多行文本或代码。</span><br><span class="line"><span class="keyword">\end</span>&#123;comment&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="特殊字符">特殊字符</h3>
 <p>以下字符有特殊用途，如 % 表示注释， $、^ 、_
@@ -428,14 +426,17 @@ tie，“带子”），通常用在<strong>英文人名、图表名称</strong>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114174307171.png" alt="image-20250114174307171" style="zoom:67%;" /></p>
 <h3 id="手动断行和断页">手动断行和断页</h3>
 <p>如果我们确实需要手动断行，可使用如下命令：</p>
-<p><code>\\[⟨length⟩] \\*[⟨length⟩]</code> <code>\newline</code></p>
+<p><code>\\[⟨length⟩]</code></p>
+<p><code>\\*[⟨length⟩]</code></p>
+<p><code>\newline</code></p>
 <p>它们有两点区别：一是 <code>\\</code>
-可以带可选参数<length>，用于在断行处向下增加垂直间距，而
+可以带可选参数<code>&lt;length&gt;</code>，用于在断行处向下增加垂直间距，而
 <code>\newline</code> 不带可选参数；二是 <code>\\</code>
 也在表格、公式等地方用于换行，而 <code>\newline</code>
 只用于文本段落中。带星号的 <code>\\</code> 表示禁止在断行处分页。</p>
 <p>断页的命令有两个：</p>
-<p><code>\newpage</code> <code>\clearpage</code></p>
+<p><code>\newpage</code></p>
+<p><code>\clearpage</code></p>
 <p>通常情况下两个命令都起到另起一页的作用，区别在于：第一，在双栏排版模式中
 <code>\newpage</code> 起到另起一栏的作用，<code>\clearpage</code>
 则能够另起一页；第二，在涉及浮动体的排版上行为不同。</p>
@@ -451,9 +452,10 @@ tie，“带子”），通常用在<strong>英文人名、图表名称</strong>
 意味着此处需要强行断行；<code>\nopagebreak</code> 或
 <code>\nopagebreak[4]</code>意味着禁止在此处断页。</p>
 <p>以上命令适合给出优先考虑断行断页/禁止断行断页的位置，但不适合直接拿来断行或断页，使用
-或 等命令是更好的选择。因为 <code>\newline</code> 和
-<code>\newpage</code> 会在断行/断页位置填充适当的间距，但
-<code>\linebreak</code> 和 <code>\pagebreak</code>
+<code>\newline</code> 或 <code>\newpage</code> 等命令是更好的选择。因为
+<code>\newline</code> 和 <code>\newpage</code>
+会在断行/断页位置填充适当的间距，但 <code>\linebreak</code> 和
+<code>\pagebreak</code>
 不能，使用这些命令强行断行/断页可能会制造出糟糕的排版效果，并导致 <span
 class="math inline">\(\LaTeX{}\)</span> 报 <span
 class="math inline">\(\texttt{Underfull \\hbox}\)</span> 等警告。</p>
@@ -467,7 +469,7 @@ class="math inline">\(\LaTeX{}\)</span>
 <hr />
 <h2 id="参考文献">参考文献</h2>
 <p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
-2024. https://github.com/CTeX-org/lshort-zh-cn</p>
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
@@ -601,8 +603,8 @@ class="math inline">\(\LaTeX{}\)</span>
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/latex/LaTeX%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8C%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" rel="next" title="">
-                   <i class="fa fa-angle-right"></i>
+                <a href="/latex/03_LaTeX%E4%B9%8B%E6%96%87%E6%A1%A3%E5%85%83%E7%B4%A0/" rel="next" title="$\LaTeX{}$ 之文档元素（三）">
+                  $\LaTeX{}$ 之文档元素（三） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -634,13 +636,13 @@ class="math inline">\(\LaTeX{}\)</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">44k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:40</span>
+    <span title="站点阅读时长">2:35</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动
