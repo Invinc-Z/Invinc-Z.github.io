@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX{}$ 之排版样式设定（五）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/05_layout_style/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250121100704497.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250121101016109.png">
@@ -51,8 +51,8 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125162309991.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125170414339.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125174255995.png">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:18:28.009Z">
+<meta property="article:published_time" content="2025-01-30T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-06T15:20:50.902Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -203,7 +203,7 @@
 宏包更改字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-ctex-%E5%AE%8F%E5%8C%85%E6%88%96%E6%96%87%E6%A1%A3%E7%B1%BB%E4%B8%AD%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93"><span class="nav-number">1.6.</span> <span class="nav-text">在 ctex
 宏包或文档类中更改中文字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-unicode-math-%E5%AE%8F%E5%8C%85%E9%85%8D%E7%BD%AE-unicode-%E6%95%B0%E5%AD%A6%E5%AD%97%E4%BD%93"><span class="nav-number">1.7.</span> <span class="nav-text">使用
 unicode-math 宏包配置 Unicode 数学字体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E8%A3%85%E9%A5%B0%E5%92%8C%E5%BC%BA%E8%B0%83"><span class="nav-number">2.</span> <span class="nav-text">文字装饰和强调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F%E5%92%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">3.</span> <span class="nav-text">段落格式和间距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E5%92%8C%E9%95%BF%E5%BA%A6%E5%8F%98%E9%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">长度和长度变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E8%B7%9D"><span class="nav-number">3.2.</span> <span class="nav-text">行距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">段落格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E9%97%B4%E8%B7%9D"><span class="nav-number">3.4.</span> <span class="nav-text">水平间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E9%97%B4%E8%B7%9D"><span class="nav-number">3.5.</span> <span class="nav-text">垂直间距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%92%8C%E5%88%86%E6%A0%8F"><span class="nav-number">4.</span> <span class="nav-text">页面和分栏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-geometry-%E5%AE%8F%E5%8C%85%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">利用 geometry
-宏包设置页面参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E7%9A%84%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="nav-number">4.2.</span> <span class="nav-text">页面内容的垂直对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%A0%8F"><span class="nav-number">4.3.</span> <span class="nav-text">分栏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A"><span class="nav-number">5.</span> <span class="nav-text">页眉页脚</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">基本的页眉页脚样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%94%B9%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">5.2.</span> <span class="nav-text">手动更改页眉页脚的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fancyhdr-%E5%AE%8F%E5%8C%85"><span class="nav-number">5.3.</span> <span class="nav-text">fancyhdr 宏包</span></a></li></ol></li></ol></div>
+宏包设置页面参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E7%9A%84%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="nav-number">4.2.</span> <span class="nav-text">页面内容的垂直对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%A0%8F"><span class="nav-number">4.3.</span> <span class="nav-text">分栏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A"><span class="nav-number">5.</span> <span class="nav-text">页眉页脚</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">基本的页眉页脚样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%94%B9%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">5.2.</span> <span class="nav-text">手动更改页眉页脚的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fancyhdr-%E5%AE%8F%E5%8C%85"><span class="nav-number">5.3.</span> <span class="nav-text">fancyhdr 宏包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -328,14 +328,14 @@ unicode-math 宏包配置 Unicode 数学字体</span></a></li></ol></li><li clas
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-31 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-31T05:12:18+08:00">2025-01-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:18:28" itemprop="dateModified" datetime="2025-06-03T20:18:28+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-06 23:20:50" itemprop="dateModified" datetime="2025-06-06T23:20:50+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -358,7 +358,7 @@ unicode-math 宏包配置 Unicode 数学字体</span></a></li></ol></li><li clas
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>5.4k</span>
+      <span>5.5k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -375,13 +375,12 @@ unicode-math 宏包配置 Unicode 数学字体</span></a></li></ol></li><li clas
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本章内容将一览如何修改 <span class="math inline">\(\LaTeX{}\)</span>
-的排版样式。 <span id="more"></span> # 05_<span
-class="math inline">\(\LaTeX{}\)</span> 之排版样式设定</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>本章内容将一览如何修改 <span class="math inline">\(\LaTeX{}\)</span>
-的排版样式。</p>
+的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。</p>
+<span id="more"></span>
+<hr />
 <h2 id="字体和字号">字体和字号</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 根据文档的逻辑结构（章节、脚注等）来选择默认的字体样式以及字号。需要更改字体样式或字号的话，可以使用
@@ -406,10 +405,10 @@ pt。</p>
 <code>\rmfamily</code> 那样。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250121102848593.png" alt="image-20250121102848593" style="zoom:67%;" /></p>
 <p><span class="math inline">\(\LaTeX{}\)</span> 还提供了一个基础的命令
-<code>\fontsize</code> 用于设定任意大小的字号： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fontsize</span>&#123;&lt;size&gt;&#125;&#123;&lt;base line-skip&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\fontsize</code> 用于设定任意大小的字号：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fontsize</span>&#123;&lt;size&gt;&#125;&#123;&lt;base line-skip&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><code>\fontsize</code> 用到两个参数，<code>&lt;size&gt;</code>
-为字号，<code>&lt;base lineskip&gt;</code> 为基础行距。表 <span
-class="math inline">\(\ref{tbl:ptsizes}\)</span>
+为字号，<code>&lt;base lineskip&gt;</code> 为基础行距。表 5.3
 中的命令也都各自设定了与字号对应的基础行距，大小为字号的 1.2
 倍。如果不是在导言区，<code>\fontsize</code> 的设定需要
 <code>\selectfont</code> 命令才能立即生效，而表 5.2
@@ -428,7 +427,8 @@ class="math inline">\(\texttt{T1}\)</span> 等。 默认使用兼容 plainTeX �
 class="math inline">\(\texttt{OT1}\)</span> 字体编码、<span
 class="math inline">\(\texttt{rmfamily}\)</span> 和 <span
 class="math inline">\(\texttt{sffamly}\)</span> 字体族下， <span
-class="math inline">\(\texttt&lt;\)</span> 和 $ $ 排版 <span
+class="math inline">\(\texttt&lt;\)</span> 和 <span
+class="math inline">\(\texttt&gt;\)</span> 排版 <span
 class="math inline">\(!\)</span> 和 <span
 class="math inline">\(¿\)</span>
 两个倒立的标点符号，正常的大于号和小于号可用命令
@@ -437,7 +437,8 @@ class="math inline">\(\texttt{ttfamily}\)</span>
 字体族下是正常的大于号和小于号）。扩展的 <span
 class="math inline">\(\texttt{T1}\)</span> 字体编码则更加靠近 ASCII
 文本编码，不会出现上述的大于号、小于号的问题。</p>
-<p>切换字体编码要用到 <code>fontenc</code> 宏包： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[T1]&#123;fontenc&#125;</span><br></pre></td></tr></table></figure></p>
+<p>切换字体编码要用到 <code>fontenc</code> 宏包：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[T1]&#123;fontenc&#125;</span><br></pre></td></tr></table></figure>
 <p>如果使用 <span class="math inline">\(\texttt{xelatex}\)</span>
 编译方式，并使用 <code>fontspec</code> 宏包调用 <span
 class="math inline">\(\texttt{ttf}\)</span> 或 <span
@@ -457,12 +458,13 @@ class="math inline">\(\texttt{.otf}\)</span> 格式字体(Linux 下的 TeXLive
 class="math inline">\(\texttt{lualatex}\)</span>
 命令下支持用户调用字体的宏包是
 <code>fontspec</code>。宏包提供了几个设置全局字体的命令，设置
-<code>\rmfamily</code> 等对应命令的默认字体： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;]</span><br></pre></td></tr></table></figure></p>
+<code>\rmfamily</code> 等对应命令的默认字体：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;]</span><br></pre></td></tr></table></figure>
 <p>其中 <code>&lt;font name&gt;</code>
 使用字体的文件名（带扩展名）或者字体的英文名称。<code>&lt;font features&gt;</code>
 用来手动配置对应的粗体或斜体，比如为 Windows 下的无衬线字体 Arial
-配置粗体和斜体（通常情况下自动检测并设置对应的粗体和斜体，无需手动指定）：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setsansfont</span>&#123;Arial&#125;[BoldFont=&#123;Arial Bold&#125;, ItalicFont=&#123;Arial Italic&#125;]</span><br></pre></td></tr></table></figure></p>
+配置粗体和斜体（通常情况下自动检测并设置对应的粗体和斜体，无需手动指定）：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setsansfont</span>&#123;Arial&#125;[BoldFont=&#123;Arial Bold&#125;, ItalicFont=&#123;Arial Italic&#125;]</span><br></pre></td></tr></table></figure>
 <p><code>&lt;font features&gt;</code>
 还能配置字体本身的各种特性，这里不再赘述，感兴趣的读者请参考
 <code>fontspec</code> 宏包的帮助文档。</p>
@@ -481,12 +483,13 @@ class="math inline">\(\texttt{xelatex}\)</span>
 编译时，这几个命令实际上由 <code>xeCJK</code> 宏包提供；使用 <span
 class="math inline">\(\texttt{lualatex}\)</span> 编译时，则是由
 <code>ctex</code> 宏包或文档类对 <code>luatexja</code>
-宏包提供的类似命令进行额外封装)。： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure></p>
+宏包提供的类似命令进行额外封装)。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure>
 <p>由于中文字体少有对应的粗体或斜体，<code>&lt;font features&gt;</code>
 里多用其他字体来配置，比如在 Windows 中设定基本字体为宋体，并设定对应的
 <span class="math inline">\(\texttt{BoldFont}\)</span> 为黑体， <span
-class="math inline">\(\texttt{ItalicFont}\)</span> 为楷体：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;SimSun&#125;[BoldFont=SimHei, ItalicFont=KaiTi]</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{ItalicFont}\)</span> 为楷体：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;SimSun&#125;[BoldFont=SimHei, ItalicFont=KaiTi]</span><br></pre></td></tr></table></figure>
 <h3 id="使用-unicode-math-宏包配置-unicode-数学字体">使用
 <code>unicode-math</code> 宏包配置 Unicode 数学字体</h3>
 <p>Unicode 数学字体是一类 OpenType 字体，包含了 Unicode
@@ -496,15 +499,18 @@ class="math inline">\(\texttt{lualatex}\)</span> 编译命令下，借助
 <code>unicode-math</code> 宏包可以调用 Unicode
 数学字体配置数学公式的字体风格。</p>
 <p>在导言区使用<code>\usepackage&#123;unicode-math&#125;</code> 后，使用
-<code>\setmathfont</code> 命令即可： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmathfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure></p>
+<code>\setmathfont</code> 命令即可：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmathfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure>
 <p>绝大多数时候，只需要给定字体名称 <code>&lt;font name&gt;</code>
 即可。Unicode 数学字体相比于正文字体的选择余地不多。下表
 给出了较为常用的 Unicode 数学字体。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125120819345.png" alt="image-20250125120819345" style="zoom:67%;" /></p>
+<hr />
 <h2 id="文字装饰和强调">文字装饰和强调</h2>
 <p>强调文字的方法，或者是添加下划线等装饰物，或者是改变文字的字体。</p>
 <p><span class="math inline">\(\LaTeX{}\)</span> 定义了
-<code>\underline</code> 命令用来为文字添加下划线： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">An <span class="keyword">\underline</span>&#123;underlined&#125; text.</span><br></pre></td></tr></table></figure></p>
+<code>\underline</code> 命令用来为文字添加下划线：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">An <span class="keyword">\underline</span>&#123;underlined&#125; text.</span><br></pre></td></tr></table></figure>
 <p><span class="math display">\[
 An \  \underline{underlined} \  text.
 \]</span></p>
@@ -515,8 +521,10 @@ An \  \underline{underlined} \  text.
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125121752045.png" alt="image-20250125121752045" style="zoom:67%;" /></p>
 <p>前一节介绍了 <code>\emph</code>
 命令，它将文字变为斜体以示强调，而如果在已强调的文字中嵌套使用
-<code>\emph</code> 命令，命令内则使用直立体文字： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Some <span class="keyword">\emph</span>&#123;emphasized words,</span><br><span class="line">including <span class="keyword">\emph</span>&#123;double-emphasized&#125;</span><br><span class="line">words&#125;, are shown here.</span><br></pre></td></tr></table></figure></p>
+<code>\emph</code> 命令，命令内则使用直立体文字：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Some <span class="keyword">\emph</span>&#123;emphasized words,</span><br><span class="line">including <span class="keyword">\emph</span>&#123;double-emphasized&#125;</span><br><span class="line">words&#125;, are shown here.</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125121906215.png" alt="image-20250125121906215" style="zoom:67%;" /></p>
+<hr />
 <h2 id="段落格式和间距">段落格式和间距</h2>
 <h3 id="长度和长度变量">长度和长度变量</h3>
 <p>在本节首先统一介绍长度和长度变量。长度的数值
@@ -534,13 +542,16 @@ class="math inline">\(\texttt{0pt plus 5pt}\)</span>。</p>
 <p>长度的数值还可以用长度变量本身或其倍数来表达，如 <span
 class="math inline">\(\texttt{2.5\\parindent}\)</span> 等。</p>
 <p><span class="math inline">\(\LaTeX{}\)</span>
-预定义了大量的长度变量用于控制版面格式。如页面宽度和高度、首行缩进、段落间距等。如果需要自定义长度变量，需使用如下命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\newlength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>长度变量可以用 赋值，或用 增加长度： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;&#123;&lt;length&gt;&#125; </span><br><span class="line"><span class="keyword">\addtolength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+预定义了大量的长度变量用于控制版面格式。如页面宽度和高度、首行缩进、段落间距等。如果需要自定义长度变量，需使用如下命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\newlength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>长度变量可以用 <code>\setlength</code> 赋值，或用
+<code>\addtolength</code> 增加长度：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;&lt;length command&gt;&#125;&#123;&lt;length&gt;&#125; </span><br><span class="line"><span class="keyword">\addtolength</span>&#123;&lt;length command&gt;&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="行距">行距</h3>
-<p>前文中我们提到过 <code>\fontsize</code>
+<p>前文中提到过 <code>\fontsize</code>
 命令可以为字号设定对应的行距，但很少那么用。更常用的办法是在导言区使用
-<code>\linespread</code> 命令。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\linespread</span>&#123;&lt;factor&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\linespread</code> 命令。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\linespread</span>&#123;&lt;factor&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>&lt;factor&gt;</code>
 作用于基础行距而不是字号。缺省的基础行距是 1.2 倍字号大小（参考
 <code>\fontsize</code> 命令），因此使用 <code>\linespread&#123;1.5&#125;</code>
@@ -553,10 +564,11 @@ class="math inline">\(\texttt{2.5\\parindent}\)</span> 等。</p>
 <code>\par</code> 命令的位置：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125130826941.png" alt="image-20250125130826941" style="zoom:67%;" /></p>
 <h3 id="段落格式">段落格式</h3>
-<p>以下长度分别为段落的左缩进、右缩进和首行缩进： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\leftskip</span>&#125;&#123;&lt;length&gt;&#125;  </span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\rightskip</span>&#125;&#123;&lt;length&gt;&#125;</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parindent</span>&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以下长度分别为段落的左缩进、右缩进和首行缩进：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\leftskip</span>&#125;&#123;&lt;length&gt;&#125;  </span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\rightskip</span>&#125;&#123;&lt;length&gt;&#125;</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parindent</span>&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>它们和设置行距的命令一样，在分段时生效。</p>
 <p>控制段落缩进的命令为：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\cmd</span>&#123;indent&#125; </span><br><span class="line"><span class="keyword">\cmd</span>&#123;noindent&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\indent</span></span><br><span class="line"><span class="keyword">\noindent</span></span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 默认在段落开始时缩进，长度为用上述命令设置的
 <code>parindent</code>。如果需要在某一段不缩进，可在段落开头使用<code>\noindent</code>
@@ -570,7 +582,8 @@ class="math inline">\(\texttt{2.5\\parindent}\)</span> 等。</p>
 <code>indentfirst</code> 宏包，令第一段的首行缩进照常。</p>
 <p>段落间的垂直间距为 <code>parskip</code>，如设置段落间距在 <span
 class="math inline">\(\texttt{0.8ex}\)</span> 到 <span
-class="math inline">\(\texttt{1.5ex}\)</span> 变动： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parskip</span>&#125;&#123;1ex plus 0.5ex minus 0.2ex&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{1.5ex}\)</span> 变动：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parskip</span>&#125;&#123;1ex plus 0.5ex minus 0.2ex&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="水平间距">水平间距</h3>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 默认为将单词之间的“空格”转化为水平间距。如果需要在文中手动插入额外的水平间距，可使用
@@ -619,6 +632,7 @@ class="math inline">\(\texttt{0pt plus 1pt}\)</span>。</p>
 还提供了<code>\bigskip</code>, <code>\medskip</code>,
 <code>\smallskip</code> 来增加预定义长度的垂直间距。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250125161301100.png" alt="image-20250125161301100" style="zoom:67%;" /></p>
+<hr />
 <h2 id="页面和分栏">页面和分栏</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 允许用户通过为文档类指定选项来控制纸张的大小，包括 <span
@@ -649,18 +663,20 @@ class="math inline">\(\texttt{dvipdfmx}\)</span>；<span
 class="math inline">\(\texttt{pdflatex}\)</span> 和 <span
 class="math inline">\(\texttt{xelatex}\)</span> 编译命令下不需要。</p>
 <p>既可以调用 <code>geometry</code> 宏包，然后用其提供的
-<code>\geometry</code>命令设置页面参数： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;geometry&#125;</span><br><span class="line"><span class="keyword">\geometry</span>&#123;&lt;eometry-settings&gt;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>也可以直接在宏包选项中设置： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[&lt;geometry-settings&gt;]&#123;geometry&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\geometry</code>命令设置页面参数：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;geometry&#125;</span><br><span class="line"><span class="keyword">\geometry</span>&#123;&lt;eometry-settings&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以直接在宏包选项中设置：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[&lt;geometry-settings&gt;]&#123;geometry&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>&lt;geometry-settings&gt;</code> 多以
 <code>&lt;key&gt;=&lt;value&gt;</code> 的形式组织。</p>
 <p>比如，符合 Microsoft Word 习惯的页面设定是 A4 纸张，上下边距 1
 英寸，左右边距 1.25
 英寸，于是我们可以通过如下两种等效的方式之一设定页边距：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;a4paper,left=1.25in,right=1.25in,top=1in,bottom=1in&#125;</span><br><span class="line"><span class="comment">% or like this:</span></span><br><span class="line"><span class="keyword">\geometry</span>&#123;a4paper,hmargin=1.25in,vmargin=1in&#125;</span><br></pre></td></tr></table></figure>
-<p>又比如，需要设定周围的边距一致为 1.25 英寸，可以用更简单的语法：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;margin=1.25in&#125;</span><br></pre></td></tr></table></figure></p>
-<p>对于书籍等双面文档，习惯上奇数页右边、偶数页左边留出较大的页边距，而靠近书脊一侧的奇数页左边、偶数页右边页边距较小。可以这样设定：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;inner=1in,outer=1.25in&#125;</span><br></pre></td></tr></table></figure></p>
+<p>又比如，需要设定周围的边距一致为 1.25 英寸，可以用更简单的语法：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;margin=1.25in&#125;</span><br></pre></td></tr></table></figure>
+<p>对于书籍等双面文档，习惯上奇数页右边、偶数页左边留出较大的页边距，而靠近书脊一侧的奇数页左边、偶数页右边页边距较小。可以这样设定：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;inner=1in,outer=1.25in&#125;</span><br></pre></td></tr></table></figure>
 <p>需要指出的是，通过 <code>geometry</code> 宏包设置的纸张大小是输出 PDF
 文件的真实大小，而在文档类选项中设置的参数实际上只影响输出区域。<code>geometry</code>
 宏包还能够修改页眉页脚高度、边注宽度等参数，并且能比较好地处理各参数之间的依赖关系。更详细的用法不再赘述，感兴趣的用户可查阅其帮助文档。</p>
@@ -670,15 +686,17 @@ class="math inline">\(\texttt{xelatex}\)</span> 编译命令下不需要。</p>
 <span class="math inline">\(\texttt{Underfull \\vbox}\)</span>
 警告。<span class="math inline">\(\LaTeX{}\)</span>
 还提供了另一种策略：将页面内容向顶部对齐，给底部留出高度不一的空白。</p>
-<p>以下命令分别令页面在垂直方向向顶部对齐/分散对齐： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\raggedbottom</span></span><br><span class="line"><span class="keyword">\flushbottom</span></span><br></pre></td></tr></table></figure></p>
+<p>以下命令分别令页面在垂直方向向顶部对齐/分散对齐：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\raggedbottom</span></span><br><span class="line"><span class="keyword">\flushbottom</span></span><br></pre></td></tr></table></figure>
 <h3 id="分栏">分栏</h3>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 支持简单的单栏或双栏排版。标准文档类的全局选项 <span
 class="math inline">\(\texttt{onecolumn}\)</span>、<span
 class="math inline">\(\texttt{twocolumn}\)</span>
 可控制全文分单栏或双栏排版。<span
-class="math inline">\(\LaTeX{}\)</span> 也提供了切换单/双栏排版的命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\onecolumn</span></span><br><span class="line"><span class="keyword">\twocolumn</span>[&lt;one-column top material&gt;]</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\LaTeX{}\)</span>
+也提供了切换单/双栏排版的命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\onecolumn</span></span><br><span class="line"><span class="keyword">\twocolumn</span>[&lt;one-column top material&gt;]</span><br></pre></td></tr></table></figure>
 <p><code>\twocolumn</code>
 支持带一个可选参数，用于排版双栏之上的一部分单栏内容。</p>
 <p>切换单/双栏排版时总是会另起一页（<code>\clearpage</code>）。在双栏模式下使用
@@ -690,7 +708,8 @@ class="math inline">\(\LaTeX{}\)</span> 也提供了切换单/双栏排版的命
 <code>\columnseprule</code>，默认为零，也就是看不到竖线。</p>
 <p>一个比较好用的分栏解决方案是 <code>multicol</code>，它提供了简单的
 <span class="math inline">\(\texttt{multicols}\)</span>
-环境自动产生分栏，如以下环境将内容分为 3 栏： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;multicols&#125;&#123;3&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">\end</span>&#123;multicols&#125;</span><br></pre></td></tr></table></figure></p>
+环境自动产生分栏，如以下环境将内容分为 3 栏：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;multicols&#125;&#123;3&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">\end</span>&#123;multicols&#125;</span><br></pre></td></tr></table></figure>
 <p><code>multicol</code>
 宏包能够在一页之中切换单栏/多栏，也能处理跨页的分栏，且各栏的高度分布平衡。但代价是<strong>在
 <span class="math inline">\(\texttt{multicols}\)</span>
@@ -701,10 +720,12 @@ class="math inline">\(\LaTeX{}\)</span> 也提供了切换单/双栏排版的命
 和 <span class="math inline">\(\texttt{figure*}\)</span> 环境，或者用
 <code>float</code> 宏包提供的 <span
 class="math inline">\(\texttt{H}\)</span> 参数固定浮动体的位置。</p>
+<hr />
 <h2 id="页眉页脚">页眉页脚</h2>
 <h3 id="基本的页眉页脚样式">基本的页眉页脚样式</h3>
 <p><span class="math inline">\(\LaTeX{}\)</span> 中提供了命令
-<code>\pagestyle</code> 来修改页眉页脚的样式： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\pagestyle</code> 来修改页眉页脚的样式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>命令 <code>\thispagestyle</code> 只影响当页的页眉页脚样式：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\thispagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><code>&lt;page-style&gt;</code> 参数为样式的名称，在 <span
@@ -746,8 +767,8 @@ class="math inline">\(\texttt{book}\)</span> 文档类的
 <span class="math inline">\(\texttt{myheadings}\)</span> 样式，<span
 class="math inline">\(\LaTeX{}\)</span>
 允许用户使用命令手动修改页眉上面的内容，特别是因为使用了
-<code>\chapter*</code> 等命令而无法自动生成页眉页脚的情况：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\markright</span>&#123;&lt;right-mark&gt;&#125;</span><br><span class="line"><span class="keyword">\markboth</span>&#123;&lt;left-mark&gt;&#125;&#123;&lt;right-mark&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\chapter*</code> 等命令而无法自动生成页眉页脚的情况：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\markright</span>&#123;&lt;right-mark&gt;&#125;</span><br><span class="line"><span class="keyword">\markboth</span>&#123;&lt;left-mark&gt;&#125;&#123;&lt;right-mark&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>在双面排版、<span class="math inline">\(\texttt{headings}\)</span> 或
 <span class="math inline">\(\texttt{myheadings}\)</span>
 页眉页脚样式下，<code>&lt;left-mark&gt;</code> 和
@@ -791,6 +812,10 @@ O（奇数页）/ E（偶数页）字母的组合。<code>\fancyhf</code>
 class="math inline">\(\texttt{plain}\)</span> 等：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 自定义 myfancy 样式</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;myfancy&#125;&#123;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\fancyhf</span>&#123;&#125;</span><br><span class="line">  <span class="keyword">\fancyhead</span>&#123;...&#125;</span><br><span class="line">  <span class="keyword">\fancyfoot</span>&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">% 使用样式</span></span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;myfancy&#125;</span><br></pre></td></tr></table></figure>
 <p>更多用法请参考 <code>fancyhdr</code> 宏包的帮助文档。</p>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
@@ -929,13 +954,13 @@ class="math inline">\(\texttt{plain}\)</span> 等：</p>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/notes_lshort/07_graphic/" rel="prev" title="$\LaTeX{}$ 之绘图功能（七）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之绘图功能（七）
+                <a href="/notes_lshort/symbol_table/" rel="prev" title="$\LaTeX{}$ 之符号表">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之符号表
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/notes_lshort/01_basic_concepts/" rel="next" title="$\LaTeX{}$ 的基本概念（一）">
-                  $\LaTeX{}$ 的基本概念（一） <i class="fa fa-angle-right"></i>
+                <a href="/notes_lshort/06_special/" rel="next" title="$\LaTeX{}$ 之特色工具和功能（六）">
+                  $\LaTeX{}$ 之特色工具和功能（六） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
