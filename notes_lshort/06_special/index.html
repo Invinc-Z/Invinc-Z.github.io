@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本文介绍一些特色的 \(\LaTeX{}\) 辅助功能。前两个功能 \(\texttt{BibTeX}\) 和 \(\texttt{makeindex}\) 依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则令我们生成美观易用的电子文档。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本文介绍一些特色的 \(\LaTeX{}\) 辅助功能。前两个功能 \(\texttt{BibTeX}\) 和 \(\texttt{makeindex}\) 依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则生成美观易用的电子文档。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX{}$ 之特色工具和功能（六）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/06_special/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本文介绍一些特色的 \(\LaTeX{}\) 辅助功能。前两个功能 \(\texttt{BibTeX}\) 和 \(\texttt{makeindex}\) 依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则令我们生成美观易用的电子文档。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本文介绍一些特色的 \(\LaTeX{}\) 辅助功能。前两个功能 \(\texttt{BibTeX}\) 和 \(\texttt{makeindex}\) 依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则生成美观易用的电子文档。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250126152050667.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250422160552215.png">
@@ -41,7 +41,7 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128001606010.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128002508111.png">
 <meta property="article:published_time" content="2025-02-05T21:12:18.000Z">
-<meta property="article:modified_time" content="2025-06-06T15:22:02.897Z">
+<meta property="article:modified_time" content="2025-06-06T16:06:08.018Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -190,7 +190,7 @@
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%92%8C-textttbibtex-%E5%B7%A5%E5%85%B7"><span class="nav-number">1.</span> <span class="nav-text">参考文献和 \(\texttt{BibTeX}\) 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%92%8C%E5%BC%95%E7%94%A8"><span class="nav-number">1.1.</span> <span class="nav-text">基本的参考文献和引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textttbibtex-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">\(\texttt{BibTeX}\) 数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textttbibtex-%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text">\(\texttt{BibTeX}\) 样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-textttbibtex-%E6%8E%92%E7%89%88%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">1.4.</span> <span class="nav-text">使用 \(\texttt{BibTeX}\) 排版参考文献</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textttnatbib-%E5%AE%8F%E5%8C%85"><span class="nav-number">1.5.</span> <span class="nav-text">\(\texttt{natbib}\) 宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textttbiblatex-%E5%AE%8F%E5%8C%85"><span class="nav-number">1.6.</span> <span class="nav-text">\(\texttt{biblatex}\) 宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84%E5%92%8C-biblatex-%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="nav-number">1.6.1.</span> <span class="nav-text">文档结构和 biblatex
 相关命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E6%96%B9%E5%BC%8F"><span class="nav-number">1.6.2.</span> <span class="nav-text">编译方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#biblatex-%E6%A0%B7%E5%BC%8F%E5%92%8C%E5%85%B6%E5%AE%83%E9%80%89%E9%A1%B9"><span class="nav-number">1.6.3.</span> <span class="nav-text">biblatex
-样式和其它选项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E5%92%8C-textrmmakeindex-%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">索引和 \(\textrm{makeindex}\) 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-textrmmakeindex-%E5%B7%A5%E5%85%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">使用 \(\textrm{makeindex}\) 工具的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E9%A1%B9%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">索引项的写法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%A2%9C%E8%89%B2"><span class="nav-number">3.</span> <span class="nav-text">使用颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E7%9A%84%E8%A1%A8%E8%BE%BE%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">颜色的表达方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%87%E6%9C%AC%E5%92%8C%E7%9B%92%E5%AD%90"><span class="nav-number">3.2.</span> <span class="nav-text">带颜色的文本和盒子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">使用超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hyperref-%E5%AE%8F%E5%8C%85"><span class="nav-number">4.1.</span> <span class="nav-text">hyperref 宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">4.2.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdf-%E4%B9%A6%E7%AD%BE"><span class="nav-number">4.3.</span> <span class="nav-text">PDF 书签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdf-%E6%96%87%E6%A1%A3%E5%B1%9E%E6%80%A7"><span class="nav-number">4.4.</span> <span class="nav-text">PDF 文档属性</span></a></li></ol></li></ol></div>
+样式和其它选项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E5%92%8C-textrmmakeindex-%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">索引和 \(\textrm{makeindex}\) 工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-textrmmakeindex-%E5%B7%A5%E5%85%B7%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">使用 \(\textrm{makeindex}\) 工具的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95%E9%A1%B9%E7%9A%84%E5%86%99%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">索引项的写法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%A2%9C%E8%89%B2"><span class="nav-number">3.</span> <span class="nav-text">使用颜色</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%9C%E8%89%B2%E7%9A%84%E8%A1%A8%E8%BE%BE%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">颜色的表达方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%87%E6%9C%AC%E5%92%8C%E7%9B%92%E5%AD%90"><span class="nav-number">3.2.</span> <span class="nav-text">带颜色的文本和盒子</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">4.</span> <span class="nav-text">使用超链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hyperref-%E5%AE%8F%E5%8C%85"><span class="nav-number">4.1.</span> <span class="nav-text">hyperref 宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">4.2.</span> <span class="nav-text">超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdf-%E4%B9%A6%E7%AD%BE"><span class="nav-number">4.3.</span> <span class="nav-text">PDF 书签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdf-%E6%96%87%E6%A1%A3%E5%B1%9E%E6%80%A7"><span class="nav-number">4.4.</span> <span class="nav-text">PDF 文档属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -339,7 +339,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-06 23:22:02" itemprop="dateModified" datetime="2025-06-06T23:22:02+08:00">2025-06-06</time>
+      <time title="修改时间：2025-06-07 00:06:08" itemprop="dateModified" datetime="2025-06-07T00:06:08+08:00">2025-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -369,7 +369,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>18 分钟</span>
+      <span>19 分钟</span>
     </span>
 </div>
 
@@ -385,7 +385,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 辅助功能。前两个功能 <span
 class="math inline">\(\texttt{BibTeX}\)</span> 和 <span
 class="math inline">\(\texttt{makeindex}\)</span>
-依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则令我们生成美观易用的电子文档。</p>
+依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则生成美观易用的电子文档。</p>
 <span id="more"></span>
 <hr />
 <h2 id="参考文献和-textttbibtex-工具">参考文献和 <span
@@ -397,14 +397,15 @@ class="math inline">\(\texttt{BibTeX}\)</span> 工具</h2>
 <code>\cite</code> 命令用于在正文中引用参考文献：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\cite</span>&#123;&lt;citation&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><code>&lt;citation&gt;</code> 为引用的参考文献的标签，类似
-<code>\ref</code>
-里的参数；<code>\cite</code>带一个可选参数，为引用的编号后加上额外的内容，如
+<code>\ref</code> 里的参数；<code>\cite</code>
+带一个可选参数，为引用的编号后加上额外的内容，如
 <code>\cite[page 22]&#123;Paper2013&#125;</code>可能得到形如
 <code>[13, page 22]</code> 这样的引用。</p>
 <p>参考文献由 <span
 class="math inline">\(\texttt{thebibliography}\)</span>
 环境包裹。每条参考文献由 <code>\bibitem</code>
-开头，其后是参考文献本身的内容： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;thebibliography&#125;&#123;&lt;widest label&gt;&#125;</span><br><span class="line">	<span class="keyword">\bibitem</span>[&lt;item number&gt;&#125;&#123;&lt;citation&gt;&#125; ...</span><br><span class="line"><span class="keyword">\end</span>&#123;thebibliography&#125;</span><br></pre></td></tr></table></figure></p>
+开头，其后是参考文献本身的内容：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;thebibliography&#125;&#123;&lt;widest label&gt;&#125;</span><br><span class="line">	<span class="keyword">\bibitem</span>[&lt;item number&gt;&#125;&#123;&lt;citation&gt;&#125; ...</span><br><span class="line"><span class="keyword">\end</span>&#123;thebibliography&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>&lt;citation&gt;</code> 是 <code>\cite</code>
 使用的文献标签，<code>&lt;item number&gt;</code>
 自定义参考文献的序号，如果省略，则按自然排序给定序号。<code>&lt;widest label&gt;</code>
@@ -420,7 +421,8 @@ class="math inline">\(\texttt{book}\)</span>
 class="math inline">\(\texttt{“Bibliography”}\)</span>。</p>
 <p>以下为一个使用 <span
 class="math inline">\(\texttt{thebibliography}\)</span>
-排版参考文献的例子： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;Introduction&#125;</span><br><span class="line">Partl~<span class="keyword">\cite</span>&#123;germenTeX&#125; has proposed that <span class="keyword">\ldots</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;thebibliography&#125;&#123;99&#125;</span><br><span class="line"><span class="keyword">\bibitem</span>&#123;germenTeX&#125; H.~Partl: <span class="keyword">\emph</span>&#123;German <span class="keyword">\TeX</span>&#125;,</span><br><span class="line">  TUGboat Volume~9, Issue~1 (1988)</span><br><span class="line"><span class="keyword">\end</span>&#123;thebibliography&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure></p>
+排版参考文献的例子：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;Introduction&#125;</span><br><span class="line">Partl~<span class="keyword">\cite</span>&#123;germenTeX&#125; has proposed that <span class="keyword">\ldots</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;thebibliography&#125;&#123;99&#125;</span><br><span class="line"><span class="keyword">\bibitem</span>&#123;germenTeX&#125; H.~Partl: <span class="keyword">\emph</span>&#123;German <span class="keyword">\TeX</span>&#125;,</span><br><span class="line">  TUGboat Volume~9, Issue~1 (1988)</span><br><span class="line"><span class="keyword">\end</span>&#123;thebibliography&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="textttbibtex-数据库"><span
 class="math inline">\(\texttt{BibTeX}\)</span> 数据库</h3>
 <p><span class="math inline">\(\texttt{BibTeX}\)</span>
@@ -485,7 +487,8 @@ class="math inline">\(\textrm{series}\)</span>, <span
 class="math inline">\(\textrm{address}\)</span> 等。</li>
 </ul>
 <p>例如 <span class="math inline">\(\texttt{article}\)</span>
-类别的参考文献数据条目写法如下： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@article&#123;Alice13,</span><br><span class="line">  title = &#123;Demostration of bibliography items&#125;,</span><br><span class="line">  author = &#123;Alice Axford and Bob Birkin and Charlie Copper and Danny Dannford&#125;,</span><br><span class="line">  year = &#123;2013&#125;,</span><br><span class="line">  month = &#123;Mar&#125;,</span><br><span class="line">  journal = &#123;Journal of <span class="keyword">\TeX</span> perts&#125;,</span><br><span class="line">  volume = &#123;36&#125;,</span><br><span class="line">  number = &#123;7&#125;,</span><br><span class="line">  pages = &#123;114-120&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+类别的参考文献数据条目写法如下：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@article&#123;Alice13,</span><br><span class="line">  title = &#123;Demostration of bibliography items&#125;,</span><br><span class="line">  author = &#123;Alice Axford and Bob Birkin and Charlie Copper and Danny Dannford&#125;,</span><br><span class="line">  year = &#123;2013&#125;,</span><br><span class="line">  month = &#123;Mar&#125;,</span><br><span class="line">  journal = &#123;Journal of <span class="keyword">\TeX</span> perts&#125;,</span><br><span class="line">  volume = &#123;36&#125;,</span><br><span class="line">  number = &#123;7&#125;,</span><br><span class="line">  pages = &#123;114-120&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>多数时候，我们无需自己手写 <span
 class="math inline">\(\texttt{BibTeX}\)</span> 文献条目。从 Google
 Scholar 或者期刊/数据库的网站上都能够导出 <span
@@ -493,8 +496,7 @@ class="math inline">\(\texttt{BibTeX}\)</span>文献条目，老牌的文献管�
 EndNote 也支持生成 <span class="math inline">\(\texttt{BibTeX}\)</span>
 格式的数据库。开源软件 JabRef 甚至支持 <span
 class="math inline">\(\texttt{BibTeX}\)</span>
-文献条目的导入、导出和管理。</p>
-<p><strong>==从谷歌学术镜像获取bib==</strong></p>
+文献条目的导入、导出和管理。下面是<strong>从谷歌学术镜像获取bib</strong>的步骤：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250422160552215.png" alt="image-20250422160552215" style="zoom:50%;" /></p>
 <h3 id="textttbibtex-样式"><span
 class="math inline">\(\texttt{BibTeX}\)</span> 样式</h3>
@@ -541,7 +543,8 @@ class="math inline">\(\texttt{BibTeX}\)</span>
 命令；而 <code>\nocite&#123;*&#125;</code> 则让所有未被引用的文献都列出。</p></li>
 <li><p>再次，在需要列出参考文献的位置，使用<code>\bibliography</code>
 命令代替 <span class="math inline">\(\texttt{thebibliography}\)</span>
-环境： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\bibliography</span>&#123;&lt;bib-name&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+环境：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\bibliography</span>&#123;&lt;bib-name&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>其中<code>&lt;bib-name&gt;</code> 是 <span
 class="math inline">\(\texttt{BibTeX}\)</span>
 数据库的文件名，<strong>不要带 <span
@@ -568,7 +571,8 @@ class="math inline">\(\texttt{bibtex}\)</span> 命令处理完毕后会生成
 <span class="math inline">\(\texttt{demo.tex}\)</span>
 编译<strong>两遍</strong>，读入参考文献并正确生成引用。</li>
 </ol>
-<p>整个过程使用的命令如下（可以略去扩展名）： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xelatex demo</span><br><span class="line">bibtex demo</span><br><span class="line">xelatex demo</span><br><span class="line">xelatex demo</span><br></pre></td></tr></table></figure></p>
+<p>整个过程使用的命令如下（可以略去扩展名）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xelatex demo</span><br><span class="line">bibtex demo</span><br><span class="line">xelatex demo</span><br><span class="line">xelatex demo</span><br></pre></td></tr></table></figure>
 <p>使用 <span class="math inline">\(\texttt{latex + dvipdfmx}\)</span>
 命令编译时，则 <span class="math inline">\(\texttt{dvipdfmx}\)</span>
 命令放在最后，相当于先后使用<span
@@ -584,7 +588,8 @@ class="math inline">\({Axford~et~al.},
 2013\)</span>)。<code>natbib</code>
 宏包提供了对这种“自然”引用方式的处理。</p>
 <p>除了 <code>\cite</code> 之外，<code>natbib</code>
-宏包在正文中支持两种引用方式： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\citep</span>&#123;&lt;citation&gt;&#125; </span><br><span class="line"><span class="keyword">\citet</span>&#123;&lt;citation&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+宏包在正文中支持两种引用方式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\citep</span>&#123;&lt;citation&gt;&#125; </span><br><span class="line"><span class="keyword">\citet</span>&#123;&lt;citation&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>它们分别生成形如(<span class="math inline">\(Axford~et~al.,
 2013\)</span>) 和 <span class="math inline">\(Axford~et~al.
 (2013)\)</span> 的人名——年份引用。正确排版人名——年份引用还依赖于特定的
@@ -692,6 +697,7 @@ class="math inline">\(\texttt{trad-plain}\)</span> 和 $。</li>
 风格的样式，著录按顺序编码排版。另外还包括按作者—年份顺序排版著录的样式
 <span class="math inline">\(\texttt{ieee-alphabetic}\)</span>。</li>
 </ul>
+<hr />
 <h2 id="索引和-textrmmakeindex-工具">索引和 <span
 class="math inline">\(\textrm{makeindex}\)</span> 工具</h2>
 <p>书籍和大文档通常用索引来归纳关键词，方便用户查阅。<span
@@ -704,7 +710,8 @@ class="math inline">\(\textrm{makeindex}\)</span> 工具的方法</h3>
 class="math inline">\(\texttt{demo.tex}\)</span>）：</p>
 <p>第一步，在 <span class="math inline">\(\LaTeX{}\)</span>
 源代码的导言区调用 <code>makeidx</code> 宏包，并使用
-<code>\makeindex</code> 命令开启索引的收集： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;makeidx&#125;</span><br><span class="line"><span class="keyword">\makeindex</span></span><br></pre></td></tr></table></figure></p>
+<code>\makeindex</code> 命令开启索引的收集：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;makeidx&#125;</span><br><span class="line"><span class="keyword">\makeindex</span></span><br></pre></td></tr></table></figure>
 <p>第二步，在正文中需要索引的地方使用 <code>\index</code>
 命令。在需要输出索引的地方（如所有章节之后）使用
 <code>\printindex</code> 命令。</p>
@@ -722,7 +729,8 @@ class="math inline">\(\texttt{demo.idx}\)</span>，生成用于排版的索引�
 class="math inline">\(\texttt{demo.tex}\)</span>，正确生成索引列表。</li>
 </ol>
 <h3 id="索引项的写法">索引项的写法</h3>
-<p>添加索引项的命令为： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\index</span>&#123;&lt;index entry&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>添加索引项的命令为：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\index</span>&#123;&lt;index entry&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>其中 <code>&lt;index entry&gt;</code> 为索引项，写法由 下表
 汇总。其中 <span class="math inline">\(\texttt!\)</span>、<span
 class="math inline">\(\texttt @\)</span> 和 <span
@@ -734,14 +742,17 @@ class="math inline">\(\texttt{&quot;&quot;}\)</span>
 才能输出到索引项。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250127204208420.png" alt="image-20250127204208420" style="zoom:67%;" /></p>
 <p>读者可以钻研一下以下给出的一个较为复杂的，结合多级索引、索引格式、页码格式等的用法示例。但在自己使用时，最好还是遵循“简单的就是最好的”原则，尽量使用
-上表 中的写法。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Test index.</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;|(textbf&#125;</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;!sub@&quot;|sub&quot;||see&#123;Test&#125;&#125;</span><br><span class="line"><span class="keyword">\newpage</span></span><br><span class="line">Test index.</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;|)textbf&#125;</span><br></pre></td></tr></table></figure></p>
+上表 中的写法。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Test index.</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;|(textbf&#125;</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;!sub@&quot;|sub&quot;||see&#123;Test&#125;&#125;</span><br><span class="line"><span class="keyword">\newpage</span></span><br><span class="line">Test index.</span><br><span class="line"><span class="keyword">\index</span>&#123;Test@<span class="keyword">\textsf</span>&#123;&quot;&quot;Test&#125;|)textbf&#125;</span><br></pre></td></tr></table></figure>
+<hr />
 <h2 id="使用颜色">使用颜色</h2>
 <p>原始的 <span class="math inline">\(\LaTeX{}\)</span>
 不支持使用各种颜色。<code>color</code> 宏包或者 <code>xcolor</code>
 宏包提供了对颜色的支持，给 PDF 输出生成颜色的特殊指令。</p>
 <h3 id="颜色的表达方式">颜色的表达方式</h3>
 <p>调用 <code>color</code> 或 <code>xcolor</code>
-宏包后，我们就可以用如下命令切换颜色： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\color</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;</span><br><span class="line"><span class="keyword">\color</span>&#123;&lt;color-name&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+宏包后，我们就可以用如下命令切换颜色：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\color</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;</span><br><span class="line"><span class="keyword">\color</span>&#123;&lt;color-name&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>颜色的表达方式有两种，其一是使用色彩模型和色彩代码，代码用 <span
 class="math inline">\(0\sim1\)</span>
 的数字代表成分的比例。<code>color</code> 宏包支持 <span
@@ -759,7 +770,8 @@ class="math inline">\(\texttt{gray}\)</span> 模型，<code>xcolor</code>
 <p><code>xcolor</code> 还支持将颜色通过表达式混合或互补：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250127205941911.png" alt="image-20250127205941911" style="zoom:67%;" /></p>
 <p>我们还可以通过命令自定义颜色名称，注意这里的 <code>color-mode</code>
-是必选参数： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\definecolor</span>&#123;&lt;color-name&gt;&#125;&#123;&lt;color-mode&gt;&#125;&#123;&lt;code&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+是必选参数：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\definecolor</span>&#123;&lt;color-name&gt;&#125;&#123;&lt;color-mode&gt;&#125;&#123;&lt;code&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>如果调用 <code>color</code> 或 <code>xcolor</code> 宏包时指定 <span
 class="math inline">\(\texttt{dvipsnames}\)</span> 选项，就有额外的 68
 种颜色名称可用。<code>xcolor</code>
@@ -769,17 +781,19 @@ class="math inline">\(\texttt{dvipsnames}\)</span> 选项，就有额外的 68
 <p>原始的 <code>\color</code> 命令类似于字体命令
 <code>\bfseries</code>，它使之后排版的内容全部变成指定的颜色，所以直接使用时通常要加花括号分组。<code>color</code>
 和 <code>xcolor</code> 宏包都定义了一些方便用户使用的带颜色元素。</p>
-<p>输入带颜色的文本可以用类似 <code>\textbf</code> 的命令：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\textcolor</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;&#123;&lt;text&gt;&#125;</span><br><span class="line"><span class="keyword">\textcolor</span>&#123;color-name&#125;&#123;&lt;text&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>输入带颜色的文本可以用类似 <code>\textbf</code> 的命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\textcolor</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;&#123;&lt;text&gt;&#125;</span><br><span class="line"><span class="keyword">\textcolor</span>&#123;color-name&#125;&#123;&lt;text&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>以下命令构造一个带背景色的盒子，<code>&lt;material&gt;</code>
-为盒子中的内容： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\colorbox</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;&#123;&lt;material&gt;&#125;</span><br><span class="line"><span class="keyword">\colorbox</span>&#123;&lt;color-name&gt;&#125;&#123;&lt;material&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+为盒子中的内容：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\colorbox</span>[&lt;color-mode&gt;]&#123;&lt;code&gt;&#125;&#123;&lt;material&gt;&#125;</span><br><span class="line"><span class="keyword">\colorbox</span>&#123;&lt;color-name&gt;&#125;&#123;&lt;material&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>以下命令构造一个带背景色和有色边框的盒子，<code>&lt;fcode&gt;</code>
-或 <code>&lt;fcolor-name&gt;</code> 用于设置边框颜色：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fcolorbox</span>[&lt;color-mode&gt;]&#123;&lt;fcode&gt;&#125;&#123;&lt;code&gt;&#125;&#123;&lt;material&gt;&#125; </span><br><span class="line"><span class="keyword">\fcolorbox</span>&#123;&lt;fcolor-name&gt;&#125;&#123;&lt;color-name&gt;&#125;&#123;&lt;material&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+或 <code>&lt;fcolor-name&gt;</code> 用于设置边框颜色：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fcolorbox</span>[&lt;color-mode&gt;]&#123;&lt;fcode&gt;&#125;&#123;&lt;code&gt;&#125;&#123;&lt;material&gt;&#125; </span><br><span class="line"><span class="keyword">\fcolorbox</span>&#123;&lt;fcolor-name&gt;&#125;&#123;&lt;color-name&gt;&#125;&#123;&lt;material&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250127211405408.png" alt="image-20250127211405408" style="zoom:67%;" /></p>
 <p><code>\fcolorbox</code> 也可以像 <code>\fbox</code> 那样调节
 <code>\fboxrule</code> 和 <code>\fboxsep</code>；对于
 <code>\colorbox</code>，调整 <code>\fboxsep</code> 是有效的。</p>
+<hr />
 <h2 id="使用超链接">使用超链接</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span> 中实现超链接功能的是
 <code>hyperref</code> 宏包。</p>
@@ -809,18 +823,17 @@ class="math inline">\(\texttt{=true}\)</span>”不写。可用的参数见
 <p><code>\url</code> 和 <code>\nolinkurl</code> 都像抄录命令
 <code>\verb</code> 一样输出一个 URL，区别是前者还为 URL
 加上了超链接，后者没有。在 <code>\url</code> 等命令的参数
-<code>&lt;url&gt;</code> 里，可直接输入如 <span
-class="math inline">\(\texttt\%\)</span>、<span
-class="math inline">\(\texttt\&amp;\)</span> 这样的特殊符号。</p>
-<p>也可以像 HTML 中的超链接一样，把一段文字作为超链接：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\href</span>&#123;<span class="link">url</span>&#125;&#123;text&#125;</span><br></pre></td></tr></table></figure></p>
+<code>&lt;url&gt;</code> 里，可直接输入如
+<code>%</code>、<code>&amp;</code> 这样的特殊符号。</p>
+<p>也可以像 HTML 中的超链接一样，把一段文字作为超链接：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\href</span>&#123;<span class="link">url</span>&#125;&#123;text&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128002508111.png" alt="image-20250128002508111" style="zoom:67%;" /></p>
 <p>使用 <code>hyperref</code>
 宏包后，文档中所有的引用、参考文献、索引等等都转换为超链接。用户也可对某个
 <code>\label</code> 命令定义的标签 <code>&lt;label&gt;</code>
 作超链接（注意这里的 <code>&lt;label&gt;</code>
-虽然是可选参数的形式，但通常是<strong>必填的</strong>：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\hyperref</span>[&lt;label&gt;]&#123;&lt;text&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+虽然是可选参数的形式，但通常是<strong>必填的</strong>：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\hyperref</span>[&lt;label&gt;]&#123;&lt;text&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>默认的超链接在文字外边加上一个带颜色的边框（在打印 PDF
 时边框不会打印），可指定 <span
 class="math inline">\(\texttt{colorlinks}\)</span>
@@ -828,7 +841,8 @@ class="math inline">\(\texttt{colorlinks}\)</span>
 class="math inline">\(\texttt{pdfborder}\)</span>
 参数调整边框宽度以“去掉”边框；<span
 class="math inline">\(\texttt{hidelinks}\)</span>
-参数则令超链接既不变色也不加边框。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\hypersetup</span>&#123;hidelinks&#125;</span><br><span class="line"><span class="comment">% or:</span></span><br><span class="line"><span class="keyword">\hypersetup</span>&#123;pdfborder=&#123;0 0 0&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+参数则令超链接既不变色也不加边框。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\hypersetup</span>&#123;hidelinks&#125;</span><br><span class="line"><span class="comment">% or:</span></span><br><span class="line"><span class="keyword">\hypersetup</span>&#123;pdfborder=&#123;0 0 0&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="pdf-书签">PDF 书签</h3>
 <p><code>hyperref</code> 宏包另一个强大的功能是为 PDF
 生成书签。对于章节命令 <code>\chapter</code>、<code>\section</code>
@@ -854,13 +868,19 @@ class="math inline">\(\texttt{lualatex}\)</span>
 <code>\textbf</code>
 等，对于未被处理的命令或数学公式，就要在章节标题中使用如下命令，分别提供
 <span class="math inline">\(\LaTeX{}\)</span> 代码和 PDF
-书签可用的纯文本： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\texorpdfstring</span>&#123;&lt;LaTeX code&gt;&#125;&#123;&lt;PDF bookmark text&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+书签可用的纯文本：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\texorpdfstring</span>&#123;&lt;LaTeX code&gt;&#125;&#123;&lt;PDF bookmark text&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>比如在章节名称里使用公式 <span
-class="math inline">\(E=mc^2\)</span>，而书签则使用纯文本形式的 E=mc^2：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\section</span>&#123;质能公式 <span class="keyword">\texorpdfstring</span>&#123;<span class="built_in">$</span>E=mc<span class="built_in">^</span>2<span class="built_in">$</span>&#125;&#123;E=mc<span class="keyword">\textasciicircum</span> 2&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(E=mc^2\)</span>，而书签则使用纯文本形式的
+E=mc^2：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\section</span>&#123;质能公式 <span class="keyword">\texorpdfstring</span>&#123;<span class="built_in">$</span>E=mc<span class="built_in">^</span>2<span class="built_in">$</span>&#125;&#123;E=mc<span class="keyword">\textasciicircum</span> 2&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="pdf-文档属性">PDF 文档属性</h3>
 <p><code>hyperref</code> 宏包还提供了一些参数用于改变 PDF
 文档的属性，部分见 上表。</p>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
