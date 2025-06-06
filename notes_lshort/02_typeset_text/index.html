@@ -22,27 +22,38 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 文字是排版的基础。本章主要介绍如何在 \(\LaTeX{}\) 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 \(\LaTeX{}\) 中排版中文的方法。随着 \(\LaTeX{}\) 和底层 \(\TeX{}\)引擎的发展，旧方式（\(\texttt{CCT}\)、\(\">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$\LaTeX{}$ 安装TEX发行版（九）">
-<meta property="og:url" content="https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/index.html">
+<meta property="og:title" content="用 $\LaTeX{}$ 排版文字（二）">
+<meta property="og:url" content="https://invinc-z.com/notes_lshort/02_typeset_text/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 文字是排版的基础。本章主要介绍如何在 \(\LaTeX{}\) 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 \(\LaTeX{}\) 中排版中文的方法。随着 \(\LaTeX{}\) 和底层 \(\TeX{}\)引擎的发展，旧方式（\(\texttt{CCT}\)、\(\">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:20:35.036Z">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114165512239.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114170715995.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114171445216.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172016408.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172526612.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172739640.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173207428.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173234392.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114174307171.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114180103541.png">
+<meta property="article:published_time" content="2025-01-01T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-06T03:09:21.357Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114165512239.png">
 
 
-<link rel="canonical" href="https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/">
+<link rel="canonical" href="https://invinc-z.com/notes_lshort/02_typeset_text/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/","path":"latex/09_LaTeX安装TEX发行版/","title":"$\\LaTeX{}$ 安装TEX发行版（九）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes_lshort/02_typeset_text/","path":"notes_lshort/02_typeset_text/","title":"用 $\\LaTeX{}$ 排版文字（二）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>$\LaTeX{}$ 安装TEX发行版（九） | Invinc-Z Blog</title>
+<title>用 $\LaTeX{}$ 排版文字（二） | Invinc-Z Blog</title>
   
 
 
@@ -83,7 +94,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous" defer></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes_lshort/02_typeset_text/"}</script>
   <script src="/js/third-party/quicklink.js" defer></script>
 
   <noscript>
@@ -176,9 +187,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex-%E5%8F%91%E8%A1%8C%E7%89%88%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">\(\TeX{}\)
-发行版简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.1.</span> <span class="nav-text">安装发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftex-live"><span class="nav-number">1.1.1.</span> <span class="nav-text">\(\textbf{TeX
-Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfmiktex"><span class="nav-number">1.1.2.</span> <span class="nav-text">\(\textbf{MiKTeX}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装和更新宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装宏包</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">\(\LaTeX{}\)中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%A0%BC%E5%92%8C%E5%88%86%E6%AE%B5"><span class="nav-number">1.1.</span> <span class="nav-text">空格和分段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97"><span class="nav-number">1.4.</span> <span class="nav-text">连字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.5.</span> <span class="nav-text">标点符号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E5%8F%B7"><span class="nav-number">1.5.1.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97%E5%8F%B7%E5%92%8C%E7%A0%B4%E6%8A%98%E5%8F%B7"><span class="nav-number">1.5.2.</span> <span class="nav-text">连字号和破折号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9C%81%E7%95%A5%E5%8F%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">省略号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%89%E4%B8%81%E6%96%87%E6%89%A9%E5%B1%95%E4%B8%8E%E9%87%8D%E9%9F%B3"><span class="nav-number">1.5.4.</span> <span class="nav-text">拉丁文扩展与重音</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#latex-%E6%A0%87%E5%BF%97"><span class="nav-number">1.5.5.</span> <span class="nav-text">\(\LaTeX{}\)
+标志</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%AD%E8%A1%8C%E5%92%8C%E6%96%AD%E9%A1%B5"><span class="nav-number">2.</span> <span class="nav-text">断行和断页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%AF%8D%E9%97%B4%E8%B7%9D"><span class="nav-number">2.1.</span> <span class="nav-text">单词间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%96%AD%E8%A1%8C%E5%92%8C%E6%96%AD%E9%A1%B5"><span class="nav-number">2.2.</span> <span class="nav-text">手动断行和断页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%AD%E8%AF%8D"><span class="nav-number">2.3.</span> <span class="nav-text">断词</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -257,37 +267,6 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
       </div>
     </div>
         <div class="pjax">
-        <div class="sidebar-inner sidebar-post-related">
-          <div class="animated">
-              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
-    相关文章
-  </div>
-  <ul class="popular-posts">
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/latex/08_LaTeX%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89LaTeX%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8A%9F%E8%83%BD/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
-        <br>
-      $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
-        <br>
-      $\LaTeX{}$ 之绘图功能（七）
-      </a>
-    </li>
-    <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/latex/06_LaTeX%E4%B9%8B%E7%89%B9%E8%89%B2%E5%B7%A5%E5%85%B7%E5%92%8C%E5%8A%9F%E8%83%BD/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
-        <br>
-      $\LaTeX{}$ 之特色工具和功能（六）
-      </a>
-    </li>
-  </ul>
-
-          </div>
-        </div>
         </div>
   </aside>
 
@@ -305,7 +284,7 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/02_typeset_text/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -318,12 +297,12 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="$\LaTeX{}$ 安装TEX发行版（九） | Invinc-Z Blog">
+      <meta itemprop="name" content="用 $\LaTeX{}$ 排版文字（二） | Invinc-Z Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          $\LaTeX{}$ 安装TEX发行版（九）
+          用 $\LaTeX{}$ 排版文字（二）
         </h1>
 
         <div class="post-meta-container">
@@ -334,14 +313,14 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-01-02 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-02T05:12:18+08:00">2025-01-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:20:35" itemprop="dateModified" datetime="2025-06-03T20:20:35+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-06 11:09:21" itemprop="dateModified" datetime="2025-06-06T11:09:21+08:00">2025-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,14 +343,14 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>6 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -381,213 +360,146 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本章会简单介绍如何安装 <span class="math inline">\(\TeX{}\)</span>
-发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 <span
-class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。
-<span id="more"></span> # 09_<span class="math inline">\(\LaTeX{}\)</span>
-安装TEX发行版</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>高德纳的 <span class="math inline">\(\TeX{}\)</span> 程序开发于 20
-世纪 80 年代，那时候电子计算机的运算能力有限，<span
-class="math inline">\(\TeX{}\)</span>
-还是大型服务器上的玩物。而如今个人计算机完全能够胜任排版的工作，并催生了用于个人计算机的工具集合——
-<span class="math inline">\(\TeX{}\)</span> 发行版的发展。</p>
-<p>本章会简单介绍如何安装 <span class="math inline">\(\TeX{}\)</span>
-发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 <span
-class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
-<h2 id="tex-发行版简介"><span class="math inline">\(\TeX{}\)</span>
-发行版简介</h2>
-<p>一个 <strong><span class="math inline">\(\TeX{}\)</span>
-发行版</strong> 是 <span class="math inline">\(\TeX{}\)</span>
-排版引擎、支持排版的文件（基本格式、<span
+<p>文字是排版的基础。本章主要介绍如何在 <span
 class="math inline">\(\LaTeX{}\)</span>
-宏包、字体等）以及一些辅助工具的集合。各式各样的 <span
-class="math inline">\(\TeX{}\)</span>
-发行版经过十多年的发展，大浪淘沙，现今的两个主流发行版为：</p>
+中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在
+<span class="math inline">\(\LaTeX{}\)</span> 中排版中文的方法。随着
+<span class="math inline">\(\LaTeX{}\)</span> 和底层 <span
+class="math inline">\(\TeX{}\)</span>引擎的发展，旧方式（<span
+class="math inline">\(\texttt{CCT}\)</span>、<span
+class="math inline">\(\texttt{CJK}\)</span>等）日渐退出舞台，<span
+class="math inline">\(\texttt{xelatex}\)</span> 和 <span
+class="math inline">\(\texttt{lualatex}\)</span> 编译命令配合 <span
+class="math inline">\(\texttt{ctex}\)</span>
+宏包/文档类的方式成为当前的主流中文排版支持方式。</p>
+<span id="more"></span>
+<hr />
+<h2 id="latex中的字符"><span
+class="math inline">\(\LaTeX{}\)</span>中的字符</h2>
+<h3 id="空格和分段">空格和分段</h3>
+<p>空格键和 Tab
+键输入的空白字符视为“空格”。连续的若干个空白字符视为一个空格。一行开头的空格忽略不计。行末的换行符视为一个空格；但连续两个换行符，也就是空行，会将文字分段。多个空行被视为一个空行。也可以在行末使用
+<code>\par</code>命令分段。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114165512239.png" alt="image-20250114165512239" style="zoom: 50%;" /></p>
+<h3 id="注释">注释</h3>
 <ul>
-<li><p><span class="math inline">\(\textbf{TeX Live}\)</span> <span
-class="math inline">\(\textrm{TeX Live}\)</span> 由类 UNIX 系统上的
-<span class="math inline">\(\textrm{teTEX}\)</span>
-发展并取而代之，最终成为跨平台的 <span
-class="math inline">\(\TeX{}\)</span> 发行版。<span
-class="math inline">\(\textrm{TeX Live}\)</span> 自 2011
-年起以年份作为发行版的版本号，保持了一年一更的频率。</p>
-<p><span class="math inline">\(\textrm{MacTeX}\)</span> 是 macOS（OS
-X）系统下的一个定制化的 <span class="math inline">\(\textrm{TeX
-Live}\)</span> 版本，与 <span class="math inline">\(\textrm{TeX
-Live}\)</span> 同步更新。</p></li>
-<li><p><span class="math inline">\(\textbf{MiKTeX}\)</span> <span
-class="math inline">\(\textrm{MiKTeX}\)</span> 是主要用于 Windows
-平台的一个稳定发展的 <span class="math inline">\(\TeX{}\)</span>
-发行版。在中国大陆曾经发行过“<span
-class="math inline">\(\textrm{CTeX}\)</span>
-套装”，它是一个经过本地化配置的 <span
-class="math inline">\(\textrm{MiKTeX}\)</span>，不过其配置较为过时，也不再有更新支持，使用起来可能有诸多问题，现已不推荐使用。</p></li>
+<li>用 %
+字符作为注释。在这个字符之后直到行末，所有的字符都被忽略，行末的换行符也不引入空格。</li>
+<li>texstudio快捷键 <code>Ctrl + T</code>
+快速注释/取消注释光标所在行。</li>
+<li><code>\iffalse</code> 和 <code>\fi</code>
+是一个常用的方法，适合注释大段文字或代码。</li>
 </ul>
-<p><span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
-class="math inline">\(\textrm{MiKTeX}\)</span> 都集成了一个简单的 <span
-class="math inline">\(\LaTeX{}\)</span> 源代码编辑器
-<strong>TeXworks</strong>（<span
-class="math inline">\(\textrm{MacTeX}\)</span> 则集成了类似的
-TeXShop）。用户在安装完毕后，可直接使用 TeXworks 编写和编译 <span
-class="math inline">\(\LaTeX{}\)</span> 源代码。</p>
-<h3 id="安装发行版">安装发行版</h3>
-<h4 id="textbftex-live"><span class="math inline">\(\textbf{TeX
-Live}\)</span></h4>
-<p><span class="math inline">\(\textrm{TeX Live}\)</span>
-的光盘镜像发布于 https://www.tug.org/texlive/，
-下载镜像到本地，挂载到虚拟光驱，或者用压缩工具解压后，在其根目录有几个用于安装的脚本：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\iffalse</span></span><br><span class="line">这里是被注释掉的内容。</span><br><span class="line">无论是文字、公式还是代码，都会被忽略。</span><br><span class="line"><span class="keyword">\fi</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>用于 <strong>Windows</strong> 的批处理文件：</p>
-<ul>
-<li><p><span
-class="math inline">\(\texttt{install-tl-windows.bat}\)</span>
-双击启动图形界面安装程序，可以在图形安装界面的 Advanced
-选项中定制安装；</p></li>
-<li><p>在命令提示符中输入 <span
-class="math inline">\(\texttt{install-tl-windows.bat -no-gui}\)</span>
-启动文本界面安装程序。</p></li>
-</ul></li>
-<li><p>用于 <strong>Linux</strong> 的 Perl 脚本 <span
-class="math inline">\(\texttt{install-tl}\)</span> ：</p>
-<ul>
-<li><p><span class="math inline">\(\texttt{install-tl}\)</span>
-启动文本界面安装程序；</p></li>
-<li><p><span class="math inline">\(\texttt{install-tl -gui}\)</span>
-启动图形界面安装程序。</p></li>
-</ul></li>
+<li><code>comment</code>
+宏包提供了方便的注释方式，可以直接注释任意内容。在导言区引入宏包：<code>\usepackage&#123;comment&#125;</code></li>
 </ul>
-<p>另外也可以下载在线安装程序 <span
-class="math inline">\(\texttt{install-tl.zip}\)</span>，包含以上所有安装脚本。安装过程中会从
-CTAN 软件源下载所有组件。</p>
-<p>Linux 下 <span class="math inline">\(\textrm{TeX Live}\)</span>
-安装完毕后，一般还需要在 root 权限下进行以下操作，使得 <span
-class="math inline">\(\textrm{XeLaTeX}\)</span> 能正确通过
-<code>fontspec</code>等宏包使用字体(https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf，
-可用 <span class="math inline">\(\texttt{texdoc texlive-zh-cn}\)</span>
-在本地打开。)：</p>
-<ol type="1">
-<li>将 <span
-class="math inline">\(\texttt{texlive-fontconfig.conf}\)</span>
-文件复制到 <span
-class="math inline">\(\texttt{/etc/fonts/conf.d/09-texlive.conf}\)</span>。</li>
-<li>运行 <span class="math inline">\(\texttt{fc-cache
--fsv}\)</span>。</li>
-</ol>
-<h4 id="textbfmiktex"><span
-class="math inline">\(\textbf{MiKTeX}\)</span></h4>
-<p>从 <span class="math inline">\(\textrm{MiKTeX}\)</span> 官网
-https://www.miktex.org/ 下载名为 <span
-class="math inline">\(\texttt{basic-miktex-***.exe}\)</span> 的 Windows
-安装包。下载后直接双击打开，按照程序的提示进行安装即可。</p>
-<h2 id="安装和更新宏包">安装和更新宏包</h2>
-<p><span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
-class="math inline">\(\textrm{MiKTeX}\)</span>
-分别提供了图形界面的宏包管理器 <span class="math inline">\(\textrm{TEX
-Live Manager}\)</span> 和 <span class="math inline">\(\textrm{MiKTeX
-Package
-Manager}\)</span>，用于安装、管理和更新宏包。一般情况下，直接在图形界面的工具下按提示操作即可（<span
-class="math inline">\(\textrm{MiKTeX Package Manager}\)</span>
-有普通权限和管理员权限的版本，建议<strong>总是使用管理员权限</strong>的版本）。</p>
-<p>两者也可以通过各自的命令行工具安装和更新宏包： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% TeX Live 命令行工具 tlmgr 的使用示例</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">tlmgr install &lt;package-name&gt;</span><br><span class="line">tlmgr remove &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包（包括 tlmgr 本身）</span><br><span class="line">tlmgr update --all --self</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">tlmgr update --list</span><br><span class="line">% 指定更新源地址</span><br><span class="line">% &lt;CTAN mirrors&gt; 形如 https://mirrors.tuna.tsinghua.edu.cn/CTAN</span><br><span class="line">tlmgr repository <span class="built_in">set</span> &lt;CTAN mirrors&gt;/systems/texlive/tlnet</span><br><span class="line">% 查看宏包信息，加 --list 参数可列出宏包的所有文件</span><br><span class="line">tlmgr info &lt;package-name&gt;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% MiKTeX 命令行工具 mpm 的使用示例</span><br><span class="line">% 建议始终加 --admin 参数使用</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">mpm --admin --install &lt;package-name&gt;</span><br><span class="line">mpm --admin --uninstall &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包</span><br><span class="line">mpm --admin --update</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">mpm --admin --find-updates</span><br><span class="line">% 指定更新源地址</span><br><span class="line">mpm --admin --set-repository=&lt;CTAN mirrors&gt;/systems/win32/miktex/tm/packages</span><br><span class="line">% 查看宏包信息</span><br><span class="line">mpm --admin --print-package-info &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
-<p><span class="math inline">\(\textrm{TeX Live}\)</span>
-默认安装所有宏包， <span class="math inline">\(\textrm{MiKTeX}\)</span>
-的安装程序只包含了 <span class="math inline">\(\LaTeX{}\)</span>
-的一些基本宏包。从 <span class="math inline">\(\textrm{TeX
-Live}\)</span> 的光盘镜像和 <span
-class="math inline">\(\textrm{MiKTeX}\)</span> 的安装包体积可见一斑。
-默认情况下，编译过程中如果遇到宏包未安装而报错的情况下，<span
-class="math inline">\(\textrm{MiKTeX}\)</span>
-会弹出一个对话框，让用户可以选择临时安装宏包，安装成功后继续编译。</p>
-<h3 id="手动安装宏包">手动安装宏包</h3>
-<p><span
-class="math inline">\(\textcolor{red}{如非万不得已，尽量不要手动安装宏包}\)</span>。绝大多数宏包都已打包到
-<span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
-class="math inline">\(\textrm{MiKTeX}\)</span>
-两大发行版的安装源，可用宏包管理器安装。如果用户知道某个宏包的名称，但不确定是否在发行版中已打包，可在
-<span class="math inline">\(\textrm{CTAN}\)</span> 中搜索。</p>
-<p>如果确实有手动安装宏包的需要，本小节的内容将有所帮助。在手动安装之前，有必要了解一下
-<span class="math inline">\(\TeX{}\)</span> 目录结构（<span
-class="math inline">\(\TeX{}\)</span> Directory Structure, TDS）。它是
-<span class="math inline">\(\TeX{}\)</span>
-发行版中宏包、字体、帮助文档等文件的组织结构。TDS 有时也称为 <span
-class="math inline">\(\textrm{TEXMF}\)</span> 树，取 <span
-class="math inline">\(\TeX+\textrm{METAFONT}\)</span> 之意。</p>
-<p>以 <span class="math inline">\(\textrm{TeX Live}\)</span>
-为例，假设系统的 <span class="math inline">\(\textrm{TEXMF}\)</span>
-树根目录为 <span
-class="math inline">\(\textrm{C:\\texlive\\2020\\texmf-dist}\)</span>，其下有很多子目录，仅举几例：</p>
-<table>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 70%" />
-</colgroup>
-<thead>
-<tr>
-<th style="text-align: left;"><span
-class="math inline">\(\texttt{tex/latex}\)</span></th>
-<th style="text-align: left;"><span
-class="math inline">\(\LaTeX{}\)</span> 宏包</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{doc/latex}\)</span></td>
-<td style="text-align: left;"><span
-class="math inline">\(\LaTeX{}\)</span> 宏包的帮助文档</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{source/latex}\)</span></td>
-<td style="text-align: left;"><span
-class="math inline">\(\LaTeX{}\)</span> 宏包的源代码</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{bibtex}\)</span></td>
-<td style="text-align: left;"><span
-class="math inline">\(\textrm{BibTeX}\)</span>
-工具相关文件，许多宏包配套的 <span
-class="math inline">\(\textrm{BibTeX}\)</span> 格式文件位于子目录 <span
-class="math inline">\(\texttt{bst}\)</span> 中</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{fonts/tfm}\)</span></td>
-<td style="text-align: left;">$ $ 使用的字体文件，<span
-class="math inline">\(\textrm{TFM}\)</span> 格式</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{fonts/type1}\)</span></td>
-<td style="text-align: left;"><span
-class="math inline">\(\textrm{PostScript}\)</span> 字体文件（<span
-class="math inline">\(\textrm{Type1}\)</span>），<span
-class="math inline">\(\textrm{PFB}\)</span> 格式</td>
-</tr>
-<tr>
-<td style="text-align: left;"><span
-class="math inline">\(\texttt{fonts/opentype}\)</span></td>
-<td style="text-align: left;"><span
-class="math inline">\(\textrm{OpenType}\)</span> 格式的字体文件</td>
-</tr>
-</tbody>
-</table>
-<p>需要手动安装的宏包，一般已经按照上述目录结构打包完成。手动安装时，尽量不要拷贝到系统的
-<span class="math inline">\(\textrm{TEXMF}\)</span>
-树，而是拷贝到发行版提供的用户 <span
-class="math inline">\(\textrm{TEXMF}\)</span> 树，如 <span
-class="math inline">\(\textrm{TeX Live}\)</span> 的 <span
-class="math inline">\(\textrm{C:\\texlive\\texmf-local}\)</span>。安装完成后，还需<strong>刷新
-<span class="math inline">\(\TeX{}\)</span>
-发行版的文件名数据库</strong>，令新安装的宏包文件能够被系统找到。<span
-class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
-命令行或者 Linux 终端执行命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mktexlsr</span><br></pre></td></tr></table></figure></p>
-<p><span class="math inline">\(\textrm{MiKTeX}\)</span> 用户的命令为：
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">initexmf --update-fndb</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;comment&#125;</span><br><span class="line">这里是大段注释内容。</span><br><span class="line">你可以注释多行文本或代码。</span><br><span class="line"><span class="keyword">\end</span>&#123;comment&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="特殊字符">特殊字符</h3>
+<p>以下字符有特殊用途，如 % 表示注释， $、^ 、_
+等用于排版数学公式，&amp;
+用于排版表格，等等。直接输入这些字符得不到对应的符号，还往往会出错：</p>
+<p><code># $ % &amp; &#123; &#125; _ ^ ~ \</code></p>
+<p>如果想要输入以上符号，需要使用以下带反斜线的形式输入，类似编程语言里的“转义”符号：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114170715995.png" alt="image-20250114170715995" style="zoom: 50%;" /></p>
+<p>这些“转义”符号事实上是一些 <span
+class="math inline">\(\LaTeX{}\)</span> 命令。其中 <code>\^</code> 和
+<code>\~</code>两个命令需要一个参数，加一对花括号的写法相当于提供了空的参数，否则它们可能会将后面的字符作为参数，形成重音效果。<code>\\</code>被直接定义成了手动换行的命令，输入反斜线就需要用
+<code>\textbackslash</code>。</p>
+<h3 id="连字">连字</h3>
+<p>西文排版中经常会出现连字（ligatures），常见的有
+ff/fi/fl/ffi/ffl。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114171445216.png" alt="image-20250114171445216" style="zoom:67%;" /></p>
+<h3 id="标点符号">标点符号</h3>
+<p>中文的标点符号（绝大多数为非 ASCII
+字符）使用中文输入法输入即可，一般不需要过多留意。而输入西文标点符号时，有不少地方需要留意。</p>
+<h4 id="引号">引号</h4>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172016408.png" alt="image-20250114172016408" style="zoom:67%;" /></p>
+<h4 id="连字号和破折号">连字号和破折号</h4>
+<p>有三种长度的“横线”可用：连字号（hyphen）、短破折号（en-dash）和长破折号（em-dash）。
+它们分别有不同的用途：连字号 - 用来组成复合词；短破折号 –
+用来连接数字表示范围；长破折号 —
+用来连接单词，语义上类似中文的破折号。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172526612.png" alt="image-20250114172526612" style="zoom:67%;" /></p>
+<h4 id="省略号">省略号</h4>
+<p>提供了 <code>\ldots</code>
+命令表示省略号，相对于直接输入三个点的方式更为合理。<code>\dots</code>
+与 <code>\ldots</code> 命令等效。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114172739640.png" alt="image-20250114172739640" style="zoom:67%;" /></p>
+<h4 id="拉丁文扩展与重音">拉丁文扩展与重音</h4>
+<p>支持用命令输入西欧语言中使用的各种拉丁文扩展字符，主要为带重音的字母：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173207428.png" alt="image-20250114173207428" style="zoom:67%;" /></p>
+<p>更多可用的符号和重音见下表。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173234392.png" alt="image-20250114173234392" style="zoom:67%;" /></p>
+<h4 id="latex-标志"><span class="math inline">\(\LaTeX{}\)</span>
+标志</h4>
+<p>我们见到的所有错落有致的 <span
+class="math inline">\(\LaTeX{}\)</span> 标志都是由以下命令输入的：</p>
+<figure>
+<img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114173523673.png"
+alt="image-20250114173523673" />
+<figcaption aria-hidden="true">image-20250114173523673</figcaption>
+</figure>
+<p>更多的 <span class="math inline">\(\LaTeX{}\)</span> 标志可以使用
+<code>hologo</code> 宏包提供的 <code>\hologo</code> 命令输入。</p>
+<hr />
+<h2 id="断行和断页">断行和断页</h2>
+<p><span class="math inline">\(\LaTeX{}\)</span>
+将文字段落在合适的位置进行断行，尽可能做到每行的疏密程度匀称，单词间距不会过宽或过窄。文字段落和公式、图表等内容从上到下顺序排布，并在合适的位置断页，分割成匀称的页面。在绝大多数时候，我们无需自己操心断行和断页。但偶尔会遇到需要手工调整的地方。</p>
+<h3 id="单词间距">单词间距</h3>
+<p>文字在单词间的“空格”处断行时，“空格”生成的间距随之舍去。可以使用字符
+<code>~</code> 输入一个<strong>不会断行的空格</strong>（高德纳称之为
+tie，“带子”），通常用在<strong>英文人名、图表名称</strong>等上下文环境：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114174307171.png" alt="image-20250114174307171" style="zoom:67%;" /></p>
+<h3 id="手动断行和断页">手动断行和断页</h3>
+<p>如果我们确实需要手动断行，可使用如下命令：</p>
+<p><code>\\[⟨length⟩]</code></p>
+<p><code>\\*[⟨length⟩]</code></p>
+<p><code>\newline</code></p>
+<p>它们有两点区别：一是 <code>\\</code>
+可以带可选参数<code>&lt;length&gt;</code>，用于在断行处向下增加垂直间距，而
+<code>\newline</code> 不带可选参数；二是 <code>\\</code>
+也在表格、公式等地方用于换行，而 <code>\newline</code>
+只用于文本段落中。带星号的 <code>\\</code> 表示禁止在断行处分页。</p>
+<p>断页的命令有两个：</p>
+<p><code>\newpage</code></p>
+<p><code>\clearpage</code></p>
+<p>通常情况下两个命令都起到另起一页的作用，区别在于：第一，在双栏排版模式中
+<code>\newpage</code> 起到另起一栏的作用，<code>\clearpage</code>
+则能够另起一页；第二，在涉及浮动体的排版上行为不同。</p>
+<p>有时候我们不满足于默认的断行和断页位置，需要进行微调，可以用以下命令告诉
+<span class="math inline">\(\LaTeX{}\)</span>
+哪些地方适合断行或断页，哪些地方不适合：</p>
+<p><code>\linebreak[⟨n⟩]</code> <code>\nolinebreak[⟨n⟩]</code>
+<code>\pagebreak[⟨n⟩]</code> <code>\nopagebreak[⟨n⟩]</code></p>
+<p>以上命令都带一个可选参数，用数字
+<code>n</code>代表适合/不适合的程度，取值范围为
+0-4，不带可选参数时，缺省为4。 比如 <code>\linebreak</code> 或者
+<code>\linebreak[4]</code>
+意味着此处需要强行断行；<code>\nopagebreak</code> 或
+<code>\nopagebreak[4]</code>意味着禁止在此处断页。</p>
+<p>以上命令适合给出优先考虑断行断页/禁止断行断页的位置，但不适合直接拿来断行或断页，使用
+<code>\newline</code> 或 <code>\newpage</code> 等命令是更好的选择。因为
+<code>\newline</code> 和 <code>\newpage</code>
+会在断行/断页位置填充适当的间距，但 <code>\linebreak</code> 和
+<code>\pagebreak</code>
+不能，使用这些命令强行断行/断页可能会制造出糟糕的排版效果，并导致 <span
+class="math inline">\(\LaTeX{}\)</span> 报 <span
+class="math inline">\(\texttt{Underfull \\hbox}\)</span> 等警告。</p>
+<h3 id="断词">断词</h3>
+<p>如果遇到了很长的英文单词，仅在单词之间的“空格”处断行无法生成疏密程度匀称的段落时，就会考虑从单词中间断开。对于绝大多数单词，<span
+class="math inline">\(\LaTeX{}\)</span>
+能够找到合适的断词位置，在断开的行尾加上连字符 <code>-</code> 。</p>
+<p>如果一些单词没能自动断词，我们可以在单词内手动使用 <code>\-</code>
+命令指定断词的位置：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250114180103541.png" alt="image-20250114180103541" style="zoom:67%;" /></p>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
@@ -623,7 +535,7 @@ class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://invinc-z.com/latex/09_LaTeX%E5%AE%89%E8%A3%85TEX%E5%8F%91%E8%A1%8C%E7%89%88/" title="$\LaTeX{}$ 安装TEX发行版（九）">https://invinc-z.com/latex/09_LaTeX安装TEX发行版/</a>
+      <a href="https://invinc-z.com/notes_lshort/02_typeset_text/" title="用 $\LaTeX{}$ 排版文字（二）">https://invinc-z.com/notes_lshort/02_typeset_text/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -726,13 +638,13 @@ class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/latex/07_LaTeX%E4%B9%8B%E7%BB%98%E5%9B%BE%E5%8A%9F%E8%83%BD/" rel="prev" title="$\LaTeX{}$ 之绘图功能（七）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之绘图功能（七）
+                <a href="/notes_lshort/01_basic_concepts/" rel="prev" title="$\LaTeX{}$ 的基本概念（一）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 的基本概念（一）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/latex/10_LaTeX%E4%B9%8B%E6%8E%92%E9%99%A4%E9%94%99%E8%AF%AF%E5%92%8C%E5%AF%BB%E6%B1%82%E5%B8%AE%E5%8A%A9/" rel="next" title="$LaTeX{}$ 之排除错误和寻求帮助（十）">
-                  $LaTeX{}$ 之排除错误和寻求帮助（十） <i class="fa fa-angle-right"></i>
+                <a href="/notes_lshort/03_document_elements/" rel="next" title="$\LaTeX{}$ 之文档元素（三）">
+                  $\LaTeX{}$ 之文档元素（三） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
