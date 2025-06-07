@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="除了排版文字，\(\LaTeX{}\) 也支持用代码表示图形。不同的扩展已极大丰富了 \(\LaTeX{}\) 的图形功能，TikZ 就是其中之一。本章将带你了解一些基本的绘图功能。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 除了排版文字，\(\LaTeX{}\) 也支持用代码表示图形。不同的扩展已极大丰富了 \(\LaTeX{}\) 的图形功能，TikZ 就是其中之一。本章将带你了解一些基本的绘图功能。 一些特殊的绘图，如交换图、树状图甚至分子式和电路图也能够通过代码绘制，有兴趣的读者可以查阅一些帮助文档，或者在互联网寻求帮助。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX{}$ 之绘图功能（七）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/07_graphic/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="除了排版文字，\(\LaTeX{}\) 也支持用代码表示图形。不同的扩展已极大丰富了 \(\LaTeX{}\) 的图形功能，TikZ 就是其中之一。本章将带你了解一些基本的绘图功能。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 除了排版文字，\(\LaTeX{}\) 也支持用代码表示图形。不同的扩展已极大丰富了 \(\LaTeX{}\) 的图形功能，TikZ 就是其中之一。本章将带你了解一些基本的绘图功能。 一些特殊的绘图，如交换图、树状图甚至分子式和电路图也能够通过代码绘制，有兴趣的读者可以查阅一些帮助文档，或者在互联网寻求帮助。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128171123106.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128175453993.png">
@@ -57,8 +57,8 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129112859971.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129113731045.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129113823045.png">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:19:32.694Z">
+<meta property="article:published_time" content="2025-02-11T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-07T03:09:48.783Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -205,7 +205,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">绘图语言简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#textrmtikz-%E7%BB%98%E5%9B%BE%E8%AF%AD%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">\(\textrm{TikZ}\) 绘图语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E5%9D%90%E6%A0%87%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.1.</span> <span class="nav-text">\(\textrm{TikZ}\) 坐标和路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">\(\textrm{TikZ}\) 绘图命令和参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E6%96%87%E5%AD%97%E7%BB%93%E7%82%B9"><span class="nav-number">2.3.</span> <span class="nav-text">\(\textrm{TikZ}\) 文字结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-textrmtikz-%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.4.</span> <span class="nav-text">在 \(\textrm{TikZ}\) 中使用循环</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">绘图语言简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#textrmtikz-%E7%BB%98%E5%9B%BE%E8%AF%AD%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">\(\textrm{TikZ}\) 绘图语言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E5%9D%90%E6%A0%87%E5%92%8C%E8%B7%AF%E5%BE%84"><span class="nav-number">2.1.</span> <span class="nav-text">\(\textrm{TikZ}\) 坐标和路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-number">2.2.</span> <span class="nav-text">\(\textrm{TikZ}\) 绘图命令和参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#textrmtikz-%E6%96%87%E5%AD%97%E7%BB%93%E7%82%B9"><span class="nav-number">2.3.</span> <span class="nav-text">\(\textrm{TikZ}\) 文字结点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-textrmtikz-%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.4.</span> <span class="nav-text">在 \(\textrm{TikZ}\) 中使用循环</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -292,9 +292,16 @@
   <ul class="popular-posts">
     <li class="popular-posts-item">
       <a class="popular-posts-link" href="/notes_lshort/09_install/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
+        <time class="popular-posts-time">2025-02-26</time>
         <br>
-      $\LaTeX{}$ 安装TEX发行版（九）
+      $\LaTeX{}$ 之安装TEX发行版（九）
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/notes_lshort/08_custom/" rel="bookmark">
+        <time class="popular-posts-time">2025-02-18</time>
+        <br>
+      $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）
       </a>
     </li>
   </ul>
@@ -347,14 +354,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-02-12 05:12:18" itemprop="dateCreated datePublished" datetime="2025-02-12T05:12:18+08:00">2025-02-12</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:19:32" itemprop="dateModified" datetime="2025-06-03T20:19:32+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-07 11:09:48" itemprop="dateModified" datetime="2025-06-07T11:09:48+08:00">2025-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -394,18 +401,15 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>除了排版文字，<span class="math inline">\(\LaTeX{}\)</span>
-也支持用代码表示图形。不同的扩展已极大丰富了 <span
-class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
-就是其中之一。本章将带你了解一些基本的绘图功能。 <span id="more"></span> #
-07_<span class="math inline">\(\LaTeX{}\)</span> 之绘图功能</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>除了排版文字，<span class="math inline">\(\LaTeX{}\)</span>
 也支持用代码表示图形。不同的扩展已极大丰富了 <span
 class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
 就是其中之一。本章将带你了解一些基本的绘图功能。</p>
 <p>一些特殊的绘图，如交换图、树状图甚至分子式和电路图也能够通过代码绘制，有兴趣的读者可以查阅一些帮助文档，或者在互联网寻求帮助。</p>
+<span id="more"></span>
+<hr />
 <h2 id="绘图语言简介">绘图语言简介</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span> 提供了原始的 <span
 class="math inline">\(\texttt{picture}\)</span>
@@ -420,8 +424,10 @@ class="math inline">\(\texttt{picture}\)</span>
 语法为基础的绘图宏包，具有优秀的绘图能力。它对老式的 <span
 class="math inline">\(\texttt{latex + dvips}\)</span>
 编译命令支持最好，而现在的几种编译命令下使用起来都不够方便。</p></li>
-<li><p><span class="math inline">\(\textrm{TikZ &amp; pgf}\)</span>
-德国的 Till Tantau 教授在开发著名的 <span
+<li><p><span class="math inline">\(\textrm{TikZ}\)</span> <span
+class="math inline">\(\&amp;\)</span> <span
+class="math inline">\(\textrm{pgf}\)</span></p>
+<p>德国的 Till Tantau 教授在开发著名的 <span
 class="math inline">\(\LaTeX{}\)</span> 幻灯片文档类 <span
 class="math inline">\(\texttt{beamer}\)</span> 时一并开发了绘图宏包
 <code>pgf</code>，目的是令其能够在 <span
@@ -433,10 +439,11 @@ class="math inline">\(\textrm{TikZ}\)</span> 是在 <code>pgf</code>
 class="math inline">\(\texttt{METAPOST}\)</span>
 的语法，提供了方便的绘图命令，绘图能力不输 <span
 class="math inline">\(\textrm{PSTricks}\)</span> 。</p></li>
-<li><p><span class="math inline">\(\textrm{METAPOST &amp;
-Asymptote}\)</span> <span
-class="math inline">\(\textrm{METAPOST}\)</span> 脱胎于高德纳为 <span
-class="math inline">\(\TeX{}\)</span> 配套开发的字体生成程序 <span
+<li><p><span class="math inline">\(\textrm{METAPOST}\)</span> <span
+class="math inline">\(\&amp;\)</span> <span
+class="math inline">\(\textrm{Asymptote}\)</span></p>
+<p><span class="math inline">\(\textrm{METAPOST}\)</span> 脱胎于高德纳为
+<span class="math inline">\(\TeX{}\)</span> 配套开发的字体生成程序 <span
 class="math inline">\(\textrm{METAFONT}\)</span>，具有优秀的绘图能力，并能够调用
 <span class="math inline">\(\TeX{}\)</span>
 引擎向图片中插入文字和公式。<span
@@ -449,6 +456,7 @@ class="math inline">\(\textrm{METAPOST}\)</span>
 <span class="math inline">\(\LaTeX{}\)</span>
 引用，也可以借助特殊的宏包在 <span
 class="math inline">\(\LaTeX{}\)</span> 代码里直接使用。</p>
+<hr />
 <h2 id="textrmtikz-绘图语言"><span
 class="math inline">\(\textrm{TikZ}\)</span> 绘图语言</h2>
 <p>在导言区调用 <span class="math inline">\(\textrm{TikZ}\)</span>
@@ -480,37 +488,42 @@ class="math inline">\(\theta\)</span> 为极角，单位是度。</li>
 <span class="math inline">\(\texttt{(A)}\)</span> 作为点的位置了。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) -- (30:1);</span><br><span class="line"><span class="keyword">\draw</span> (1,0) -- (2,1);</span><br><span class="line"><span class="keyword">\coordinate</span> (S) at (0,1);</span><br><span class="line"><span class="keyword">\draw</span> (S) -- (1,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128175453993.png" alt="image-20250128175453993" style="zoom:67%;" /></p>
-<p>坐标的表示形式还包括“垂足”形式： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\coordinate</span> (S) at (2,2);</span><br><span class="line"><span class="keyword">\draw</span>[gray] (-1,2) -- (S);</span><br><span class="line"><span class="keyword">\draw</span>[gray] (2,-1) -- (S);</span><br><span class="line"><span class="keyword">\draw</span>[red] (0,0) -- (0,0 -| S);</span><br><span class="line"><span class="keyword">\draw</span>[blue] (0,0) -- (0,0 |- S);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+<p>坐标的表示形式还包括“垂足”形式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\coordinate</span> (S) at (2,2);</span><br><span class="line"><span class="keyword">\draw</span>[gray] (-1,2) -- (S);</span><br><span class="line"><span class="keyword">\draw</span>[gray] (2,-1) -- (S);</span><br><span class="line"><span class="keyword">\draw</span>[red] (0,0) -- (0,0 -| S);</span><br><span class="line"><span class="keyword">\draw</span>[blue] (0,0) -- (0,0 |- S);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128175922953.png" alt="image-20250128175922953" style="zoom:67%;" /></p>
 <p><span class="math inline">\(\textrm{TikZ}\)</span>
-最基本的路径为两点之间连线，如 <span
-class="math inline">\(\texttt{(x_1,y_1) --
-(x_2,y_2)}\)</span>，可以连用表示多个连线（折线）。连续使用连线时，可以使用
+最基本的路径为两点之间连线，如 <span class="math inline">\((x_1,y_1) --
+(x_2,y_2)\)</span>，可以连用表示多个连线（折线）。连续使用连线时，可以使用
 <span class="math inline">\(\texttt{cycle}\)</span>
-令路径回到起点，生成闭合的路径。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) -- (1,1) -- (2,0) -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+令路径回到起点，生成闭合的路径。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) -- (1,1) -- (2,0) -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128180317382.png" alt="image-20250128180317382" style="zoom:67%;" /></p>
 <p><strong>多条路径</strong>可用于同一条画图命令中，以<strong>空格分隔</strong>：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) -- (0,1)</span><br><span class="line">      (1,0) -- (1,1) -- (2,0) -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128180447083.png" alt="image-20250128180447083" style="zoom:67%;" /></p>
 <p>其它常用的路径还包括：</p>
 <ul>
-<li><p>矩形、圆和椭圆： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (1.5,1);</span><br><span class="line"><span class="keyword">\draw</span> (2.5,0.5) circle [radius=0.5];</span><br><span class="line"><span class="keyword">\draw</span> (4.5,0.5) ellipse</span><br><span class="line">    [x radius=1,y radius=0.5];</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+<li><p>矩形、圆和椭圆：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (1.5,1);</span><br><span class="line"><span class="keyword">\draw</span> (2.5,0.5) circle [radius=0.5];</span><br><span class="line"><span class="keyword">\draw</span> (4.5,0.5) ellipse</span><br><span class="line">    [x radius=1,y radius=0.5];</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128180748916.png" alt="image-20250128180748916" style="zoom:67%;" /></p></li>
-<li><p>直角、圆弧、椭圆弧 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) |- (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (1,0) -| (2,1);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) arc (0:135:1);</span><br><span class="line"><span class="keyword">\draw</span> (6,0) arc (0:135:1 and 0.5);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128180937724.png" style="zoom:67%;" /></p></li>
-<li><p>正弦、余弦曲线（1/4 周期）： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) sin (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (0,1) sin (1,0);</span><br><span class="line"><span class="keyword">\draw</span> (2,1) cos (3,0);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) cos (3,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128181343493.png" style="zoom:67%;" /></p></li>
+<li><p>直角、圆弧、椭圆弧</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) |- (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (1,0) -| (2,1);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) arc (0:135:1);</span><br><span class="line"><span class="keyword">\draw</span> (6,0) arc (0:135:1 and 0.5);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128180937724.png" alt="image-20250128180937724" style="zoom:67%;" /></p></li>
+<li><p>正弦、余弦曲线（1/4 周期）：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) sin (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (0,1) sin (1,0);</span><br><span class="line"><span class="keyword">\draw</span> (2,1) cos (3,0);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) cos (3,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128181343493.png" alt="image-20250128181343493" style="zoom:67%;" /></p></li>
 <li><p>抛物线，用 <span class="math inline">\(\texttt{bend}\)</span>
-控制顶点： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) parabola (1,2);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) parabola</span><br><span class="line">      bend (2.25,-0.25) (3,2);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) parabola</span><br><span class="line">      bend (4.75,2.25) (5,2);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+控制顶点：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) parabola (1,2);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) parabola</span><br><span class="line">      bend (2.25,-0.25) (3,2);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) parabola</span><br><span class="line">      bend (4.75,2.25) (5,2);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128181601221.png" alt="image-20250128181601221" style="zoom:67%;" /></p></li>
-<li><p>二次和三次 B'ezier 曲线，分别使用一个和两个控制点：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) .. controls</span><br><span class="line">  (2,1) and (3,1) .. (3,0);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) .. controls</span><br><span class="line">  (5,1) .. (5,0);</span><br><span class="line"><span class="keyword">\draw</span>[help lines] (0,0)</span><br><span class="line">  -- (2,1) -- (3,1) -- (3,0)</span><br><span class="line">  (4,0) -- (5,1) -- (5,0);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+<li><p>二次和三次 B'ezier 曲线，分别使用一个和两个控制点：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) .. controls</span><br><span class="line">  (2,1) and (3,1) .. (3,0);</span><br><span class="line"><span class="keyword">\draw</span> (4,0) .. controls</span><br><span class="line">  (5,1) .. (5,0);</span><br><span class="line"><span class="keyword">\draw</span>[help lines] (0,0)</span><br><span class="line">  -- (2,1) -- (3,1) -- (3,0)</span><br><span class="line">  (4,0) -- (5,1) -- (5,0);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128181655169.png" alt="image-20250128181655169" style="zoom:67%;" /></p></li>
 <li><p>网格、函数图像，网格可用 <span
 class="math inline">\(\texttt{step}\)</span>
 参数控制网格大小，函数图像用 <span
-class="math inline">\(\texttt{domain}\)</span> 参数控制定义域：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[help lines,step=0.5]</span><br><span class="line">     (-1,-1) grid (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (-1.5,0) -- (1.5,0);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (0,-1.5) -- (0,1.5);</span><br><span class="line"><span class="keyword">\draw</span>[domain=-1:1]</span><br><span class="line">     plot(<span class="keyword">\x</span>,&#123;<span class="keyword">\x</span>*<span class="keyword">\x</span>*2 -1&#125;);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{domain}\)</span> 参数控制定义域：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[help lines,step=0.5]</span><br><span class="line">     (-1,-1) grid (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (-1.5,0) -- (1.5,0);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (0,-1.5) -- (0,1.5);</span><br><span class="line"><span class="keyword">\draw</span>[domain=-1:1]</span><br><span class="line">     plot(<span class="keyword">\x</span>,&#123;<span class="keyword">\x</span>*<span class="keyword">\x</span>*2 -1&#125;);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250128181832752.png" alt="image-20250128181832752" style="zoom:67%;" /></p></li>
 </ul>
 <h3 id="textrmtikz-绘图命令和参数"><span
@@ -540,50 +553,58 @@ class="math inline">\(\texttt{fill}\)</span>
 class="math inline">\(\texttt{color}\)</span> 同时指定，也可以省略 <span
 class="math inline">\(\texttt{color=}\)</span> 直接写颜色名称。</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;[thick]</span><br><span class="line"><span class="keyword">\draw</span>[blue] (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\filldraw</span>[fill=yellow,draw=red]</span><br><span class="line">  (2,0.5) circle [radius=0.5];</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129092336978.png" style="zoom:67%;" /></p></li>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129092336978.png" alt="image-20250129092336978"  style="zoom:67%;" /></p></li>
 <li><p><span
 class="math inline">\(\texttt{thick=&lt;length&gt;/thin/semithick/...}\)</span>
-指定线条的粗细。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[ultra thin] (0,0)--(0,2);</span><br><span class="line"><span class="keyword">\draw</span>[very thin] (0.5,0)--(0.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[thin] (1,0)--(1,2);</span><br><span class="line"><span class="keyword">\draw</span>[semithick] (1.5,0)--(1.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[thick] (2,0)--(2,2);</span><br><span class="line"><span class="keyword">\draw</span>[very thick] (2.5,0)--(2.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[ultra thick] (3,0)--(3,2);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+指定线条的粗细。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[ultra thin] (0,0)--(0,2);</span><br><span class="line"><span class="keyword">\draw</span>[very thin] (0.5,0)--(0.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[thin] (1,0)--(1,2);</span><br><span class="line"><span class="keyword">\draw</span>[semithick] (1.5,0)--(1.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[thick] (2,0)--(2,2);</span><br><span class="line"><span class="keyword">\draw</span>[very thick] (2.5,0)--(2.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[ultra thick] (3,0)--(3,2);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129092537257.png" alt="image-20250129092537257" style="zoom:67%;" /></p></li>
 <li><p><span class="math inline">\(\texttt{solid/dashed/dotted/dash
 dot/dash dot dot}\)</span> 指定线条类型（实线、虚线、点划线等）。与
 <span class="math inline">\(\texttt{dashed}\)</span> 对应地有 <span
 class="math inline">\(\texttt{densely dashed}\)</span> 和 <span
-class="math inline">\(\texttt{loosely dashed}\)</span>，后三种类型同理。
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[dashed] (0,0) -- (0,2);</span><br><span class="line"><span class="keyword">\draw</span>[dotted] (0.5,0) -- (0.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[dash dot] (1,0) -- (1,2);</span><br><span class="line"><span class="keyword">\draw</span>[dash dot dot] (1.5,0) -- (1.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[densely dotted]</span><br><span class="line">   (2,0) -- (3,2) -- (4,0) -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{loosely
+dashed}\)</span>，后三种类型同理。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[dashed] (0,0) -- (0,2);</span><br><span class="line"><span class="keyword">\draw</span>[dotted] (0.5,0) -- (0.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[dash dot] (1,0) -- (1,2);</span><br><span class="line"><span class="keyword">\draw</span>[dash dot dot] (1.5,0) -- (1.5,2);</span><br><span class="line"><span class="keyword">\draw</span>[densely dotted]</span><br><span class="line">   (2,0) -- (3,2) -- (4,0) -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129092948158.png" alt="image-20250129092948158" style="zoom:67%;" /></p></li>
 <li><p><span class="math inline">\(\texttt{arrow - arrow}\)</span>
 指定线条首尾的箭头形式。复杂的箭头形式需要在导言区使用
-<code>\usetikzlibrary&#123;arrows.meta&#125;</code>。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;[thick]</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (0,4) -- (3,4);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;&gt;] (0,3.5) -- (3,3.5);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;|] (0,3) -- (3,3);</span><br><span class="line"><span class="keyword">\draw</span>[&lt;-] (0,2.5) -- (3,2.5);</span><br><span class="line"><span class="keyword">\draw</span>[&lt;-&gt;] (0,2) -- (3,2);</span><br><span class="line"><span class="keyword">\draw</span>[&gt;-&gt;|] (0,1.5) -- (3,1.5);</span><br><span class="line"><span class="keyword">\draw</span>[-stealth] (0,1) -- (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[-latex] (0,0.5) -- (3,0.5);</span><br><span class="line"><span class="keyword">\draw</span>[-to] (0,0) -- (3,0);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\usetikzlibrary&#123;arrows.meta&#125;</code>。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;[thick]</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;] (0,4) -- (3,4);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;&gt;] (0,3.5) -- (3,3.5);</span><br><span class="line"><span class="keyword">\draw</span>[-&gt;|] (0,3) -- (3,3);</span><br><span class="line"><span class="keyword">\draw</span>[&lt;-] (0,2.5) -- (3,2.5);</span><br><span class="line"><span class="keyword">\draw</span>[&lt;-&gt;] (0,2) -- (3,2);</span><br><span class="line"><span class="keyword">\draw</span>[&gt;-&gt;|] (0,1.5) -- (3,1.5);</span><br><span class="line"><span class="keyword">\draw</span>[-stealth] (0,1) -- (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[-latex] (0,0.5) -- (3,0.5);</span><br><span class="line"><span class="keyword">\draw</span>[-to] (0,0) -- (3,0);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129093329315.png" alt="image-20250129093329315" style="zoom:67%;" /></p></li>
 <li><p><span class="math inline">\(\texttt{rounded
 corners[=&lt;radius&gt;]/sharp corners}\)</span>
 将路径转向处绘制成圆角/直角。可选参数<code>&lt;radius&gt;</code>
-控制圆角的半径。可对某一段路径直接使用。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[rounded corners]</span><br><span class="line">  (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) -- (2,1)</span><br><span class="line">  [rounded corners=.3cm]</span><br><span class="line">  -- (3,1) -- (3.5,0)</span><br><span class="line">  [sharp corners] -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+控制圆角的半径。可对某一段路径直接使用。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[rounded corners]</span><br><span class="line">  (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span> (2,0) -- (2,1)</span><br><span class="line">  [rounded corners=.3cm]</span><br><span class="line">  -- (3,1) -- (3.5,0)</span><br><span class="line">  [sharp corners] -- cycle;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129093732376.png" alt="image-20250129093732376" style="zoom:67%;" /></p></li>
 <li><p><span
 class="math inline">\(\texttt{scale/xshift/yshift/xslant/yslant/rotate}\)</span>
-设定图形的缩放、位移和旋转。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[help lines](0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[scale=1.5] (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[rotate=30] (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[help lines](2,0) rectangle (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[yshift=4pt](2,0) rectangle (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[help lines](4,0) rectangle (5,1);</span><br><span class="line"><span class="keyword">\draw</span>[xslant=0.4](4,0) rectangle (5,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+设定图形的缩放、位移和旋转。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span>[help lines](0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[scale=1.5] (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[rotate=30] (0,0) rectangle (1,1);</span><br><span class="line"><span class="keyword">\draw</span>[help lines](2,0) rectangle (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[yshift=4pt](2,0) rectangle (3,1);</span><br><span class="line"><span class="keyword">\draw</span>[help lines](4,0) rectangle (5,1);</span><br><span class="line"><span class="keyword">\draw</span>[xslant=0.4](4,0) rectangle (5,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129094034719.png" alt="image-20250129094034719" style="zoom:67%;" /></p></li>
 </ul>
 <p>为了重复利用绘图参数，减少代码冗余，<span
 class="math inline">\(\textrm{TikZ}\)</span>
-引入了“样式”的概念，可以定义一个样式包含绘图参数，然后将样式作为一个参数用于绘图：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line">  [myarrow/.style=&#123;blue,thick,-&gt;&#125;]</span><br><span class="line"><span class="keyword">\draw</span> (0,0)--(0,1)--(2,1);</span><br><span class="line"><span class="keyword">\draw</span>[myarrow] (0,0)--(2,1);</span><br><span class="line"><span class="keyword">\draw</span>[myarrow,dotted]</span><br><span class="line">  (0,0)--(2,0)--(2,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+引入了“样式”的概念，可以定义一个样式包含绘图参数，然后将样式作为一个参数用于绘图：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line">  [myarrow/.style=&#123;blue,thick,-&gt;&#125;]</span><br><span class="line"><span class="keyword">\draw</span> (0,0)--(0,1)--(2,1);</span><br><span class="line"><span class="keyword">\draw</span>[myarrow] (0,0)--(2,1);</span><br><span class="line"><span class="keyword">\draw</span>[myarrow,dotted]</span><br><span class="line">  (0,0)--(2,0)--(2,1);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129094345438.png" alt="image-20250129094345438" style="zoom:67%;" /></p>
 <p><span class="math inline">\(\textrm{TikZ}\)</span> 还提供了<span
 class="math inline">\(\texttt{scope}\)</span>
-环境，令绘图参数或样式在局部生效： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (2.5, 2.5);</span><br><span class="line"><span class="keyword">\begin</span>&#123;scope&#125;[thick,scale=0.5]</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (2.5, 2.5);</span><br><span class="line"><span class="keyword">\end</span>&#123;scope&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+环境，令绘图参数或样式在局部生效：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (2.5, 2.5);</span><br><span class="line"><span class="keyword">\begin</span>&#123;scope&#125;[thick,scale=0.5]</span><br><span class="line"><span class="keyword">\draw</span> (0,0) rectangle (2.5, 2.5);</span><br><span class="line"><span class="keyword">\end</span>&#123;scope&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129094453595.png" alt="image-20250129094453595" style="zoom:67%;" /></p>
 <h3 id="textrmtikz-文字结点"><span
 class="math inline">\(\textrm{TikZ}\)</span> 文字结点</h3>
 <p><span class="math inline">\(\textrm{TikZ}\)</span> 用
-<code>\node</code> 命令绘制文字结点： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\node</span>[&lt;options&gt;] (&lt;name&gt;) at (&lt;coordinate&gt;) &#123;&lt;text&gt;&#125;;</span><br></pre></td></tr></table></figure></p>
+<code>\node</code> 命令绘制文字结点：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\node</span>[&lt;options&gt;] (&lt;name&gt;) at (&lt;coordinate&gt;) &#123;&lt;text&gt;&#125;;</span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(\texttt{(&lt;name&gt;)}\)</span>
 为结点命名，类似 <code>\coordinate</code>；<span
 class="math inline">\(\texttt{at (&lt;coordinate&gt;)}\)</span>
 指定结点的位置。这两者和前面的 <code>&lt;options&gt;</code>
-都可以省略，只有 <code>&lt;text&gt;</code> 是必填的。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\node</span> (A) at (0,0) &#123;A&#125;;</span><br><span class="line"><span class="keyword">\node</span> (B) at (1,0) &#123;B&#125;;</span><br><span class="line"><span class="keyword">\node</span> (C) at (60:1) &#123;C&#125;;</span><br><span class="line"><span class="keyword">\draw</span> (A) -- (B) -- (C) -- (A);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+都可以省略，只有 <code>&lt;text&gt;</code> 是必填的。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\node</span> (A) at (0,0) &#123;A&#125;;</span><br><span class="line"><span class="keyword">\node</span> (B) at (1,0) &#123;B&#125;;</span><br><span class="line"><span class="keyword">\node</span> (C) at (60:1) &#123;C&#125;;</span><br><span class="line"><span class="keyword">\draw</span> (A) -- (B) -- (C) -- (A);</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129095143645.png" alt="image-20250129095143645" style="zoom:67%;" /></p>
 <p>上一 小节中的参数可用于 <code>\node</code>
 命令的配置。除此之外，<code>\node</code> 还有一些特定的参数：</p>
@@ -601,7 +622,8 @@ class="math inline">\(\texttt{above left}\)</span>/<span
 class="math inline">\(\ldots [=&lt;length&gt;]\)</span> 与 <span
 class="math inline">\(\texttt{anchor}\)</span> 等效的选项。可选的
 <code>&lt;length&gt;</code> 为结点相对于 <code>&lt;coordinate&gt;</code>
-的距离。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\coordinate</span> (A) at (1,1);</span><br><span class="line"><span class="keyword">\fill</span> (A) circle[radius=2pt];</span><br><span class="line"><span class="keyword">\node</span>[draw,anchor=south] at (A) &#123;a&#125;;</span><br><span class="line"><span class="keyword">\node</span>[draw,below right=4pt] at (A) &#123;b&#125;;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p>
+的距离。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\coordinate</span> (A) at (1,1);</span><br><span class="line"><span class="keyword">\fill</span> (A) circle[radius=2pt];</span><br><span class="line"><span class="keyword">\node</span>[draw,anchor=south] at (A) &#123;a&#125;;</span><br><span class="line"><span class="keyword">\node</span>[draw,below right=4pt] at (A) &#123;b&#125;;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129100019973.png" alt="image-20250129100019973" style="zoom:67%;" /></p></li>
 <li><p><span class="math inline">\(\texttt{shape=&lt;shape&gt;}\)</span>
 结点的形状，默认可用 <span
@@ -614,18 +636,17 @@ class="math inline">\(\texttt{shape=}\)</span>
 结点文字的颜色。</p></li>
 <li><p><span class="math inline">\(\texttt{node font={&lt;font
 command&gt;}}\)</span>结点文字的字体，形如 <code>\bfseries</code> 或
-<code>\itshape</code> 等。 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\node</span>[circle,fill=blue,text=white,</span><br><span class="line">  node font=&#123;<span class="keyword">\bfseries</span>&#125;]</span><br><span class="line">  (A) at (0,0) &#123;A node&#125;;</span><br><span class="line"><span class="keyword">\node</span>[rectangle,rounded corners,</span><br><span class="line">  draw=gray,</span><br><span class="line">  node font=&#123;<span class="keyword">\sffamily</span><span class="keyword">\slshape</span>&#125;]</span><br><span class="line">  (B) at (2,0) &#123;B node&#125;;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p></li>
-</ul>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129111754629.png" alt="image-20250129111754629" style="zoom:67%;" /></p>
-<ul>
-<li><span class="math inline">\(\texttt{inner sep= &lt;length&gt;} /
+<code>\itshape</code> 等。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\node</span>[circle,fill=blue,text=white,</span><br><span class="line">  node font=&#123;<span class="keyword">\bfseries</span>&#125;]</span><br><span class="line">  (A) at (0,0) &#123;A node&#125;;</span><br><span class="line"><span class="keyword">\node</span>[rectangle,rounded corners,</span><br><span class="line">  draw=gray,</span><br><span class="line">  node font=&#123;<span class="keyword">\sffamily</span><span class="keyword">\slshape</span>&#125;]</span><br><span class="line">  (B) at (2,0) &#123;B node&#125;;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129111754629.png" alt="image-20250129111754629" style="zoom:67%;" /></p></li>
+<li><p><span class="math inline">\(\texttt{inner sep= &lt;length&gt;} /
 \texttt{outer sep=&lt;length&gt;}\)</span>
-结点边界向外和向内的额外距离。</li>
-<li><span class="math inline">\(\texttt{minimum
+结点边界向外和向内的额外距离。</p></li>
+<li><p><span class="math inline">\(\texttt{minimum
 size=&lt;length&gt;}\)</span> / <span
 class="math inline">\(\texttt{minimum height=&lt;length&gt;}\)</span>
 /<span class="math inline">\(\texttt{minimum
-width=&lt;length&gt;}\)</span>结点的最小大小或最小高度/宽度。</li>
+width=&lt;length&gt;}\)</span>结点的最小大小或最小高度/宽度。</p></li>
 </ul>
 <p><code>\node</code> 命令不仅为文字结点的位置命名，在
 <code>\draw</code>
@@ -642,8 +663,8 @@ class="math inline">\(\texttt{node}\)</span>，不仅可以对某个位置标记
 <h3 id="在-textrmtikz-中使用循环">在 <span
 class="math inline">\(\textrm{TikZ}\)</span> 中使用循环</h3>
 <p><span class="math inline">\(\textrm{TikZ}\)</span> 通过
-<code>pgffor</code> 功能宏包实现了简单的循环功能，语法为：
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\foreach</span> <span class="keyword">\a</span> in &#123;&lt;list&gt;&#125; &#123;&lt;commands&gt;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>pgffor</code> 功能宏包实现了简单的循环功能，语法为：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\foreach</span> <span class="keyword">\a</span> in &#123;&lt;list&gt;&#125; &#123;&lt;commands&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>上述语法定义了 <code>\a</code> 为变量，在
 <code>&lt;commands&gt;</code> 中使用 <code>\a</code> 完成循环。</p>
 <p><code>&lt;list&gt;</code> 可以直接将所有值写出来，如 <span
@@ -654,6 +675,10 @@ class="math inline">\(\texttt{1,2,3,4}\)</span>；也可以写成省略形式，
 <p><code>\foreach</code> 还可使用变量对参与循环：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tikzpicture&#125;</span><br><span class="line"><span class="keyword">\foreach</span> <span class="keyword">\n</span>/<span class="keyword">\t</span> in</span><br><span class="line">  &#123;0/<span class="keyword">\alpha</span>,1/<span class="keyword">\beta</span>,2/<span class="keyword">\gamma</span>&#125;</span><br><span class="line">  &#123;<span class="keyword">\node</span>[circle,fill=lightgray,draw]</span><br><span class="line">    at (<span class="keyword">\n</span>,0) &#123;<span class="built_in">$</span><span class="keyword">\t</span><span class="built_in">$</span>&#125;;&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250129113823045.png" alt="image-20250129113823045" style="zoom:67%;" /></p>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
@@ -792,13 +817,13 @@ class="math inline">\(\texttt{1,2,3,4}\)</span>；也可以写成省略形式，
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/notes_lshort/08_custom/" rel="prev" title="$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）
+                <a href="/notes_lshort/06_special/" rel="prev" title="$\LaTeX{}$ 之特色工具和功能（六）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之特色工具和功能（六）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/notes_lshort/09_install/" rel="next" title="$\LaTeX{}$ 安装TEX发行版（九）">
-                  $\LaTeX{}$ 安装TEX发行版（九） <i class="fa fa-angle-right"></i>
+                <a href="/notes_lshort/08_custom/" rel="next" title="$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）">
+                  $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -836,7 +861,7 @@ class="math inline">\(\texttt{1,2,3,4}\)</span>；也可以写成省略形式，
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:37</span>
+    <span title="站点阅读时长">2:36</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

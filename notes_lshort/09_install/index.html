@@ -22,15 +22,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="$\LaTeX{}$ 安装TEX发行版（九）">
+<meta property="og:title" content="$\LaTeX{}$ 之安装TEX发行版（九）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/09_install/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:20:35.036Z">
+<meta property="article:published_time" content="2025-02-25T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-07T05:56:50.719Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -39,10 +39,10 @@
 <link rel="canonical" href="https://invinc-z.com/notes_lshort/09_install/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes_lshort/09_install/","path":"notes_lshort/09_install/","title":"$\\LaTeX{}$ 安装TEX发行版（九）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes_lshort/09_install/","path":"notes_lshort/09_install/","title":"$\\LaTeX{}$ 之安装TEX发行版（九）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>$\LaTeX{}$ 安装TEX发行版（九） | Invinc-Z Blog</title>
+<title>$\LaTeX{}$ 之安装TEX发行版（九） | Invinc-Z Blog</title>
   
 
 
@@ -178,7 +178,7 @@
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex-%E5%8F%91%E8%A1%8C%E7%89%88%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">\(\TeX{}\)
 发行版简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.1.</span> <span class="nav-text">安装发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftex-live"><span class="nav-number">1.1.1.</span> <span class="nav-text">\(\textbf{TeX
-Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfmiktex"><span class="nav-number">1.1.2.</span> <span class="nav-text">\(\textbf{MiKTeX}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装和更新宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装宏包</span></a></li></ol></li></ol></div>
+Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfmiktex"><span class="nav-number">1.1.2.</span> <span class="nav-text">\(\textbf{MiKTeX}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装和更新宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装宏包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -265,14 +265,14 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
   <ul class="popular-posts">
     <li class="popular-posts-item">
       <a class="popular-posts-link" href="/notes_lshort/08_custom/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
+        <time class="popular-posts-time">2025-02-18</time>
         <br>
       $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）
       </a>
     </li>
     <li class="popular-posts-item">
       <a class="popular-posts-link" href="/notes_lshort/07_graphic/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
+        <time class="popular-posts-time">2025-02-12</time>
         <br>
       $\LaTeX{}$ 之绘图功能（七）
       </a>
@@ -318,12 +318,12 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="$\LaTeX{}$ 安装TEX发行版（九） | Invinc-Z Blog">
+      <meta itemprop="name" content="$\LaTeX{}$ 之安装TEX发行版（九） | Invinc-Z Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          $\LaTeX{}$ 安装TEX发行版（九）
+          $\LaTeX{}$ 之安装TEX发行版（九）
         </h1>
 
         <div class="post-meta-container">
@@ -334,14 +334,14 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-02-26 05:12:18" itemprop="dateCreated datePublished" datetime="2025-02-26T05:12:18+08:00">2025-02-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:20:35" itemprop="dateModified" datetime="2025-06-03T20:20:35+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-07 13:56:50" itemprop="dateModified" datetime="2025-06-07T13:56:50+08:00">2025-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -364,7 +364,7 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -381,21 +381,13 @@ Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本章会简单介绍如何安装 <span class="math inline">\(\TeX{}\)</span>
-发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 <span
-class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。
-<span id="more"></span> # 09_<span class="math inline">\(\LaTeX{}\)</span>
-安装TEX发行版</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>高德纳的 <span class="math inline">\(\TeX{}\)</span> 程序开发于 20
-世纪 80 年代，那时候电子计算机的运算能力有限，<span
-class="math inline">\(\TeX{}\)</span>
-还是大型服务器上的玩物。而如今个人计算机完全能够胜任排版的工作，并催生了用于个人计算机的工具集合——
-<span class="math inline">\(\TeX{}\)</span> 发行版的发展。</p>
 <p>本章会简单介绍如何安装 <span class="math inline">\(\TeX{}\)</span>
 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 <span
 class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
+<span id="more"></span>
+<hr />
 <h2 id="tex-发行版简介"><span class="math inline">\(\TeX{}\)</span>
 发行版简介</h2>
 <p>一个 <strong><span class="math inline">\(\TeX{}\)</span>
@@ -436,8 +428,10 @@ class="math inline">\(\LaTeX{}\)</span> 源代码。</p>
 <h4 id="textbftex-live"><span class="math inline">\(\textbf{TeX
 Live}\)</span></h4>
 <p><span class="math inline">\(\textrm{TeX Live}\)</span>
-的光盘镜像发布于 https://www.tug.org/texlive/，
-下载镜像到本地，挂载到虚拟光驱，或者用压缩工具解压后，在其根目录有几个用于安装的脚本：</p>
+的安装和使用指南可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlL2RvYy90ZXhsaXZlLXpoLWNuL3RleGxpdmUtemgtY24ucGRm">文档<i class="fa fa-external-link-alt"></i></span>,
+可用 <code>texdoc texlive-zh-cn</code> 在本地打开。</p>
+<p><span class="math inline">\(\textrm{TeX Live}\)</span>
+的光盘镜像发布于 <span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==">texlive官网<i class="fa fa-external-link-alt"></i></span>，下载镜像到本地，挂载到虚拟光驱，或者用压缩工具解压后，在其根目录有几个用于安装的脚本：</p>
 <ul>
 <li><p>用于 <strong>Windows</strong> 的批处理文件：</p>
 <ul>
@@ -464,9 +458,7 @@ CTAN 软件源下载所有组件。</p>
 <p>Linux 下 <span class="math inline">\(\textrm{TeX Live}\)</span>
 安装完毕后，一般还需要在 root 权限下进行以下操作，使得 <span
 class="math inline">\(\textrm{XeLaTeX}\)</span> 能正确通过
-<code>fontspec</code>等宏包使用字体(https://www.tug.org/texlive/doc/texlive-zh-cn/texlive-zh-cn.pdf，
-可用 <span class="math inline">\(\texttt{texdoc texlive-zh-cn}\)</span>
-在本地打开。)：</p>
+<code>fontspec</code>等宏包使用字体：</p>
 <ol type="1">
 <li>将 <span
 class="math inline">\(\texttt{texlive-fontconfig.conf}\)</span>
@@ -477,10 +469,10 @@ class="math inline">\(\texttt{/etc/fonts/conf.d/09-texlive.conf}\)</span>。</li
 </ol>
 <h4 id="textbfmiktex"><span
 class="math inline">\(\textbf{MiKTeX}\)</span></h4>
-<p>从 <span class="math inline">\(\textrm{MiKTeX}\)</span> 官网
-https://www.miktex.org/ 下载名为 <span
+<p>从 <span class="math inline">\(\textrm{MiKTeX}\)</span> <span class="exturl" data-url="aHR0cHM6Ly93d3cubWlrdGV4Lm9yZy8=">官网<i class="fa fa-external-link-alt"></i></span> 下载名为 <span
 class="math inline">\(\texttt{basic-miktex-***.exe}\)</span> 的 Windows
 安装包。下载后直接双击打开，按照程序的提示进行安装即可。</p>
+<hr />
 <h2 id="安装和更新宏包">安装和更新宏包</h2>
 <p><span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
 class="math inline">\(\textrm{MiKTeX}\)</span>
@@ -490,7 +482,8 @@ Package
 Manager}\)</span>，用于安装、管理和更新宏包。一般情况下，直接在图形界面的工具下按提示操作即可（<span
 class="math inline">\(\textrm{MiKTeX Package Manager}\)</span>
 有普通权限和管理员权限的版本，建议<strong>总是使用管理员权限</strong>的版本）。</p>
-<p>两者也可以通过各自的命令行工具安装和更新宏包： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% TeX Live 命令行工具 tlmgr 的使用示例</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">tlmgr install &lt;package-name&gt;</span><br><span class="line">tlmgr remove &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包（包括 tlmgr 本身）</span><br><span class="line">tlmgr update --all --self</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">tlmgr update --list</span><br><span class="line">% 指定更新源地址</span><br><span class="line">% &lt;CTAN mirrors&gt; 形如 https://mirrors.tuna.tsinghua.edu.cn/CTAN</span><br><span class="line">tlmgr repository <span class="built_in">set</span> &lt;CTAN mirrors&gt;/systems/texlive/tlnet</span><br><span class="line">% 查看宏包信息，加 --list 参数可列出宏包的所有文件</span><br><span class="line">tlmgr info &lt;package-name&gt;</span><br></pre></td></tr></table></figure></p>
+<p>两者也可以通过各自的命令行工具安装和更新宏包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% TeX Live 命令行工具 tlmgr 的使用示例</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">tlmgr install &lt;package-name&gt;</span><br><span class="line">tlmgr remove &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包（包括 tlmgr 本身）</span><br><span class="line">tlmgr update --all --self</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">tlmgr update --list</span><br><span class="line">% 指定更新源地址</span><br><span class="line">% &lt;CTAN mirrors&gt; 形如 https://mirrors.tuna.tsinghua.edu.cn/CTAN</span><br><span class="line">tlmgr repository <span class="built_in">set</span> &lt;CTAN mirrors&gt;/systems/texlive/tlnet</span><br><span class="line">% 查看宏包信息，加 --list 参数可列出宏包的所有文件</span><br><span class="line">tlmgr info &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% MiKTeX 命令行工具 mpm 的使用示例</span><br><span class="line">% 建议始终加 --admin 参数使用</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">mpm --admin --install &lt;package-name&gt;</span><br><span class="line">mpm --admin --uninstall &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包</span><br><span class="line">mpm --admin --update</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">mpm --admin --find-updates</span><br><span class="line">% 指定更新源地址</span><br><span class="line">mpm --admin --set-repository=&lt;CTAN mirrors&gt;/systems/win32/miktex/tm/packages</span><br><span class="line">% 查看宏包信息</span><br><span class="line">mpm --admin --print-package-info &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <p><span class="math inline">\(\textrm{TeX Live}\)</span>
 默认安装所有宏包， <span class="math inline">\(\textrm{MiKTeX}\)</span>
@@ -585,9 +578,15 @@ class="math inline">\(\textrm{C:\\texlive\\texmf-local}\)</span>。安装完成�
 <span class="math inline">\(\TeX{}\)</span>
 发行版的文件名数据库</strong>，令新安装的宏包文件能够被系统找到。<span
 class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
-命令行或者 Linux 终端执行命令： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mktexlsr</span><br></pre></td></tr></table></figure></p>
-<p><span class="math inline">\(\textrm{MiKTeX}\)</span> 用户的命令为：
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">initexmf --update-fndb</span><br></pre></td></tr></table></figure></p>
+命令行或者 Linux 终端执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mktexlsr</span><br></pre></td></tr></table></figure>
+<p><span class="math inline">\(\textrm{MiKTeX}\)</span>
+用户的命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">initexmf --update-fndb</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 
     </div>
 
@@ -623,7 +622,7 @@ class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://invinc-z.com/notes_lshort/09_install/" title="$\LaTeX{}$ 安装TEX发行版（九）">https://invinc-z.com/notes_lshort/09_install/</a>
+      <a href="https://invinc-z.com/notes_lshort/09_install/" title="$\LaTeX{}$ 之安装TEX发行版（九）">https://invinc-z.com/notes_lshort/09_install/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -726,13 +725,13 @@ class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/notes_lshort/07_graphic/" rel="prev" title="$\LaTeX{}$ 之绘图功能（七）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之绘图功能（七）
+                <a href="/notes_lshort/08_custom/" rel="prev" title="$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/notes_lshort/01_basic_concepts/" rel="next" title="$\LaTeX{}$ 的基本概念（一）">
-                  $\LaTeX{}$ 的基本概念（一） <i class="fa fa-angle-right"></i>
+                <a href="/notes_lshort/10_error_help/" rel="next" title="$LaTeX{}$ 之排除错误和寻求帮助（十）">
+                  $LaTeX{}$ 之排除错误和寻求帮助（十） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -770,7 +769,7 @@ class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:37</span>
+    <span title="站点阅读时长">2:36</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

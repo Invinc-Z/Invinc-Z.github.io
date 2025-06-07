@@ -22,15 +22,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本章首先总结了常见的 \(\LaTeX{}\) 错误及应对的办法。">
+    <meta name="description" content="本文主体内容来自 一份 (不太) 简短的 LATEX2ε 介绍。 \(\LaTeX{}\) 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 \(\LaTeX{}\) 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$LaTeX{}$ 之排除错误和寻求帮助（十）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/10_error_help/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本章首先总结了常见的 \(\LaTeX{}\) 错误及应对的办法。">
+<meta property="og:description" content="本文主体内容来自 一份 (不太) 简短的 LATEX2ε 介绍。 \(\LaTeX{}\) 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 \(\LaTeX{}\) 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:21:07.708Z">
+<meta property="article:published_time" content="2025-03-03T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-07T07:02:19.705Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -177,7 +177,7 @@
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
             <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E9%94%99%E8%AF%AF"><span class="nav-number">1.</span> <span class="nav-text">\(\LaTeX{}\)
-错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">处理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-latex-%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">常见的 \(\LaTeX{}\) 错误信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">查找帮助文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">常用宏包简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%85%AC%E5%BC%8F%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">文字、公式和符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E7%89%88%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">排版元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A1%A8%E5%92%8C%E6%B5%AE%E5%8A%A8%E4%BD%93"><span class="nav-number">3.3.</span> <span class="nav-text">图表和浮动体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%89%88%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">修改版式</span></a></li></ol></li></ol></div>
+错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">处理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-latex-%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">常见的 \(\LaTeX{}\) 错误信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">查找帮助文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">常用宏包简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%85%AC%E5%BC%8F%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">文字、公式和符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E7%89%88%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">排版元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A1%A8%E5%92%8C%E6%B5%AE%E5%8A%A8%E4%BD%93"><span class="nav-number">3.3.</span> <span class="nav-text">图表和浮动体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%89%88%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">修改版式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -302,14 +302,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-03-04 05:12:18" itemprop="dateCreated datePublished" datetime="2025-03-04T05:12:18+08:00">2025-03-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:21:07" itemprop="dateModified" datetime="2025-06-03T20:21:07+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-07 15:02:19" itemprop="dateModified" datetime="2025-06-07T15:02:19+08:00">2025-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -332,7 +332,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.9k</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -349,23 +349,24 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本章首先总结了常见的 <span class="math inline">\(\LaTeX{}\)</span>
-错误及应对的办法。 <span id="more"></span> # 10_<span
-class="math inline">\(LaTeX{}\)</span> 之排除错误和寻求帮助</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <p><span class="math inline">\(\LaTeX{}\)</span>
 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的
-<span class="math inline">\(\LaTeX{}\)</span> 错误及应对的办法。</p>
+<span class="math inline">\(\LaTeX{}\)</span>
+错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。</p>
+<span id="more"></span>
+<hr />
 <h2 id="latex-错误"><span class="math inline">\(\LaTeX{}\)</span>
 错误</h2>
 <p>当用排版引擎编译 <span class="math inline">\(\LaTeX{}\)</span>
 代码时，命令行的窗口（终端）会显示大量信息（TeXworks
 等编辑器会有一个区域显示这些信息）。
 当编译过程中出现错误时，信息将会停止在出错的地方，等待我们接下来的操作。</p>
-<p>比如说我们有一个明显出错的例子： <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">Test <span class="keyword">\LaTEx</span>&#123;&#125; and it&#x27;s friends.</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure></p>
-<p>编译过程中遇到这个错误将会停顿下来，提示错误，并等待用户输入指令：
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">! Undefined control sequence.</span><br><span class="line">l.3 Test <span class="keyword">\LaTEx</span></span><br><span class="line">             &#123;&#125; and it&#x27;s friends.</span><br></pre></td></tr></table></figure></p>
+<p>比如说我们有一个明显出错的例子：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line">Test <span class="keyword">\LaTEx</span>&#123;&#125; and it&#x27;s friends.</span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>编译过程中遇到这个错误将会停顿下来，提示错误，并等待用户输入指令：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">! Undefined control sequence.</span><br><span class="line">l.3 Test <span class="keyword">\LaTEx</span></span><br><span class="line">             &#123;&#125; and it&#x27;s friends.</span><br></pre></td></tr></table></figure>
 <p>这种错误信息分两部分，前一部分提示了错误的信息，后一部分指出了错误发生的行号，以及通过错落的文字告知发生错误的命令所在位置。如上错误显示
 <code>\LaTEx</code> 位置发生了错误，错误信息是“未定义的控制序列”，意思是
 <code>\LaTEx</code> 是 <span class="math inline">\(\TeX{}\)</span>
@@ -415,12 +416,11 @@ class="math inline">\(\texttt\&amp;\)</span>
 <li>后者常出现于漏掉了行尾的 <code>\\</code> 命令而接着使用
 <code>\hline</code> 命令画横线的时候。</li>
 </ul></li>
-<li><p><span style="color:red;">! LaTeX Error: Lonely</p>
-<p>–perhaps a missing list environment.</span></p></li>
+<li><p><span style="color:red;">! LaTeX Error: Lonely \item – perhaps a
+missing list environment.</span></p></li>
 <li><p><span style="color:red;">! LaTeX Error: Something’s wrong–perhaps
-a missing</p>
-<p>.</span></p>
-<p>两个错误信息都与列表环境和<code>\item</code>
+a missing \item.</span></p>
+<p>两个错误信息都与列表环境和 <code>\item</code>
 命令有关。前者意味着在没有使用列表环境的情况下用了
 <code>\item</code>；后者则相反，是在列表环境中漏了
 <code>\item</code>。</p></li>
@@ -429,12 +429,12 @@ a missing</p>
 found.</span></p>
 <p>两个错误都意味着缺少文件。</p>
 <ul>
-<li>如果使用<code>\input</code> 或者 <code>\include</code>
+<li>如果使用 <code>\input</code> 或者 <code>\include</code>
 命令添加文件，出现上述错误的原因当然是文件不存在或者文件名不对；</li>
 <li>如果错误提示里的文件名带 <span
 class="math inline">\(\texttt{.sty}\)</span> 或者 <span
-class="math inline">\(\texttt{.cls}\)</span>
-扩展名，那么很显然，是因为<strong>没有安装所需的宏包或文档类</strong>。</li>
+class="math inline">\(\texttt{.cls}\)</span> 扩展名，那么很显然，是因为
+<strong>没有安装所需的宏包或文档类</strong>。</li>
 </ul></li>
 <li><p><span style="color:red;">! LaTeX Error: Missing
 \begin{document}.</span></p>
@@ -445,14 +445,15 @@ class="math inline">\(\texttt{.cls}\)</span>
 preamble.</span></p>
 <p>与上一条相反，由于将必须用于导言区的命令在
 <code>\begin&#123;document&#125;</code> 之后使用而产生。</p></li>
-<li><p><span style="color:red;">! LaTeX Error: \begin{…} on input line …
-ended by \end{…}.</span></p>
+<li><p><span style="color:red;">! LaTeX Error:  begin{…} on input line
+ended by \end{…}. </span></p>
 <p>环境首尾不匹配。比如 <code>\begin&#123;enumerate&#125;</code> 用了
 <code>\end&#123;itemize&#125;</code> 结尾。或者也可能是由于漏写了
-<code>\begin</code>或者 <code>\end</code> 命令。</p></li>
+<code>\begin</code> 或者 <code>\end</code> 命令。</p></li>
 <li><p><span style="color:red;">! LaTeX Error: Option clash for package
 `…’.</span></p>
-<p>以<strong>不同选项</strong>重复调用宏包造成冲突。有可能是因为其它宏包内部事先调用了这个宏包，用户再次带选项调用而导致冲突。解决问题的办法是去掉重复调用的宏包。如果宏包允许的话，尽量使用其定义的命令改变设置，减少宏包选项的使用。</p></li>
+<p>以 <strong>不同选项</strong>
+重复调用宏包造成冲突。有可能是因为其它宏包内部事先调用了这个宏包，用户再次带选项调用而导致冲突。解决问题的办法是去掉重复调用的宏包。如果宏包允许的话，尽量使用其定义的命令改变设置，减少宏包选项的使用。</p></li>
 <li><p><span style="color:red;">! LaTeX Error: Command … already
 defined, </span></p>
 <p><span style="color:red;">or name \end… illegal … </span></p>
@@ -469,6 +470,7 @@ package `…’. </span></p>
 <li><p><span style="color:red;">! Package `…’ error: … </span></p>
 <p>宏包或文档类自定义的错误，由于不正确地使用宏包里的命令而导致。此时应该查找宏包的帮助文档来解决问题。</p></li>
 </ul>
+<hr />
 <h2 id="查找帮助文档">查找帮助文档</h2>
 <p>无论是 <span class="math inline">\(\textrm{TeX Live}\)</span> 还是
 <span
@@ -476,25 +478,28 @@ class="math inline">\(\textrm{MiKTeX}\)</span>，都提供了一个命令行模�
 <span class="math inline">\(\texttt{texdoc}\)</span>。比如对
 <code>fancyhdr</code> 宏包感兴趣，这时在 Windows 命令提示符或者 Linux
 终端输入以下命令，则会弹出宏包的帮助文档 <span
-class="math inline">\(\texttt{fancyhdr.pdf}\)</span>： <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">texdoc fancyhdr</span><br></pre></td></tr></table></figure></p>
+class="math inline">\(\texttt{fancyhdr.pdf}\)</span>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">texdoc fancyhdr</span><br></pre></td></tr></table></figure>
 <p>除了宏包的帮助文档外，<span class="math inline">\(\TeX{}\)</span>
 发行版还包括了各类有用的文档，有一部分在参考文献中给出。</p>
-<p>当然对于初学者，有一个现实而棘手的问题：<strong>某个命令到底是 <span
+<p>对于初学者，有一个现实而棘手的问题：<strong>某个命令到底是 <span
 class="math inline">\(\LaTeX{}\)</span>
-自有的，还是哪个宏包提供的？</strong>很遗憾地说，除了通过慢慢积累、熟悉较多宏包之外，没有很方便的办法解决这个问题，因为
+自有的，还是哪个宏包提供的？</strong>
+很遗憾地说，除了通过慢慢积累、熟悉较多宏包之外，没有很方便的办法解决这个问题，因为
 <span class="math inline">\(\LaTeX{}\)</span> 的宏包实在太丰富了。</p>
 <p>解决这个问题有几点可行的办法：</p>
 <ol type="1">
 <li><p>查询一些综述性的资料，如总结所有 <span
-class="math inline">\(\LaTeX{}\)</span> 自带命令的文档<a href="#fn1"
+class="math inline">\(\LaTeX{}\)</span> 自带命令的文档 <a href="#fn1"
 class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a>、、<span
-class="math inline">\(\LaTeX{}\)</span> 符号大全<a href="#fn2"
+class="math inline">\(\LaTeX{}\)</span> 符号大全 <a href="#fn2"
 class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 等；</p></li>
 <li><p>在互联网上搜索自己不清楚的命令；</p></li>
 <li><p>在论坛上提问求助有经验的人。</p></li>
 </ol>
+<hr />
 <h2 id="常用宏包简介">常用宏包简介</h2>
 <h3 id="文字公式和符号">文字、公式和符号</h3>
 <table>
@@ -859,19 +864,20 @@ class="math inline">\(\texttt{enumerate}\)</span> 环境。</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1"><p>Karl Berry, Jim Hefferon, Vincent Belaiche. <span
-class="math inline">\(\textit{LaTeXe: An unofficial reference
-manual}\)</span>. (<span class="math inline">\(\texttt{texdoc
-latex2e}\)</span>)<a href="#fnref1" class="footnote-back"
+<li id="fn1"><p>Karl Berry, Jim Hefferon, Vincent Belaiche. LaTeXe: An
+unofficial reference manual. (texdoc latex2e)<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Scott Pakin. The Comprehensive LaTeX Symbol List}.
+(texdoc symbols-a4)<a href="#fnref2" class="footnote-back"
 role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Scott Pakin. <span class="math inline">\(\textit{The
-Comprehensive LaTeX Symbol List}\)</span>. (<span
-class="math inline">\(\texttt{texdoc symbols-a4}\)</span>)<a
-href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
@@ -1012,6 +1018,9 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/notes_lshort/09_install/" rel="prev" title="$\LaTeX{}$ 之安装TEX发行版（九）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之安装TEX发行版（九）
+                </a>
             </div>
             <div class="post-nav-item">
                 <a href="/notes_lshort/11_reference_books/" rel="next" title="$\LaTeX{}$ 之学习参考书籍（十一）">
@@ -1053,7 +1062,7 @@ href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:37</span>
+    <span title="站点阅读时长">2:36</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动

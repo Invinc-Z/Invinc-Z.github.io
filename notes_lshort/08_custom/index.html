@@ -22,12 +22,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.23.1","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。">
+    <meta name="description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 如何制作一个简单但像样的毕业论文&#x2F;书籍&#x2F;简历模板，每次可以直接套用，而不是再在导言区写一堆代码？ 本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）">
 <meta property="og:url" content="https://invinc-z.com/notes_lshort/08_custom/index.html">
 <meta property="og:site_name" content="Invinc-Z Blog">
-<meta property="og:description" content="本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。">
+<meta property="og:description" content="本文主体内容来自一份 (不太) 简短的 LATEX2ε 介绍。 如何制作一个简单但像样的毕业论文&#x2F;书籍&#x2F;简历模板，每次可以直接套用，而不是再在导言区写一堆代码？ 本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250131110507497.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250131111926918.png">
@@ -51,8 +51,8 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250207223910065.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250208210859903.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250208211426192.png">
-<meta property="article:published_time" content="2019-07-30T08:45:08.000Z">
-<meta property="article:modified_time" content="2025-06-03T12:19:55.425Z">
+<meta property="article:published_time" content="2025-02-17T21:12:18.000Z">
+<meta property="article:modified_time" content="2025-06-07T05:19:31.081Z">
 <meta property="article:author" content="Invinc-Z">
 <meta property="article:tag" content="LaTeX">
 <meta name="twitter:card" content="summary">
@@ -199,8 +199,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%96%B0%E5%91%BD%E4%BB%A4"><span class="nav-number">1.</span> <span class="nav-text">定义新命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">定义环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xparse-%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">xparse 宏包简介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%8F%E5%8C%85%E5%92%8C%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number"></span> <span class="nav-text">编写自己的宏包和文档类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%8F%E5%8C%85"><span class="nav-number">1.</span> <span class="nav-text">编写简单的宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%AE%8F%E5%8C%85%E4%B8%AD%E8%B0%83%E7%94%A8%E5%85%B6%E5%AE%83%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">在宏包中调用其它宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">编写自己的文档类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number"></span> <span class="nav-text">计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BF%AE%E6%94%B9%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">定义和修改计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8%E7%9A%84%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">计数器的输出格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E4%B8%AD%E7%9A%84%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">\(\LaTeX{}\)
-中的计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfsecnumdepth"><span class="nav-number">3.1.</span> <span class="nav-text">\(\textbf{secnumdepth}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftocdepth"><span class="nav-number">3.2.</span> <span class="nav-text">\(\textbf{tocdepth}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%8F%AF%E5%AE%9A%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-number"></span> <span class="nav-text">\(LaTeX{}\) 可定制的一些命令和参数</span></a></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%91%BD%E4%BB%A4%E5%92%8C%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">自定义命令和环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E6%96%B0%E5%91%BD%E4%BB%A4"><span class="nav-number">1.1.</span> <span class="nav-text">定义新命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E7%8E%AF%E5%A2%83"><span class="nav-number">1.2.</span> <span class="nav-text">定义环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xparse-%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">1.3.</span> <span class="nav-text">xparse 宏包简介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AE%8F%E5%8C%85%E5%92%8C%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">编写自己的宏包和文档类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">编写简单的宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%AE%8F%E5%8C%85%E4%B8%AD%E8%B0%83%E7%94%A8%E5%85%B6%E5%AE%83%E5%AE%8F%E5%8C%85"><span class="nav-number">2.2.</span> <span class="nav-text">在宏包中调用其它宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E6%A1%A3%E7%B1%BB"><span class="nav-number">2.3.</span> <span class="nav-text">编写自己的文档类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%92%8C%E4%BF%AE%E6%94%B9%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">定义和修改计数器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E6%95%B0%E5%99%A8%E7%9A%84%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">计数器的输出格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex-%E4%B8%AD%E7%9A%84%E8%AE%A1%E6%95%B0%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">\(\LaTeX{}\)
+中的计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfsecnumdepth"><span class="nav-number">3.3.1.</span> <span class="nav-text">\(\textbf{secnumdepth}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftocdepth"><span class="nav-number">3.3.2.</span> <span class="nav-text">\(\textbf{tocdepth}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%8F%AF%E5%AE%9A%E5%88%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4%E5%92%8C%E5%8F%82%E6%95%B0"><span class="nav-number">4.</span> <span class="nav-text">\(LaTeX{}\) 可定制的一些命令和参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -287,16 +287,23 @@
   <ul class="popular-posts">
     <li class="popular-posts-item">
       <a class="popular-posts-link" href="/notes_lshort/09_install/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
+        <time class="popular-posts-time">2025-02-26</time>
         <br>
-      $\LaTeX{}$ 安装TEX发行版（九）
+      $\LaTeX{}$ 之安装TEX发行版（九）
       </a>
     </li>
     <li class="popular-posts-item">
       <a class="popular-posts-link" href="/notes_lshort/11_reference_books/" rel="bookmark">
-        <time class="popular-posts-time">2019-07-30</time>
+        <time class="popular-posts-time">2025-03-10</time>
         <br>
       $\LaTeX{}$ 之学习参考书籍（十一）
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/notes_lshort/07_graphic/" rel="bookmark">
+        <time class="popular-posts-time">2025-02-12</time>
+        <br>
+      $\LaTeX{}$ 之绘图功能（七）
       </a>
     </li>
   </ul>
@@ -349,14 +356,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2019-07-30 16:45:08" itemprop="dateCreated datePublished" datetime="2019-07-30T16:45:08+08:00">2019-07-30</time>
+      <time title="创建时间：2025-02-18 05:12:18" itemprop="dateCreated datePublished" datetime="2025-02-18T05:12:18+08:00">2025-02-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-03 20:19:55" itemprop="dateModified" datetime="2025-06-03T20:19:55+08:00">2025-06-03</time>
+      <time title="修改时间：2025-06-07 13:19:31" itemprop="dateModified" datetime="2025-06-07T13:19:31+08:00">2025-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -396,17 +403,18 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。
-<span id="more"></span> # 08_<span class="math inline">\(\LaTeX{}\)</span>
-之自定义<span class="math inline">\(\LaTeX{}\)</span>命令和功能</p>
-<p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
+    <div class="post-body" itemprop="articleBody"><p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>如何制作一个简单但像样的毕业论文/书籍/简历模板，每次可以直接套用，而不是再在导言区写一堆代码？</p>
-<p>本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。
-不过作为入门手册，这些知识仍是不全面的。如果你不满足于此，需要参考更多资料，比如<a
+<p>本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。</p>
+<span id="more"></span>
+<p>不过作为入门手册，这些知识仍是不全面的。如果你不满足于此，需要参考更多资料，比如<a
 href="#fn1" class="footnote-ref" id="fnref1"
-role="doc-noteref"><sup>1</sup></a> <a href="#fn2" class="footnote-ref"
-id="fnref2" role="doc-noteref"><sup>2</sup></a>。</p>
+role="doc-noteref"><sup>1</sup></a> 和 <a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>。</p>
+<hr />
+<h2 id="自定义命令和环境">自定义命令和环境</h2>
 <h3 id="定义新命令">定义新命令</h3>
 <p>使用如下命令可以定义你自己的命令：
 <img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250131110507497.png" alt="image-20250131110507497" style="zoom:67%;" />
@@ -472,13 +480,16 @@ Introduction to ”
 <p>举例如下：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250131143954655.png" alt="image-20250131143954655" style="zoom:67%;" /></p>
 <p>需要注意的是，与命令不同，环境在定义时名字里面可以包含
-<code>*</code>： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123;mytabular&#125;  &#123; o +m &#125; &#123;...&#125; &#123;...&#125;</span><br><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123;mytabular*&#125; &#123; m o +m &#125; &#123;...&#125; &#123;...&#125;</span><br></pre></td></tr></table></figure></p>
+<code>*</code>：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123;mytabular&#125;  &#123; o +m &#125; &#123;...&#125; &#123;...&#125;</span><br><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123;mytabular*&#125; &#123; m o +m &#125; &#123;...&#125; &#123;...&#125;</span><br></pre></td></tr></table></figure>
 <p>用 <code>s</code> 标记的 <code>*</code>
-则应该放在<code>\begin&#123;&lt;env&gt;&#125;</code> 的后面： <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123; envstar &#125; &#123; s &#125;</span><br><span class="line">  &#123;<span class="keyword">\IfBooleanTF</span> &#123;<span class="params">#1</span>&#125; &#123;star&#125; &#123;no star&#125;&#125; &#123;&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;envstar&#125;*</span><br><span class="line"><span class="keyword">\end</span>&#123;envstar&#125;</span><br></pre></td></tr></table></figure></p>
+则应该放在<code>\begin&#123;&lt;env&gt;&#125;</code> 的后面：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\NewDocumentEnvironment</span> &#123; envstar &#125; &#123; s &#125;</span><br><span class="line">  &#123;<span class="keyword">\IfBooleanTF</span> &#123;<span class="params">#1</span>&#125; &#123;star&#125; &#123;no star&#125;&#125; &#123;&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;envstar&#125;*</span><br><span class="line"><span class="keyword">\end</span>&#123;envstar&#125;</span><br></pre></td></tr></table></figure>
 <p>与 <code>\renewcommand</code>、<code>\providecommand</code>
 等命令类似，<code>xparse</code>
 宏包也允许在命令或环境已有定义时做出相应的处理，具体见 下表。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250206211617053.png" alt="image-20250206211617053" style="zoom:67%;" /></p>
+<hr />
 <h2 id="编写自己的宏包和文档类">编写自己的宏包和文档类</h2>
 <h3 id="编写简单的宏包">编写简单的宏包</h3>
 <p>如果定义了很多新的环境和命令，文档的导言区将变得很长，在这种情况下，可以建立一个新的
@@ -489,8 +500,7 @@ Introduction to ”
 <span class="math inline">\(\texttt{.sty}\)</span>
 作扩展名。还需要加入一个宏包专用的命令：</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250207202115559.png" alt="image-20250207202115559" style="zoom:67%;" /></p>
-<p>这个命令应该放在你的宏包的最前面，并且一定要注意：<span
-class="math inline">\(\textbf{&lt;package name&gt;}\)</span>
+<p>这个命令应该放在你的宏包的最前面，并且一定要注意：<code>&lt;package name&gt;</code>
 需要和宏包的文件名一致。<code>\ProvidesPackage</code> 是 LaTeX
 中用于声明宏包名称和版本信息的命令，通常放在宏包文件的顶部。它的作用是：</p>
 <ol type="1">
@@ -550,15 +560,16 @@ class="math inline">\(\textbf{将所有下级计数器归零}\)</span>。
 <code>\the&lt;counter&gt;</code>
 表示。这个值默认以阿拉伯数字形式输出，如果想改成其它形式，需要重定义
 <code>\the&lt;counter&gt;</code>，如将 equation
-计数器的格式定义为大写字母： <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\theequation</span>&#123;<span class="keyword">\Alph</span>&#123;equation&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+计数器的格式定义为大写字母：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\theequation</span>&#123;<span class="keyword">\Alph</span>&#123;equation&#125;&#125;</span><br></pre></td></tr></table></figure>
 <p>命令 <code>\Alph</code> 控制计数器 <code>&lt;counter&gt;</code>
 的值以大写字母形式显示。下表列出所有可用于修改计数器格式的命令。注意：这些命令<span
 class="math inline">\(\textbf{只能用于计数器，不能直接用于数字}\)</span>，如<code>\roman&#123;1&#125;</code>
 这样的命令会出错。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250207223910065.png" alt="image-20250207223910065" style="zoom:67%;" /></p>
 <p>计数器的输出格式还可以利用其它字符，甚至其它计数器的输出格式与之组合。如标准文档类里对
-<code>\subsection</code> 相关的计数器的输出格式的定义相当于：
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thesubsection</span>&#123;<span class="keyword">\thesection</span>.<span class="keyword">\arabic</span>&#123;subsection&#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<code>\subsection</code> 相关的计数器的输出格式的定义相当于：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thesubsection</span>&#123;<span class="keyword">\thesection</span>.<span class="keyword">\arabic</span>&#123;subsection&#125;&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="latex-中的计数器"><span class="math inline">\(\LaTeX{}\)</span>
 中的计数器</h3>
 <ul>
@@ -585,8 +596,8 @@ class="math inline">\(\textrm{chapter}\)</span> 为上级计数器。</li>
 class="math inline">\(\textrm{page}\)</span>和 <span
 class="math inline">\(\textrm{footnote}\)</span>。</li>
 </ul>
-<p>我们可以利用前面介绍过的命令，修改计数器的样式以达到想要的效果，比如把页码修改成大写罗马数字，左右加横线，或是给脚注加上方括号：
-<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thepage</span>&#123;--~<span class="keyword">\Roman</span>&#123;page&#125;~--&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thefootnote</span>&#123;[<span class="keyword">\arabic</span>&#123;footnote&#125;]&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;verbatim&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们可以利用前面介绍过的命令，修改计数器的样式以达到想要的效果，比如把页码修改成大写罗马数字，左右加横线，或是给脚注加上方括号：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thepage</span>&#123;--~<span class="keyword">\Roman</span>&#123;page&#125;~--&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\thefootnote</span>&#123;[<span class="keyword">\arabic</span>&#123;footnote&#125;]&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;verbatim&#125;</span><br></pre></td></tr></table></figure>
 <p>最后介绍两个有用的计数器：</p>
 <h4 id="textbfsecnumdepth"><span
 class="math inline">\(\textbf{secnumdepth}\)</span></h4>
@@ -624,6 +635,7 @@ class="math inline">\(\textbf{tocdepth}\)</span></h4>
 计数器控制目录的深度，如果章节的层级大于 <span
 class="math inline">\(\texttt{tocdepth}\)</span>，那么章节将不会自动写入目录项。默认值同
 <span class="math inline">\(\textrm{secnumdepth}\)</span>。</p>
+<hr />
 <h2 id="latex-可定制的一些命令和参数"><span
 class="math inline">\(LaTeX{}\)</span> 可定制的一些命令和参数</h2>
 <p><span class="math inline">\(\LaTeX{}\)</span>
@@ -635,9 +647,13 @@ class="math inline">\(LaTeX{}\)</span> 可定制的一些命令和参数</h2>
 <code>\renewcommand</code> 来修改。</p>
 <p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250208210859903.png" alt="image-20250208210859903" style="zoom:67%;" /></p></li>
 <li><p>长度。前文在叙述各种排版元素时已经介绍过一些，现归纳于
-下表。表中所有的长度命令可用 <code>\setlength</code> 来修改。</p></li>
+下表。表中所有的长度命令可用 <code>\setlength</code> 来修改。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250208211426192.png" alt="image-20250208211426192" style="zoom:67%;" /></p></li>
 </ul>
-<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20250208211426192.png" alt="image-20250208211426192" style="zoom:67%;" /></p>
+<hr />
+<h2 id="参考文献">参考文献</h2>
+<p>[1] Partl H, Hyna I, Schlegl E. 一份 (不太) 简短的 LATEX2ε 介绍[J].
+2024. <code>https://github.com/CTeX-org/lshort-zh-cn</code></p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
@@ -646,9 +662,9 @@ role="doc-endnotes">
 David Carlisle, Chris Rowley. The LATEX Companion, 2nd edition.
 Addison-Wesley, Reading, Massachusetts, 2004, ISBN 0-201-36299-6.<a
 href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>LATEX Project Team. LATEX 2 $$ for class and package
-writers. CTAN://macros/latex/base/clsguide.pdf (<strong>texdoc
-clsguide</strong>) ## 自定义命令和环境<a href="#fnref2"
+<li id="fn2"><p>LATEX Project Team. LATEX 2 for class and package
+writers. <code>CTAN://macros/latex/base/clsguide.pdf</code>
+(<strong>texdoc clsguide</strong>)<a href="#fnref2"
 class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
@@ -790,13 +806,13 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/notes_lshort/11_reference_books/" rel="prev" title="$\LaTeX{}$ 之学习参考书籍（十一）">
-                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之学习参考书籍（十一）
+                <a href="/notes_lshort/07_graphic/" rel="prev" title="$\LaTeX{}$ 之绘图功能（七）">
+                  <i class="fa fa-angle-left"></i> $\LaTeX{}$ 之绘图功能（七）
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/notes_lshort/07_graphic/" rel="next" title="$\LaTeX{}$ 之绘图功能（七）">
-                  $\LaTeX{}$ 之绘图功能（七） <i class="fa fa-angle-right"></i>
+                <a href="/notes_lshort/09_install/" rel="next" title="$\LaTeX{}$ 之安装TEX发行版（九）">
+                  $\LaTeX{}$ 之安装TEX发行版（九） <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -834,7 +850,7 @@ class="footnote-back" role="doc-backlink">↩︎</a></p></li>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:37</span>
+    <span title="站点阅读时长">2:36</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动
