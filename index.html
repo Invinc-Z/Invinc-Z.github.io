@@ -188,18 +188,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -268,7 +268,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/11_reference_books/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_c/variable_argument_lists/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -286,7 +286,232 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/11_reference_books/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之学习参考书籍（十一）</a>
+          <a href="/lang_c/variable_argument_lists/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-03-19 20:04:22" itemprop="dateCreated datePublished" datetime="2025-03-19T20:04:22+08:00">2025-03-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-03-25 10:14:16" itemprop="dateModified" datetime="2025-03-25T10:14:16+08:00">2025-03-25</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>966</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="可变参数列表">可变参数列表</h1>
+<p>在 C 语言中，可变参数列表（Variable Argument List）通过
+<code>stdarg.h</code>
+头文件提供的宏和函数来实现。它允许函数接受可变数量的参数，类似于
+<code>printf</code> 和 <code>scanf</code> 这样的函数。</p>
+<p>以下是 <code>va_list</code> 相关的函数和用法：</p>
+<hr />
+<h3 id="核心宏和函数">1. <strong>核心宏和函数</strong></h3>
+<p><code>stdarg.h</code> 提供了以下宏和函数来处理可变参数列表：</p>
+<table>
+<thead>
+<tr>
+<th>宏/函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>va_list</code></td>
+<td>定义一个变量，用于存储可变参数列表。</td>
+</tr>
+<tr>
+<td><code>va_start()</code></td>
+<td>初始化 <code>va_list</code>，使其指向可变参数列表的第一个参数。</td>
+</tr>
+<tr>
+<td><code>va_arg()</code></td>
+<td>从 <code>va_list</code> 中获取下一个参数，并指定其类型。</td>
+</tr>
+<tr>
+<td><code>va_end()</code></td>
+<td>清理 <code>va_list</code>，结束可变参数列表的访问。</td>
+</tr>
+<tr>
+<td><code>va_copy()</code></td>
+<td>复制一个 <code>va_list</code>（C99 标准引入）。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="使用步骤">2. <strong>使用步骤</strong></h3>
+<p>使用可变参数列表的典型步骤如下：</p>
+<ol type="1">
+<li>定义一个 <code>va_list</code> 类型的变量。</li>
+<li>使用 <code>va_start()</code> 初始化 <code>va_list</code>。</li>
+<li>使用 <code>va_arg()</code> 逐个获取参数。</li>
+<li>使用 <code>va_end()</code> 清理 <code>va_list</code>。</li>
+</ol>
+<hr />
+<h3 id="示例代码">3. <strong>示例代码</strong></h3>
+<p>以下是一个简单的示例，演示如何使用可变参数列表实现一个求和函数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdarg.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个可变参数函数，计算任意数量整数的和</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">sum</span><span class="params">(<span class="type">int</span> count, ...)</span> &#123;</span><br><span class="line">    <span class="type">int</span> total = <span class="number">0</span>;</span><br><span class="line">    va_list args;  <span class="comment">// 定义 va_list 变量</span></span><br><span class="line"></span><br><span class="line">    va_start(args, count);  <span class="comment">// 初始化 args，使其指向第一个可变参数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line">        <span class="type">int</span> num = va_arg(args, <span class="type">int</span>);  <span class="comment">// 获取下一个 int 类型的参数</span></span><br><span class="line">        total += num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    va_end(args);  <span class="comment">// 清理 args</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> total;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sum: %d\n&quot;</span>, sum(<span class="number">3</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>));  <span class="comment">// 输出 60</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Sum: %d\n&quot;</span>, sum(<span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>));  <span class="comment">// 输出 15</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h3 id="详细说明">4. <strong>详细说明</strong></h3>
+<h4 id="va_list">(1) <code>va_list</code></h4>
+<ul>
+<li>类型：<code>va_list</code> 是一个类型，用于存储可变参数列表。</li>
+<li>示例： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">va_list args;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="va_start">(2) <code>va_start()</code></h4>
+<ul>
+<li>函数原型： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">va_start</span><span class="params">(va_list ap, last_arg)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>作用：
+<ul>
+<li>初始化 <code>va_list</code>，使其指向可变参数列表的第一个参数。</li>
+<li><code>last_arg</code> 是可变参数列表前的最后一个固定参数。</li>
+</ul></li>
+<li>示例： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">va_start(args, count);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="va_arg">(3) <code>va_arg()</code></h4>
+<ul>
+<li>函数原型： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type <span class="title function_">va_arg</span><span class="params">(va_list ap, type)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>作用：
+<ul>
+<li>从 <code>va_list</code> 中获取下一个参数，并指定其类型。</li>
+<li><code>type</code> 是参数的类型（如
+<code>int</code>、<code>double</code> 等）。</li>
+</ul></li>
+<li>示例： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num = va_arg(args, <span class="type">int</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="va_end">(4) <code>va_end()</code></h4>
+<ul>
+<li>函数原型： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">va_end</span><span class="params">(va_list ap)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>作用：
+<ul>
+<li>清理 <code>va_list</code>，结束可变参数列表的访问。</li>
+</ul></li>
+<li>示例： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">va_end(args);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="va_copyc99-引入">(5) <code>va_copy()</code>（C99 引入）</h4>
+<ul>
+<li>函数原型： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">va_copy</span><span class="params">(va_list dest, va_list src)</span>;</span><br></pre></td></tr></table></figure></li>
+<li>作用：
+<ul>
+<li>复制一个 <code>va_list</code> 变量。</li>
+<li><code>dest</code> 是目标变量，<code>src</code> 是源变量。</li>
+</ul></li>
+<li>示例： <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">va_list args_copy;</span><br><span class="line">va_copy(args_copy, args);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr />
+<h3 id="注意事项">5. <strong>注意事项</strong></h3>
+<ol type="1">
+<li><strong>固定参数</strong>：
+<ul>
+<li>可变参数函数必须至少有一个固定参数（如
+<code>count</code>），用于确定可变参数的数量或类型。</li>
+</ul></li>
+<li><strong>参数类型</strong>：
+<ul>
+<li>使用 <code>va_arg()</code>
+时，必须明确指定参数的类型。如果类型不匹配，会导致未定义行为。</li>
+</ul></li>
+<li><strong>参数数量</strong>：
+<ul>
+<li>需要确保访问的参数数量不超过实际传递的参数数量，否则会导致未定义行为。</li>
+</ul></li>
+<li><strong>平台依赖性</strong>：
+<ul>
+<li>可变参数列表的实现依赖于底层平台，不同平台可能有不同的行为。</li>
+</ul></li>
+</ol>
+<hr />
+<h3 id="更复杂的示例">6. <strong>更复杂的示例</strong></h3>
+<p>以下是一个更复杂的示例，实现一个类似 <code>printf</code>
+的函数，支持格式化输出：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdarg.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">my_printf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *format, ...)</span> &#123;</span><br><span class="line">    va_list args;</span><br><span class="line">    va_start(args, format);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (*format) &#123;</span><br><span class="line">        <span class="keyword">if</span> (*format == <span class="string">&#x27;%&#x27;</span>) &#123;</span><br><span class="line">            format++;  <span class="comment">// 跳过 &#x27;%&#x27;</span></span><br><span class="line">            <span class="keyword">switch</span> (*format) &#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;d&#x27;</span>: &#123;</span><br><span class="line">                    <span class="type">int</span> num = va_arg(args, <span class="type">int</span>);</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, num);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;f&#x27;</span>: &#123;</span><br><span class="line">                    <span class="type">double</span> num = va_arg(args, <span class="type">double</span>);</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%f&quot;</span>, num);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;s&#x27;</span>: &#123;</span><br><span class="line">                    <span class="type">char</span> *str = va_arg(args, <span class="type">char</span> *);</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%s&quot;</span>, str);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">default</span>:</span><br><span class="line">                    <span class="built_in">putchar</span>(*format);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">putchar</span>(*format);</span><br><span class="line">        &#125;</span><br><span class="line">        format++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    va_end(args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    my_printf(<span class="string">&quot;Integer: %d, Float: %f, String: %s\n&quot;</span>, <span class="number">42</span>, <span class="number">3.14</span>, <span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h3 id="总结">7. <strong>总结</strong></h3>
+<ul>
+<li><code>va_list</code> 是处理可变参数列表的核心类型。</li>
+<li><code>va_start()</code>、<code>va_arg()</code> 和
+<code>va_end()</code> 是处理可变参数的基本宏。</li>
+<li>可变参数函数需要至少一个固定参数，用于确定可变参数的数量或类型。</li>
+<li>使用可变参数时需要注意参数类型和数量的匹配，避免未定义行为。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/11_reference_books/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Invinc-Z">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Invinc-Z Blog">
+      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Invinc-Z Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/lang_latex/notes_lshort/11_reference_books/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之学习参考书籍（十一）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -349,7 +574,7 @@
 的经典书籍，供读者参考。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/11_reference_books/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/11_reference_books/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -380,7 +605,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/10_error_help/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/10_error_help/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -398,7 +623,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/10_error_help/" class="post-title-link" itemprop="url">$LaTeX{}$ 之排除错误和寻求帮助（十）</a>
+          <a href="/lang_latex/notes_lshort/10_error_help/" class="post-title-link" itemprop="url">$LaTeX{}$ 之排除错误和寻求帮助（十）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -465,7 +690,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/10_error_help/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/10_error_help/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -496,7 +721,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/09_install/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/09_install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -514,7 +739,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/09_install/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之安装TEX发行版（九）</a>
+          <a href="/lang_latex/notes_lshort/09_install/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之安装TEX发行版（九）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -580,7 +805,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/09_install/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/09_install/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -611,7 +836,7 @@ class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/08_custom/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/08_custom/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -629,7 +854,7 @@ class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/08_custom/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）</a>
+          <a href="/lang_latex/notes_lshort/08_custom/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之自定义$\LaTeX{}$命令和功能（八）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -694,7 +919,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>本章的内容将有助于你实现这一个目标，让你能编写可重复利用的模块——宏包和文档类，并在其中自己定义命令和环境。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/08_custom/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/08_custom/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -725,7 +950,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/07_graphic/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/07_graphic/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -743,7 +968,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/07_graphic/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之绘图功能（七）</a>
+          <a href="/lang_latex/notes_lshort/07_graphic/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之绘图功能（七）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -811,7 +1036,7 @@ class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
 <p>一些特殊的绘图，如交换图、树状图甚至分子式和电路图也能够通过代码绘制，有兴趣的读者可以查阅一些帮助文档，或者在互联网寻求帮助。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/07_graphic/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/07_graphic/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -842,7 +1067,7 @@ class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/06_special/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/06_special/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -860,7 +1085,7 @@ class="math inline">\(\LaTeX{}\)</span> 的图形功能，<code>TikZ</code>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/06_special/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之特色工具和功能（六）</a>
+          <a href="/lang_latex/notes_lshort/06_special/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之特色工具和功能（六）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -928,7 +1153,7 @@ class="math inline">\(\texttt{makeindex}\)</span>
 依靠一些辅助程序自动生成参考文献、索引等；之后的使用颜色、超链接等则生成美观易用的电子文档。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/06_special/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/06_special/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -959,7 +1184,7 @@ class="math inline">\(\texttt{makeindex}\)</span>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/05_layout_style/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/05_layout_style/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -977,7 +1202,7 @@ class="math inline">\(\texttt{makeindex}\)</span>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/05_layout_style/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之排版样式设定（五）</a>
+          <a href="/lang_latex/notes_lshort/05_layout_style/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之排版样式设定（五）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1042,7 +1267,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/05_layout_style/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/05_layout_style/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1073,7 +1298,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/symbol_table/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/symbol_table/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1091,7 +1316,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/symbol_table/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之符号表</a>
+          <a href="/lang_latex/notes_lshort/symbol_table/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之符号表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1156,7 +1381,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 中常用的符号。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/symbol_table/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/symbol_table/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1187,7 +1412,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/04_math_equation/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/lang_latex/notes_lshort/04_math_equation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1205,7 +1430,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/04_math_equation/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之数学公式（四）</a>
+          <a href="/lang_latex/notes_lshort/04_math_equation/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之数学公式（四）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1270,120 +1495,7 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 闻名的强项——排版数学公式。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes_lshort/04_math_equation/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes_lshort/03_document_elements/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Invinc-Z">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Invinc-Z Blog">
-      <meta itemprop="description" content="Welcome to my blog! Here I share tech tips and life stories.">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Invinc-Z Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/notes_lshort/03_document_elements/" class="post-title-link" itemprop="url">$\LaTeX{}$ 之文档元素（三）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-01-13 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-13T05:12:18+08:00">2025-01-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-06-06 23:18:22" itemprop="dateModified" datetime="2025-06-06T23:18:22+08:00">2025-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/LaTeX/LaTeX%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">LaTeX学习笔记</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>8k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>29 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>本文主体内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太) 简短的
-LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/notes_lshort/03_document_elements/#more" rel="contents">
+              <a class="btn" href="/lang_latex/notes_lshort/04_math_equation/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1429,13 +1541,13 @@ LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">43k</span>
+    <span title="站点总字数">85k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:36</span>
+    <span title="站点阅读时长">5:10</span>
   </span>
 </div>
   <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9taXN0Lw==">NexT.Mist</span> 强力驱动
