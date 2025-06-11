@@ -1,6 +1,6 @@
 :root {
   --body-bg-color: #eee;
-  --content-bg-color: #fff;
+  --content-bg-color: rgba(255,255,255,0.9);
   --card-bg-color: #f5f5f5;
   --text-color: #555;
   --selection-bg: #262a30;
@@ -1500,7 +1500,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #5cff9d;
+    background: #fcd0ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2943,7 +2943,7 @@ mjx-container[display='true'] + br {
 }
 header.header {
   background: var(--content-bg-color);
-  border-radius: initial;
+  border-radius: 20px 20px 20px 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 @media (max-width: 991px) {
@@ -2980,7 +2980,7 @@ header.header {
   }
 }
 .main-inner {
-  border-radius: initial;
+  border-radius: 20px 20px 20px 20px;
   box-sizing: border-box;
   width: calc(100% - 262px);
 }
@@ -3115,7 +3115,7 @@ header.header {
   }
   .sidebar-inner {
     background: var(--content-bg-color);
-    border-radius: initial;
+    border-radius: 20px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
     box-sizing: border-box;
     color: var(--text-color);
@@ -3184,11 +3184,11 @@ header.header {
 .main-inner .comment-position .comments,
 .main-inner .pagination {
   background: var(--content-bg-color);
-  border-radius: initial;
+  border-radius: 20px 20px 20px 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 .main-inner .post-block:not(:first-child):not(:first-child) {
-  border-radius: initial;
+  border-radius: 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin-top: 12px;
 }
@@ -3206,7 +3206,7 @@ header.header {
 .main-inner > .comments,
 .main-inner .comment-position .comments,
 .main-inner .pagination {
-  border-radius: initial;
+  border-radius: 20px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin-top: 12px;
 }
@@ -3271,6 +3271,52 @@ header.header {
   .comments {
     padding: 10px 12px;
   }
+}
+body {
+  background: url("https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/background1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.back-to-top {
+  border-radius: 100px;
+}
+.btn {
+  background: rgba(255,255,255,0.5);
+}
+.main-inner {
+  margin-top: 40px;
+}
+.header-inner {
+  margin-top: 20px;
+  border-radius: 25px 25px 20px 20px;
+}
+.site-brand-container {
+  border-radius: 20px 20px 0px 0px;
+  padding-top: 20px;
+}
+.sidebar {
+  background-color: transparent;
+  opacity: 0.9;
+  border-radius: 0px 0px 20px 20px;
+}
+.header-inner {
+  background: rgba(255,255,255,0.9);
+}
+.popup {
+  opacity: 0.9;
+}
+.site-brand-container {
+  background: url("https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/background7.png");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.site-overview {
+  text-align: center;
+}
+canvas#canvas {
+  margin-top: 20px;
 }
 .post-body {
   font-family: Times New Roman, cursive, Trebuchet MS, Times New Roman, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
