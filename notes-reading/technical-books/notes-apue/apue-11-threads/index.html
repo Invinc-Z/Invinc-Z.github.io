@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文记录《UNIX环境高级编程》第3版 第11章 Threads 的一些知识点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APUE笔记：Threads（十一）">
+<meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/index.html">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文记录《UNIX环境高级编程》第3版 第11章 Threads 的一些知识点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-27T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-18T17:36:05.771Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="APUE">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/","path":"notes-reading/technical-books/notes-apue/apue-11-threads/","title":"APUE笔记：Threads（十一）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>APUE笔记：Threads（十一） | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">线程概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E6%A0%87%E8%AF%86"><span class="nav-number">2.</span> <span class="nav-text">线程标识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA"><span class="nav-number">3.</span> <span class="nav-text">线程创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E7%BB%88%E6%AD%A2"><span class="nav-number">4.</span> <span class="nav-text">线程终止</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="nav-number">5.</span> <span class="nav-text">线程同步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%92%E6%96%A5%E9%87%8F"><span class="nav-number">5.1.</span> <span class="nav-text">互斥量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="nav-number">5.2.</span> <span class="nav-text">避免死锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0pthread_mutex_timedlock"><span class="nav-number">5.3.</span> <span class="nav-text">函数pthread_mutex_timedlock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BB%E5%86%99%E9%94%81"><span class="nav-number">5.4.</span> <span class="nav-text">读写锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%A6%E6%9C%89%E8%B6%85%E6%97%B6%E7%9A%84%E8%AF%BB%E5%86%99%E9%94%81"><span class="nav-number">5.5.</span> <span class="nav-text">带有超时的读写锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F"><span class="nav-number">5.6.</span> <span class="nav-text">条件变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E6%97%8B%E9%94%81"><span class="nav-number">5.7.</span> <span class="nav-text">自旋锁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%8F%E9%9A%9C"><span class="nav-number">5.8.</span> <span class="nav-text">屏障</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="APUE笔记：Threads（十一） | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APUE笔记：Threads（十一）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-28 05:12:18" itemprop="dateCreated datePublished" datetime="2025-07-28T05:12:18+08:00">2025-07-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>33 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文记录《UNIX环境高级编程》第3版 第11章 Threads 的一些知识点。</p>
+<span id="more"></span>
+<hr />
+<h2 id="线程概念">线程概念</h2>
+<p>典型的UNIX进程可以看成只有一个控制线程：一个进程在某一时刻只能做一件事情。有了多个控制线程以后，在程序设计时就可以把进程设计成在某一时刻能够做不止一件事，每个线程处理各自独立的任务。这种方法有很多好处。</p>
+<blockquote>
+<ul>
+<li><p>通过为每种事件类型分配单独的处理线程，可以简化处理异步事件的代码。每个线程在进行事件处理时可以采用同步编程模式，同步编程模式要比异步编程模式简单得多。</p></li>
+<li><p>多个进程必须使用操作系统提供的复杂机制才能实现内存和文件描述符的共享。而多个线程自动地可以访问相同的存储地址空间和文件描述符。</p></li>
+<li><p>有些问题可以分解从而提高整个程序的吞吐量。</p></li>
+<li><p>交互的程序同样可以通过使用多线程来改善响应时间，多线程可以把程序中处理用户输入输出的部分与其他部分分开。</p></li>
+</ul>
+</blockquote>
+<p>每个线程都包含有表示执行环境所必需的信息，其中包括进程中标识线程的线程ID、一组寄存器值、栈、调度优先级和策略、信号屏蔽字、errno变量以及线程私有数据。一个进程的所有信息对该进程的所有线程都是共享的，包括可执行程序的正文段、程序的全局内存和堆内存、栈以及文件描述符。</p>
+<hr />
+<h2 id="线程标识">线程标识</h2>
+<p>就像每个进程有一个进程ID一样，每个线程也有一个线程ID。进程
+ID在整个系统中是唯一的，但线程ID不同，线程ID只有在它所属的进程上下文中才有意义。</p>
+<p>回忆一下进程ID，它是用 <code>pid_t</code>
+数据类型来表示的，是一个非负整数。线程ID是用 <code>pthread_t</code>
+数据类型来表示的，实现的时候可以用一个结构来代表<code>pthread_t</code>
+数据类型，所以可移植的操作系统实现不能把它作为整数处理。因此必须使用一个函数来<strong>对两个线程ID进行比较</strong>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_equal</span><span class="params">(<span class="type">pthread_t</span> tid1, <span class="type">pthread_t</span> tid2)</span>;</span><br><span class="line"><span class="comment">// 返回值：若相等，返回非0数值；否则，返回0</span></span><br></pre></td></tr></table></figure>
+<p>Linux 3.2.0使用<strong>无符号长整型</strong>表示
+<code>pthread_t</code> 数据类型。Solaris 10把 <code>pthread_t</code>
+数据类型表示为无符号整型。FreeBSD 8.0和Mac OS X 10.6.8用一个指向
+<code>pthread</code> 结构的指针来表示 <code>pthread_t</code>
+数据类型。</p>
+<p>线程可以通过调用 <code>pthread_self</code>
+函数<strong>获得自身的线程ID</strong>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">pthread_t</span> <span class="title function_">pthread_self</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="comment">// 返回值：调用线程的线程ID</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="线程创建">线程创建</h2>
+<p>新增的线程可以通过调用 <code>pthread_create</code> 函数创建。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_create</span><span class="params">(<span class="type">pthread_t</span> *<span class="keyword">restrict</span> tidp, <span class="type">const</span> <span class="type">pthread_attr_t</span> *<span class="keyword">restrict</span> attr, <span class="type">void</span> *(*start_rtn)(<span class="type">void</span> *), <span class="type">void</span> *<span class="keyword">restrict</span> arg)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>当 <code>pthread_create</code>
+成功返回时，新创建线程的线程ID会被设置成 <code>tidp</code>
+指向的内存单元。<code>attr</code>
+参数用于定制各种不同的线程属性。置为NULL，创建一个具有默认属性的线程。</p>
+<p>新创建的线程从 <code>start_rtn</code>
+函数的地址开始运行，该函数只有一个无类型指针参数
+<code>arg</code>。如果需要向 <code>start_rtn</code>
+函数传递的参数有一个以上，那么需要把这些参数放到一个结构中，然后把这个结构的地址作为
+<code>arg</code> 参数传入。</p>
+<p>线程创建时并不能保证哪个线程会先运行：是新创建的线程，还是调用线程。新创建的线程可以访问进程的地址空间，并且继承调用线程的浮点环境和信号屏蔽字，但是该线程的挂起信号集会被清除。</p>
+<hr />
+<h2 id="线程终止">线程终止</h2>
+<p>如果进程中的任意线程调用了 <code>exit</code>、<code>_Exit</code>
+或者<code>_exit</code>，那么整个进程就会终止。与此相类似，如果默认的动作是终止进程，那么，发送到线程的信号就会终止整个进程。</p>
+<p>单个线程可以通过3种方式退出，因此可以在不终止整个进程的情况下，停止它的控制流。</p>
+<p>（1）线程可以简单地从启动例程中返回，返回值是线程的退出码。</p>
+<p>（2）线程可以被同一进程中的其他线程取消。</p>
+<p>（3）线程调用 <code>pthread_exit</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_exit</span><span class="params">(<span class="type">void</span> *rval_ptr)</span>;</span><br></pre></td></tr></table></figure>
+<p><code>rval_ptr</code>
+参数是一个无类型指针，与传给启动例程的单个参数类似。</p>
+<p>进程中的其他线程也可以通过调用 <code>pthread_join</code>
+函数访问到这个指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_join</span><span class="params">(<span class="type">pthread_t</span> thread, <span class="type">void</span> **rval_ptr)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>调用线程将<strong>一直阻塞</strong>，直到指定的线程调用
+<code>pthread_exit</code>、从启动例程中返回或者被取消。如果线程简单地从它的启动例程返回，<code>rval_ptr</code>
+就包含返回码。如果线程被取消，由 <code>rval_ptr</code>
+指定的内存单元就设置为 <code>PTHREAD_CANCELED</code>。</p>
+<p>如果对线程的返回值并不感兴趣，那么可以把 <code>rval_ptr</code> 设置为
+NULL。在这种情况下，调用 <code>pthread_join</code>
+函数可以等待指定的线程终止，但并不获取线程的终止状态。</p>
+<p>线程可以通过调用 <code>pthread_cancel</code>
+函数来请求取消同一进程中的其他线程。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cancel</span><span class="params">(<span class="type">pthread_t</span> tid)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>在默认情况下，<code>pthread_cancel</code> 函数会使得由
+<code>tid</code> 标识的线程的行为表现为如同调用了参数为
+<code>PTHREAD_ CANCELED</code> 的 <code>pthread_exit</code>
+函数，但是，线程可以选择忽略取消或者控制如何被取消。注意
+<code>pthread_cancel</code> 并不等待线程终止，它仅仅提出请求。</p>
+<p>线程可以安排它退出时需要调用的函数，这与进程在退出时可以用
+<code>atexit</code>
+函数安排退出是类似的。这样的函数称为线程清理处理程序（thread cleanup
+handler）。一个线程可以建立多个清理处理程序。处理程序记录在栈中，也就是说，它们的执行顺序与它们注册时相反。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_cleanup_push</span><span class="params">(<span class="type">void</span> (*rtn)(<span class="type">void</span> *), <span class="type">void</span> *arg)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">pthread_cleanup_pop</span><span class="params">(<span class="type">int</span> execute)</span>;</span><br></pre></td></tr></table></figure>
+<p><code>pthread_cleanup_push</code> 函数会安排清理函数 <code>rtn</code>
+在线程执行以下操作之一时，以单个参数 <code>arg</code> 被调用：</p>
+<ul>
+<li><p>调用 <code>pthread_exit</code> 时；</p></li>
+<li><p>响应取消请求时；</p></li>
+<li><p>用非零 <code>execute</code> 参数调用
+<code>pthread_cleanup_pop</code> 时。</p></li>
+</ul>
+<p>如果 <code>execute</code> 参数设置为
+0，清理函数将不被调用。不管发生上述哪种情况，<code>pthread_cleanup_pop</code>
+都将删除上次 <code>pthread_cleanup_push</code>
+调用建立的清理处理程序。</p>
+<p>这些函数有一个限制，由于它们可以实现为宏，所以必须在与线程相同的作用域中以匹配对的形式使用。<code>pthread_cleanup_push</code>
+的宏定义可以包含字符<code>{</code>这种情况下，在
+<code>pthread_cleanup_pop</code>
+的定义中要有对应的匹配字符<code>}</code>。</p>
+<p>下图总结了线程函数和进程函数之间的相似的函数。</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 24%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr>
+<th>Process primitive</th>
+<th>Thread primitive</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fork</code></td>
+<td><code>pthread_create</code></td>
+<td>create a new flow of control</td>
+</tr>
+<tr>
+<td><code>exit</code></td>
+<td><code>pthread_exit</code></td>
+<td>exit from an existing flow of control</td>
+</tr>
+<tr>
+<td><code>waitpid</code></td>
+<td><code>pthread_join</code></td>
+<td>get exit status from flow of control</td>
+</tr>
+<tr>
+<td><code>atexit</code></td>
+<td><code>pthread_cleanup_push</code></td>
+<td>register function to be called at exit from flow of control</td>
+</tr>
+<tr>
+<td><code>getpid</code></td>
+<td><code>pthread_self</code></td>
+<td>get ID for flow of control</td>
+</tr>
+<tr>
+<td><code>abort</code></td>
+<td><code>pthread_cancel</code></td>
+<td>request abnormal termination of flow of control</td>
+</tr>
+</tbody>
+</table>
+<p>在默认情况下，线程的终止状态会保存直到对该线程调用
+<code>pthread_join</code>。如果线程已经被分离，线程的底层存储资源可以在线程终止时立即被收回。在线程被分离后，我们不能用
+<code>pthread_join</code> 函数等待它的终止状态，因为对分离状态的线程调用
+<code>pthread_join</code>
+会产生未定义行为。可以调用<code>pthread_detach</code> 分离线程。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_detach</span><span class="params">(<span class="type">pthread_t</span> tid)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="线程同步">线程同步</h2>
+<p>当多个控制线程共享相同的内存时，需要确保每个线程看到一致的数据视图。</p>
+<h3 id="互斥量">互斥量</h3>
+<p>可以通过使用pthreads互斥接口来保护数据，并确保每次只有一个线程能够访问数据。互斥量（mutex）从本质上说是一把锁，在访问共享资源前对互斥量进行设置（加锁），在访问完成后释放（解锁）互斥量。对互斥量进行加锁以后，任何其他试图再次对互斥量加锁的线程都会被阻塞直到当前线程释放该互斥锁。如果释放互斥量时有一个以上的线程阻塞，那么所有该锁上的阻塞线程都会变成可运行状态，第一个变为运行的线程就可以对互斥量加锁，其他线程就会看到互斥量依然是锁着的，只能回去再次等待它重新变为可用。在这种方式下，每次只有一个线程可以向前执行。</p>
+<p>互斥变量是用 <code>pthread_mutex_t</code>
+数据类型表示的。在使用互斥变量前，必须首先对它进行初始化，可以把它设置为常量
+<code>PTHREAD_MUTEX_INITIALIZER</code>（只适用于静态分配的互斥量），也可以通过调用
+<code>pthread_mutex_init</code>
+函数进行初始化。如果动态分配互斥量（例如，通过调用malloc函数），在释放内存前需要调用
+<code>pthread_mutex_destroy</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_init</span><span class="params">(<span class="type">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex, <span class="type">const</span> <span class="type">pthread_mutexattr_t</span> *<span class="keyword">restrict</span> attr)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_destroy</span><span class="params">(<span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>要用默认的属性初始化互斥量，只需把 <code>attr</code> 设为
+<code>NULL</code>。</p>
+<p>对互斥量进行加锁，需要调用
+<code>pthread_mutex_lock</code>。如果互斥量已经上锁，调用线程将阻塞直到互斥量被解锁。对互斥量解锁，需要调用
+<code>pthread_mutex_unlock</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_lock</span><span class="params">(<span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_trylock</span><span class="params">(<span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_unlock</span><span class="params">(<span class="type">pthread_mutex_t</span> *mutex)</span>;</span><br><span class="line"><span class="comment">// 所有函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>如果线程不希望被阻塞，它可以使用 <code>pthread_mutex_trylock</code>
+尝试对互斥量进行加锁。如果调用 <code>pthread_mutex_trylock</code>
+时互斥量处于未锁住状态，那么 <code>pthread_mutex_trylock</code>
+将锁住互斥量，不会出现阻塞直接返回0，否则
+<code>pthread_mutex_trylock</code> 就会失败，不能锁住互斥量，返回
+<code>EBUSY</code>。</p>
+<h3 id="避免死锁">避免死锁</h3>
+<p>如果线程试图对同一个互斥量加锁两次，那么它自身就会陷入死锁状态，但是使用互斥量时，还有其他不太明显的方式也能产生死锁。例如，程序中使用一个以上的互斥量时，如果允许一个线程一直占有第一个互斥量，并且在试图锁住第二个互斥量时处于阻塞状态，但是拥有第二个互斥量的线程也在试图锁住第一个互斥量。因为两个线程都在相互请求另一个线程拥有的资源，所以这两个线程都无法向前运行，于是就产生死锁。</p>
+<p>可以通过仔细控制互斥量加锁的顺序来避免死锁的发生。例如，假设需要对两个互斥量A和B同时加锁。如果所有线程总是在对互斥量B加锁之前锁住互斥量A，那么使用这两个互斥量就不会产生死锁（当然在其他的资源上仍可能出现死锁）。类似地，如果所有的线程总是在锁住互斥量A之前锁住互斥量B，那么也不会发生死锁。可能出现的死锁只会发生在一个线程试图锁住另一个线程以相反的顺序锁住的互斥量。</p>
+<p>有时候，应用程序的结构使得对互斥量进行排序是很困难的。如果涉及了太多的锁和数据结构，可用的函数并不能把它转换成简单的层次，那么就需要采用另外的方法。在这种情况下，可以先释放占有的锁，然后过一段时间再试。这种情况可以使用
+<code>pthread_mutex_trylock</code>
+接口避免死锁。如果已经占有某些锁而且<code>pthread_mutex_trylock</code>
+接口返回成功，那么就可以前进。但是，如果不能获取锁，可以先释放已经占有的锁，做好清理工作，然后过一段时间再重新试。</p>
+<p>多线程的软件设计涉及这两者之间的折中。如果锁的粒度太粗，就会出现很多线程阻塞等待相同的锁，这可能并不能改善并发性。如果锁的粒度太细，那么过多的锁开销会使系统性能受到影响，而且代码变得复杂。作为一个程序员，需要在满足锁需求的情况下，在代码复杂性和性能之间找到正确的平衡。</p>
+<h3 id="函数pthread_mutex_timedlock">函数pthread_mutex_timedlock</h3>
+<p>当线程试图获取一个已加锁的互斥量时，<code>pthread_mutex_timedlock</code>
+互斥量原语允许绑定线程阻塞时间。<code>pthread_mutex_timedlock</code>
+函数与 <code>pthread_mutex_lock</code>
+是基本等价的，但是在达到超时时间值时，<code>pthread_mutex_timedlock</code>
+不会对互斥量进行加锁，而是返回错误码 <code>ETIMEDOUT</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_mutex_timedlock</span><span class="params">(<span class="type">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex, <span class="type">const</span> <span class="keyword">struct</span> timespec *<span class="keyword">restrict</span> tsptr)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>超时指定愿意等待的绝对时间。这个超时时间是用 <code>timespec</code>
+结构来表示的，它用秒和纳秒来描述时间。</p>
+<h3 id="读写锁">读写锁</h3>
+<p>读写锁（reader-writer
+lock）与互斥量类似，不过读写锁允许更高的并行性。互斥量要么是锁住状态，要么就是不加锁状态，而且一次只有一个线程可以对其加锁。读写锁可以有3种状态：读模式下加锁状态，写模式下加锁状态，不加锁状态。一次只有一个线程可以占有写模式的读写锁，但是多个线程可以同时占有读模式的读写锁。</p>
+<p>当读写锁是写加锁状态时，在这个锁被解锁之前，所有试图对这个锁加锁的线程都会被阻塞。当读写锁在读加锁状态时，所有试图以读模式对它进行加锁的线程都可以得到访问权，但是任何希望以写模式对此锁进行加锁的线程都会阻塞，直到所有的线程释放它们的读锁为止。虽然各操作系统对读写锁的实现各不相同，但当读写锁处于读模式锁住的状态，而这时有一个线程试图以写模式获取锁时，读写锁通常会阻塞随后的读模式锁请求。这样可以避免读模式锁长期占用，而等待的写模式锁请求一直得不到满足。</p>
+<p>读写锁非常适合于对数据结构读的次数远大于写的情况。当读写锁在写模式下时，它所保护的数据结构就可以被安全地修改，因为一次只有一个线程可以在写模式下拥有这个锁。当读写锁在读模式下时，只要线程先获取了读模式下的读写锁，该锁所保护的数据结构就可以被多个获得读模式锁的线程读取。</p>
+<p>读写锁也叫做共享互斥锁（shared-exclusive
+lock）。当读写锁是读模式锁住时，就可以说成是以共享模式锁住的。当它是写模式锁住的时候，就可以说成是以互斥模式锁住的。</p>
+<p>与互斥量一样，读写锁在使用之前必须初始化，在释放它们底层的内存之前必须销毁。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_init</span><span class="params">(<span class="type">pthread_rwlock_t</span> *<span class="keyword">restrict</span> rwlock, <span class="type">const</span> <span class="type">pthread_rwlockattr_t</span> *<span class="keyword">restrict</span> attr)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_destroy</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>Single UNIX Specification在XSI扩展中定义了
+<code>PTHREAD_RWLOCK_INITIALIZER</code>
+常量。如果默认属性就足够的话，可以用它对静态分配的读写锁进行初始化。</p>
+<p>在释放读写锁占用的内存之前，需要调用
+<code>pthread_rwlock_destroy</code> 做清理工作。如果
+<code>pthread_rwlock_init</code>
+为读写锁分配了资源，<code>pthread_rwlock_destroy</code>
+将释放这些资源。如果在调用 <code>pthread_rwlock_destroy</code>
+之前就释放了读写锁占用的内存，那么分配给这个锁的资源就会丢失。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_rdlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>; <span class="comment">// 要在读模式下锁定读写锁，需要调用pthread_rwlock_rdlock</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_wrlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>; <span class="comment">// 要在写模式下锁定读写锁，需要调用pthread_rwlock_wrlock</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_unlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>; <span class="comment">// 不管以何种方式锁住读写锁，都可以调用pthread_rwlock_unlock进行解锁</span></span><br><span class="line"><span class="comment">// 所有函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>Single UNIX Specification还定义了读写锁原语的条件版本。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_tryrdlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_trywrlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *rwlock)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>可以获取锁时，这两个函数返回0。否则，它们返回错误
+<code>EBUSY</code>。</p>
+<h3 id="带有超时的读写锁">带有超时的读写锁</h3>
+<p>与互斥量一样，Single UNIX
+Specification提供了带有超时的读写锁加锁函数，使应用程序在获取读写锁时避免陷入永久阻塞状态。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_timedrdlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *<span class="keyword">restrict</span> rwlock, <span class="type">const</span> <span class="keyword">struct</span> timespec *<span class="keyword">restrict</span> tsptr)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_rwlock_timedwrlock</span><span class="params">(<span class="type">pthread_rwlock_t</span> *<span class="keyword">restrict</span> rwlock, <span class="type">const</span> <span class="keyword">struct</span> timespec *<span class="keyword">restrict</span> tsptr)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>这两个函数的行为与它们“不计时的”版本类似。<code>tsptr</code> 参数指向
+<code>timespec</code>
+结构，指定线程应该停止阻塞的时间。如果它们不能获取锁，那么超时到期时，这两个函数将返回
+<code>ETIMEDOUT</code> 错误。与 <code>pthread_mutex_timedlock</code>
+函数类似，超时指定的是绝对时间，而不是相对时间。</p>
+<h3 id="条件变量">条件变量</h3>
+<p>条件变量是线程可用的另一种同步机制。条件变量给多个线程提供了一个会合的场所。条件变量与互斥量一起使用时，允许线程以无竞争的方式等待特定的条件发生。</p>
+<p>条件本身受互斥锁保护。线程必须先锁定互斥锁才能更改条件状态。其他线程在获取互斥锁之前不会察觉到这种变化，因为必须锁定互斥锁才能评估该条件。</p>
+<p>在使用条件变量之前，必须先对它进行初始化。由
+<code>pthread_cond_t</code>
+数据类型表示的条件变量可以用两种方式进行初始化，可以把常量
+<code>PTHREAD_COND_INITIALIZER</code>
+赋给静态分配的条件变量，但是如果条件变量是动态分配的，则需要使用
+<code>pthread_cond_init</code> 函数对它进行初始化。</p>
+<p>在释放条件变量底层的内存空间之前，可以使用
+<code>pthread_cond_destroy</code>
+函数对条件变量进行反初始化（deinitialize）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_init</span><span class="params">(<span class="type">pthread_cond_t</span> *<span class="keyword">restrict</span> cond, <span class="type">const</span> <span class="type">pthread_condattr_t</span> *<span class="keyword">restrict</span> attr)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_destroy</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>使用 <code>pthread_cond_wait</code>
+来等待某个条件变为真。还提供了一个变体，如果在指定时间内该条件未得到满足，它会返回一个错误代码。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_wait</span><span class="params">(<span class="type">pthread_cond_t</span> *<span class="keyword">restrict</span> cond, <span class="type">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_timedwait</span><span class="params">(<span class="type">pthread_cond_t</span> *<span class="keyword">restrict</span> cond, <span class="type">pthread_mutex_t</span> *<span class="keyword">restrict</span> mutex, <span class="type">const</span> <span class="keyword">struct</span> timespec *<span class="keyword">restrict</span> tsptr)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>传递给 <code>pthread_cond_wait</code>
+的互斥量对条件进行保护。调用者把锁住的互斥量传给函数，函数然后自动把调用线程放到等待条件的线程列表上，对互斥量解锁。这就关闭了条件检查和线程进入休眠状态等待条件改变这两个操作之间的时间通道，这样线程就不会错过条件的任何变化。<code>pthread_cond_wait</code>
+返回时，互斥量再次被锁住。</p>
+<p><code>pthread_cond_timedwait</code> 函数的功能与
+<code>pthread_cond_wait</code>
+函数相似，只是多了一个超时。超时值指定了我们愿意等待多长时间。这个时间值是一个绝对数而不是相对数。例如，假设愿意等待3分钟。那么，并不是把3分钟转换成
+<code>timespec</code> 结构，而是需要把当前时间加上3分钟再转换成
+<code>timespec</code> 结构。</p>
+<p>可以使用 <code>clock_gettime</code> 函数获取 <code>timespec</code>
+结构表示的当前时间。但是目前并不是所有的平台都支持这个函数，因此，也可以用另一个函数
+<code>gettimeofday</code> 获取 <code>timeval</code>
+结构表示的当前时间，然后把这个时间转换成 <code>timespec</code>
+结构。要得到超时值的绝对时间，可以使用下面的函数：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">maketimeout</span><span class="params">(<span class="keyword">struct</span> timespec *tsp, <span class="type">long</span> minutes)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">timeval</span> <span class="title">now</span>;</span></span><br><span class="line">    <span class="comment">/* get the current time */</span></span><br><span class="line">    gettimeofday(&amp;now, <span class="literal">NULL</span>);</span><br><span class="line">    tsp-&gt;tv_sec = now.tv_sec;</span><br><span class="line">    tsp-&gt;tv_nsec = now.tv_usec * <span class="number">1000</span>; <span class="comment">/* usec to nsec */</span></span><br><span class="line">    <span class="comment">/* add the offset to get timeout value */</span></span><br><span class="line">    tsp-&gt;tv_sec += minutes * <span class="number">60</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果超时到期时条件还是没有出现，<code>pthread_cond_timewait</code>
+将重新获取互斥量，然后返回错误 <code>ETIMEDOUT</code>。从
+<code>pthread_cond_wait</code> 或者 <code>pthread_cond_timedwait</code>
+调用成功返回时，线程需要重新计算条件，因为另一个线程可能已经在运行并改变了条件。</p>
+<p>有两个函数可以用于通知线程条件已经满足。<code>pthread_cond_signal</code>
+函数<strong>至少能唤醒一个</strong>等待该条件的线程，而
+<code>pthread_cond_broadcast</code>
+函数则能唤醒等待该条件的所有线程。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_signal</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_cond_broadcast</span><span class="params">(<span class="type">pthread_cond_t</span> *cond)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>在调用 <code>pthread_cond_signal</code> 或者
+<code>pthread_cond_broadcast</code>
+时，我们说这是在给线程或者条件发信号。必须注意，一定要在改变条件状态以后再给线程发信号。</p>
+<h3 id="自旋锁">自旋锁</h3>
+<p>自旋锁与互斥量类似，但它不是通过休眠使进程阻塞，而是在获取锁之前一直处于忙等（自旋）阻塞状态。自旋锁可用于以下情况：锁被持有的时间短，而且线程并不希望在重新调度上花费太多的成本。</p>
+<p>自旋锁通常作为底层原语用于实现其他类型的锁。</p>
+<p>自旋锁的接口与互斥量的接口类似，这使得它可以比较容易地从一个替换为另一个。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_spin_init</span><span class="params">(<span class="type">pthread_spinlock_t</span> *lock, <span class="type">int</span> pshared)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_spin_destroy</span><span class="params">(<span class="type">pthread_spinlock_t</span> *lock)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p><code>pshared</code>
+参数表示进程共享属性，表明自旋锁是如何获取的。如果将其设置为
+<code>PTHREAD_PROCESS_SHARED</code>，那么只要线程能够访问该自旋锁的底层内存，即使这些线程来自不同的进程，也可以获取该自旋锁。否则，<code>pshared</code>
+参数会被设置为
+<code>PTHREAD_PROCESS_PRIVATE</code>，此时该自旋锁只能由初始化它的进程内的线程访问。</p>
+<p>可以用 <code>pthread_spin_lock</code> 或
+<code>pthread_spin_trylock</code>
+对自旋锁进行加锁，前者在获取锁之前一直自旋，后者如果不能获取锁，就立即返回
+<code>EBUSY</code> 错误。注意， <code>pthread_spin_trylock</code>
+不能自旋。不管以何种方式加锁，自旋锁都可以调用
+<code>pthread_spin_unlock</code> 函数解锁。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_spin_lock</span><span class="params">(<span class="type">pthread_spinlock_t</span> *lock)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_spin_trylock</span><span class="params">(<span class="type">pthread_spinlock_t</span> *lock)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_spin_unlock</span><span class="params">(<span class="type">pthread_spinlock_t</span> *lock)</span>;</span><br><span class="line"><span class="comment">// 所有函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>注意，如果自旋锁当前在解锁状态的话，<code>pthread_spin_lock</code>
+函数不要自旋就可以对它加锁。如果线程已经对它加锁了，结果就是未定义的。调用<code>pthread_spin_lock</code>
+会返回 <code>EDEADLK</code>
+错误（或其他错误），或者调用可能会永久自旋。具体行为依赖于实际的实现。试图对没有加锁的自旋锁进行解锁，结果也是未定义的。</p>
+<p>不管是 <code>pthread_spin_lock</code>还是
+<code>pthread_spin_trylock</code>，返回值为0的话就表示自旋锁被加锁。需要注意，不要调用在持有自旋锁情况下可能会进入休眠状态的函数。如果调用了这些函数，会浪费CPU资源，因为其他线程需要获取自旋锁需要等待的时间就延长了。</p>
+<h3 id="屏障">屏障</h3>
+<p>屏障（barrier）是用户协调多个线程并行工作的同步机制。屏障允许每个线程等待，直到所有的合作线程都到达某一点，然后从该点继续执行。我们已经见过一种形式的屏障——
+<code>pthread_join</code>
+函数就起到了屏障的作用，它能让一个线程等待另一个线程退出。</p>
+<p>但是屏障对象的概念更广，它们允许任意数量的线程等待，直到所有的线程完成处理工作，而线程不需要退出。所有线程达到屏障后可以接着工作。</p>
+<p>可以使用 <code>pthread_barrier_init</code> 函数对屏障进行初始化，用
+<code>thread_barrier_destroy</code> 函数反初始化。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_barrier_init</span><span class="params">(<span class="type">pthread_barrier_t</span> *<span class="keyword">restrict</span> barrier, <span class="type">const</span> <span class="type">pthread_barrierattr_t</span> *<span class="keyword">restrict</span> attr, <span class="type">unsigned</span> <span class="type">int</span> count)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_barrier_destroy</span><span class="params">(<span class="type">pthread_barrier_t</span> *barrier)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回0；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>初始化屏障时，可以使用 <code>count</code>
+参数指定，在允许所有线程继续运行之前，必须到达屏障的线程数目。使用
+<code>attr</code> 参数指定屏障对象的属性。</p>
+<p>可以使用 <code>pthread_barrier_wait</code>
+函数来表明，线程已完成工作，准备等所有其他线程赶上来。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pthread_barrier_wait</span><span class="params">(<span class="type">pthread_barrier_t</span> *barrier)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0或者PTHREAD_BARRIER_SERIAL_THREAD；否则，返回错误编号</span></span><br></pre></td></tr></table></figure>
+<p>调用 <code>pthread_barrier_wait</code> 的线程在屏障计数（调用
+<code>pthread_barrier_init</code>
+时设定）未满足条件时，会进入休眠状态。如果该线程是最后一个调用
+<code>pthread_barrier_wait</code>
+的线程，就满足了屏障计数，所有的线程都被唤醒。</p>
+<p><code>pthread_barrier_wait()</code> 会随机选择一个线程返回
+<code>PTHREAD_BARRIER_SERIAL_THREAD</code>，其余线程返回
+0，这样可以让一个线程作为 master 在所有线程同步后执行必要的串行操作</p>
+<p>一旦达到屏障计数值，而且线程处于非阻塞状态，屏障就可以被重用。但是除非在调用了
+<code>pthread_barrier_destroy</code> 函数之后，又调用了
+<code>pthread_barrier_init</code>
+函数对计数用另外的数进行初始化，否则屏障计数不会改变。</p>
+<!-- flag of hidden posts -->
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/" title="APUE笔记：Threads（十一）">https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/apue/" rel="tag"><i class="fa fa-tag"></i> APUE</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">142k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:50</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

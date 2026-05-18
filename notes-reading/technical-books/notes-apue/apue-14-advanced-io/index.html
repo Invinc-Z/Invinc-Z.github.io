@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文记录《UNIX环境高级编程》第3版 第14章 Advanced I&#x2F;O 的一些知识点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APUE笔记：Advanced I&#x2F;O（十四）">
+<meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/index.html">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文记录《UNIX环境高级编程》第3版 第14章 Advanced I&#x2F;O 的一些知识点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309102807787.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309134731811.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309180558242.png">
+<meta property="article:published_time" content="2025-08-15T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-18T17:36:05.772Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="APUE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309102807787.png">
+
+
+<link rel="canonical" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/","path":"notes-reading/technical-books/notes-apue/apue-14-advanced-io/","title":"APUE笔记：Advanced I/O（十四）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>APUE笔记：Advanced I/O（十四） | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%9E%E9%98%BB%E5%A1%9Eio"><span class="nav-number">1.</span> <span class="nav-text">非阻塞I&#x2F;O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E9%94%81%E5%AE%9A"><span class="nav-number">2.</span> <span class="nav-text">记录锁定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fcntl-record-locking"><span class="nav-number">2.1.</span> <span class="nav-text">fcntl Record Locking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%81%E7%9A%84%E9%9A%90%E5%90%AB%E7%BB%A7%E6%89%BF%E5%92%8C%E9%87%8A%E6%94%BE"><span class="nav-number">2.2.</span> <span class="nav-text">锁的隐含继承和释放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freebsd%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.3.</span> <span class="nav-text">FreeBSD实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">I&#x2F;O多路复用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0select%E5%92%8Cpselect"><span class="nav-number">3.1.</span> <span class="nav-text">函数select和pselect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0poll"><span class="nav-number">3.2.</span> <span class="nav-text">函数poll</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E6%AD%A5io"><span class="nav-number">4.</span> <span class="nav-text">异步I&#x2F;O</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0readv%E5%92%8Cwritev"><span class="nav-number">5.</span> <span class="nav-text">函数readv和writev</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0readn%E5%92%8Cwriten"><span class="nav-number">6.</span> <span class="nav-text">函数readn和writen</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#memory-mapped-io"><span class="nav-number">7.</span> <span class="nav-text">Memory-Mapped I&#x2F;O</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="APUE笔记：Advanced I&#x2F;O（十四） | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APUE笔记：Advanced I/O（十四）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-16 05:12:18" itemprop="dateCreated datePublished" datetime="2025-08-16T05:12:18+08:00">2025-08-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>40 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文记录《UNIX环境高级编程》第3版 第14章 Advanced I/O
+的一些知识点。</p>
+<span id="more"></span>
+<hr />
+<h2 id="非阻塞io">非阻塞I/O</h2>
+<p>系统调用分成两类：“低速”系统调用和其他。低速系统调用是可能会使进程永远阻塞的一类系统调用，包括：</p>
+<blockquote>
+<ul>
+<li><p>如果某些文件类型（如读管道、终端设备和网络设备）的数据并不存在，读操作可能会使调用者永远阻塞；</p></li>
+<li><p>如果数据不能被相同的文件类型立即接受（如管道中无空间、网络流控制），写操作可能会使调用者永远阻塞；</p></li>
+<li><p>在某种条件发生之前打开某些文件类型可能会发生阻塞（如要打开一个终端设备，需要先等待与之连接的调制解调器应答，又如若以只写模式打开FIFO，那么在没有其他进程已用读模式打开该FIFO时也要等待）；</p></li>
+<li><p>对已经加上强制性记录锁的文件进行读写；</p></li>
+<li><p>某些ioctl操作；</p></li>
+<li><p>某些进程间通信函数。</p></li>
+</ul>
+</blockquote>
+<p>我们也曾说过，虽然读写磁盘文件会暂时阻塞调用者，但并不能将与磁盘I/O有关的系统调用视为“低速”。</p>
+<p>非阻塞I/O使我们可以发出open、read和write这样的I/O操作，并使这些操作不会永远阻塞。如果这种操作不能完成，则调用立即出错返回，表示该操作如继续执行将阻塞。</p>
+<p>对于一个给定的描述符，有两种为其指定非阻塞I/O的方法。</p>
+<p>（1）如果调用 <code>open</code> 获得描述符，则可指定
+<code>O_NONBLOCK</code> 标志。</p>
+<p>（2）对于已经打开的一个描述符，则可调用
+<code>fcntl</code>，由该函数打开 <code>O_NONBLOCK</code>
+文件状态标志。</p>
+<hr />
+<h2 id="记录锁定">记录锁定</h2>
+<p>当两个人同时编辑一个文件时，在大多数UNIX系统中，该文件的最后状态取决于写该文件的最后一个进程。但是对于有些应用程序，<strong>如数据库</strong>，进程有时需要确保它正在单独写一个文件。为了向进程提供这种功能，商用UNIX系统提供了记录锁定机制。</p>
+<p>记录锁定（record
+locking）的功能是：<strong>当第一个进程正在读或修改文件的某个部分时，使用记录锁定可以阻止其他进程修改同一文件区</strong>。对于
+UNIX 系统而言，“记录”这个词是一种误用，因为 UNIX
+系统内核根本没有在一个文件中使用记录这种概念。一个更适合的术语可能是<strong>字节范围锁定</strong>（byte-range
+locking），因为它锁定的只是文件中的一个区域（也可能是整个文件）。</p>
+<p>早期的伯克利版本只支持 <code>flock</code>
+函数。该函数只能对整个文件加锁，不能对文件中的一部分加锁。</p>
+<p>SVR3通过 <code>fcntl</code> 函数增加了记录锁功能。在此基础上构造了
+<code>lockf</code>
+函数，它提供了一个简化的接口。这些函数允许调用者对一个文件中任意字节数的区域加锁，长至整个文件，短至文件中的一个字节。</p>
+<p>POSIX.1标准的基础是 <code>fcntl</code>
+方法。下图列出了各种系统提供的不同形式的记录锁。</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Advisory</th>
+<th>Mandatory</th>
+<th>fcntl</th>
+<th>lockf</th>
+<th>flock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SUS</td>
+<td>•</td>
+<td></td>
+<td>•</td>
+<td>XSI</td>
+<td></td>
+</tr>
+<tr>
+<td>FreeBSD 8.0</td>
+<td>•</td>
+<td></td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+</tr>
+<tr>
+<td>Linux 3.2.0</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+</tr>
+<tr>
+<td>Mac OS X 10.6.8</td>
+<td>•</td>
+<td></td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+</tr>
+<tr>
+<td>Solaris 10</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+<td>•</td>
+</tr>
+</tbody>
+</table>
+<p>本节最后部分将说明建议性锁和强制性锁之间的区别。</p>
+<h3 id="fcntl-record-locking"><code>fcntl</code> Record Locking</h3>
+<p><code>fcntl</code> 函数的原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcnt1.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fcnt1</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> cmd, ...<span class="comment">/* struct flock *flockptr */</span>)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，依赖于cmd（见下），否则，返回−1</span></span><br></pre></td></tr></table></figure>
+<p>对于记录锁定，<code>cmd</code> 是
+<code>F_GETLK</code>、<code>F_SETLK</code> 或
+<code>F_SETLKW</code>。第三个参数（<code>flockptr</code> ）是一个指向
+<code>flock</code> 结构的指针。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">flock</span> &#123;</span></span><br><span class="line">    <span class="type">short</span> l_type;　　　 <span class="comment">/* F_RDLCK, F_WRLCK, or F_UNLCK */</span></span><br><span class="line">    <span class="type">short</span> l_whence;　　 <span class="comment">/* SEEK_SET, SEEK_CUR, or SEEK_END */</span></span><br><span class="line">    <span class="type">off_t</span> l_start;　　　 <span class="comment">/* offset in bytes, relative to l_whence */</span></span><br><span class="line">    <span class="type">off_t</span> l_len;　　　　 <span class="comment">/* length, in bytes; 0 means lock to EOF */</span></span><br><span class="line">    <span class="type">pid_t</span> l_pid;　　　　 <span class="comment">/* returned with F_GETLK */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>对 <code>flock</code> 结构说明如下。</p>
+<ul>
+<li><p>所希望的锁类型：<code>F_RDLCK</code>（共享读锁）、<code>F_WRLCK</code>（独占性写锁）或
+<code>F_UNLCK</code>（解锁一个区域）。</p></li>
+<li><p>要加锁或解锁区域的起始字节偏移量（<code>l_start</code> 和
+<code>l_whence</code>）。</p></li>
+<li><p>区域的字节长度（<code>l_len</code>）。</p></li>
+<li><p>持有可能会阻塞当前进程的锁的进程的ID（<code>l_pid</code>）</p></li>
+</ul>
+<p>如果一个进程对一个文件区间已经有了一把锁，后来该进程又企图在同一文件区间再加一把锁，那么新锁将替换已有锁。因此，若一进程在某文件的16～32字节区间有一把写锁，然后又试图在16～32字节区间加一把读锁，那么该请求将成功执行，原来的写锁会被替换为读锁。</p>
+<p>加读锁时，该描述符必须是读打开。加写锁时，该描述符必须是写打开。</p>
+<p>下面说明一下 <code>fcntl</code>函数的3种命令。</p>
+<p><code>F_GETLK</code> 判断由 <code>flockptr</code>
+所描述的锁是否会被另外一把锁所排斥（阻塞）。如果存在一把锁，它阻止创建由
+<code>flockptr</code>
+所描述的锁，则该现有锁的信息将重写<code>flockptr</code>
+指向的信息。如果不存在这种情况，则除了将 <code>l_type</code> 设置为
+<code>F_UNLCK</code> 之外， <code>flockptr</code>
+所指向结构中的其他信息保持不变。</p>
+<p><code>F_SETLK</code> 设置由 <code>flockptr</code>
+所描述的锁。如果我们试图获得一把读锁（<code>l_type</code> 为
+<code>F_RDLCK</code>）或写锁（<code>l_type</code> 为
+<code>F_WRLCK</code>），而兼容性规则阻止系统给我们这把锁，那么
+<code>fcntl</code> 会立即出错返回，此时<code>errno</code> 设置为
+<code>EACCES</code> 或 <code>EAGAIN</code>。此命令也用来清除由
+<code>flockptr</code> 指定的锁（<code>l_type</code> 为
+<code>F_UNLCK</code>）。</p>
+<p><code>F_SETLKW</code> 这个命令是 <code>F_SETLK</code>
+的阻塞版本（命令名中的W表示等待（wait））。如果所请求的读锁或写锁因另一个进程当前已经对所请求区域的某部分进行了加锁而不能被授予，那么调用进程会被置为休眠。如果请求创建的锁已经可用，或者休眠由信号中断，则该进程被唤醒。</p>
+<p>应当了解，用 <code>F_GETLK</code> 测试能否建立一把锁，然后用
+<code>F_SETLK</code> 或 <code>F_SETLKW</code>
+企图建立那把锁，这两者不是一个原子操作。因此不能保证在这两次
+<code>fcntl</code>
+调用之间不会有另一个进程插入并建立一把相同的锁。如果不希望在等待锁变为可用时产生阻塞，就必须处理由
+<code>F_SETLK</code> 返回的可能的出错。</p>
+<p>实例：请求和释放一把锁</p>
+<p>为了避免每次分配 <code>flock</code>
+结构，然后又填入各项信息，可以用函数 <code>lock_reg</code>
+来处理所有这些细节。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;apue.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">lock_reg</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> cmd, <span class="type">int</span> type, <span class="type">off_t</span> offset, <span class="type">int</span> whence, <span class="type">off_t</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">flock</span> <span class="title">lock</span>;</span></span><br><span class="line">    lock.l_type = type; <span class="comment">/* F_RDLCK, F_WRLCK, F_UNLCK */</span></span><br><span class="line">    lock.l_start = offset; <span class="comment">/* byte offset, relative to l_whence */</span></span><br><span class="line">    lock.l_whence = whence; <span class="comment">/* SEEK_SET, SEEK_CUR, SEEK_END */</span></span><br><span class="line">    lock.l_len = len; <span class="comment">/* #bytes (0 means to EOF) */</span></span><br><span class="line">    <span class="keyword">return</span>(fcntl(fd, cmd, &amp;lock));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为大多数锁调用是加锁或解锁一个文件区域（命令 <code>F_GETLK</code>
+很少使用），故通常使用下列5个宏中的一个。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> read_lock(fd,offset,whence,len) 	lock_reg((fd), F_SETLK, F_RDLCK, (offset), (whence), (len))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> readw_lock(fd,offset,whence,len) 	lock_reg((fd), F_SETLKW, F_RDLCK, (offset), (whence), (len))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> write_lock(fd,offset,whence,len) 	lock_reg((fd), F_SETLK, F_WRLCK, (offset), (whence), (len))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> writew_lock(fd,offset,whence,len) 	lock_reg((fd), F_SETLKW, F_WRLCK, (offset), (whence), (len))</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> un_lock(fd,offset,whence,len) 		lock_reg((fd), F_SETLK, F_UNLCK, (offset), (whence), (len))</span></span><br></pre></td></tr></table></figure>
+<p>实例：测试一把锁</p>
+<p>下图中定义了一个函数
+<code>lock_test</code>，我们将用它测试一把锁。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;apue.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="type">pid_t</span> <span class="title function_">lock_test</span><span class="params">(<span class="type">int</span> fd, <span class="type">int</span> type, <span class="type">off_t</span> offset, <span class="type">int</span> whence, <span class="type">off_t</span> len)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">flock</span> <span class="title">lock</span>;</span></span><br><span class="line">    lock.l_type = type; <span class="comment">/* F_RDLCK or F_WRLCK */</span></span><br><span class="line">    lock.l_start = offset; <span class="comment">/* byte offset, relative to l_whence */</span></span><br><span class="line">    lock.l_whence = whence; <span class="comment">/* SEEK_SET, SEEK_CUR, SEEK_END */</span></span><br><span class="line">    lock.l_len = len; <span class="comment">/* #bytes (0 means to EOF) */</span></span><br><span class="line">    <span class="keyword">if</span> (fcntl(fd, F_GETLK, &amp;lock) &lt; <span class="number">0</span>)</span><br><span class="line">        err_sys(<span class="string">&quot;fcntl error&quot;</span>);</span><br><span class="line">    <span class="keyword">if</span> (lock.l_type == F_UNLCK)</span><br><span class="line">        <span class="keyword">return</span>(<span class="number">0</span>);      <span class="comment">/* false, region isn’t locked by another proc */</span></span><br><span class="line">    <span class="keyword">return</span>(lock.l_pid); <span class="comment">/* true, return pid of lock owner */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果存在一把锁，它阻塞由参数指定的锁请求，则此函数返回持有这把现有锁的进程的进程ID，否则此函数返回0。通常用下面两个宏来调用此函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> is_read_lockable(fd, offset, whence, len) (lock_test((fd), F_RDLCK, (offset), (whence), (len)) == 0)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> is_write_lockable(fd, offset, whence, len) (lock_test((fd), F_WRLCK, (offset), (whence), (len)) == 0)</span></span><br></pre></td></tr></table></figure>
+<p>注意，进程不能使用 <code>lock_test</code>
+函数测试它自己是否在文件的某一部分持有一把锁。<code>F_GETLK</code>
+命令的定义说明，返回信息指示是否有现有的锁阻止调用进程设置它自己的锁。因为
+<code>F_SETLK</code> 和 <code>F_SETLKW</code>
+命令总是替换调用进程现有的锁（若已存在，新锁将替换已有锁），所以调用进程决不会阻塞在自己持有的锁上，于是，<code>F_GETLK</code>
+命令决不会报告调用进程自己持有的锁。</p>
+<h3 id="锁的隐含继承和释放">锁的隐含继承和释放</h3>
+<p>关于记录锁的自动继承和释放有3条规则。</p>
+<blockquote>
+<p>（1）锁与进程和文件两者相关联。这有两重含义：第一重很明显，当一个进程终止时，它所建立的锁全部释放；第二重则不太明显，无论一个描述符何时关闭，该进程通过这一描述符引用的文件上的任何一把锁都会释放。</p>
+<p>（2）锁不会在fork操作中由子进程继承。这意味着，如果一个进程获取了锁，然后调用fork，那么对于父进程所获取的锁而言，子进程会被视为另一个进程。子进程必须调用
+<code>fcntl</code>，以在通过fork继承的任何描述符上获取自己的锁。这种限制是合理的，因为锁的作用是防止多个进程同时写入同一个文件。如果子进程在fork时继承了锁，那么父进程和子进程就可能同时写入同一个文件。</p>
+<p>（3）在执行exec时，新程序会继承锁。不过需要注意的是，如果为文件描述符设置了执行时关闭（close-on-exec）标志，那么当该描述符作为exec的一部分被关闭时，底层文件的所有锁都会被释放。</p>
+</blockquote>
+<h3 id="freebsd实现">FreeBSD实现</h3>
+<p>先简要地观察FreeBSD实现中使用的数据结构。这会帮助进一步理解记录锁的自动继承和释放的第一条规则：锁与进程和文件两者相关联。</p>
+<p>考虑一个进程，它执行下列语句（忽略出错返回）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fd1 = open(pathname, ...);</span><br><span class="line">write_lock(fd1, <span class="number">0</span>, SEEK_SET, <span class="number">1</span>);　　<span class="comment">/* parent write locks byte 0 */</span></span><br><span class="line"><span class="keyword">if</span> ((pid = fork()) &gt; <span class="number">0</span>) &#123;　　　　　 <span class="comment">/* parent */</span></span><br><span class="line">    fd2 = dup(fd1);</span><br><span class="line">    fd3 = open(pathname, ...);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">    read_lock(fd1, <span class="number">1</span>, SEEK_SET, <span class="number">1</span>); <span class="comment">/* child read locks byte 1 */</span></span><br><span class="line">&#125;</span><br><span class="line">pause();</span><br></pre></td></tr></table></figure>
+<p>下图显示了父进程和子进程暂停（执行pause()）后的数据结构情况。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309102807787.png" alt="The FreeBSD data structures for record locking" style="zoom:67%;" /></p>
+<p>每个 <code>lockf</code>
+结构描述了一个给定进程的一个加锁区域（由偏移量和长度定义的）。图中显示了两个
+<code>lockf</code> 结构，一个是由父进程调用 <code>write_lock</code>
+形成的，另一个则是由子进程调用 <code>read_lock</code>
+形成的。每一个结构都包含了相应的进程ID。</p>
+<p>在父进程中，关闭fd1、fd2或fd3中的任意一个都将释放由父进程设置的写锁。在关闭这3个描述符中的任意一个时，内核会从该描述符所关联的i节点开始，逐个检查
+<code>lockf</code>
+链接表中的各项，并释放由调用进程持有的各把锁。内核并不清楚（也不关心）父进程是用这3个描述中的哪一个来设置这把锁的。</p>
+<p>实例</p>
+<p>守护进程可用一把文件锁来保证只有该守护进程的唯一副本在运行。下图展示了
+<code>lockfile</code> 函数的实现，守护进程可用该函数在文件上加写锁。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">lockfile</span><span class="params">(<span class="type">int</span> fd)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">flock</span> <span class="title">fl</span>;</span></span><br><span class="line">    fl.l_type = F_WRLCK;</span><br><span class="line">    fl.l_start = <span class="number">0</span>;</span><br><span class="line">    fl.l_whence = SEEK_SET;</span><br><span class="line">    fl.l_len = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span>(fcntl(fd, F_SETLK, &amp;fl));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>另一种方法是用 <code>write_lock</code> 函数定义 <code>lockfile</code>
+函数。</p>
+<p><code>#define lockfile(fd) write_lock((fd), 0, SEEK_SET, 0)</code></p>
+<hr />
+<h2 id="io多路复用">I/O多路复用</h2>
+<p>为了使用这种技术，先构造一张我们感兴趣的描述符（通常都不止一个）的列表，然后调用一个函数，直到这些描述符中的一个已准备好进行I/O时，该函数才返回。<code>poll</code>、<code>pselect</code>
+和 <code>select</code>
+这3个函数使我们能够执行I/O多路复用。在从这些函数返回时，进程会被告知哪些描述符已准备好可以进行I/O。</p>
+<h3 id="函数select和pselect">函数select和pselect</h3>
+<p>传给select的参数告诉内核：</p>
+<ul>
+<li><p>我们所关心的描述符；</p></li>
+<li><p>对于每个描述符我们所关心的条件（是否想<strong>从一个给定的描述符读，是否想写一个给定的描述符，是否关心一个给定描述符的异常条件</strong>）；</p></li>
+<li><p>愿意等待多长时间（可以永远等待、等待一个固定的时间或者根本不等待）。</p></li>
+</ul>
+<p>从select返回时，内核告诉我们：</p>
+<ul>
+<li><p>已准备好的描述符的总数量；</p></li>
+<li><p>对于读、写或异常这3个条件中的每一个，哪些描述符已准备好。</p></li>
+</ul>
+<p>使用这种返回信息，就可调用相应的I/O函数（一般是read或write），并且确知函数不会阻塞。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">select</span><span class="params">(<span class="type">int</span> maxfdp1, fd_set *<span class="keyword">restrict</span> readfds, fd_set *<span class="keyword">restrict</span> writefds, fd_set *<span class="keyword">restrict</span> exceptfds, </span></span><br><span class="line"><span class="params">           <span class="keyword">struct</span> timeval *<span class="keyword">restrict</span> tvptr)</span>;</span><br><span class="line"><span class="comment">// 返回值：准备就绪的描述符数目；若超时，返回0；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<p>先来说明最后一个参数，它指定愿意等待的时间长度，单位为秒和微秒。有以下3种情况。</p>
+<ol type="1">
+<li><p><code>tvptr == NULL</code>
+永远等待。如果捕捉到一个信号则中断此无限期等待。当所指定的描述符中的一个已准备好或捕捉到一个信号则返回。如果捕捉到一个信号，则select返回-1，errno设置为
+<code>EINTR</code>。</p></li>
+<li><p><code>tvptr-&gt;tv_sec == 0 &amp;&amp; tvptr-&gt;tv_usec == 0</code>
+根本不等待。测试所有指定的描述符并立即返回。这是轮询系统找到多个描述符状态而不阻塞select函数的方法。</p></li>
+<li><p><code>tvptr-&gt;tv_sec != 0 || tvptr-&gt;tv_usec != 0</code>
+等待指定的秒数和微秒数。当指定的描述符之一已准备好，或当指定的时间值已经超过时立即返回。如果在超时到期时还没有一个描述符准备好，则返回值是
+0。与第一种情况一样，这种等待可被捕捉到的信号中断。</p></li>
+</ol>
+<p>POSIX.1允许实现修改 <code>timeval</code>
+结构中的值，所以在select返回后，你不能指望该结构仍旧保持调用select之前它所包含的值。FreeBSD
+8.0、Mac OS X 10.6.8和Solaris
+10都保持该结构中的值不变。但是，若在超时时间尚未到期时，select就返回，那么Linux
+3.2.0将用剩余时间值更新该结构。</p>
+<p>中间3个参数 <code>readfds</code>、<code>writefds</code> 和
+<code>exceptfds</code>
+是指向描述符集的指针。这3个描述符集说明了我们关心的可读、可写或处于异常条件的描述符集合。每个描述符集存储在一个
+<code>fd_set</code>
+数据类型中。这个数据类型是由实现选择的，它可以为每一个可能的描述符保持一位。我们可认为它只是一个很大的字节数组。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309134731811.png" alt="Specifying the read, write, and exception descriptors for select" style="zoom:67%;" /></p>
+<p>对于 <code>fd_set</code>
+数据类型，唯一可以进行的处理是：分配一个这种类型的变量，将这种类型的一个变量值赋给同类型的另一个变量，或对这种类型的变量使用下列4个函数中的一个。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">FD_ISSET</span><span class="params">(<span class="type">int</span> fd, fd_set *fdset)</span>;</span><br><span class="line"><span class="comment">// 返回值：若fd在描述符集中，返回非0值；否则，返回0</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">FD_CLR</span><span class="params">(<span class="type">int</span> fd, fd_set *fdset)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">FD_SET</span><span class="params">(<span class="type">int</span> fd, fd_set *fdset)</span>;</span><br><span class="line"><span class="type">void</span> <span class="title function_">FD_ZERO</span><span class="params">(fd_set *fdset)</span>;</span><br></pre></td></tr></table></figure>
+<p>在声明了一个描述符集之后，必须用 <code>FD_ZERO</code>
+将这个描述符集置为0，然后在其中设置我们关心的各个描述符的位。具体操作如下所示：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fd_set rset;</span><br><span class="line"><span class="type">int</span>　　fd;</span><br><span class="line">FD_ZERO(&amp;rset);</span><br><span class="line">FD_SET(fd, &amp;rset);</span><br><span class="line">FD_SET(STDIN_FILENO, &amp;rset);</span><br></pre></td></tr></table></figure>
+<p>从 <code>select</code> 返回时，可以用 <code>FD_ISSET</code>
+测试该集中的一个给定位是否仍处于打开状态：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (FD_ISSET(fd, &amp;rset)) &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>select</code>
+的中间3个参数（指向描述符集的指针）中的任意一个（或全部）可以是空指针，这表示对相应条件并不关心。如果所有3个指针都是<code>NULL</code>，则
+<code>select</code>
+提供了比<code>sleep</code>更精确的定时器。（<code>sleep</code>
+等待整数秒，而 <code>select</code>
+的等待时间则可以小于1秒，其实际精度取决于系统时钟。）</p>
+<p><code>select</code> 第一个参数 <code>maxfdp1</code>
+的意思是“<strong>最大文件描述符编号值加1</strong>”。考虑所有3个描述符集，在3个描述符集中找出最大描述符编号值，然后加1，这就是第一个参数值。也可将第一个参数设置为
+<code>FD_SETSIZE</code>，这是 <code>&lt;sys/select.h&gt;</code>
+中的一个常量，它指定最大描述符数（经常是1
+024），但是对大多数应用程序而言，此值太大了。确实，大多数应用程序只使用3～10个描述符（某些应用程序需要更多的描述符，但这种UNIX程序并不典型）。通过指定我们所关注的最大描述符，内核就只需在此范围内寻找打开的位，而不必在3个描述符集中的数百个没有使用的位内搜索。</p>
+<p>select有3个可能的返回值。</p>
+<blockquote>
+<p>（1）返回值-1表示出错。这是可能发生的，例如，在所指定的描述符一个都没准备好时捕捉到一个信号。在此种情况下，一个描述符集都不修改。</p>
+<p>（2）返回值0表示没有描述符准备好。若指定的描述符一个都没准备好，指定的时间就过了，那么就会发生这种情况。此时，所有描述符集都会置0。</p>
+<p>（3）一个正返回值说明了已经准备好的描述符数。<strong>该值是3个描述符集中已准备好的描述符数之和</strong>，所以如果同一描述符已准备好读和写，那么在返回值中会对其计两次数。在这种情况下，
+3个描述符集中仍旧打开的位对应于已准备好的描述符。</p>
+</blockquote>
+<p>如果在一个描述符上碰到了文件尾端，则select会认为该描述符是可读的。然后调用read，它返回0，这是UNIX系统指示到达文件尾端的方法。</p>
+<p>POSIX.1也定义了一个 <code>select</code> 的变体，称为
+<code>pselect</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">pselect</span><span class="params">(<span class="type">int</span> maxfdp1, fd_set *<span class="keyword">restrict</span> readfds, fd_set *<span class="keyword">restrict</span> writefds, fd_set *<span class="keyword">restrict</span> exceptfds,</span></span><br><span class="line"><span class="params">			<span class="type">const</span> <span class="keyword">struct</span> timespec *<span class="keyword">restrict</span> tsptr, <span class="type">const</span> <span class="type">sigset_t</span> *<span class="keyword">restrict</span> sigmask)</span>;</span><br><span class="line"><span class="comment">// 返回值：准备就绪的描述符数目；若超时，返回0；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<p>除下列几点外，<code>pselect</code> 与 <code>select</code> 相同。</p>
+<ul>
+<li><p><code>select</code> 的超时值用 <code>timeval</code> 结构指定，但
+<code>pselect</code> 使用
+<code>timespec</code>结构。<code>timespec</code>
+结构以秒和纳秒表示超时值，而非秒和微秒。如果平台支持这样的时间精度，那么
+<code>timespec</code> 就能提供更精准的超时时间。</p></li>
+<li><p><code>pselect</code> 的超时值被声明为
+<code>const</code>，这保证了调用 <code>pselect</code>
+不会改变此值。</p></li>
+<li><p><code>pselect</code> 可使用可选信号屏蔽字。若
+<code>sigmask</code> 为 <code>NULL</code>，那么在与信号有关的方面，
+<code>pselect</code> 的运行状况和 <code>select</code>
+相同。否则，<code>sigmask</code> 指向一信号屏蔽字，在调用
+<code>pselect</code>
+时，以原子操作的方式安装该信号屏蔽字。在返回时，恢复以前的信号屏蔽字。在
+<code>pselect</code> 调用期间被屏蔽的信号不会被处理，但在
+<code>pselect</code> 返回后，这些信号会恢复为可处理状态。</p></li>
+</ul>
+<h3 id="函数poll">函数poll</h3>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;poll.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">poll</span><span class="params">(<span class="keyword">struct</span> pollfd fdarray[], <span class="type">nfds_t</span> nfds, <span class="type">int</span> timeout)</span>;</span><br><span class="line"><span class="comment">// 返回值：准备就绪的描述符数目；若超时，返回0；若出错，返回-1</span></span><br></pre></td></tr></table></figure>
+<p>与 <code>select</code>不同，<code>poll</code>
+不是为每个条件（可读性、可写性和异常条件）构造一个描述符集，而是构造一个
+<code>pollfd</code>
+结构的数组，每个数组元素指定一个描述符编号以及我们对该描述符感兴趣的条件。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">pollfd</span> &#123;</span></span><br><span class="line">    <span class="type">int</span>　 fd;　　　 <span class="comment">/* file descriptor to check, or &lt; 0 to ignore */</span></span><br><span class="line">    <span class="type">short</span> events; <span class="comment">/* events of interest on fd */</span></span><br><span class="line">    <span class="type">short</span> revents; <span class="comment">/* events that occurred on fd */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>fdarray</code> 数组中的元素数由 <code>nfds</code> 指定。</p>
+<p>当一个描述符被挂断（<code>POLLHUP</code>）后，就不能再写该描述符，但是有可能仍然可以从该描述符读取到数据。</p>
+<p><code>poll</code> 的最后一个参数指定的是我们愿意等待多长时间。如同
+<code>select</code> 一样，有3种不同的情形。</p>
+<ol type="1">
+<li><p><code>timeout == -1</code>永远等待。当所指定的描述符中的一个已准备好，或捕捉到一个信号时返回。如果捕捉到一个信号，则poll返回-1，errno设置为
+<code>EINTR</code>。</p></li>
+<li><p><code>timeout == 0</code>
+不等待。测试所有描述符并立即返回。这是一种轮询系统的方法，可以找到多个描述符的状态而不阻塞
+<code>poll</code> 函数。</p></li>
+<li><p><code>timeout &gt; 0</code> 等待 <code>timeout</code>
+毫秒。当指定的描述符之一已准备好，或 <code>timeout</code>
+到期时立即返回。若 <code>timeout</code>
+到期时还没有一个描述符准备好，返回值是0。</p></li>
+</ol>
+<p>理解文件尾端与挂断之间的区别是很重要的。如果我们正从终端输入数据，并键入文件结束符，那么就会打开
+<code>POLLIN</code>，于是我们就可以读文件结束指示（read返回0）。<code>revents</code>
+中的 <code>POLLHUP</code>
+没有打开。如果正在读调制解调器，并且电话线已挂断，我们将接到
+<code>POLLHUP</code> 通知。</p>
+<hr />
+<h2 id="异步io">异步I/O</h2>
+<p>在探讨使用异步输入/输出的不同方式之前，我们需要先讨论其成本。当我们决定使用异步输入/输出时，由于要处理多个并发操作，会使应用程序的设计变得复杂。一种更简单的方法可能是使用多线程，这能让我们采用同步模型来编写程序，并让各个线程彼此异步运行。</p>
+<hr />
+<h2 id="函数readv和writev">函数readv和writev</h2>
+<p><code>readv</code> 和 <code>writev</code>
+函数用于在一次函数调用中读、写<strong>多个非连续缓冲区</strong>。有时也将这两个函数称为散布读（scatter
+read）和聚集写（gather write）。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/uio.h&gt;</span></span></span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">readv</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="keyword">struct</span> iovec *iov, <span class="type">int</span> iovcnt)</span>;</span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">writev</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="keyword">struct</span> iovec *iov, <span class="type">int</span> iovcnt)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：已读或已写的字节数；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<p>这两个函数的第二个参数是指向 <code>iovec</code>
+结构数组的一个指针：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">iovec</span> &#123;</span></span><br><span class="line">    <span class="type">void</span> *iov_base; <span class="comment">/* starting address of buffer */</span></span><br><span class="line">    <span class="type">size_t</span> iov_len; <span class="comment">/* size of buffer */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><code>iov</code> 数组中的元素数由 <code>iovcnt</code>
+指定，其最大值受限于 <code>IOV_MAX</code>。</p>
+<p><code>writev</code>
+函数从缓冲区中聚集输出数据的顺序是：<code>iov[0]</code>、<code>iov[1]</code>
+直至 <code>iov[iovcnt-1]</code>。<code>writev</code>
+返回输出的字节总数，通常应等于所有缓冲区长度之和。</p>
+<p><code>readv</code>
+函数则将读入的数据按上述同样顺序散布到缓冲区中。<code>readv</code>
+总是先填满一个缓冲区，然后再填写下一个。<code>readv</code>
+返回读到的字节总数。如果遇到文件尾端，已无数据可读，则返回0。</p>
+<hr />
+<h2 id="函数readn和writen">函数readn和writen</h2>
+<p>管道、FIFO以及某些设备（特别是终端和网络）有下列两种性质。</p>
+<p>（1）即使我们尚未遇到文件末尾，<code>read</code>
+操作返回的数据也可能少于请求的数据量。这并非错误，只需继续从设备读取即可。</p>
+<p>（2）<code>write</code>
+操作返回的字节数可能少于我们指定的数量。例如，这可能是由内核输出缓冲区已满导致的。不过，这并非错误，我们应该继续写入剩余的数据。（通常，只有在使用非阻塞描述符或者捕获到信号时，才会出现写操作返回的字节数少于预期这种情况。）</p>
+<p>在读写磁盘文件时，永远不会遇到这种情况，除非文件系统空间耗尽，或者达到了配额限制，导致无法写入所有请求的内容。</p>
+<p>通常，在读、写一个管道、网络设备或终端时，需要考虑这些特性。可以分别使用
+<code>readn</code> 和 <code>writen</code>
+函数来读取和写入N字节的数据，让这些函数处理可能小于请求值的返回值。这两个函数会根据需要多次调用read或write，以读取或写入全部的N字节数据。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自定义函数</span></span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">readn</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> nbytes)</span>;</span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">writen</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> nbytes)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：读、写的字节数；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stddef.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 从指定描述符读n个字节</span></span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">readn</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> nbytes)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">size_t</span> nleft;</span><br><span class="line">    <span class="type">ssize_t</span> nread;</span><br><span class="line">    nleft = nbytes;</span><br><span class="line">    <span class="keyword">while</span>(nleft &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>((nread = read(fd,buf,nleft)) &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nleft == nbytes)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>; <span class="comment">// 返回已经读取的数量</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nread == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>; <span class="comment">// EOF</span></span><br><span class="line">        nleft -= nread;</span><br><span class="line">        buf += nread;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> (nbytes - nleft);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向指定描述符写n个字节</span></span><br><span class="line"><span class="type">ssize_t</span> <span class="title function_">writen</span><span class="params">(<span class="type">int</span> fd, <span class="type">void</span> *buf, <span class="type">size_t</span> nbytes)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">size_t</span> nleft;</span><br><span class="line">    <span class="type">ssize_t</span> nwrite;</span><br><span class="line">    nleft = nbytes;</span><br><span class="line">    <span class="keyword">while</span>(nleft &gt; <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>((nwrite = write(fd,buf,nleft)) &lt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nleft == nbytes)</span><br><span class="line">                <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nwrite == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        nleft -= nwrite;</span><br><span class="line">        buf += nwrite;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (nbytes - nleft);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="memory-mapped-io">Memory-Mapped I/O</h2>
+<p>存储映射I/O（memory-mapped
+I/O）能将一个磁盘文件映射到存储空间中的一个缓冲区上，于是，当从缓冲区中取数据时，就相当于读文件中的相应字节。与此类似，将数据存入缓冲区时，相应字节就自动写入文件。这样，就可以在不使用read和write的情况下执行I/O。</p>
+<p>要使用此功能，我们必须告知内核将给定的文件映射到内存中的一个区域。这项任务由
+<code>mmap</code> 函数处理。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/mman.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> *<span class="title function_">mmap</span><span class="params">(<span class="type">void</span> *addr, <span class="type">size_t</span> len, <span class="type">int</span> prot, <span class="type">int</span> flag, <span class="type">int</span> fd, <span class="type">off_t</span> off)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回映射区的起始地址；若出错，返回MAP_FAILED</span></span><br></pre></td></tr></table></figure>
+<p><code>addr</code>
+参数用于指定映射存储区的起始地址。通常将其设置为0，这表示由系统选择该映射区的起始地址。此函数的返回值是该映射区的起始地址。</p>
+<p><code>fd</code>
+参数是指定要被映射文件的描述符。在文件映射到地址空间之前，必须先打开该文件。<code>len</code>
+参数是映射的字节数，<code>off</code>
+是要映射字节在文件中的起始偏移量。</p>
+<p><code>prot</code> 参数指定了映射存储区的保护要求，如表所示。</p>
+<table>
+<thead>
+<tr>
+<th>prot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PROT_READ</code></td>
+<td>Region can be read.</td>
+</tr>
+<tr>
+<td><code>PROT_WRITE</code></td>
+<td>Region can be written.</td>
+</tr>
+<tr>
+<td><code>PROT_EXEC</code></td>
+<td>Region can be executed.</td>
+</tr>
+<tr>
+<td><code>PROT_NONE</code></td>
+<td>Region cannot be accessed.</td>
+</tr>
+</tbody>
+</table>
+<p>可将 <code>prot</code> 参数指定为 <code>PROT_NONE</code> ，也可指定为
+<code>PROT_READ</code>、<code>PROT_WRITE</code> 和
+<code>PROT_EXEC</code>
+的任意组合的按位或。对指定映射存储区的保护要求<strong>不能超过文件open模式访问权限</strong>。例如，若该文件是只读打开的，那么对映射存储区就不能指定
+<code>PROT_WRITE</code>。</p>
+<p>在说明 <code>flag</code>
+参数之前，先看一下存储映射文件的基本情况。下图显示了一个存储映射文件。在此图中，“起始地址”是
+<code>mmap</code> 的返回值。内存映射区位于堆和栈之间。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260309180558242.png" alt="Example of a memory-mapped file" style="zoom:67%;" /></p>
+<p>下面是 <code>flag</code> 参数影响映射存储区的多种属性。</p>
+<blockquote>
+<ul>
+<li><p><code>MAP_FIXED</code> 返回值必须等于
+<code>addr</code>。因为这不利于可移植性，所以不鼓励使用此标志。如果未指定此标志，而且
+<code>addr</code> 非0，则内核只把 <code>addr</code>
+视为在何处设置映射区的一种建议，但是不保证会使用所要求的地址。将
+<code>addr</code> 指定为0可获得最大可移植性。</p></li>
+<li><p><code>MAP_SHARED</code>
+此标志描述了该进程将存储操作部署到映射区域的方式。该标志规定，存储操作会修改映射文件，也就是说，一次存储操作等同于对该文件的一次写入。必须指定此标志或下一个标志（<code>MAP_PRIVATE</code>），但不能同时指定两者。</p></li>
+<li><p><code>MAP_PRIVATE</code>
+该标志表明，对映射区域执行存储操作会导致创建映射文件的私有副本。所有后来对映射区域的引用会转而引用该副本。（此标志的一种用途是供调试器使用，调试器会映射程序文件的文本部分，但允许用户修改指令。任何修改都会影响副本，而不是原始程序文件。）</p></li>
+</ul>
+</blockquote>
+<p><code>off</code> 的值和 <code>addr</code> 的值（如果指定了
+<code>MAP_FIXED</code>）通常被要求是系统虚拟存储页长度的倍数。虚拟存储页长可用带参数<code>_SC_PAGESIZE</code>或
+<code>_SC_PAGE_SIZE</code> 的<code>sysconf</code>
+函数得到。因为off和addr常常指定为0，所以这种要求一般并不重要。</p>
+<p>与映射区相关的信号有 <code>SIGSEGV</code> 和
+<code>SIGBUS</code>。信号 <code>SIGSEGV</code>
+通常用于指示进程试图访问对它不可用的存储区。如果映射存储区被
+<code>mmap</code>
+指定成了只读的，那么进程试图将数据存入这个映射存储区的时候，也会产生此信号。如果映射区的某个部分在访问时已不存在，则产生
+<code>SIGBUS</code>
+信号。例如，假设用文件长度映射了一个文件，但在引用该映射区之前，另一个进程已将该文件截断。此时，如果进程试图访问对应于该文件已截去部分的映射区，将会接收到
+<code>SIGBUS</code> 信号。</p>
+<p>子进程能通过fork继承内存映射区（因为子进程复制父进程地址空间，而内存映射区是该地址空间中的一部分），但是由于同样的原因，新程序则不能通过
+<code>exec</code> 继承存储映射区。</p>
+<p>调用 <code>mprotect</code> 可以更改一个现有映射的权限。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/mman.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">mprotect</span><span class="params">(<span class="type">void</span> *addr, <span class="type">size_t</span> len, <span class="type">int</span> prot)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回-1</span></span><br></pre></td></tr></table></figure>
+<p><code>prot</code> 的合法值与 <code>mmap</code> 中 <code>prot</code>
+参数的一样。请注意，实现可能要求 <code>addr</code>
+的值必须是系统页长的整数倍。</p>
+<p>如果修改的页是通过 <code>MAP_SHARED</code>
+标志映射到地址空间的，那么修改并不会立即写回到文件中。相反，何时写回脏页由内核的守护进程决定，决定的依据是系统负载和用来限制在系统失败事件中的数据损失的配置参数。因此，如果只修改了一页中的一个字节，当修改被写回到文件中时，整个页都会被写回。</p>
+<p>如果共享映射中的页已修改，那么可以调用 <code>msync</code>
+将该页冲洗到被映射的文件中。<code>msync</code> 函数类似于
+<code>fsync</code>，但作用于内存映射区。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/mman.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">msync</span><span class="params">(<span class="type">void</span> *addr, <span class="type">size_t</span> len, <span class="type">int</span> flags)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回-1</span></span><br></pre></td></tr></table></figure>
+<p>如果映射是私有的，那么不修改被映射的文件。与其他内存映射函数一样，地址必须与页边界对齐。</p>
+<p><code>flags</code>
+参数使我们对如何冲洗存储区有某种程度的控制。可以指定
+<code>MS_ASYNC</code>
+标志来简单地安排页面的写入。如果希望在返回之前等待写操作完成，则可指定
+<code>MS_SYNC</code> 标志。一定要指定 <code>MS_ASYNC</code> 和
+<code>MS_SYNC</code> 中的一个。</p>
+<p><code>MS_INVALIDATE</code>是一个可选标志，允许我们通知操作系统丢弃那些与底层存储器没有同步的页。若使用了此标志，某些实现将丢弃指定范围中的所有页，但这种行为并不是必需的。</p>
+<p>当进程终止时，会自动解除内存映射区的映射，或者直接调用
+<code>munmap</code>
+函数也可以解除映射区。关闭映射存储区时使用的文件描述符并不解除映射区。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/mman.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">munmap</span><span class="params">(<span class="type">void</span> *addr, <span class="type">size_t</span> len)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<p><code>munmap</code> 并不影响被映射的对象，也就是说，调用
+<code>munmap</code> 并不会使映射区的内容写到磁盘文件上。对于
+<code>MAP_SHARED</code>
+区域，内核的虚拟内存算法会在我们向内存映射区域写入数据后的某个时刻自动更新磁盘文件。而对于
+<code>MAP_PRIVATE</code>
+区域，当该区域被解除映射时，对其内存所做的修改会被丢弃。</p>
+<!-- flag of hidden posts -->
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/" title="APUE笔记：Advanced I&#x2F;O（十四）">https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/apue/" rel="tag"><i class="fa fa-tag"></i> APUE</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">142k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:50</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

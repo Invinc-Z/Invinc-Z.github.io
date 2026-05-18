@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://invinc-z.com/sitemap.xml

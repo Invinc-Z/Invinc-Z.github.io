@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文记录《UNIX环境高级编程》第3版 第5章 Standard I&#x2F;O Library 的一些知识点。标准I&#x2F;O库是由Dennis Ritchie在1975年左右编写的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APUE笔记：Standard I&#x2F;O Library（五）">
+<meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/index.html">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文记录《UNIX环境高级编程》第3版 第5章 Standard I&#x2F;O Library 的一些知识点。标准I&#x2F;O库是由Dennis Ritchie在1975年左右编写的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00094.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00095.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00096.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00101.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00102.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00103.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00104.jpg">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250227214831313.png">
+<meta property="article:published_time" content="2025-05-14T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-18T17:36:05.771Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="APUE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00094.jpg">
+
+
+<link rel="canonical" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/","path":"notes-reading/technical-books/notes-apue/apue-05-standard-io-library/","title":"APUE笔记：Standard I/O Library（五）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>APUE笔记：Standard I/O Library（五） | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E5%92%8Cfile%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">流和FILE对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E8%BE%93%E5%85%A5%E6%A0%87%E5%87%86%E8%BE%93%E5%87%BA%E5%92%8C%E6%A0%87%E5%87%86%E9%94%99%E8%AF%AF"><span class="nav-number">2.</span> <span class="nav-text">标准输入、标准输出和标准错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%86%B2"><span class="nav-number">3.</span> <span class="nav-text">缓冲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E6%B5%81"><span class="nav-number">4.</span> <span class="nav-text">打开流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BB%E5%92%8C%E5%86%99%E6%B5%81"><span class="nav-number">5.</span> <span class="nav-text">读和写流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E6%AC%A1%E4%B8%80%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84io"><span class="nav-number">5.1.</span> <span class="nav-text">每次一个字符的I&#x2F;O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%8F%E6%AC%A1%E4%B8%80%E8%A1%8Cio"><span class="nav-number">5.2.</span> <span class="nav-text">每次一行I&#x2F;O</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6io"><span class="nav-number">5.3.</span> <span class="nav-text">二进制I&#x2F;O</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D%E6%B5%81"><span class="nav-number">6.</span> <span class="nav-text">定位流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96io"><span class="nav-number">7.</span> <span class="nav-text">格式化I&#x2F;O</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">7.1.</span> <span class="nav-text">格式化输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%85%A5"><span class="nav-number">7.2.</span> <span class="nav-text">格式化输入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6"><span class="nav-number">8.</span> <span class="nav-text">临时文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E6%B5%81"><span class="nav-number">9.</span> <span class="nav-text">内存流</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="APUE笔记：Standard I&#x2F;O Library（五） | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APUE笔记：Standard I/O Library（五）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-05-15 05:12:18" itemprop="dateCreated datePublished" datetime="2025-05-15T05:12:18+08:00">2025-05-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>39 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文记录《UNIX环境高级编程》第3版 第5章 Standard I/O Library
+的一些知识点。标准I/O库是由Dennis Ritchie在1975年左右编写的。</p>
+<span id="more"></span>
+<hr />
+<h2 id="流和file对象">流和FILE对象</h2>
+<p>在第3章中，所有I/O函数都是围绕文件描述符的。当打开一个文件时，即返回一个文件描述符，然后该文件描述符就用于后续的I/O操作。而对于标准I/O库，它们的操作是<strong>围绕流</strong>进行的。当用标准I/O库打开或创建一个文件时，我们已使一个流与一个文件相关联。</p>
+<p>对于ASCII字符集，一个字符用一个字节表示。对于国际字符集，一个字符可用多个字节表示。标准I/O文件流可用于单字节或多字节（“宽”）字符集。流的定向（stream’s
+orientation）决定了所读、写的字符是单字节还是多字节的。当一个流最初被创建时，它并没有定向。如若在未定向的流上使用一个多字节
+I/O
+函数（见<code>&lt;wchar.h&gt;</code>），则将该流的定向设置为宽定向的。若在未定向的流上使用一个单字节I/O函数，则将该流的定向设为字节定向的。只有两个函数可改变流的定向。
+<code>freopen</code> 函数清除一个流的定向；<code>fwide</code>
+函数可用于设置流的定向。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fwide</span><span class="params">(FILE *fp, <span class="type">int</span> mode)</span>;</span><br><span class="line"><span class="comment">// 返回值：若流是宽定向的，返回正值；若流是字节定向的，返回负值；若流是未定向的，返回0</span></span><br></pre></td></tr></table></figure>
+<p>根据mode参数的不同值，<code>fwide</code> 函数执行不同的工作。</p>
+<ul>
+<li><p>如若mode参数值为负，<code>fwide</code>
+将试图使指定的流是字节定向的。</p></li>
+<li><p>如若mode参数值为正，<code>fwide</code>
+将试图使指定的流是宽定向的。</p></li>
+<li><p>如若mode参数值为0，<code>fwide</code>
+将不试图设置流的定向，但返回标识该流定向的值。</p></li>
+</ul>
+<p>注意，<code>fwide</code>
+并不改变已定向流的定向。还应注意的是，<code>fwide</code>
+无出错返回。试想，如若流是无效的，那么将发生什么呢？我们唯一可依靠的是，在调用
+<code>fwide</code> 前先清除 errno，从 <code>fwide</code> 返回时检查
+errno 的值。</p>
+<p>当打开一个流时，标准I/O函数 <code>fopen</code> 返回一个指向
+<code>FILE</code>
+对象的指针。该对象通常是一个结构，它包含了标准I/O库为管理该流需要的所有信息，包括用于实际I/O的文件描述符、指向用于该流缓冲区的指针、缓冲区的长度、当前在缓冲区中的字符数以及出错标志等。</p>
+<hr />
+<h2 id="标准输入标准输出和标准错误">标准输入、标准输出和标准错误</h2>
+<p>对一个进程预定义了 3 个流，并且这 3
+个流可以自动地被进程使用，它们是：标准输入、标准输出和标准错误。这些流引用的文件与文件描述符
+<code>STDIN_FILENO</code>、<code>STDOUT_FILENO</code> 和
+<code>STDERR_FILENO</code> 所引用的相同。</p>
+<p>这3个标准I/O流通过预定义文件指针
+<code>stdin</code>、<code>stdout</code> 和 <code>stderr</code>
+加以引用。这3个文件指针定义在头文件<code>&lt;stdio.h&gt;</code>中。</p>
+<hr />
+<h2 id="缓冲">缓冲</h2>
+<p>标准I/O库 <strong>提供缓冲的目的是尽可能减少使用 <code>read</code> 和
+<code>write</code>
+调用的次数</strong>。它也对每个I/O流自动地进行缓冲管理，从而避免了应用程序需要考虑这一点所带来的麻烦。</p>
+<p>标准I/O提供了以下3种类型的缓冲。</p>
+<blockquote>
+<p>（1）全缓冲。在这种情况下，在填满标准I/O缓冲区后才进行实际I/O操作。对于驻留在磁盘上的文件通常是由标准I/O库实施全缓冲的。在一个流上执行第一次I/O操作时，相关标准I/O函数通常调用
+<code>malloc</code> 获得需使用的缓冲区。</p>
+<p>（2）行缓冲。在这种情况下，当在输入和输出中遇到换行符时，标准I/O库执行I/O操作。这允许我们一次输出一个字符（用标准I/O函数fputc），但只有在写了一行之后才进行实际I/O操作。当流涉及一个终端时（如标准输入和标准输出），通常使用行缓冲。</p>
+<p>（3）不带缓冲。标准I/O库不对字符进行缓冲存储。例如，若用标准I/O函数
+<code>fputs</code>
+写15个字符到不带缓冲的流中，我们就期望这15个字符能立即输出。</p>
+<p>标准错误流 <code>stderr</code>
+通常是不带缓冲的，这就使得出错信息可以尽快显示出来。</p>
+</blockquote>
+<p>对任何一个给定的流，如果我们并不喜欢这些系统默认，则可调用下列两个函数中的一个更改缓冲类型。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">setbuf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">char</span> *<span class="keyword">restrict</span> buf)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">setvbuf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">int</span> mode, <span class="type">size_t</span> size)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回非0</span></span><br></pre></td></tr></table></figure>
+<p>可以使用 <code>setbuf</code> 函数打开或关闭缓冲机制。为了带缓冲进行
+I/O，参数 <code>buf</code> 必须指向一个长度为 <code>BUFSIZ</code>
+的缓冲区（该常量定义在<code>&lt;stdio.h&gt;</code>中）。通常在此之后该流就是全缓冲的，但是如果该流与一个终端设备相关，那么某些系统也可将其设置为行缓冲的。为了关闭缓冲，将buf设置为NULL。</p>
+<p>使用 <code>setvbuf</code>，我们可以精确地说明所需的缓冲类型。这是用
+<code>mode</code> 参数实现的：</p>
+<p><code>_IOFBF</code> 全缓冲</p>
+<p><code>_IOLBF</code> 行缓冲</p>
+<p><code>_IONBF</code> 不带缓冲</p>
+<p>如果指定一个不带缓冲的流，则忽略 <code>buf</code> 和
+<code>size</code> 参数。如果指定全缓冲或行缓冲，则 <code>buf</code> 和
+<code>size</code> 可选择地指定一个缓冲区及其长度。如果该流是带缓冲的，而
+<code>buf</code> 是
+<code>NULL</code>，则标准I/O库将自动地为该流分配适当长度的缓冲区。适当长度指的是由常量
+<code>BUFSIZ</code> 所指定的值。</p>
+<p>下图列出了这两个函数的动作，以及它们的各个选项。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00094.jpg" alt="img" style="zoom:67%;" /></p>
+<p>任何时候，我们都可强制冲洗一个流。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fflush</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>此函数使该流所有未写的数据都被传送至内核。作为一种特殊情形，如若fp是NULL，则此函数将导致所有输出流被冲洗。</p>
+<hr />
+<h2 id="打开流">打开流</h2>
+<p>下列3个函数打开一个标准I/O流。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line">FILE *<span class="title function_">fopen</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> pathname, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> type)</span>;</span><br><span class="line">FILE *<span class="title function_">freopen</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> pathname, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> type, FILE *<span class="keyword">restrict</span> fp)</span>;</span><br><span class="line">FILE *<span class="title function_">fdopen</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="type">char</span> *type)</span>;</span><br><span class="line"><span class="comment">// 3个函数的返回值：若成功，返回文件指针；若出错，返回NULL</span></span><br></pre></td></tr></table></figure>
+<p>这3个函数的区别如下。</p>
+<p>（1）<code>fopen</code> 函数打开路径名为 <code>pathname</code>
+的一个指定的文件。</p>
+<p>（2）<code>freopen</code>
+函数在一个指定的流上打开一个指定的文件，如若该流已经打开，则先关闭该流。若该流已经定向，则使用
+freopen
+清除该定向。此函数一般用于将一个指定的文件打开为一个预定义的流：标准输入、标准输出或标准错误。</p>
+<p>（3）<code>fdopen</code>
+函数取一个已有的文件描述符，并使一个标准的I/O流与该描述符相结合。此函数常用于由创建管道和网络通信通道函数返回的描述符。因为这些特殊类型的文件不能用标准I/O函数
+<code>fopen</code>
+打开，所以我们必须先调用设备专用函数以获得一个文件描述符，然后用
+<code>fdopen</code> 使一个标准I/O流与该描述符相结合。</p>
+<p><code>type</code> 参数指定对该I/O流的读、写方式，ISO
+C规定type参数可以有15种不同的值，如图所示。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00095.jpg" alt="img" style="zoom:67%;" /></p>
+<p>使用字符 <code>b</code>
+作为type的一部分，这使得标准I/O系统可以区分文本文件和二进制文件。因为UNIX内核并不对这两种文件进行区分，所以在UNIX系统环境下指定字符b作为type的一部分实际上并无作用。</p>
+<p>当文件以读写模式（类型中的加号）打开时，有两个限制。（<strong>缓冲区读写切换</strong>）
+-
+在没有中间的fflush、fseek、fsetpos或rewind操作的情况下，输出不能直接紧跟输入。
+-
+在没有中间的fseek、fsetpos、rewind操作，或者没有遇到文件结束的输入操作的情况下，输入不能直接紧跟输出。</p>
+<p>下图列出了打开一个流的6种不同的方式。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00096.jpg" alt="img" style="zoom:67%;" /></p>
+<p>调用 <code>fclose</code> 关闭一个打开的流。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fclose</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>在该文件被关闭之前，冲洗缓冲中的输出数据。缓冲区中的任何输入数据被丢弃。如果标准I/O库已经为该流自动分配了一个缓冲区，则释放此缓冲区。</p>
+<p>当一个进程正常终止时（直接调用 <code>exit</code> 函数，或从
+<code>main</code>
+函数返回），则所有带未写缓冲数据的标准I/O流都被冲洗，所有打开的标准I/O流都被关闭。</p>
+<hr />
+<h2 id="读和写流">读和写流</h2>
+<p>一旦我们打开一个流，就可以从三种类型的无格式输入/输出中进行选择：</p>
+<h3 id="每次一个字符的io">每次一个字符的I/O</h3>
+<p>以下3个函数可用于一次读一个字符。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">getc</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fgetc</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">getchar</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="comment">// 3个函数的返回值：若成功，返回下一个字符；若已到达文件尾端或出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>函数 <code>getchar</code> 等同于 <code>getc(stdin)</code>
+。前两个函数的区别是，<code>getc</code> 可被实现为宏，而
+<code>fgetc</code> 不能实现为宏。这意味着以下几点。</p>
+<p>（1）getc的参数不应当是具有副作用的表达式，因为它可能会被计算多次。</p>
+<p>（2）因为fgetc一定是个函数，所以可以得到其地址。这就允许将fgetc的地址作为一个参数传送给另一个函数。</p>
+<p>（3）调用fgetc所需时间很可能比调用getc要长，因为调用函数所需的时间通常长于调用宏。</p>
+<p>注意，不管是出错还是到达文件尾端，这3个函数都返回同样的值。为了区分这两种不同的情况，必须调用
+<code>ferror</code> 或 <code>feof</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">ferror</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">feof</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 两个函数返回值：若条件为真，返回非0（真）；否则，返回0（假）</span></span><br></pre></td></tr></table></figure>
+<p><code>void clearerr(FILE *fp);</code></p>
+<p>在大多数实现中，为每个流在FILE对象中维护了两个标志：</p>
+<ul>
+<li><p>出错标志；</p></li>
+<li><p>文件结束标志。</p></li>
+</ul>
+<p>调用 <code>clearerr</code> 可以清除这两个标志。</p>
+<p>从流中读取数据以后，可以调用 <code>ungetc</code>
+将字符再压送回流中。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">ungetc</span><span class="params">(<span class="type">int</span> c, FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回c；若出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>压送回到流中的字符以后又可从流中读出，但读出字符的顺序与压送回的顺序相反。应当了解，虽然ISO
+C允许实现支持任何次数的回送，但是它要求实现提供一次只回送一个字符。我们不能期望一次能回送多个字符。</p>
+<p>回送的字符，不一定必须是上一次读到的字符。不能回送EOF。但是当已经到达文件尾端时，仍可以回送一个字符。下次读将返回该字符，再读则返回EOF。之所以能这样做的原因是，一次成功的
+<code>ungetc</code> 调用会清除该流的文件结束标志。</p>
+<p>当正在读一个输入流，并进行某种形式的切词或记号切分操作时，会经常用到回送字符操作。有时需要先看一看下一个字符，以决定如何处理当前字符。然后就需要方便地将刚查看的字符回送，以便下一次调用getc时返回该字符。</p>
+<p>用 <code>ungetc</code>
+压送回字符时，并没有将它们写到底层文件中或设备上，只是将它们写回标准I/O库的流缓冲区中。</p>
+<p>对应于上面所述的每个输入函数都有一个输出函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">putc</span><span class="params">(<span class="type">int</span> c, FILE *fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fputc</span><span class="params">(<span class="type">int</span> c, FILE *fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">putchar</span><span class="params">(<span class="type">int</span> c)</span>;</span><br><span class="line"><span class="comment">// 3个函数返回值：若成功，返回c；若出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>与输入函数一样，<code>putchar(c)</code>等同于<code>putc(c, stdout)</code>，<code>putc</code>
+可被实现为宏，而 <code>fputc</code> 不能实现为宏。</p>
+<h3 id="每次一行io">每次一行I/O</h3>
+<p>下面两个函数提供每次输入一行的功能。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">char</span> *<span class="title function_">fgets</span><span class="params">(<span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">int</span> n，FILE *<span class="keyword">restrict</span> fp)</span>;</span><br><span class="line"><span class="type">char</span> *<span class="title function_">gets</span><span class="params">(<span class="type">char</span> *buf)</span>;</span><br><span class="line"><span class="comment">// 两个函数返回值：若成功，返回buf；若已到达文件尾端或出错，返回NULL</span></span><br></pre></td></tr></table></figure>
+<p>这两个函数都指定了缓冲区的地址，读入的行将送入其中。<code>gets</code>
+从标准输入读，而 <code>fgets</code> 则从指定的流读。</p>
+<p>对于 <code>fgets</code>
+，必须指定缓冲的长度n。此函数一直读到下一个换行符为止，但是不超过
+<code>n − 1</code>
+个字符，读入的字符被送入缓冲区。该缓冲区以null字节结尾。如若该行包括最后一个换行符的字符数超过
+<code>n − 1</code>，则 <code>fgets</code>
+只返回一个不完整的行，但是，缓冲区总是以null字节结尾。对fgets的下一次调用会继续读该行。</p>
+<p><code>gets</code> 删除换行符，而 <code>fgets</code>
+则保留换行符。尽量只用 <code>fgets</code>。</p>
+<p>下面两个函数提供每次输出一行的功能。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fputs</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> str, FILE *<span class="keyword">restrict</span> fp)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">puts</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str)</span>;</span><br><span class="line"><span class="comment">// 两个函数返回值：若成功，返回非负值；若出错，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>函数 <code>fputs</code>
+将一个以null字节终止的字符串写到指定的流，尾端的终止符null不写出。注意，这并不一定是每次输出一行，因为字符串不需要换行符作为最后一个非null字节。通常，在null字节之前是一个换行符，但并不要求总是如此。</p>
+<p><code>puts</code>
+将一个以null字节终止的字符串写到标准输出，终止符不写出。但是，<code>puts</code>
+随后又将一个换行符写到标准输出。</p>
+<p>puts 并不像它所对应的 gets
+那样不安全。但是我们还是应避免使用它，以免需要记住它在最后是否添加了一个换行符。如果总是使用
+<code>fgets</code> 和 <code>fputs</code>,
+那么就会熟知在每行终止处我们必须自己处理换行符。</p>
+<h3 id="二进制io">二进制I/O</h3>
+<p>如果进行二进制I/O操作，那么我们更愿意一次读或写一个完整的结构。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">size_t</span> <span class="title function_">fread</span><span class="params">(<span class="type">void</span> *<span class="keyword">restrict</span> ptr, <span class="type">size_t</span> size, <span class="type">size_t</span> nobj, FILE *<span class="keyword">restrict</span> fp)</span>;</span><br><span class="line"><span class="type">size_t</span> <span class="title function_">fwrite</span><span class="params">(<span class="type">const</span> <span class="type">void</span> *<span class="keyword">restrict</span> ptr, <span class="type">size_t</span> size, <span class="type">size_t</span> nobj, FILE *<span class="keyword">restrict</span> fp)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：读或写的对象数</span></span><br></pre></td></tr></table></figure>
+<p><code>size</code> 是结构的大小，<code>nobj</code>是元素个数。</p>
+<p>fread和fwrite返回读或写的对象数。对于读，如果出错或到达文件尾端，则此数字可以少于nobj。在这种情况，应调用
+<code>ferror</code> 或 <code>feof</code>
+以判断究竟是那一种情况。对于写，如果返回值少于所要求的
+<code>nobj</code>，则出错。</p>
+<hr />
+<h2 id="定位流">定位流</h2>
+<p>有3种方法定位标准I/O流。</p>
+<p>（1）<code>ftell</code> 和 <code>fseek</code>
+函数。假定文件的位置可以存放在一个长整型中。</p>
+<p>（2）<code>ftello</code> 和 <code>fseeko</code> 函数。使用
+<code>off_t</code>数据类型代替了长整型。</p>
+<p>（3）<code>fgetpos</code> 和 <code>fsetpos</code>
+函数。使用抽象数据类型 <code>fpos_t</code>
+记录文件的位置。这种数据类型可以根据需要定义为一个足够大的数，用以记录文件位置。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="title function_">ftell</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回当前文件位置指示；若出错，返回-1L</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fseek</span><span class="params">(FILE *fp, <span class="type">long</span> offset, <span class="type">int</span> whence)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回−1</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">rewind</span><span class="params">(FILE *fp)</span>;</span><br></pre></td></tr></table></figure>
+<p>对于二进制文件，其文件位置指示器是从文件起始位置开始度量，并以字节为度量单位的。<code>ftell</code>
+用于二进制文件时，其返回值就是这种字节位置。为了用<code>fseek</code>
+定位一个二进制文件，必须指定一个字节
+<code>offset</code>，以及解释这种偏移量的方式。<code>whence</code>
+的值与 <code>lseek</code> 函数的相同：<code>SEEK_SET</code>
+表示从文件的起始位置开始，<code>SEEK_CUR</code>
+表示从当前文件位置开始，<code>SEEK_END</code> 表示从文件的尾端开始。</p>
+<p>对于文本文件，它们的文件当前位置可能不以简单的字节偏移量来度量。这主要也是在非UNIX系统中，它们可能以不同的格式存放文本文件。为了定位一个文本文件，whence一定要是
+<code>SEEK_SET</code>，而且 <code>offset</code>
+只能有两种值：0（后退到文件的起始位置），或是对该文件的
+<code>ftell</code> 所返回的值。使用
+<code>rewind</code>函数也可将一个流设置到文件的起始位置。</p>
+<p>除了偏移量的类型是 <code>off_t</code> 而非 <code>long</code>
+以外，<code>ftello</code> 函数与 <code>ftell</code>
+相同，<code>fseeko</code>函数与 <code>fseek</code>相同。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">off_t</span> <span class="title function_">ftello</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回当前文件位置；若出错，返回(off_t)-1</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fseeko</span><span class="params">(FILE *fp, <span class="type">off_t</span> offset, <span class="type">int</span> whence)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回0；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fgetpos</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">fpos_t</span> *<span class="keyword">restrict</span> pos)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fsetpos</span><span class="params">(FILE *fp, <span class="type">const</span> <span class="type">fpos_t</span> *pos)</span>;</span><br><span class="line"><span class="comment">// 两个函数返回值：若成功，返回0；若出错，返回非0</span></span><br></pre></td></tr></table></figure>
+<p><code>fgetpos</code> 将文件位置指示器的当前值存入由 <code>pos</code>
+指向的对象中。在以后调用 <code>fsetpos</code>
+时，可以使用此值将流重新定位至该位置。</p>
+<hr />
+<h2 id="格式化io">格式化I/O</h2>
+<h3 id="格式化输出">格式化输出</h3>
+<p>格式化输出是由5个 <code>printf</code> 函数来处理的。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">printf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fprintf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">dprintf</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="comment">// 3个函数返回值：若成功，返回输出字符数；若输出出错，返回负值</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">sprintf</span><span class="params">(<span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回存入数组的字符数；若编码出错，返回负值</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">snprintf</span><span class="params">(<span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">size_t</span> n, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="comment">// 返回值：若缓冲区足够大，返回将要存入数组的字符数；若编码出错，返回负值</span></span><br></pre></td></tr></table></figure>
+<p><code>printf</code> 将格式化数据写到标准输出，<code>fprintf</code>
+写至指定的流，<code>dprintf</code>
+写至指定的文件描述符，<code>sprintf</code>
+将格式化的字符送入数组buf中。<code>sprintf</code>
+在该数组的尾端自动加一个 null 字节，但该字符不包括在返回值中。</p>
+<p>注意，<code>sprintf</code>
+函数可能会造成由buf指向的缓冲区的溢出。调用者有责任确保该缓冲区足够大。因为缓冲区溢出会造成程序不稳定甚至安全隐患，为了解决这种缓冲区溢出问题，引入了
+<code>snprintf</code>
+函数。在该函数中，缓冲区长度是一个显式参数，超过缓冲区尾端写的所有字符都被丢弃。如果缓冲区足够大，<code>snprintf</code>函数就会返回写入缓冲区的字符数。与sprintf相同，该返回值不包括结尾的null字节。若
+<code>snprintf</code>
+函数返回小于缓冲区长度n的正值，那么没有截断输出。若发生了一个编码的错误，<code>snprintf</code>
+返回负值。</p>
+<p>格式说明控制其余参数如何编码，以后又如何显示。每个参数按照转换说明编码，转换说明以百分号
+<code>%</code>
+开始，除转换说明外，格式字符串中的其他字符将按原样，不经任何修改被复制输出。一个转换说明有4个可选择的部分，下面将它们都示于方括号中：</p>
+<p><code>%[flags][fldwidth][precision][lenmodifier]convtype</code></p>
+<p>下图总结了各种 <code>flags</code> 标志。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00101.jpg" alt="img" style="zoom: 67%;" /></p>
+<p><code>fldwidth</code>
+说明最小字段宽度。转换后参数字符数若小于宽度，则多余字符位置用空格填充。字段宽度是一个非负十进制数，或是一个星号（*）。</p>
+<p><code>precision</code>
+说明整型转换后最少输出数字位数、浮点数转换后小数点后的最少位数、字符串转换后最大字节数。精度是一个点（.），其后跟随一个可选的非负十进制数或一个星号（*）。</p>
+<p><code>lenmodifier</code> 说明参数长度。其可能的值示于下图中。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00102.jpg" alt="img" style="zoom:67%;" /></p>
+<p><code>convtype</code>
+不是可选的。它控制如何解释参数。下图列出了各种转换类型字符。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00103.jpg" alt="img" style="zoom:67%;" /></p>
+<p>下列5种
+<code>printf</code>族的变体类似于上面的5种，但是可变参数表（…）替换成了
+<code>arg</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdarg.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">vprintf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">vfprintf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">vdprintf</span><span class="params">(<span class="type">int</span> fd, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="comment">// 所有3个函数返回值：若成功，返回输出字符数；若输出出错，返回负值</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">vsprintf</span><span class="params">(<span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="comment">// 函数返回值：若成功，返回存入数组的字符数；若编码出错，返回负值</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">vsnprintf</span><span class="params">(<span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">size_t</span> n, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="comment">// 函数返回值：若缓冲区足够大，返回存入数组的字符数；若编码出错，返回负值</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式化输入">格式化输入</h3>
+<p>执行格式化输入处理的是3个 <code>scanf</code> 函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">scanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fscanf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">sscanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, ...)</span>;</span><br><span class="line"><span class="comment">// 3个函数返回值：赋值的输入项数；若输入出错或在任一转换前已到达文件尾端，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p><code>scanf</code>
+族用于分析输入字符串，并将字符序列转换成指定类型的变量。在格式之后的各参数包含了变量的地址，用转换结果对这些变量赋值。</p>
+<p>格式说明控制如何转换参数，以便对它们赋值。转换说明以%字符开始。<strong>除转换说明和空白字符外,
+格式字符串中的其他字符必须与输入匹配.</strong>
+若有一个字符不匹配，则停止后续处理，不再读输入的其余部分。</p>
+<p>一个转换说明有3个可选择的部分，下面将它们都示于方括号中：</p>
+<p><code>%[*][fldwidth][m][lenmodifier]convtype</code></p>
+<p>可选择的星号（*）用于抑制转换。按照转换说明的其余部分对输入进行转换，但转换结果并不存放在参数中。</p>
+<p><code>fldwidth</code>
+说明最大宽度（即最大字符数）。<code>lenmodifier</code>
+说明要用转换结果赋值的参数大小。</p>
+<p><code>convtype</code> 字段类似于 <code>printf</code>
+族的转换类型字段，但两者之间还有些差别。一个差别是，作为一种选项，输入中带符号的可赋予无符号类型。例如，输入流中的-1可被转换成4
+294 967 295赋予无符号整型变量。下图总结了 <code>scanf</code>
+族函数支持的转换类型。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/Image00104.jpg" alt="img" style="zoom:67%;" /></p>
+<p>在字段宽度和长度修饰符之间的可选项 <code>m</code>
+是赋值分配符。它可以用于 <code>%c</code>、<code>%s</code> 以及
+<code>%[</code>
+转换符，迫使内存缓冲区分配空间以接纳转换字符串。在这种情况下，相关的参数必须是指针地址，分配的缓冲区地址必须复制给该指针。如果调用成功，该缓冲区不再使用时，由调用者负责通过调用
+<code>free</code> 函数来释放该缓冲区。</p>
+<p>与 <code>printf</code> 族相同，<code>scanf</code> 族也使用由
+<code>&lt;stdarg.h&gt;</code> 说明的可变长度参数表。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdarg.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">vscanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">vfscanf</span><span class="params">(FILE *<span class="keyword">restrict</span> fp, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">vsscanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> buf, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> format, va_list arg)</span>;</span><br><span class="line"><span class="comment">// 3个函数返回值：指定的输入项目数；若输入出错或在任一转换前文件结束，返回EOF</span></span><br></pre></td></tr></table></figure>
+<p>每个标准I/O流都有一个与其相关联的文件描述符，可以对一个流调用
+<code>fileno</code> 函数以获得其描述符。</p>
+<p>注意，fileno不是ISO C标准部分，而是POSIX.1支持的扩展。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fileno</span><span class="params">(FILE *fp)</span>;</span><br><span class="line"><span class="comment">// 返回值：与该流相关联的文件描述符</span></span><br></pre></td></tr></table></figure>
+<hr />
+<h2 id="临时文件">临时文件</h2>
+<p>ISO C 标准 I/O
+库提供了两个函数以帮助<strong>创建临时文件</strong>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">char</span> *<span class="title function_">tmpnam</span><span class="params">(<span class="type">char</span> *ptr)</span>;</span><br><span class="line"><span class="comment">// 返回值：指向唯一路径名的指针</span></span><br><span class="line"></span><br><span class="line">FILE *<span class="title function_">tmpfile</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回文件指针；若出错，返回NULL</span></span><br></pre></td></tr></table></figure>
+<p><code>tmpnam</code>
+函数产生一个与现有文件名不同的一个有效路径名字符串。每次调用它时，都产生一个不同的路径名，最多调用次数是
+<code>TMP_MAX</code>。<code>TMP_MAX</code>
+定义在<code>&lt;stdio.h&gt;</code>中。</p>
+<p>若 <code>ptr</code>
+是NULL，则所产生的路径名存放在一个静态区中，指向该静态区的指针作为函数值返回。后续调用
+<code>tmpnam</code>
+时，会重写该静态区（这意味着，如果我们调用此函数多次，而且想保存路径名，则我们应当保存该路径名的副本，而不是指针的副本）。如若
+<code>ptr</code>
+不是NULL，则认为它应该是指向长度至少是<code>L_tmpnam</code>
+个字符的数组（常量 <code>L_tmpnam</code> 定义在头文件
+<code>&lt;stdio.h&gt;</code>
+中）。所产生的路径名存放在该数组中，<code>ptr</code>
+也作为函数值返回。</p>
+<p><code>tmpfile</code>
+创建一个临时二进制文件（类型wb+），在关闭该文件或程序结束时将自动删除这种文件。</p>
+<p>Single UNIX
+Specification为处理临时文件定义了另外两个函数：<code>mkdtemp</code> 和
+<code>mkstemp</code>，它们是XSI的扩展部分。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="type">char</span> *<span class="title function_">mkdtemp</span><span class="params">(<span class="type">char</span> *template)</span>;</span><br><span class="line"><span class="comment">//返回值：若成功，返回指向目录名的指针；若出错，返回NULL</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">mkstemp</span><span class="params">(<span class="type">char</span> *template)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回文件描述符；若出错，返回−1</span></span><br></pre></td></tr></table></figure>
+<p><code>mkdtemp</code>
+函数创建了一个目录，该目录有一个唯一的名字；<code>mkstemp</code>
+函数创建了一个文件，该文件有一个唯一的名字。名字是通过
+<code>template</code>字符串进行选择的。这个字符串是后6位设置为
+<code>XXXXXX</code>
+的路径名。函数将这些占位符替换成不同的字符来构建一个唯一的路径名。如果成功的话，这两个函数将修改<code>template</code>
+字符串反映临时文件的名字。</p>
+<p>由 <code>mkdtemp</code>
+函数创建的目录使用下列访问权限位集：<code>S_IRUSR | S_IWUSR | S_IXUSR</code>。注意，调用进程的文件模式创建屏蔽字可以进一步限制这些权限。如果目录创建成功，<code>mkdtemp</code>
+返回新目录的名字。</p>
+<p><code>mkstemp</code>函数以唯一的名字创建一个普通文件并且打开该文件，该函数返回的文件描述符以读写方式打开。由
+<code>mkstemp</code> 创建的文件使用访问权限位
+<code>S_IRUSR | S_IWUSR</code>。</p>
+<p>与 <code>tempfile</code>不同，<code>mkstemp</code>
+创建的临时文件并不会自动删除。如果希望从文件系统命名空间中删除该文件，必须自己对它解除链接。</p>
+<hr />
+<h2 id="内存流">内存流</h2>
+<p>标准I/O库把数据缓存在内存中，因此每次一字符和每次一行的I/O更有效。也可以通过调用
+<code>setbuf</code> 或 <code>setvbuf</code>
+函数让I/O库使用我们自己的缓冲区。在SUSv4中支持了内存流。这就是标准I/O流，虽然仍使用FILE指针进行访问，但其实并没有底层文件。所有的I/O都是通过在缓冲区与主存之间来回传送字节来完成的。我们将看到，即便这些流看起来像文件流，它们的某些特征使其<strong>更适用于字符串操作</strong>。</p>
+<p>有3个函数可用于内存流的创建，第一个是 <code>fmemopen</code>函数。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line">FILE *<span class="title function_">fmemopen</span><span class="params">(<span class="type">void</span> *<span class="keyword">restrict</span> buf, <span class="type">size_t</span> size, <span class="type">const</span> <span class="type">char</span> *<span class="keyword">restrict</span> type)</span>;</span><br><span class="line"><span class="comment">// 返回值：若成功，返回流指针；若错误，返回NULL</span></span><br></pre></td></tr></table></figure>
+<p><code>fmemopen</code>函数允许调用者提供缓冲区用于内存流：<code>buf</code>
+参数指向缓冲区的开始位置，<code>size</code>
+参数指定了缓冲区大小的字节数。如果<code>buf</code>
+参数为空，<code>fmemopen</code> 函数分配 <code>size</code>
+字节数的缓冲区。在这种情况下，当流关闭时缓冲区会被释放。</p>
+<p><code>type</code> 参数控制如何使用流。<code>type</code>
+可能的取值如图所示。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250227214831313.png" alt="image-20250227214831301" style="zoom:67%;" /></p>
+<p>注意，这些取值对应于基于文件的标准I/O流的type参数取值，但其中有些微小差别。第一，无论何时以追加写方式打开内存流时，当前文件位置设为缓冲区中的第一个null字节。如果缓冲区中不存在null字节，则当前位置就设为缓冲区结尾的后一个字节。当流并不是以追加写方式打开时，当前位置设为缓冲区的开始位置。因为追加写模式通过第一个null字节确定数据的尾端，内存流并不适合存储二进制数据（二进制数据在数据尾端之前就可能包含多个null字节）。</p>
+<p>第二，如果buf参数是一个null指针，打开流进行读或者写都没有任何意义。因为在这种情况下缓冲区是通过fmemopen进行分配的，没有办法找到缓冲区的地址，只写方式打开流意味着无法读取已写入的数据，同样，以读方式打开流意味着只能读取那些我们无法写入的缓冲区中的数据。</p>
+<p>第三，任何时候需要增加流缓冲区中数据量以及调用fclose、fflush、fseek、fseeko以及fsetpos时都会在当前位置写入一个null字节。</p>
+<p>用于创建内存流的其他两个函数分别是 <code>open_memstream</code> 和
+<code>open_wmemstream</code>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line">FILE *<span class="title function_">open_memstream</span><span class="params">(<span class="type">char</span> **bufp, <span class="type">size_t</span> *sizep)</span>;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;wchar.h&gt;</span></span></span><br><span class="line">FILE *<span class="title function_">open_wmemstream</span><span class="params">(<span class="type">wchar_t</span> **bufp, <span class="type">size_t</span> *sizep)</span>;</span><br><span class="line"><span class="comment">// 两个函数的返回值：若成功，返回流指针；若出错，返回NULL</span></span><br></pre></td></tr></table></figure>
+<p><code>open_memstream</code>
+函数创建的流是面向字节的，<code>open_wmemstream</code>
+函数创建的流是面向宽字节的。这两个函数与 <code>fmemopen</code>
+函数的不同在于：</p>
+<ul>
+<li><p>创建的流只能写打开；</p></li>
+<li><p>不能指定自己的缓冲区，但可以分别通过 <code>bufp</code> 和
+<code>sizep</code> 参数访问缓冲区地址和大小；</p></li>
+<li><p>关闭流后需要自行释放缓冲区；</p></li>
+<li><p>对流添加字节会增加缓冲区大小。</p></li>
+</ul>
+<p>但是在缓冲区地址和大小的使用上必须遵循一些原则。第一，缓冲区地址和长度只有在调用
+<code>fclose</code> 或 <code>fflush</code>
+后才有效；第二，这些值只有在下一次流写入或调用 <code>fclose</code>
+前才有效。因为缓冲区可以增长，可能需要重新分配。如果出现这种情况，我们会发现缓冲区的内存地址值在下一次调用
+<code>fclose</code> 或<code>fflush</code> 时会改变。</p>
+<p>因为避免了缓冲区溢出，内存流非常适用于创建字符串。因为内存流只访问主存，不访问磁盘上的文件，所以对于把标准I/O流作为参数用于临时文件的函数来说，会有很大的性能提升。</p>
+<!-- flag of hidden posts -->
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/" title="APUE笔记：Standard I&#x2F;O Library（五）">https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/apue/" rel="tag"><i class="fa fa-tag"></i> APUE</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">142k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:50</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 $\LaTeX{}$ 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lshort笔记：排版样式设定（五）">
+<meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/index.html">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 $\LaTeX{}$ 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121100704497.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101016109.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101037202.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121102202770.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121102848593.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121105449196.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125120819345.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125121752045.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125121906215.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125124002209.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125130505191.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125130826941.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125143708280.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160138870.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160343041.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160614418.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161039548.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161301100.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125162000736.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125162309991.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125170414339.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125174255995.png">
+<meta property="article:published_time" content="2025-01-30T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-18T17:36:05.773Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="lshort">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121100704497.png">
+
+
+<link rel="canonical" href="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/","path":"notes-reading/technical-books/notes-lshort/lshort-05-layout-style/","title":"lshort笔记：排版样式设定（五）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>lshort笔记：排版样式设定（五） | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%92%8C%E5%AD%97%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">字体和字号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E6%A0%B7%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%8F%B7"><span class="nav-number">1.2.</span> <span class="nav-text">字号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E7%94%A8%E5%AD%97%E4%BD%93%E5%AE%8F%E5%8C%85"><span class="nav-number">1.3.</span> <span class="nav-text">选用字体宏包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E7%BC%96%E7%A0%81"><span class="nav-number">1.4.</span> <span class="nav-text">字体编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-fontspec-%E5%AE%8F%E5%8C%85%E6%9B%B4%E6%94%B9%E5%AD%97%E4%BD%93"><span class="nav-number">1.5.</span> <span class="nav-text">使用 fontspec
+宏包更改字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8-ctex-%E5%AE%8F%E5%8C%85%E6%88%96%E6%96%87%E6%A1%A3%E7%B1%BB%E4%B8%AD%E6%9B%B4%E6%94%B9%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93"><span class="nav-number">1.6.</span> <span class="nav-text">在 ctex
+宏包或文档类中更改中文字体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-unicode-math-%E5%AE%8F%E5%8C%85%E9%85%8D%E7%BD%AE-unicode-%E6%95%B0%E5%AD%A6%E5%AD%97%E4%BD%93"><span class="nav-number">1.7.</span> <span class="nav-text">使用
+unicode-math 宏包配置 Unicode 数学字体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E8%A3%85%E9%A5%B0%E5%92%8C%E5%BC%BA%E8%B0%83"><span class="nav-number">2.</span> <span class="nav-text">文字装饰和强调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F%E5%92%8C%E9%97%B4%E8%B7%9D"><span class="nav-number">3.</span> <span class="nav-text">段落格式和间距</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%95%BF%E5%BA%A6%E5%92%8C%E9%95%BF%E5%BA%A6%E5%8F%98%E9%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">长度和长度变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E8%B7%9D"><span class="nav-number">3.2.</span> <span class="nav-text">行距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AE%B5%E8%90%BD%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">段落格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B0%B4%E5%B9%B3%E9%97%B4%E8%B7%9D"><span class="nav-number">3.4.</span> <span class="nav-text">水平间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9E%82%E7%9B%B4%E9%97%B4%E8%B7%9D"><span class="nav-number">3.5.</span> <span class="nav-text">垂直间距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%92%8C%E5%88%86%E6%A0%8F"><span class="nav-number">4.</span> <span class="nav-text">页面和分栏</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A9%E7%94%A8-geometry-%E5%AE%8F%E5%8C%85%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2%E5%8F%82%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">利用 geometry
+宏包设置页面参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E7%9A%84%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90"><span class="nav-number">4.2.</span> <span class="nav-text">页面内容的垂直对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%A0%8F"><span class="nav-number">4.3.</span> <span class="nav-text">分栏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A"><span class="nav-number">5.</span> <span class="nav-text">页眉页脚</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E7%9A%84%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E6%A0%B7%E5%BC%8F"><span class="nav-number">5.1.</span> <span class="nav-text">基本的页眉页脚样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%9B%B4%E6%94%B9%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">5.2.</span> <span class="nav-text">手动更改页眉页脚的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fancyhdr-%E5%AE%8F%E5%8C%85"><span class="nav-number">5.3.</span> <span class="nav-text">fancyhdr 宏包</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="lshort笔记：排版样式设定（五） | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          lshort笔记：排版样式设定（五）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-31 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-31T05:12:18+08:00">2025-01-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>5.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>27 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本章内容将一览如何修改 <span class="math inline">$\LaTeX{}$</span>
+的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。</p>
+<span id="more"></span>
+<hr />
+<h2 id="字体和字号">字体和字号</h2>
+<p><span class="math inline">$\LaTeX{}$</span>
+根据文档的逻辑结构（章节、脚注等）来选择默认的字体样式以及字号。需要更改字体样式或字号的话，可以使用
+下表 中列出的命令。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121100704497.png" alt="image-20250121100704497" style="zoom:67%;" /></p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101016109.png" alt="image-20250121101016109" style="zoom:67%;" /></p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101037202.png" alt="image-20250121101037202" style="zoom:67%;" /></p>
+<h3 id="字体样式">字体样式</h3>
+<p><span class="math inline">$\LaTeX{}$</span>
+提供了两组修改字体的命令，见上表。其中诸如 <code>\bfseries</code>
+形式的命令将会影响之后所有的字符，如果想要让它在局部生效，需要用花括号<strong>分组</strong>，也就是写成<code>\bfseries &lt;some text&gt;</code>
+这样的形式；对应的 <code>\textbf</code>
+形式带一个参数，只改变参数内部的字体，更为常用。</p>
+<p>在公式中，直接使用<code>\textbf</code>
+等命令不会起效，甚至报错。<span class="math inline">$\LaTeX{}$</span>
+提供了修改数学字母样式的命令，如 <code>\mathbf</code> 等。</p>
+<h3 id="字号">字号</h3>
+<p>字号命令实际大小依赖于所使用的文档类及其选项。下表列出了这些命令在标准文档类中的绝对大小，单位为
+pt。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121102202770.png" alt="image-20250121102202770" style="zoom:67%;" /></p>
+<p>使用字号命令的时候，通常也需要用花括号进行分组，如同
+<code>\rmfamily</code> 那样。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121102848593.png" alt="image-20250121102848593" style="zoom:67%;" /></p>
+<p><span class="math inline">$\LaTeX{}$</span> 还提供了一个基础的命令
+<code>\fontsize</code> 用于设定任意大小的字号：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fontsize</span>&#123;&lt;size&gt;&#125;&#123;&lt;base line-skip&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p><code>\fontsize</code> 用到两个参数，<code>&lt;size&gt;</code>
+为字号，<code>&lt;base lineskip&gt;</code> 为基础行距。表 5.3
+中的命令也都各自设定了与字号对应的基础行距，大小为字号的 1.2
+倍。如果不是在导言区，<code>\fontsize</code> 的设定需要
+<code>\selectfont</code> 命令才能立即生效，而表 5.2
+的字号设定都是立即生效的。</p>
+<h3 id="选用字体宏包">选用字体宏包</h3>
+<p>下表
+列出了较为常用的字体宏包，其中相当多的宏包还配置了数学字体，或者文本、数学字体兼而有之。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121105449196.png" alt="image-20250121105449196" style="zoom:67%;" /></p>
+<h3 id="字体编码">字体编码</h3>
+<p>常见的正文字体编码有 <code>OT1</code> 和 <code>T1</code> 等。<span
+class="math inline">$\LaTeX{}$</span> 默认使用兼容 plainTeX 的
+<code>OT1</code> 编码，使用起来有诸多限制：高德纳在设计 Computer Modern
+字体时认为一些符号，如大于号、小于号等，原则上都应该在公式里出现，所以在正文字体里这些符号所在的位置被其它符号所占据（
+<code>OT1</code> 字体编码、<code>rmfamily</code> 和 <code>sffamly</code>
+字体族下， <code>&lt;</code> 和 <code>&gt;</code> 排版 <span
+class="math inline">!</span> 和 <span class="math inline">¿</span>
+两个倒立的标点符号，正常的大于号和小于号可用命令
+<code>\textgreater</code> 和 <code>\textless</code>
+输入；<code>ttfamily</code> 字体族下是正常的大于号和小于号）。扩展的
+<code>T1</code> 字体编码则更加靠近 ASCII
+文本编码，不会出现上述的大于号、小于号的问题。</p>
+<p>切换字体编码要用到 <code>fontenc</code> 宏包：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[T1]&#123;fontenc&#125;</span><br></pre></td></tr></table></figure>
+<p>如果使用 <code>xelatex</code> 编译方式，并使用 <code>fontspec</code>
+宏包调用 <code>ttf</code> 或 <code>otf</code> 格式字体，就不要再使用
+<code>fontenc</code> 宏包。</p>
+<h3 id="使用-fontspec-宏包更改字体">使用 <code>fontspec</code>
+宏包更改字体</h3>
+<p><code>xelatex</code> 和 <code>lualatex</code>
+编译命令能够支持直接调用系统和 <span class="math inline">$\TeX{}$</span>
+发行版中的 <code>.ttf</code> 或 <code>.otf</code> 格式字体(Linux 下的
+TeXLive 为了令 XeTeX 使用 OpenType
+字体，需要额外的配置）。相比于前文介绍的字体宏包，我们有了更多自由修改字体的余地。</p>
+<p><code>xelatex</code> 和 <code>lualatex</code>
+命令下支持用户调用字体的宏包是
+<code>fontspec</code>。宏包提供了几个设置全局字体的命令，设置
+<code>\rmfamily</code> 等对应命令的默认字体：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;]</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;font name&gt;</code>
+使用字体的文件名（带扩展名）或者字体的英文名称。<code>&lt;font features&gt;</code>
+用来手动配置对应的粗体或斜体，比如为 Windows 下的无衬线字体 Arial
+配置粗体和斜体（通常情况下自动检测并设置对应的粗体和斜体，无需手动指定）：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setsansfont</span>&#123;Arial&#125;[BoldFont=&#123;Arial Bold&#125;, ItalicFont=&#123;Arial Italic&#125;]</span><br></pre></td></tr></table></figure>
+<p><code>&lt;font features&gt;</code>
+还能配置字体本身的各种特性，这里不再赘述，感兴趣的读者请参考
+<code>fontspec</code> 宏包的帮助文档。</p>
+<p>需要注意的是，<code>fontspec</code> 宏包会覆盖数学字体设置。需要调用
+上表 中列出的一些数学字体宏包时，应当在调用 <code>fontspec</code>
+宏包时指定 <code>no-math</code> 选项。<code>fontspec</code>
+宏包可能被其它宏包或文档类（如 <code>ctex</code>
+文档类）自动调用时，则在文档开头的 <code>documentclass</code> 命令里指定
+<code>no-math</code> 选项。</p>
+<h3 id="在-ctex-宏包或文档类中更改中文字体">在 <code>ctex</code>
+宏包或文档类中更改中文字体</h3>
+<p>前文已经介绍过的 <code>ctex</code>
+宏包或文档类提供了和<code>fontspec</code>
+宏包非常类似的语法设置中文字体(使用 <code>xelatex</code>
+编译时，这几个命令实际上由 <code>xeCJK</code> 宏包提供；使用
+<code>lualatex</code> 编译时，则是由 <code>ctex</code> 宏包或文档类对
+<code>luatexja</code> 宏包提供的类似命令进行额外封装)。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKsansfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\setCJKmonofont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure>
+<p>由于中文字体少有对应的粗体或斜体，<code>&lt;font features&gt;</code>
+里多用其他字体来配置，比如在 Windows 中设定基本字体为宋体，并设定对应的
+<code>BoldFont</code> 为黑体，<code>ItalicFont</code> 为楷体：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setCJKmainfont</span>&#123;SimSun&#125;[BoldFont=SimHei, ItalicFont=KaiTi]</span><br></pre></td></tr></table></figure>
+<h3 id="使用-unicode-math-宏包配置-unicode-数学字体">使用
+<code>unicode-math</code> 宏包配置 Unicode 数学字体</h3>
+<p>Unicode 数学字体是一类 OpenType 字体，包含了 Unicode
+字符集中的数学符号部分，字体中也设定了数学公式排版所需的一些参数。在
+<code>xelatex</code> 或者 <code>lualatex</code> 编译命令下，借助
+<code>unicode-math</code> 宏包可以调用 Unicode
+数学字体配置数学公式的字体风格。</p>
+<p>在导言区使用<code>\usepackage{unicode-math}</code> 后，使用
+<code>\setmathfont</code> 命令即可：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setmathfont</span>&#123;&lt;font name&gt;&#125;[&lt;font features&gt;] </span><br></pre></td></tr></table></figure>
+<p>绝大多数时候，只需要给定字体名称 <code>&lt;font name&gt;</code>
+即可。Unicode 数学字体相比于正文字体的选择余地不多。下表
+给出了较为常用的 Unicode 数学字体。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125120819345.png" alt="image-20250125120819345" style="zoom:67%;" /></p>
+<hr />
+<h2 id="文字装饰和强调">文字装饰和强调</h2>
+<p>强调文字的方法，或者是添加下划线等装饰物，或者是改变文字的字体。</p>
+<p><span class="math inline">$\LaTeX{}$</span> 定义了
+<code>\underline</code> 命令用来为文字添加下划线：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">An <span class="keyword">\underline</span>&#123;underlined&#125; text.</span><br></pre></td></tr></table></figure>
+<p><span class="math display">$$
+An \  \underline{underlined} \  text.
+$$</span></p>
+<p><code>\underline</code>
+命令生成下划线的样式不够灵活，不同的单词可能生成高低各异的下划线，并且无法换行。<code>ulem</code>
+宏包提供了更灵活的解决方案，它提供的 <code>\uline</code>
+命令能够轻松生成自动换行的下划线：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125121752045.png" alt="image-20250125121752045" style="zoom:67%;" /></p>
+<p>前一节介绍了 <code>\emph</code>
+命令，它将文字变为斜体以示强调，而如果在已强调的文字中嵌套使用
+<code>\emph</code> 命令，命令内则使用直立体文字：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Some <span class="keyword">\emph</span>&#123;emphasized words,</span><br><span class="line">including <span class="keyword">\emph</span>&#123;double-emphasized&#125;</span><br><span class="line">words&#125;, are shown here.</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125121906215.png" alt="image-20250125121906215" style="zoom:67%;" /></p>
+<hr />
+<h2 id="段落格式和间距">段落格式和间距</h2>
+<h3 id="长度和长度变量">长度和长度变量</h3>
+<p>在本节首先统一介绍长度和长度变量。长度的数值
+<code>&lt;length&gt;</code> 由数字和单位组成。常用的单位见下表。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125124002209.png" alt="image-20250125124002209" style="zoom:67%;" /></p>
+<p>在一些情况下还会用到可伸缩的“弹性长度”，如
+<code>12pt plus 2pt minus 3pt</code> 表示基础长度为
+<code>12pt</code>，可以伸展到 <code>14pt</code>，也可以收缩到
+<code>9pt</code>。 也可只定义 <code>plus</code> 或者 <code>minus</code>
+的部分，如 `0pt plus 5pt。</p>
+<p>长度的数值还可以用长度变量本身或其倍数来表达，如
+<code>2.5\\parindent</code> 等。</p>
+<p><span class="math inline">$\LaTeX{}$</span>
+预定义了大量的长度变量用于控制版面格式。如页面宽度和高度、首行缩进、段落间距等。如果需要自定义长度变量，需使用如下命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\newlength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>长度变量可以用 <code>\setlength</code> 赋值，或用
+<code>\addtolength</code> 增加长度：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;&lt;length command&gt;&#125;&#123;&lt;length&gt;&#125; </span><br><span class="line"><span class="keyword">\addtolength</span>&#123;&lt;length command&gt;&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="行距">行距</h3>
+<p>前文中提到过 <code>\fontsize</code>
+命令可以为字号设定对应的行距，但很少那么用。更常用的办法是在导言区使用
+<code>\linespread</code> 命令。</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\linespread</span>&#123;&lt;factor&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;factor&gt;</code>
+作用于基础行距而不是字号。缺省的基础行距是 1.2 倍字号大小（参考
+<code>\fontsize</code> 命令），因此使用 <code>\linespread{1.5}</code>
+意味着最终行距为 <strong>1.8 倍</strong>的字号大小。</p>
+<p>如果不是在导言区全局修改，而想要<strong>局部地</strong>改变某个段落的行距，需要用
+<code>\selectfont</code> 命令使 <code>\linespread</code>
+命令的改动立即生效：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125130505191.png" alt="image-20250125130505191" style="zoom:67%;" /></p>
+<p>字号的改变是即时生效的，而行距的改变直到文字<strong>分段</strong>时才生效。如果需要改变某一部分文字的行距，那么不能简单地将文字包含在花括号内。注意下面两个例子中
+<code>\par</code> 命令的位置：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125130826941.png" alt="image-20250125130826941" style="zoom:67%;" /></p>
+<h3 id="段落格式">段落格式</h3>
+<p>以下长度分别为段落的左缩进、右缩进和首行缩进：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\leftskip</span>&#125;&#123;&lt;length&gt;&#125;  </span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\rightskip</span>&#125;&#123;&lt;length&gt;&#125;</span><br><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parindent</span>&#125;&#123;&lt;length&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>它们和设置行距的命令一样，在分段时生效。</p>
+<p>控制段落缩进的命令为：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\indent</span></span><br><span class="line"><span class="keyword">\noindent</span></span><br></pre></td></tr></table></figure>
+<p><span class="math inline">$\LaTeX{}$</span>
+默认在段落开始时缩进，长度为用上述命令设置的
+<code>parindent</code>。如果需要在某一段不缩进，可在段落开头使用<code>\noindent</code>
+命令。相反地，<code>\indent</code>
+命令强制开启一段首行缩进的段落。在段落开头使用多个 <code>\indent</code>
+命令可以累加缩进量。</p>
+<p><span class="math inline">$\LaTeX{}$</span> 还默认在
+<code>\chapter</code>、<code>\section</code>
+等章节标题命令之后的第一段不缩进(<code>ctex</code>
+宏包和文档类默认按照中文习惯保持标题后第一段的首行缩进)。如果不习惯这种设定，可以调用
+<code>indentfirst</code> 宏包，令第一段的首行缩进照常。</p>
+<p>段落间的垂直间距为 <code>parskip</code>，如设置段落间距在
+<code>0.8ex</code> 到 <code>1.5ex</code> 变动：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parskip</span>&#125;&#123;1ex plus 0.5ex minus 0.2ex&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="水平间距">水平间距</h3>
+<p><span class="math inline">$\LaTeX{}$</span>
+默认为将单词之间的“空格”转化为水平间距。如果需要在文中手动插入额外的水平间距，可使用
+<code>\hspace</code> 命令：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125143708280.png" alt="image-20250125143708280" style="zoom:67%;" /></p>
+<p><code>\hspace</code>
+命令生成的水平间距如果位于一行的开头或末尾，则有可能因为断行而被舍弃。可使用
+<code>\hspace*</code> 命令代替<code>\hspace</code>
+命令得到不会因断行而消失的水平间距。</p>
+<p>命令 <code>\stretch{&lt;n&gt;}</code> 生成一个特殊弹性长度，参数
+<code>&lt;n&gt;</code> 为权重。它的基础长度为
+0pt，但可以无限延伸，如果同一行内出现多个
+<code>\stretch{&lt;n&gt;}</code>，这一行的所有可用空间将按每个
+<code>\stretch</code> 命令给定的权重 <code>&lt;n&gt;</code>
+进行分配。</p>
+<p>命令 <code>\fill</code> 相当于 <code>\stretch{1}</code>(注意不要用
+<code>1.5\fill</code> 这样的用法，它生成的长度只有基础长度 0pt
+而没有延伸部分)。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160138870.png" alt="image-20250125160138870" style="zoom:67%;" /></p>
+<p>在正文中用 <code>\hspace</code> 命令生成水平间距时，往往使用
+<code>em</code> 作为单位，生成的间距随字号大小而变。在数学公式中见过
+<code>\quad</code> 和 <code>\qquad</code>
+命令，它们也可以用于文本中，分别相当于 <code>\hspace{1em}</code> 和
+<code>\hspace{2em}</code>：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160343041.png" alt="image-20250125160343041" style="zoom:67%;" /></p>
+<h3 id="垂直间距">垂直间距</h3>
+<p>在页面中，段落、章节标题、行间公式、列表、浮动体等元素之间的间距是
+<span class="math inline">$\LaTeX{}$</span> 预设的。比如
+<code>\parskip</code>，默认设置为 <code>0pt plus 1pt</code>。</p>
+<p>如果我们想要人为地增加段落之间的垂直间距，可以在两个段落之间的位置使用
+<code>\vspace</code> 命令：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160614418.png" alt="image-20250125160614418" style="zoom:67%;" /></p>
+<p><code>\vspace</code>
+命令生成的垂直间距在一页的顶端或底端可能被“吞掉”，类似
+<code>\hspace</code>
+在一行的开头和末尾那样。对应地，<code>\vspace*</code>
+命令产生不会因断页而消失的垂直间距。<code>\vspace</code> 也可用
+<code>\stretch}</code>设置无限延伸的垂直长度。</p>
+<p>在段落内的两行之间增加垂直间距，一般通过给断行命令 <code>\\</code>
+加可选参数，如 <code>\\[6pt]</code> 或 <code>\\*[6pt]</code>。
+<code>\vspace</code> 也可以在段落内使用，区别在于 <code>\vspace</code>
+只引入垂直间距而不断行：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161039548.png" alt="image-20250125161039548" style="zoom:67%;" /></p>
+<p>另外 <span class="math inline">$\LaTeX{}$</span>
+还提供了<code>\bigskip</code>, <code>\medskip</code>,
+<code>\smallskip</code> 来增加预定义长度的垂直间距。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161301100.png" alt="image-20250125161301100" style="zoom:67%;" /></p>
+<hr />
+<h2 id="页面和分栏">页面和分栏</h2>
+<p><span class="math inline">$\LaTeX{}$</span>
+允许用户通过为文档类指定选项来控制纸张的大小，包括
+<code>a4paper</code>、<code>letterpaper</code>
+等等，并配合字号设置了适合的页边距。</p>
+<p>控制页边距的参数由 下图 里给出的各种长度变量控制。可以用
+<code>\setlength</code>
+命令修改这些长度变量，以达到调节页面尺寸和边距的作用；反之也可以利用这些长度变量来决定排版内容的尺寸，如在
+<code>tabularx</code> 环境或 <code>\includegraphics</code>
+命令的参数里，设置图片或表格的宽度为 <code>0.8\textwidth</code>。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125162000736.png" alt="image-20250125162000736" style="zoom:67%;" /></p>
+<p>页边距等比较直观的参数则必须间接设置。根据 上图
+将各个方向的页边距计算公式给出（以奇数页为例）：</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125162309991.png" alt="image-20250125162309991" style="zoom:67%;" /></p>
+<p>如果需要设置合适的 <code>&lt;left-margin&gt;</code> 和
+<code>&lt;right-margin&gt;</code>，就要通过上述方程组把<code>\oddsidemargin</code>
+和 <code>\textwidth</code> 等参数解出来！</p>
+<p>幸好 <code>geometry</code>
+宏包提供了设置页边距等参数的简便方法，能够帮我们完成背后繁杂的计算。</p>
+<h3 id="利用-geometry-宏包设置页面参数">利用 <code>geometry</code>
+宏包设置页面参数</h3>
+<p><code>geometry</code> 宏包的调用方式类似于 <code>graphicx</code>，在
+<code>latex</code> + <code>dvipdfmx</code> 命令下需要指定选项
+<code>dvipdfm</code> 或 <code>dvipdfmx</code>；<code>pdflatex</code> 和
+<code>xelatex</code> 编译命令下不需要。</p>
+<p>既可以调用 <code>geometry</code> 宏包，然后用其提供的
+<code>\geometry</code>命令设置页面参数：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;geometry&#125;</span><br><span class="line"><span class="keyword">\geometry</span>&#123;&lt;eometry-settings&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>也可以直接在宏包选项中设置：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>[&lt;geometry-settings&gt;]&#123;geometry&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;geometry-settings&gt;</code> 多以
+<code>&lt;key&gt;=&lt;value&gt;</code> 的形式组织。</p>
+<p>比如，符合 Microsoft Word 习惯的页面设定是 A4 纸张，上下边距 1
+英寸，左右边距 1.25
+英寸，于是我们可以通过如下两种等效的方式之一设定页边距：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;a4paper,left=1.25in,right=1.25in,top=1in,bottom=1in&#125;</span><br><span class="line"><span class="comment">% or like this:</span></span><br><span class="line"><span class="keyword">\geometry</span>&#123;a4paper,hmargin=1.25in,vmargin=1in&#125;</span><br></pre></td></tr></table></figure>
+<p>又比如，需要设定周围的边距一致为 1.25 英寸，可以用更简单的语法：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;margin=1.25in&#125;</span><br></pre></td></tr></table></figure>
+<p>对于书籍等双面文档，习惯上奇数页右边、偶数页左边留出较大的页边距，而靠近书脊一侧的奇数页左边、偶数页右边页边距较小。可以这样设定：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\geometry</span>&#123;inner=1in,outer=1.25in&#125;</span><br></pre></td></tr></table></figure>
+<p>需要指出的是，通过 <code>geometry</code> 宏包设置的纸张大小是输出 PDF
+文件的真实大小，而在文档类选项中设置的参数实际上只影响输出区域。<code>geometry</code>
+宏包还能够修改页眉页脚高度、边注宽度等参数，并且能比较好地处理各参数之间的依赖关系。更详细的用法不再赘述，感兴趣的用户可查阅其帮助文档。</p>
+<h3 id="页面内容的垂直对齐">页面内容的垂直对齐</h3>
+<p><span class="math inline">$\LaTeX{}$</span>
+默认将页面内容在垂直方向分散对齐。对于有大量图表的文档，许多时候想要做到排版匀称的页面很困难，垂直分散对齐会造成某些页面的垂直间距过宽，还可能报大量的
+<code>Underfull \\vbox</code> 警告。<span
+class="math inline">$\LaTeX{}$</span>
+还提供了另一种策略：将页面内容向顶部对齐，给底部留出高度不一的空白。</p>
+<p>以下命令分别令页面在垂直方向向顶部对齐/分散对齐：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\raggedbottom</span></span><br><span class="line"><span class="keyword">\flushbottom</span></span><br></pre></td></tr></table></figure>
+<h3 id="分栏">分栏</h3>
+<p><span class="math inline">$\LaTeX{}$</span>
+支持简单的单栏或双栏排版。标准文档类的全局选项
+<code>onecolumn</code>、<code>twocolumn</code>
+可控制全文分单栏或双栏排版。<span class="math inline">$\LaTeX{}$</span>
+也提供了切换单/双栏排版的命令：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\onecolumn</span></span><br><span class="line"><span class="keyword">\twocolumn</span>[&lt;one-column top material&gt;]</span><br></pre></td></tr></table></figure>
+<p><code>\twocolumn</code>
+支持带一个可选参数，用于排版双栏之上的一部分单栏内容。</p>
+<p>切换单/双栏排版时总是会另起一页（<code>\clearpage</code>）。在双栏模式下使用
+<code>\newpage</code> 会换栏而不是换页；<code>\clearpage</code>
+则能够换页。</p>
+<p>双栏排版时每一栏的宽度为
+<code>\columnwidth</code>，它由<code>\textwidth</code> 减去
+<code>\columnsep</code> 的差除以 2 得到。两栏之间还有一道竖线，宽度为
+<code>\columnseprule</code>，默认为零，也就是看不到竖线。</p>
+<p>一个比较好用的分栏解决方案是 <code>multicol</code>，它提供了简单的
+<code>multicols</code> 环境自动产生分栏，如以下环境将内容分为 3 栏：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;multicols&#125;&#123;3&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">\end</span>&#123;multicols&#125;</span><br></pre></td></tr></table></figure>
+<p><code>multicol</code>
+宏包能够在一页之中切换单栏/多栏，也能处理跨页的分栏，且各栏的高度分布平衡。但代价是<strong>在
+<code>multicols</code> 环境中无法正常使用 <span
+class="math inline"><code>table</code></span> 和 <code>figure</code>
+等浮动体环境</strong>，它会直接让浮动体丢失。<code>multicols</code>
+环境中只能用跨栏的 <code>table*</code> 和 <code>figure*</code>
+环境，或者用 <code>float</code> 宏包提供的 <code>H</code>
+参数固定浮动体的位置。</p>
+<hr />
+<h2 id="页眉页脚">页眉页脚</h2>
+<h3 id="基本的页眉页脚样式">基本的页眉页脚样式</h3>
+<p><span class="math inline">$\LaTeX{}$</span> 中提供了命令
+<code>\pagestyle</code> 来修改页眉页脚的样式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>命令 <code>\thispagestyle</code> 只影响当页的页眉页脚样式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\thispagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&lt;page-style&gt;</code> 参数为样式的名称，在 <span
+class="math inline">$\LaTeX{}$</span> 里预定义了四类样式，见 下表。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125170414339.png" alt="image-20250125170414339" style="zoom:67%;" /></p>
+<p>其中 <code>headings</code> 的情况较为复杂：</p>
+<ul>
+<li><code>article</code> 文档类， <code>twoside</code> 选项:
+偶数页为页码和节标题，奇数页为小节标题和页码；</li>
+<li><code>article</code> 文档类， <code>oneside</code> 选项:
+页眉为节标题和页码；</li>
+<li><code>report</code> 和 <code>book</code>
+文档类，<code>twoside</code> 选项:
+偶数页为页码和章标题，奇数页为节标题和页码；</li>
+<li><code>report</code> 和 <code>book</code>
+文档类，<code>oneside</code> 选项: 页眉为章标题和页码。</li>
+</ul>
+<p><code>\pagenumbering</code>
+命令令我们能够改变页眉页脚中的页码样式：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagenumbering</span>&#123;&lt;style&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&lt;style&gt;</code> 为页码样式，默认为
+<code>arabic</code>（阿拉伯数字），还可修改为
+<code>roman</code>（小写罗马数字）、<code>Roman</code>（大写罗马数字）等。注意使用
+<code>\pagenumbering</code> 命令后会将页码重置为 1。<code>book</code>
+文档类的 <code>\frontmatter</code> 和 <code>\mainmatter</code>
+内部就使用了 <code>\pagenumbering</code> 命令切换页码样式。</p>
+<h3 id="手动更改页眉页脚的内容">手动更改页眉页脚的内容</h3>
+<p>对于 <code>headings</code> 或者 <code>myheadings</code> 样式，<span
+class="math inline">$\LaTeX{}$</span>
+允许用户使用命令手动修改页眉上面的内容，特别是因为使用了
+<code>\chapter*</code> 等命令而无法自动生成页眉页脚的情况：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\markright</span>&#123;&lt;right-mark&gt;&#125;</span><br><span class="line"><span class="keyword">\markboth</span>&#123;&lt;left-mark&gt;&#125;&#123;&lt;right-mark&gt;&#125;</span><br></pre></td></tr></table></figure>
+<p>在双面排版、<code>headings</code> 或 <code>myheadings</code>
+页眉页脚样式下，<code>&lt;left-mark&gt;</code> 和
+<code>&lt;right-mark&gt;</code>
+的内容分别预期出现在左页（偶数页）和右页（奇数页）。 事实上
+<code>\chapter</code> 和 <code>\section</code> 等章节命令内部也使用
+<code>\markboth</code> 或者 <code>\markright</code> 生成页眉。</p>
+<p><span class="math inline">$\LaTeX{}$</span>
+默认将页眉的内容都转为大写字母。如需要保持字母的大小写，可以尝试以下代码（但是这不能改变页眉的斜体样式<code>\slshape</code>，斜体定义在
+<code>headings</code> 样式里的。如不喜欢斜体，可在 <code>markboth</code>
+等命令参数里先使用
+<code>\normalfont</code>，再使用想要的字体样式命令，或直接尝试使用
+<code>fancyhdr</code> 宏包)：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\chaptermark</span>[1]&#123;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\markboth</span>&#123;Chapter <span class="keyword">\thechapter</span><span class="keyword">\quad</span> <span class="params">#1</span>&#125;&#123;&#125;&#125;</span><br><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\sectionmark</span>[1]&#123;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\markright</span>&#123;<span class="keyword">\thesection</span><span class="keyword">\quad</span> <span class="params">#1</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>\thechapter</code>、<code>\thesection</code>
+等命令为章节计数器的数值。注意以上代码适用于 <code>report</code> 和
+<code>book</code> 文档类；对于 <code>article</code>
+文档类，与两个页眉相关的命令分别为 <code>\sectionmark</code> 和
+<code>\subsectionmark</code>。</p>
+<h3 id="fancyhdr-宏包"><code>fancyhdr</code> 宏包</h3>
+<p><code>fancyhdr</code>
+宏包改善了页眉页脚样式的定义方式，允许将内容自由安置在页眉和页脚的左、中、右三个位置，还为页眉和页脚各加了一条横线。</p>
+<p><code>fancyhdr</code> 自定义了样式名称 <code>fancy</code>。使用
+<code>fancyhdr</code> 宏包定义页眉页脚之前，通常先用
+<code>\pagestyle{fancy}</code> 调用这个样式。在
+<code>fancyhdr</code>定义页眉页脚的命令为：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fancyhf</span>[&lt;position&gt;]&#123;...&#125;</span><br><span class="line"><span class="keyword">\fancyhead</span>[&lt;position&gt;]&#123;...&#125;</span><br><span class="line"><span class="keyword">\fancyfoot</span>[&lt;position&gt;]&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;position&gt;</code> 为 L（左）/ C（中）/ R（右）以及与
+O（奇数页）/ E（偶数页）字母的组合。<code>\fancyhf</code>
+用于同时定义页眉和页脚，习惯上使用 <code>\fancyhf{}</code>
+来清空页眉页脚的设置。</p>
+<p>下面的源代码 给出了 <code>fancyhdr</code>
+基础用法的一个示例，效果为将章节标题放在和 headings
+一致的位置，但使用加粗格式；页码都放在页脚正中；修改横线宽度，“去掉”页脚的横线。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125174255995.png" alt="image-20250125174255995" style="zoom:67%;" /></p>
+<p><code>fancyhdr</code> 还支持用 <code>\fancypagestyle</code>
+为自定义的页眉页脚样式命名，或者重新定义已有的样式如 <code>plain</code>
+等：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 自定义 myfancy 样式</span></span><br><span class="line"><span class="keyword">\fancypagestyle</span>&#123;myfancy&#125;&#123;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\fancyhf</span>&#123;&#125;</span><br><span class="line">  <span class="keyword">\fancyhead</span>&#123;...&#125;</span><br><span class="line">  <span class="keyword">\fancyfoot</span>&#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">% 使用样式</span></span><br><span class="line"><span class="keyword">\pagestyle</span>&#123;myfancy&#125;</span><br></pre></td></tr></table></figure>
+<!-- flag of hidden posts -->
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/" title="lshort笔记：排版样式设定（五）">https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/lshort/" rel="tag"><i class="fa fa-tag"></i> lshort</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">142k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:50</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

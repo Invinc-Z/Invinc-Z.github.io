@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 400px;
+}
+
+.douban-card {
+    display: flex;
+    margin: 30px 10px;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.douban-card:hover {
+    text-decoration: none;
+}
+
+.douban-card-bgimg {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    filter: blur(15px) brightness(0.6);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-img {
+    position: relative;
+    height: 130px;
+    width: 80px;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.douban-card-left:hover .douban-card-img {
+    filter: blur(5px) brightness(0.6);
+    transform: perspective(800px) rotateX(180deg);
+}
+
+.douban-card-left .douban-card-img {
+    transition: all 500ms ease;
+}
+
+.douban-card-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.douban-card-left .douban-card-status {
+    height: 130px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    transform: rotateX(180deg);
+    backface-visibility: hidden;
+    transition: all 500ms ease;
+}
+
+.douban-card-left:hover .douban-card-status {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+.douban-card-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    font-size: 16px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.3;
+    color: antiquewhite;
+}
+
+.douban-card-item {
+    margin-top: 4px;
+}
+</style><!-- hexo injector head_begin end -->
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="在 Linux 网络编程里，select 是最早被广泛使用的 I&#x2F;O 多路复用机制之一。虽然如今在高并发场景中它通常会被 epoll 替代，但 select 依然是理解 I&#x2F;O 多路复用思想的重要起点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 中 select 的用法与底层实现">
+<meta property="og:url" content="https://invinc-z.com/systems/linux/select/index.html">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="在 Linux 网络编程里，select 是最早被广泛使用的 I&#x2F;O 多路复用机制之一。虽然如今在高并发场景中它通常会被 epoll 替代，但 select 依然是理解 I&#x2F;O 多路复用思想的重要起点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-02-07T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-18T17:36:05.774Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="IO多路复用">
+<meta property="article:tag" content="网络编程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://invinc-z.com/systems/linux/select/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/systems/linux/select/","path":"systems/linux/select/","title":"Linux 中 select 的用法与底层实现"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Linux 中 select 的用法与底层实现 | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/systems/linux/select/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E4%BB%80%E4%B9%88%E6%98%AF-select"><span class="nav-number">1.</span> <span class="nav-text">一、什么是 select</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89-select"><span class="nav-number">2.</span> <span class="nav-text">二、为什么会有 select</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89select-%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">三、select 的基本用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#fd_set-%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%AE%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1. fd_set 与相关宏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nfds-%E7%9A%84%E5%90%AB%E4%B9%89"><span class="nav-number">3.2.</span> <span class="nav-text">2. nfds 的含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#timeout-%E7%9A%84%E5%90%AB%E4%B9%89"><span class="nav-number">3.3.</span> <span class="nav-text">3. timeout 的含义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9Bselect-%E7%9A%84%E5%85%B8%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">四、select 的典型使用流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94select-%E8%BF%94%E5%9B%9E%E5%90%8E%E8%AF%A5%E6%80%8E%E4%B9%88%E7%9C%8B%E7%BB%93%E6%9E%9C"><span class="nav-number">5.</span> <span class="nav-text">五、select 返回后该怎么看结果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%ADselect-%E8%83%BD%E7%9B%91%E5%90%AC%E5%93%AA%E4%BA%9B%E4%BA%8B%E4%BB%B6"><span class="nav-number">6.</span> <span class="nav-text">六、select 能监听哪些事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#readfds"><span class="nav-number">6.1.</span> <span class="nav-text">1. readfds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#writefds"><span class="nav-number">6.2.</span> <span class="nav-text">2. writefds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exceptfds"><span class="nav-number">6.3.</span> <span class="nav-text">3. exceptfds</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83select-%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E5%B1%80%E9%99%90"><span class="nav-number">7.</span> <span class="nav-text">七、select 的优点和局限</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">7.1.</span> <span class="nav-text">1. 优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90"><span class="nav-number">7.2.</span> <span class="nav-text">2. 局限</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#fd-%E6%95%B0%E9%87%8F%E6%9C%89%E9%99%90%E5%88%B6"><span class="nav-number">7.2.1.</span> <span class="nav-text">（1）fd 数量有限制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%8F%E6%AC%A1%E9%83%BD%E8%A6%81%E9%87%8D%E6%96%B0%E4%BC%A0%E5%85%A5%E5%85%A8%E9%9B%86"><span class="nav-number">7.2.2.</span> <span class="nav-text">（2）每次都要重新传入全集</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%90%8E%E4%BB%8D%E8%A6%81%E7%BA%BF%E6%80%A7%E6%89%AB%E6%8F%8F"><span class="nav-number">7.2.3.</span> <span class="nav-text">（3）返回后仍要线性扫描</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E6%80%81%E4%B8%8E%E5%86%85%E6%A0%B8%E6%80%81%E4%B9%8B%E9%97%B4%E6%9C%89%E9%9B%86%E5%90%88%E6%8B%B7%E8%B4%9D%E6%88%90%E6%9C%AC"><span class="nav-number">7.2.4.</span> <span class="nav-text">（4）用户态与内核态之间有集合拷贝成本</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%ABselect-%E7%9A%84%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF"><span class="nav-number">8.</span> <span class="nav-text">八、select 的底层实现思路</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%8D%E5%9B%BE%E8%A1%A8%E7%A4%BA-fd-%E9%9B%86%E5%90%88"><span class="nav-number">8.1.</span> <span class="nav-text">1. 位图表示 fd 集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E6%A0%B8%E9%81%8D%E5%8E%86%E7%94%A8%E6%88%B7%E7%BB%99%E5%87%BA%E7%9A%84%E7%9B%91%E8%A7%86%E9%9B%86%E5%90%88"><span class="nav-number">8.2.</span> <span class="nav-text">2. 内核遍历用户给出的监视集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%8F%91%E7%94%9F%E5%90%8E%E5%86%8D%E9%87%8D%E6%96%B0%E7%AD%9B%E9%80%89"><span class="nav-number">8.3.</span> <span class="nav-text">3. 事件发生后再重新筛选</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E5%BA%A6%E7%89%B9%E5%BE%81"><span class="nav-number">8.4.</span> <span class="nav-text">4. 复杂度特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9D%E4%BB%8E%E5%86%85%E6%A0%B8%E8%A7%86%E8%A7%92%E7%9C%8B%E4%B8%80%E6%AC%A1-select-%E7%AD%89%E5%BE%85%E8%BF%87%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text">九、从内核视角看一次 select
+等待过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%B8%BA%E4%BB%80%E4%B9%88-select-%E5%9C%A8%E9%AB%98%E5%B9%B6%E5%8F%91%E4%B8%8B%E4%B8%8D%E5%8D%A0%E4%BC%98%E5%8A%BF"><span class="nav-number">10.</span> <span class="nav-text">十、为什么 select
+在高并发下不占优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E4%BD%BF%E7%94%A8-select-%E6%97%B6%E7%9A%84%E5%B8%B8%E8%A7%81%E5%9D%91"><span class="nav-number">11.</span> <span class="nav-text">十一、使用 select 时的常见坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%98%E8%AE%B0%E6%AF%8F%E6%AC%A1%E9%87%8D%E6%96%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E9%9B%86%E5%90%88"><span class="nav-number">11.1.</span> <span class="nav-text">1. 忘记每次重新初始化集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nfds-%E4%BC%A0%E9%94%99"><span class="nav-number">11.2.</span> <span class="nav-text">2. nfds 传错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%BD%E7%95%A5%E7%9B%91%E5%90%AC-fd-%E4%B8%8E%E8%BF%9E%E6%8E%A5-fd-%E7%9A%84%E4%B8%8D%E5%90%8C%E8%AF%AD%E4%B9%89"><span class="nav-number">11.3.</span> <span class="nav-text">3. 忽略监听 fd 与连接 fd
+的不同语义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#close-%E5%90%8E%E5%BF%98%E8%AE%B0-fd_clr"><span class="nav-number">11.4.</span> <span class="nav-text">4. close 后忘记 FD_CLR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E4%BB%A5%E4%B8%BA%E5%8F%AF%E8%AF%BB%E5%B0%B1%E4%B8%80%E5%AE%9A%E8%83%BD%E8%AF%BB%E5%88%B0%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE"><span class="nav-number">11.5.</span> <span class="nav-text">5.
+误以为可读就一定能读到业务数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%BA%8Cselect-%E4%B8%8E-pollepoll-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">12.</span> <span class="nav-text">十二、select 与 poll、epoll
+的关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E4%B8%89select-%E5%9C%A8%E5%B7%A5%E7%A8%8B%E9%87%8C%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF"><span class="nav-number">13.</span> <span class="nav-text">十三、select
+在工程里适合什么场景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%99%E5%AD%A6%E5%92%8C%E5%AD%A6%E4%B9%A0"><span class="nav-number">13.1.</span> <span class="nav-text">1. 教学和学习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E6%8E%A5%E6%95%B0%E5%B0%91%E7%9A%84%E5%B7%A5%E5%85%B7%E5%9E%8B%E7%A8%8B%E5%BA%8F"><span class="nav-number">13.2.</span> <span class="nav-text">2. 连接数少的工具型程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7%E8%A6%81%E6%B1%82%E9%AB%98%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="nav-number">13.3.</span> <span class="nav-text">3. 对可移植性要求高的代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E5%9B%9B%E6%80%BB%E7%BB%93"><span class="nav-number">14.</span> <span class="nav-text">十四、总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/select/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux 中 select 的用法与底层实现 | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux 中 select 的用法与底层实现
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-02-08 05:12:18" itemprop="dateCreated datePublished" datetime="2026-02-08T05:12:18+08:00">2026-02-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">操作系统与系统编程（Systems）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>在 Linux 网络编程里，<code>select</code> 是最早被广泛使用的 I/O
+多路复用机制之一。虽然如今在高并发场景中它通常会被 <code>epoll</code>
+替代，但 <code>select</code> 依然是理解 I/O 多路复用思想的重要起点。</p>
+<span id="more"></span>
+<hr />
+<h2 id="一什么是-select">一、什么是 select</h2>
+<p><code>select</code> 的作用是：</p>
+<blockquote>
+<p>让一个线程同时等待多个文件描述符上的事件，并在其中某些 fd
+就绪时返回。</p>
+</blockquote>
+<p>它最常见的使用场景是网络编程，比如一个服务端同时监听：</p>
+<ul>
+<li>监听 socket 是否有新连接到来</li>
+<li>已连接 socket 是否有数据可读</li>
+<li>某些 socket 是否可以继续发送数据</li>
+</ul>
+<p>对应的系统调用原型如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">select</span><span class="params">(<span class="type">int</span> nfds,</span></span><br><span class="line"><span class="params">           fd_set *readfds,</span></span><br><span class="line"><span class="params">           fd_set *writefds,</span></span><br><span class="line"><span class="params">           fd_set *exceptfds,</span></span><br><span class="line"><span class="params">           <span class="keyword">struct</span> timeval *timeout)</span>;</span><br></pre></td></tr></table></figure>
+<p>从接口上看，它允许我们分别关注三类事件：</p>
+<ul>
+<li>可读</li>
+<li>可写</li>
+<li>异常</li>
+</ul>
+<hr />
+<h2 id="二为什么会有-select">二、为什么会有 select</h2>
+<p>在没有 I/O 多路复用之前，如果一个进程要同时处理多个
+socket，常见办法有两种：</p>
+<ol type="1">
+<li><strong>阻塞式串行处理</strong>：一次只处理一个连接</li>
+<li><strong>每连接一个线程/进程</strong>：让每个连接由独立执行流处理</li>
+</ol>
+<p>这两种方式都有明显问题：</p>
+<ul>
+<li>串行处理时，并发能力很差</li>
+<li>每连接一个线程会带来较高的调度、栈空间和上下文切换成本</li>
+</ul>
+<p><code>select</code> 的出现提供了第三种思路：</p>
+<blockquote>
+<p>一个线程先统一等待，哪个 fd 准备好了，再去处理哪个 fd。</p>
+</blockquote>
+<p>这就是 I/O 多路复用的基本思想。</p>
+<hr />
+<h2 id="三select-的基本用法">三、select 的基本用法</h2>
+<h3 id="fd_set-与相关宏">1. fd_set 与相关宏</h3>
+<p><code>select</code> 使用 <code>fd_set</code>
+表示一个文件描述符集合，并配套提供了一组宏：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FD_ZERO(fd_set *<span class="built_in">set</span>);   <span class="comment">// 清空集合</span></span><br><span class="line">FD_SET(<span class="type">int</span> fd, fd_set *<span class="built_in">set</span>);   <span class="comment">// 添加 fd</span></span><br><span class="line">FD_CLR(<span class="type">int</span> fd, fd_set *<span class="built_in">set</span>);   <span class="comment">// 删除 fd</span></span><br><span class="line">FD_ISSET(<span class="type">int</span> fd, fd_set *<span class="built_in">set</span>); <span class="comment">// 判断 fd 是否在集合中</span></span><br></pre></td></tr></table></figure>
+<p>最常见的写法如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fd_set readfds;</span><br><span class="line">FD_ZERO(&amp;readfds);</span><br><span class="line">FD_SET(listenfd, &amp;readfds);</span><br><span class="line">FD_SET(connfd, &amp;readfds);</span><br></pre></td></tr></table></figure>
+<h3 id="nfds-的含义">2. nfds 的含义</h3>
+<p><code>nfds</code> 不是 fd 的数量，而是：</p>
+<blockquote>
+<p>所有被监视 fd 中“最大 fd 值 + 1”。</p>
+</blockquote>
+<p>例如监视 <code>3、5、8</code>，那么 <code>nfds</code> 应该传
+<code>9</code>。</p>
+<h3 id="timeout-的含义">3. timeout 的含义</h3>
+<p><code>timeout</code> 控制 <code>select</code> 的阻塞时间：</p>
+<ul>
+<li><code>NULL</code>：一直阻塞，直到有事件发生</li>
+<li><code>{0, 0}</code>：立即返回，非阻塞轮询</li>
+<li>其他值：阻塞指定时间</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">timeval</span> <span class="title">tv</span>;</span></span><br><span class="line">tv.tv_sec = <span class="number">5</span>;</span><br><span class="line">tv.tv_usec = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>表示最多等待 5 秒。</p>
+<hr />
+<h2 id="四select-的典型使用流程">四、select 的典型使用流程</h2>
+<p>一个简单的 TCP 服务端使用 <code>select</code>
+的基本流程通常如下：</p>
+<ol type="1">
+<li>创建监听 socket</li>
+<li><code>bind</code> + <code>listen</code></li>
+<li>准备一个“主集合”，保存所有需要监视的 fd</li>
+<li>每次循环前，把主集合拷贝到临时集合</li>
+<li>调用 <code>select</code></li>
+<li>遍历所有可能的 fd，检查谁就绪了</li>
+<li>分别处理：
+<ul>
+<li>监听 fd：执行 <code>accept</code></li>
+<li>连接 fd：执行 <code>read</code> / <code>write</code></li>
+</ul></li>
+<li>连接关闭时将 fd 从集合中移除</li>
+</ol>
+<p>下面是一个简化示例：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/types.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/socket.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;netinet/in.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PORT 8080</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> listenfd = socket(AF_INET, SOCK_STREAM, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">addr</span>;</span></span><br><span class="line">    <span class="built_in">memset</span>(&amp;addr, <span class="number">0</span>, <span class="keyword">sizeof</span>(addr));</span><br><span class="line">    addr.sin_family = AF_INET;</span><br><span class="line">    addr.sin_addr.s_addr = htonl(INADDR_ANY);</span><br><span class="line">    addr.sin_port = htons(PORT);</span><br><span class="line"></span><br><span class="line">    bind(listenfd, (<span class="keyword">struct</span> sockaddr *)&amp;addr, <span class="keyword">sizeof</span>(addr));</span><br><span class="line">    listen(listenfd, <span class="number">128</span>);</span><br><span class="line"></span><br><span class="line">    fd_set allset, rset;</span><br><span class="line">    FD_ZERO(&amp;allset);</span><br><span class="line">    FD_SET(listenfd, &amp;allset);</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> maxfd = listenfd;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">        rset = allset;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> nready = select(maxfd + <span class="number">1</span>, &amp;rset, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">        <span class="keyword">if</span> (nready &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(listenfd, &amp;rset)) &#123;</span><br><span class="line">            <span class="type">int</span> connfd = accept(listenfd, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line">            <span class="keyword">if</span> (connfd &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                FD_SET(connfd, &amp;allset);</span><br><span class="line">                <span class="keyword">if</span> (connfd &gt; maxfd) maxfd = connfd;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (--nready &lt;= <span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> fd = <span class="number">0</span>; fd &lt;= maxfd; fd++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (fd == listenfd) <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (FD_ISSET(fd, &amp;rset)) &#123;</span><br><span class="line">                <span class="type">char</span> buf[<span class="number">4096</span>];</span><br><span class="line">                <span class="type">ssize_t</span> n = read(fd, buf, <span class="keyword">sizeof</span>(buf));</span><br><span class="line">                <span class="keyword">if</span> (n &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    write(fd, buf, n);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    close(fd);</span><br><span class="line">                    FD_CLR(fd, &amp;allset);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    close(listenfd);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个例子是典型的 <code>select</code> 版 echo
+server，重点在于理解结构，而不是直接用于生产环境。</p>
+<hr />
+<h2 id="五select-返回后该怎么看结果">五、select 返回后该怎么看结果</h2>
+<p>这是初学者很容易忽略的一个点。</p>
+<p><code>select</code> 调用前，你把关心的 fd 填进
+<code>readfds/writefds/exceptfds</code>；
+调用返回后，这几个集合会被<strong>原地修改</strong>，只保留已经就绪的那些
+fd。</p>
+<p>例如：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rset = allset;</span><br><span class="line"><span class="type">int</span> nready = select(maxfd + <span class="number">1</span>, &amp;rset, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+<p>返回后需要这样判断：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (FD_ISSET(fd, &amp;rset)) &#123;</span><br><span class="line">    <span class="comment">// fd 可读</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也正因为 <code>select</code>
+会修改集合，所以每次调用前都需要重新拷贝一份。</p>
+<hr />
+<h2 id="六select-能监听哪些事件">六、select 能监听哪些事件</h2>
+<p><code>select</code> 主要支持三类集合：</p>
+<h3 id="readfds">1. readfds</h3>
+<p>表示关心“可读”事件，常见情况：</p>
+<ul>
+<li>socket 接收缓冲区中有数据</li>
+<li>监听 socket 上有新连接到来</li>
+<li>对端关闭连接，此时读可能返回 <code>0</code></li>
+</ul>
+<h3 id="writefds">2. writefds</h3>
+<p>表示关心“可写”事件，常见情况：</p>
+<ul>
+<li>socket 发送缓冲区有空间</li>
+<li>非阻塞 <code>connect</code> 已完成</li>
+</ul>
+<h3 id="exceptfds">3. exceptfds</h3>
+<p>表示关心“异常条件”，在普通 TCP 服务端里相对少用。</p>
+<p>它不是一般意义上的“程序异常”，更多是一些带外数据等特殊情况。</p>
+<hr />
+<h2 id="七select-的优点和局限">七、select 的优点和局限</h2>
+<h3 id="优点">1. 优点</h3>
+<p><code>select</code> 的优点主要有：</p>
+<ul>
+<li>历史悠久，资料多</li>
+<li>接口标准化，很多 Unix-like 系统都支持</li>
+<li>适合学习 I/O 多路复用的基本思想</li>
+<li>在小规模连接场景下完全够用</li>
+</ul>
+<h3 id="局限">2. 局限</h3>
+<p><code>select</code> 最大的问题并不是“不能用”，而是它在 fd
+多起来后效率会明显下降。</p>
+<p>主要体现在以下几个方面。</p>
+<h4 id="fd-数量有限制">（1）fd 数量有限制</h4>
+<p><code>fd_set</code> 通常受 <code>FD_SETSIZE</code>
+限制，很多系统上默认是 <code>1024</code>。</p>
+<p>这意味着：</p>
+<blockquote>
+<p>单次 <code>select</code> 可监视的 fd 数量通常不能无限增长。</p>
+</blockquote>
+<h4 id="每次都要重新传入全集">（2）每次都要重新传入全集</h4>
+<p>应用每次调用 <code>select</code>，都要把所有关心的 fd
+集合重新准备好，再交给内核。</p>
+<h4 id="返回后仍要线性扫描">（3）返回后仍要线性扫描</h4>
+<p>即使只有 3 个 fd 真正就绪了，应用也通常要从 <code>0</code> 扫描到
+<code>maxfd</code>，逐个调用 <code>FD_ISSET</code> 检查。</p>
+<p>这使得它的处理成本与 <code>maxfd</code> 高度相关。</p>
+<h4
+id="用户态与内核态之间有集合拷贝成本">（4）用户态与内核态之间有集合拷贝成本</h4>
+<p>每次 <code>select</code> 调用，用户态的 <code>fd_set</code>
+需要传入内核，返回时又需要把结果带回用户态。</p>
+<hr />
+<h2 id="八select-的底层实现思路">八、select 的底层实现思路</h2>
+<p>理解 <code>select</code> 的关键是明白：</p>
+<blockquote>
+<p>它本质上更接近“每次调用时，拿着一张完整名单去检查一遍”。</p>
+</blockquote>
+<h3 id="位图表示-fd-集合">1. 位图表示 fd 集合</h3>
+<p><code>fd_set</code>
+在底层通常可以理解为一个<strong>位图（bitmap）</strong>。</p>
+<p>例如某个 fd 是否在集合里，本质上就是看对应 bit 是否置位。</p>
+<p>这种表示方式很紧凑，但它也天然意味着：</p>
+<ul>
+<li>需要按照 fd 编号组织</li>
+<li>处理时往往按编号顺序扫描</li>
+</ul>
+<h3 id="内核遍历用户给出的监视集合">2. 内核遍历用户给出的监视集合</h3>
+<p>调用 <code>select</code> 后，内核会根据 <code>nfds</code>，检查
+<code>[0, nfds)</code> 范围内哪些 fd 在对应集合里被置位。</p>
+<p>对于这些 fd，内核会进一步检查：</p>
+<ul>
+<li>是否可读</li>
+<li>是否可写</li>
+<li>是否存在异常条件</li>
+</ul>
+<p>如果没有任何 fd 就绪，而调用者又允许阻塞，当前线程就会睡眠等待。</p>
+<h3 id="事件发生后再重新筛选">3. 事件发生后再重新筛选</h3>
+<p>当某个 fd
+状态变化时，内核会唤醒等待中的线程；线程恢复后，<code>select</code>
+再根据当前状态整理结果集合，把真正就绪的 fd 保留下来。</p>
+<p>因此 <code>select</code>
+的核心特征不是“保存一份长期关注列表”，而是：</p>
+<blockquote>
+<p>每次调用都重新提交一份关注集合，然后让内核基于这份集合完成检查。</p>
+</blockquote>
+<h3 id="复杂度特征">4. 复杂度特征</h3>
+<p><code>select</code> 通常会表现出接近 <code>O(n)</code> 的特征，其中
+<code>n</code> 与 <code>nfds</code> 或 <code>maxfd</code>
+范围强相关。</p>
+<p>这也是它在高并发场景下不如 <code>epoll</code> 的根本原因之一。</p>
+<hr />
+<h2 id="九从内核视角看一次-select-等待过程">九、从内核视角看一次 select
+等待过程</h2>
+<p>可以粗略理解为：</p>
+<ol type="1">
+<li>用户态准备好 <code>readfds/writefds/exceptfds</code></li>
+<li>调用 <code>select</code></li>
+<li>内核接收这些集合并复制到内核空间</li>
+<li>内核遍历 <code>[0, nfds)</code> 范围内的 fd</li>
+<li>若没有任何 fd 就绪，则线程进入等待</li>
+<li>某个 socket 收到数据或状态发生变化</li>
+<li>内核唤醒等待线程</li>
+<li>内核再次整理结果集合</li>
+<li>把就绪结果复制回用户态</li>
+<li><code>select</code> 返回，应用再线性检查哪个 fd 被置位</li>
+</ol>
+<p>这套流程里，最值得记住的是两个扫描：</p>
+<ul>
+<li>内核扫描关注范围</li>
+<li>用户态扫描结果范围</li>
+</ul>
+<hr />
+<h2 id="十为什么-select-在高并发下不占优势">十、为什么 select
+在高并发下不占优势</h2>
+<p>假设一个服务器维护 2 万连接，但某一时刻只有 50 个连接真正活跃。</p>
+<p>对 <code>select</code> 而言，它通常仍然需要：</p>
+<ul>
+<li>根据 <code>nfds</code> 检查一大段 fd 范围</li>
+<li>返回后应用再遍历这一大段范围</li>
+</ul>
+<p>这意味着：</p>
+<blockquote>
+<p>成本更接近“跟总监视范围有关”，而不是“只和活跃连接数有关”。</p>
+</blockquote>
+<p>因此 <code>select</code> 适合：</p>
+<ul>
+<li>连接数不多</li>
+<li>代码可移植性要求高</li>
+<li>教学或基础示例</li>
+</ul>
+<p>但不太适合超大规模连接场景。</p>
+<hr />
+<h2 id="十一使用-select-时的常见坑">十一、使用 select 时的常见坑</h2>
+<h3 id="忘记每次重新初始化集合">1. 忘记每次重新初始化集合</h3>
+<p>因为 <code>select</code>
+会修改传入集合，所以不能把主集合直接传进去反复用。</p>
+<p>正确做法通常是：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rset = allset;</span><br><span class="line">select(maxfd + <span class="number">1</span>, &amp;rset, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="nfds-传错">2. nfds 传错</h3>
+<p>很多人会误传成“总共多少个 fd”，但正确的是“最大 fd + 1”。</p>
+<h3 id="忽略监听-fd-与连接-fd-的不同语义">3. 忽略监听 fd 与连接 fd
+的不同语义</h3>
+<ul>
+<li>监听 fd 可读：通常表示可以 <code>accept</code></li>
+<li>连接 fd 可读：通常表示可以 <code>read</code></li>
+</ul>
+<p>这两类 fd 的处理逻辑不能混在一起。</p>
+<h3 id="close-后忘记-fd_clr">4. close 后忘记 FD_CLR</h3>
+<p>关闭 fd 后如果没有把它从集合里移除，下次 <code>select</code>
+可能出现错误或逻辑混乱。</p>
+<h3 id="误以为可读就一定能读到业务数据">5.
+误以为可读就一定能读到业务数据</h3>
+<p>对端关闭连接时，也会表现为“可读”，但此时 <code>read</code> 返回
+<code>0</code>。</p>
+<hr />
+<h2 id="十二select-与-pollepoll-的关系">十二、select 与 poll、epoll
+的关系</h2>
+<p>从历史和设计思路上可以这样理解：</p>
+<ul>
+<li><code>select</code>：最早期、最经典的多路复用接口</li>
+<li><code>poll</code>：改进了 <code>select</code> 的位图和 fd
+数量限制问题</li>
+<li><code>epoll</code>：进一步优化了关注集合维护与就绪事件提取方式</li>
+</ul>
+<p>一个简化对比如下：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>select</th>
+<th>poll</th>
+<th>epoll</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>数据结构</td>
+<td>位图</td>
+<td>数组</td>
+<td>红黑树 + 就绪链表</td>
+</tr>
+<tr>
+<td>fd 上限</td>
+<td>常受 <code>FD_SETSIZE</code> 影响</td>
+<td>无明显固定上限</td>
+<td>无明显固定上限</td>
+</tr>
+<tr>
+<td>每次调用重复提交全集</td>
+<td>是</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>返回后用户态扫描</td>
+<td>是</td>
+<td>是</td>
+<td>通常只处理就绪项</td>
+</tr>
+<tr>
+<td>典型场景</td>
+<td>小规模、跨平台</td>
+<td>中等规模</td>
+<td>高并发 Linux</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="十三select-在工程里适合什么场景">十三、select
+在工程里适合什么场景</h2>
+<p><code>select</code> 并不是“过时到不能用”，它仍然适合一些场景：</p>
+<h3 id="教学和学习">1. 教学和学习</h3>
+<p>如果要理解：</p>
+<ul>
+<li>什么是 I/O 多路复用</li>
+<li>为什么要区分可读和可写</li>
+<li>单线程如何管理多个连接</li>
+</ul>
+<p><code>select</code> 是很好的入门材料。</p>
+<h3 id="连接数少的工具型程序">2. 连接数少的工具型程序</h3>
+<p>例如：</p>
+<ul>
+<li>简单代理</li>
+<li>调试工具</li>
+<li>内部服务</li>
+<li>小型 demo</li>
+</ul>
+<h3 id="对可移植性要求高的代码">3. 对可移植性要求高的代码</h3>
+<p>因为 <code>select</code> 是较通用的接口，很多 Unix / POSIX
+环境都支持它。</p>
+<hr />
+<h2 id="十四总结">十四、总结</h2>
+<p><code>select</code> 的核心价值在于：</p>
+<ol type="1">
+<li><strong>提供了最基础的 I/O 多路复用能力</strong></li>
+<li><strong>允许一个线程等待多个 fd 的就绪事件</strong></li>
+<li><strong>为后续理解 <code>poll</code> 和 <code>epoll</code>
+打下了基础</strong></li>
+</ol>
+<p>但它的底层方式决定了它存在天然瓶颈：</p>
+<ul>
+<li>用位图管理 fd 集合</li>
+<li>每次调用都要重新提交全集</li>
+<li>内核和用户态都要扫描 fd 范围</li>
+</ul>
+<p>所以，<code>select</code> 更适合理解思想与处理中小规模连接；
+而当连接数持续增长时，就需要进一步考虑 <code>poll</code> 和
+<code>epoll</code> 这类机制。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/systems/linux/select/" title="Linux 中 select 的用法与底层实现">https://invinc-z.com/systems/linux/select/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/" rel="tag"><i class="fa fa-tag"></i> IO多路复用</a>
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 网络编程</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/systems/computer-system/from-ascii-to-unicode-character-code-development/" rel="prev" title="从 ASCII 到 Unicode：字符编码的发展历程">
+                  <i class="fa fa-angle-left"></i> 从 ASCII 到 Unicode：字符编码的发展历程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/systems/linux/poll/" rel="next" title="Linux 中 poll 的用法与底层实现">
+                  Linux 中 poll 的用法与底层实现 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">142k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">11:50</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
