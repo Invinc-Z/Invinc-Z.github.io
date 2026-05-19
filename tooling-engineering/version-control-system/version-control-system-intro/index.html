@@ -165,7 +165,7 @@
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162649883.png">
 <meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162716274.png">
 <meta property="article:published_time" content="2025-04-08T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.775Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.348Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="SVN">
@@ -967,7 +967,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1050,7 +1050,7 @@ System，DVCS），像Git、Mercurial 以及 Darcs
 <col style="width: 33%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th><strong>特性</strong></th>
 <th><strong>VisualSVN</strong></th>
 <th><strong>纯 Subversion</strong></th>
@@ -1058,25 +1058,25 @@ System，DVCS），像Git、Mercurial 以及 Darcs
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>平台</strong></td>
 <td>Windows 专用</td>
 <td>跨平台</td>
 <td>跨平台</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>易用性</strong></td>
 <td>高，提供 GUI 管理工具</td>
 <td>中，需要手动配置和管理</td>
 <td>高，许多 GUI 客户端可选</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>分布式功能</strong></td>
 <td>支持主从架构（VDFS）</td>
 <td>无</td>
 <td>原生分布式版本控制</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>学习曲线</strong></td>
 <td>平缓</td>
 <td>较陡</td>
@@ -1123,59 +1123,59 @@ Manager，可以在窗口的右边看到版本库的一些信息,比如状态,�
 <col style="width: 44%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th><strong>特性</strong></th>
 <th><strong>FSFS</strong></th>
 <th><strong>VDFS</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>全称</strong></td>
 <td>Flat File System</td>
 <td>VisualSVN Distributed File System</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>架构</strong></td>
 <td>单机存储</td>
 <td>分布式存储，支持主从架构</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>数据存储</strong></td>
 <td>数据存储为普通的平面文件，使用自定义格式</td>
 <td>使用专有的数据存储格式，支持跨服务器的双向数据复制</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>部署模型</strong></td>
 <td>适合单一服务器或简单的网络共享环境</td>
 <td>适合需要多服务器同步和高可用性的分布式环境</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>功能等价性</strong></td>
 <td>是标准 Subversion 的默认后端，功能全面，适用于几乎所有使用场景</td>
 <td>功能等同于 FSFS，但支持透明的分布式数据同步</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>数据复制</strong></td>
 <td>不支持内置的分布式数据复制功能，需要依赖第三方工具实现</td>
 <td>内置支持主从复制，主库的提交会自动同步到从库；从库也支持写操作，写入的数据会同步到主库及其他从库</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>数据一致性</strong></td>
 <td>单机存储，无数据一致性问题</td>
 <td>提供强一致性，确保主库和从库之间的数据同步</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>扩展性</strong></td>
 <td>不适合大规模分布式环境</td>
 <td>专为分布式环境设计，适合需要高扩展性和容错能力的场景</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>配置复杂度</strong></td>
 <td>配置简单，适合小型团队或单机开发环境</td>
 <td>配置较复杂，需要设置主库和从库</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>使用成本</strong></td>
 <td>开源且免费</td>
 <td>专有技术，可能需要购买 VisualSVN Server 企业版才能使用</td>

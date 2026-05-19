@@ -116,12 +116,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
+    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 $\LaTeX{}$ 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lshort笔记：排版样式设定（五）">
 <meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 \(\LaTeX{}\) 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
+<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章内容将一览如何修改 $\LaTeX{}$ 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121100704497.png">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101016109.png">
@@ -146,7 +146,7 @@
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125170414339.png">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125174255995.png">
 <meta property="article:published_time" content="2025-01-30T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.773Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.340Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="lshort">
 <meta name="twitter:card" content="summary">
@@ -951,7 +951,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1002,25 +1002,25 @@ if(canvas.getContext){
 <p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
 (不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
-<p>本章内容将一览如何修改 <span class="math inline">\(\LaTeX{}\)</span>
+<p>本章内容将一览如何修改 <span class="math inline">$\LaTeX{}$</span>
 的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。</p>
 <span id="more"></span>
 <hr />
 <h2 id="字体和字号">字体和字号</h2>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 根据文档的逻辑结构（章节、脚注等）来选择默认的字体样式以及字号。需要更改字体样式或字号的话，可以使用
 下表 中列出的命令。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121100704497.png" alt="image-20250121100704497" style="zoom:67%;" /></p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101016109.png" alt="image-20250121101016109" style="zoom:67%;" /></p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121101037202.png" alt="image-20250121101037202" style="zoom:67%;" /></p>
 <h3 id="字体样式">字体样式</h3>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 提供了两组修改字体的命令，见上表。其中诸如 <code>\bfseries</code>
 形式的命令将会影响之后所有的字符，如果想要让它在局部生效，需要用花括号<strong>分组</strong>，也就是写成<code>\bfseries &lt;some text&gt;</code>
 这样的形式；对应的 <code>\textbf</code>
 形式带一个参数，只改变参数内部的字体，更为常用。</p>
 <p>在公式中，直接使用<code>\textbf</code>
-等命令不会起效，甚至报错。<span class="math inline">\(\LaTeX{}\)</span>
+等命令不会起效，甚至报错。<span class="math inline">$\LaTeX{}$</span>
 提供了修改数学字母样式的命令，如 <code>\mathbf</code> 等。</p>
 <h3 id="字号">字号</h3>
 <p>字号命令实际大小依赖于所使用的文档类及其选项。下表列出了这些命令在标准文档类中的绝对大小，单位为
@@ -1029,7 +1029,7 @@ pt。</p>
 <p>使用字号命令的时候，通常也需要用花括号进行分组，如同
 <code>\rmfamily</code> 那样。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121102848593.png" alt="image-20250121102848593" style="zoom:67%;" /></p>
-<p><span class="math inline">\(\LaTeX{}\)</span> 还提供了一个基础的命令
+<p><span class="math inline">$\LaTeX{}$</span> 还提供了一个基础的命令
 <code>\fontsize</code> 用于设定任意大小的字号：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\fontsize</span>&#123;&lt;size&gt;&#125;&#123;&lt;base line-skip&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><code>\fontsize</code> 用到两个参数，<code>&lt;size&gt;</code>
@@ -1044,13 +1044,12 @@ pt。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250121105449196.png" alt="image-20250121105449196" style="zoom:67%;" /></p>
 <h3 id="字体编码">字体编码</h3>
 <p>常见的正文字体编码有 <code>OT1</code> 和 <code>T1</code> 等。<span
-class="math inline">\(\LaTeX{}\)</span> 默认使用兼容 plainTeX 的
+class="math inline">$\LaTeX{}$</span> 默认使用兼容 plainTeX 的
 <code>OT1</code> 编码，使用起来有诸多限制：高德纳在设计 Computer Modern
 字体时认为一些符号，如大于号、小于号等，原则上都应该在公式里出现，所以在正文字体里这些符号所在的位置被其它符号所占据（
 <code>OT1</code> 字体编码、<code>rmfamily</code> 和 <code>sffamly</code>
 字体族下， <code>&lt;</code> 和 <code>&gt;</code> 排版 <span
-class="math inline">\(!\)</span> 和 <span
-class="math inline">\(¿\)</span>
+class="math inline">!</span> 和 <span class="math inline">¿</span>
 两个倒立的标点符号，正常的大于号和小于号可用命令
 <code>\textgreater</code> 和 <code>\textless</code>
 输入；<code>ttfamily</code> 字体族下是正常的大于号和小于号）。扩展的
@@ -1064,9 +1063,9 @@ class="math inline">\(¿\)</span>
 <h3 id="使用-fontspec-宏包更改字体">使用 <code>fontspec</code>
 宏包更改字体</h3>
 <p><code>xelatex</code> 和 <code>lualatex</code>
-编译命令能够支持直接调用系统和 <span
-class="math inline">\(\TeX{}\)</span> 发行版中的 <code>.ttf</code> 或
-<code>.otf</code> 格式字体(Linux 下的 TeXLive 为了令 XeTeX 使用 OpenType
+编译命令能够支持直接调用系统和 <span class="math inline">$\TeX{}$</span>
+发行版中的 <code>.ttf</code> 或 <code>.otf</code> 格式字体(Linux 下的
+TeXLive 为了令 XeTeX 使用 OpenType
 字体，需要额外的配置）。相比于前文介绍的字体宏包，我们有了更多自由修改字体的余地。</p>
 <p><code>xelatex</code> 和 <code>lualatex</code>
 命令下支持用户调用字体的宏包是
@@ -1117,12 +1116,12 @@ class="math inline">\(\TeX{}\)</span> 发行版中的 <code>.ttf</code> 或
 <hr />
 <h2 id="文字装饰和强调">文字装饰和强调</h2>
 <p>强调文字的方法，或者是添加下划线等装饰物，或者是改变文字的字体。</p>
-<p><span class="math inline">\(\LaTeX{}\)</span> 定义了
+<p><span class="math inline">$\LaTeX{}$</span> 定义了
 <code>\underline</code> 命令用来为文字添加下划线：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">An <span class="keyword">\underline</span>&#123;underlined&#125; text.</span><br></pre></td></tr></table></figure>
-<p><span class="math display">\[
+<p><span class="math display">$$
 An \  \underline{underlined} \  text.
-\]</span></p>
+$$</span></p>
 <p><code>\underline</code>
 命令生成下划线的样式不够灵活，不同的单词可能生成高低各异的下划线，并且无法换行。<code>ulem</code>
 宏包提供了更灵活的解决方案，它提供的 <code>\uline</code>
@@ -1146,7 +1145,7 @@ An \  \underline{underlined} \  text.
 的部分，如 `0pt plus 5pt。</p>
 <p>长度的数值还可以用长度变量本身或其倍数来表达，如
 <code>2.5\\parindent</code> 等。</p>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 预定义了大量的长度变量用于控制版面格式。如页面宽度和高度、首行缩进、段落间距等。如果需要自定义长度变量，需使用如下命令：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\newlength</span>&#123;<span class="keyword">\&lt;</span>length command&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>长度变量可以用 <code>\setlength</code> 赋值，或用
@@ -1174,13 +1173,13 @@ An \  \underline{underlined} \  text.
 <p>它们和设置行距的命令一样，在分段时生效。</p>
 <p>控制段落缩进的命令为：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\indent</span></span><br><span class="line"><span class="keyword">\noindent</span></span><br></pre></td></tr></table></figure>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 默认在段落开始时缩进，长度为用上述命令设置的
 <code>parindent</code>。如果需要在某一段不缩进，可在段落开头使用<code>\noindent</code>
 命令。相反地，<code>\indent</code>
 命令强制开启一段首行缩进的段落。在段落开头使用多个 <code>\indent</code>
 命令可以累加缩进量。</p>
-<p><span class="math inline">\(\LaTeX{}\)</span> 还默认在
+<p><span class="math inline">$\LaTeX{}$</span> 还默认在
 <code>\chapter</code>、<code>\section</code>
 等章节标题命令之后的第一段不缩进(<code>ctex</code>
 宏包和文档类默认按照中文习惯保持标题后第一段的首行缩进)。如果不习惯这种设定，可以调用
@@ -1189,7 +1188,7 @@ An \  \underline{underlined} \  text.
 <code>0.8ex</code> 到 <code>1.5ex</code> 变动：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\setlength</span>&#123;<span class="keyword">\parskip</span>&#125;&#123;1ex plus 0.5ex minus 0.2ex&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="水平间距">水平间距</h3>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 默认为将单词之间的“空格”转化为水平间距。如果需要在文中手动插入额外的水平间距，可使用
 <code>\hspace</code> 命令：</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125143708280.png" alt="image-20250125143708280" style="zoom:67%;" /></p>
@@ -1215,7 +1214,7 @@ An \  \underline{underlined} \  text.
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125160343041.png" alt="image-20250125160343041" style="zoom:67%;" /></p>
 <h3 id="垂直间距">垂直间距</h3>
 <p>在页面中，段落、章节标题、行间公式、列表、浮动体等元素之间的间距是
-<span class="math inline">\(\LaTeX{}\)</span> 预设的。比如
+<span class="math inline">$\LaTeX{}$</span> 预设的。比如
 <code>\parskip</code>，默认设置为 <code>0pt plus 1pt</code>。</p>
 <p>如果我们想要人为地增加段落之间的垂直间距，可以在两个段落之间的位置使用
 <code>\vspace</code> 命令：</p>
@@ -1231,13 +1230,13 @@ An \  \underline{underlined} \  text.
 <code>\vspace</code> 也可以在段落内使用，区别在于 <code>\vspace</code>
 只引入垂直间距而不断行：</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161039548.png" alt="image-20250125161039548" style="zoom:67%;" /></p>
-<p>另外 <span class="math inline">\(\LaTeX{}\)</span>
+<p>另外 <span class="math inline">$\LaTeX{}$</span>
 还提供了<code>\bigskip</code>, <code>\medskip</code>,
 <code>\smallskip</code> 来增加预定义长度的垂直间距。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125161301100.png" alt="image-20250125161301100" style="zoom:67%;" /></p>
 <hr />
 <h2 id="页面和分栏">页面和分栏</h2>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 允许用户通过为文档类指定选项来控制纸张的大小，包括
 <code>a4paper</code>、<code>letterpaper</code>
 等等，并配合字号设置了适合的页边距。</p>
@@ -1280,19 +1279,18 @@ An \  \underline{underlined} \  text.
 文件的真实大小，而在文档类选项中设置的参数实际上只影响输出区域。<code>geometry</code>
 宏包还能够修改页眉页脚高度、边注宽度等参数，并且能比较好地处理各参数之间的依赖关系。更详细的用法不再赘述，感兴趣的用户可查阅其帮助文档。</p>
 <h3 id="页面内容的垂直对齐">页面内容的垂直对齐</h3>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 默认将页面内容在垂直方向分散对齐。对于有大量图表的文档，许多时候想要做到排版匀称的页面很困难，垂直分散对齐会造成某些页面的垂直间距过宽，还可能报大量的
 <code>Underfull \\vbox</code> 警告。<span
-class="math inline">\(\LaTeX{}\)</span>
+class="math inline">$\LaTeX{}$</span>
 还提供了另一种策略：将页面内容向顶部对齐，给底部留出高度不一的空白。</p>
 <p>以下命令分别令页面在垂直方向向顶部对齐/分散对齐：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\raggedbottom</span></span><br><span class="line"><span class="keyword">\flushbottom</span></span><br></pre></td></tr></table></figure>
 <h3 id="分栏">分栏</h3>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 支持简单的单栏或双栏排版。标准文档类的全局选项
 <code>onecolumn</code>、<code>twocolumn</code>
-可控制全文分单栏或双栏排版。<span
-class="math inline">\(\LaTeX{}\)</span>
+可控制全文分单栏或双栏排版。<span class="math inline">$\LaTeX{}$</span>
 也提供了切换单/双栏排版的命令：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\onecolumn</span></span><br><span class="line"><span class="keyword">\twocolumn</span>[&lt;one-column top material&gt;]</span><br></pre></td></tr></table></figure>
 <p><code>\twocolumn</code>
@@ -1310,7 +1308,7 @@ class="math inline">\(\LaTeX{}\)</span>
 <p><code>multicol</code>
 宏包能够在一页之中切换单栏/多栏，也能处理跨页的分栏，且各栏的高度分布平衡。但代价是<strong>在
 <code>multicols</code> 环境中无法正常使用 <span
-class="math inline">\(\texttt{table}\)</span> 和 <code>figure</code>
+class="math inline"><code>table</code></span> 和 <code>figure</code>
 等浮动体环境</strong>，它会直接让浮动体丢失。<code>multicols</code>
 环境中只能用跨栏的 <code>table*</code> 和 <code>figure*</code>
 环境，或者用 <code>float</code> 宏包提供的 <code>H</code>
@@ -1318,14 +1316,13 @@ class="math inline">\(\texttt{table}\)</span> 和 <code>figure</code>
 <hr />
 <h2 id="页眉页脚">页眉页脚</h2>
 <h3 id="基本的页眉页脚样式">基本的页眉页脚样式</h3>
-<p><span class="math inline">\(\LaTeX{}\)</span> 中提供了命令
+<p><span class="math inline">$\LaTeX{}$</span> 中提供了命令
 <code>\pagestyle</code> 来修改页眉页脚的样式：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\pagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p>命令 <code>\thispagestyle</code> 只影响当页的页眉页脚样式：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\thispagestyle</span>&#123;&lt;page-style&gt;&#125;</span><br></pre></td></tr></table></figure>
 <p><code>&lt;page-style&gt;</code> 参数为样式的名称，在 <span
-class="math inline">\(\LaTeX{}\)</span> 里预定义了四类样式，见
-下表。</p>
+class="math inline">$\LaTeX{}$</span> 里预定义了四类样式，见 下表。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250125170414339.png" alt="image-20250125170414339" style="zoom:67%;" /></p>
 <p>其中 <code>headings</code> 的情况较为复杂：</p>
 <ul>
@@ -1350,7 +1347,7 @@ class="math inline">\(\LaTeX{}\)</span> 里预定义了四类样式，见
 内部就使用了 <code>\pagenumbering</code> 命令切换页码样式。</p>
 <h3 id="手动更改页眉页脚的内容">手动更改页眉页脚的内容</h3>
 <p>对于 <code>headings</code> 或者 <code>myheadings</code> 样式，<span
-class="math inline">\(\LaTeX{}\)</span>
+class="math inline">$\LaTeX{}$</span>
 允许用户使用命令手动修改页眉上面的内容，特别是因为使用了
 <code>\chapter*</code> 等命令而无法自动生成页眉页脚的情况：</p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\markright</span>&#123;&lt;right-mark&gt;&#125;</span><br><span class="line"><span class="keyword">\markboth</span>&#123;&lt;left-mark&gt;&#125;&#123;&lt;right-mark&gt;&#125;</span><br></pre></td></tr></table></figure>
@@ -1360,7 +1357,7 @@ class="math inline">\(\LaTeX{}\)</span>
 的内容分别预期出现在左页（偶数页）和右页（奇数页）。 事实上
 <code>\chapter</code> 和 <code>\section</code> 等章节命令内部也使用
 <code>\markboth</code> 或者 <code>\markright</code> 生成页眉。</p>
-<p><span class="math inline">\(\LaTeX{}\)</span>
+<p><span class="math inline">$\LaTeX{}$</span>
 默认将页眉的内容都转为大写字母。如需要保持字母的大小写，可以尝试以下代码（但是这不能改变页眉的斜体样式<code>\slshape</code>，斜体定义在
 <code>headings</code> 样式里的。如不喜欢斜体，可在 <code>markboth</code>
 等命令参数里先使用

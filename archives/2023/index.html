@@ -116,29 +116,23 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文记录了C++中与 对象和类 相关的容易遗忘的一些知识。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="对象和类（八）">
-<meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Neozhuang&#39;s Blog">
+<meta property="og:url" content="https://invinc-z.com/archives/2023/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文记录了C++中与 对象和类 相关的容易遗忘的一些知识。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-07T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-19T11:10:32.339Z">
 <meta property="article:author" content="Neozhuang">
-<meta property="article:tag" content="C++ Primer Plus">
-<meta property="article:tag" content="OOP">
-<meta property="article:tag" content="抽象">
+<meta property="article:tag" content="编程技术,C,C++,Linux,LaTeX">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/">
+<link rel="canonical" href="https://invinc-z.com/archives/2023/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/","path":"notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/","title":"对象和类（八）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2023/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>对象和类（八） | Neozhuang's Blog</title>
+<title>归档 | Neozhuang's Blog</title>
   
 
 
@@ -182,7 +176,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/archives/2023/"}</script>
   <script src="/js/third-party/quicklink.js" defer></script>
  
 
@@ -226,7 +220,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Neozhuang's Blog</p>
+      <h1 class="site-title">Neozhuang's Blog</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
@@ -280,7 +274,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -293,7 +287,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E5%92%8C%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">抽象和类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-number">2.</span> <span class="nav-text">类作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%9E%9A%E4%B8%BE"><span class="nav-number">2.1.</span> <span class="nav-text">有作用域枚举</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-number">3.</span> <span class="nav-text">运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E9%99%90%E5%88%B6"><span class="nav-number">3.1.</span> <span class="nav-text">重载限制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="nav-number">4.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">4.1.</span> <span class="nav-text">类型转换构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="nav-number">4.2.</span> <span class="nav-text">转换函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">5.</span> <span class="nav-text">特殊成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.1.</span> <span class="nav-text">默认构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">5.2.</span> <span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">5.3.</span> <span class="nav-text">赋值运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-number">6.</span> <span class="nav-text">动态内存分配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E4%B8%AD%E4%BD%BF%E7%94%A8new"><span class="nav-number">6.1.</span> <span class="nav-text">构造函数中使用new</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.</span> <span class="nav-text">成员变量初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">7.1.</span> <span class="nav-text">构造函数初始化列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%86%85%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">7.2.</span> <span class="nav-text">类内初始化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8B%E5%85%83"><span class="nav-number">8.</span> <span class="nav-text">友元</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -879,443 +872,51 @@ if(canvas.getContext){
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        
+        <span class="collection-header">不错! 目前共计 68 篇日志。 继续努力。</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/avatar.jpg">
-      <meta itemprop="name" content="Neozhuang">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="对象和类（八） | Neozhuang's Blog">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          对象和类（八）
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2024-08-08 05:12:18" itemprop="dateCreated datePublished" datetime="2024-08-08T05:12:18+08:00">2024-08-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/c-primer-plus/" itemprop="url" rel="index"><span itemprop="name">C++ Primer Plus</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span id="busuanzi_value_page_pv"></span>
-    </span>
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>15 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><p>本文记录了C++中与 对象和类 相关的容易遗忘的一些知识。</p>
-<span id="more"></span>
-<hr />
-<blockquote>
-<p>面向对象编程（OOP）最重要的特性：</p>
-<ul>
-<li>抽象</li>
-<li>封装与数据隐藏</li>
-<li>多态性</li>
-<li>继承</li>
-<li>代码的可重用性</li>
-</ul>
-</blockquote>
-<hr />
-<h2 id="抽象和类">抽象和类</h2>
-<p>指定一种基本类型会起到三个作用：</p>
-<ul>
-<li>它决定了一个数据对象需要多少内存。</li>
-<li>它决定了内存中的位如何被解释。（长整数和浮点数在内存中可能使用相同数量的位，但它们被转换为数值的方式不同。）</li>
-<li>它决定了可以使用该数据对象执行哪些操作或方法。</li>
-</ul>
-<p>将实现细节整合在一起并将它们与抽象分离开来，这被称为封装。</p>
-<p>类的基本思想是数据抽象和封装。数据抽象是一种依赖于接口和实现分离的编程（以及设计）技术。<strong>类的接口包括用户所能执行的操作</strong>；类的实现则包括类的数据成员、负责接口实现的函数体以及定义类所需的各种私有函数。</p>
-<hr />
-<h2 id="类作用域">类作用域</h2>
-<h3 id="有作用域枚举">有作用域枚举</h3>
-<p>为了解决如下形式的处于同一作用域，枚举值名称冲突：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">egg</span> &#123;Small, Medium, Large, Jumbo&#125;;</span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">t_shirt</span> &#123;Small, Medium, Large, Xlarge&#125;;</span><br></pre></td></tr></table></figure>
-<p>C++11提供了一种新的枚举形式，其枚举器具有类作用域，从而避免了这一问题。这种形式的声明如下所示：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum class</span> <span class="title class_">egg</span> &#123;Small, Medium, Large, Jumbo&#125;;</span><br><span class="line"><span class="keyword">enum class</span> <span class="title class_">t_shirt</span> &#123;Small, Medium, Large, Xlarge&#125;;</span><br></pre></td></tr></table></figure>
-<p>现在需要使用枚举名称来限定枚举数：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">egg choice = egg::Large; <span class="comment">// the Large enumerator of the egg enum</span></span><br><span class="line">t_shirt Floyd = t_shirt::Large; <span class="comment">// the Large enumerator of the t_shirt enum</span></span><br></pre></td></tr></table></figure>
-<p>C++11还加强了作用域枚举的类型安全性。常规枚举在某些情况下会自动转换为整数类型，例如赋值给<code>int</code>变量或在比较表达式中使用，但作用域枚举不会隐式转换为整数类型。</p>
-<p>默认情况下，C++11 作用域枚举的底层类型是
-<code>int</code>，此外，有一种语法用于表示不同的选择：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// underlying type for pizza is short</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">class</span> : <span class="type">short</span> pizza &#123;Small, Medium, Large, XLarge&#125;;</span><br></pre></td></tr></table></figure>
-<p><code>: short</code> 指定基础类型为
-<code>short</code>。基础类型必须是整数类型。在 C++11
-标准下，也可以使用这种语法来指定无作用域枚举的基础类型，但如果你不选择该类型，编译器所做的选择则取决于具体实现。</p>
-<hr />
-<h2 id="运算符重载">运算符重载</h2>
-<h3 id="重载限制">重载限制</h3>
-<ol type="1">
-<li><p>重载的运算符必须至少有一个操作数是用户定义的类型。这会阻止你对标准类型重载运算符。</p></li>
-<li><p>不能以违反原始运算符语法规则的方式使用运算符。例如，不能重载取模运算符（%），使其可以用于单个操作数。</p></li>
-<li><p>不能创建新的运算符符号。例如，不能定义一个
-<code>operator**()</code> 函数来表示幂运算。</p></li>
-<li><p>以下运算符不能重载：</p>
-<table>
-<thead>
-<tr class="header">
-<th>Operator</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>sizeof</code></td>
-<td>The sizeof operator</td>
-</tr>
-<tr class="even">
-<td><code>.</code></td>
-<td>The membership operator</td>
-</tr>
-<tr class="odd">
-<td><code>.*</code></td>
-<td>The pointer-to-member operator</td>
-</tr>
-<tr class="even">
-<td><code>::</code></td>
-<td>The scope-resolution operator</td>
-</tr>
-<tr class="odd">
-<td><code>?:</code></td>
-<td>The conditional operator</td>
-</tr>
-<tr class="even">
-<td><code>typeid</code></td>
-<td>An RTTI operator</td>
-</tr>
-<tr class="odd">
-<td><code>const_cast</code></td>
-<td>A type cast operator</td>
-</tr>
-<tr class="even">
-<td><code>dynamic_cast</code></td>
-<td>A type cast operator</td>
-</tr>
-<tr class="odd">
-<td><code>reinterpret_cast</code></td>
-<td>A type cast operator</td>
-</tr>
-<tr class="even">
-<td><code>static_cast</code></td>
-<td>A type cast operator</td>
-</tr>
-</tbody>
-</table></li>
-<li><p>只能使用成员函数（不支持非成员函数）来重载以下运算符：</p>
-<table>
-<thead>
-<tr class="header">
-<th>Operator</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>=</code></td>
-<td>Assignment operator</td>
-</tr>
-<tr class="even">
-<td><code>()</code></td>
-<td>Function call operator</td>
-</tr>
-<tr class="odd">
-<td><code>[]</code></td>
-<td>Subscripting operator</td>
-</tr>
-<tr class="even">
-<td><code>-&gt;</code></td>
-<td>Class member access by pointer operator</td>
-</tr>
-</tbody>
-</table></li>
-</ol>
-<hr />
-<h2 id="类型转换">类型转换</h2>
-<blockquote>
-<p>应当谨慎使用隐式转换函数。通常，显式调用的函数才是最佳选择。</p>
-</blockquote>
-<h3 id="类型转换构造函数">类型转换构造函数</h3>
-<p>只有一个参数的类构造函数充当着将参数类型的值转换为该类类型的指令。</p>
-<p>关键字<code>explicit</code>，用于关闭自动转换功能，即在构造函数声明前加<code>explicit</code>。</p>
-<h3 id="转换函数">转换函数</h3>
-<p>一种被称为转换函数的特殊类成员运算符函数，充当着将类对象转换为其他某种类型的指令。</p>
-<p>要转换为<code>typeName</code>类型，需使用以下形式的转换函数：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">typeName</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-<p>当你将类对象赋值给该类型<code>typeName</code>的变量，或者使用该类型<code>typeName</code>的强制类型转换运算符时，这个转换函数会被自动调用。</p>
-<p>请注意以下几点：</p>
-<ul>
-<li>转换函数必须是类方法。</li>
-<li>转换函数不得指定返回类型。</li>
-<li>转换函数不得有参数。</li>
-</ul>
-<p>例如，一个转换为<code>double</code>类型的函数会有这样的原型：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
-<p>关键字<code>explicit</code>，用于关闭隐式转换功能。</p>
-<hr />
-<h2 id="特殊成员函数">特殊成员函数</h2>
-<p>C++会自动提供以下成员函数：</p>
-<ul>
-<li>如果你没有定义任何构造函数，会有一个默认构造函数</li>
-<li>如果你没有定义的话，会有一个默认的析构函数</li>
-<li>如果你不定义一个拷贝构造函数的话</li>
-<li>如果你不定义赋值运算符的话，系统会提供一个赋值运算符</li>
-<li>如果你不定义地址运算符的话</li>
-</ul>
-<h3 id="默认构造函数">默认构造函数</h3>
-<p>默认构造函数是指没有参数的构造函数，或者所有参数都有默认值的构造函数。如果你没有定义任何构造函数，编译器会为你定义一个默认构造函数。它的存在使你能够创建对象。</p>
-<p>自动默认构造函数还有一个作用，就是为任何基类以及任何属于其他类对象的成员调用默认构造函数。</p>
-<p>此外，如果你在编写派生类构造函数时，没有在成员初始化列表中显式调用基类构造函数，编译器会使用基类的默认构造函数来构造新对象中的基类部分。如果不存在基类默认构造函数，在这种情况下就会出现编译时错误。</p>
-<p>如果你定义了任何类型的构造函数，编译器都不会为你定义默认构造函数。在这种情况下，如果需要默认构造函数，就需要你自己来提供。</p>
-<h3 id="拷贝构造函数">拷贝构造函数</h3>
-<p>类的拷贝构造函数是一种以该类类型的对象作为参数的构造函数。通常，其声明的参数是对该类类型的常量引用。</p>
-<p>类的拷贝构造函数用于以下情况：</p>
-<ul>
-<li>当一个新对象被初始化为同一类的对象时</li>
-<li>当对象通过值传递给函数时</li>
-<li>当函数通过值返回对象时</li>
-<li>当编译器生成临时对象时</li>
-</ul>
-<p>调用时机：拷贝构造函数在每当<strong>创建新对象</strong>并将其初始化为同一类型的现有对象时被调用。</p>
-<p>如果一个程序没有（显式或隐式地）使用拷贝构造函数，编译器会提供一个原型，但不会提供函数定义。否则，程序会定义一个执行成员逐一初始化的拷贝构造函数。也就是说，新对象的每个成员都会被初始化为原始对象对应成员的值。如果某个成员本身是一个类对象，那么成员逐一初始化会使用为该特定类定义的拷贝构造函数。</p>
-<p>在某些情况下，成员逐一初始化并不可取。例如，用<code>new</code>初始化的成员指针通常需要进行深拷贝。或者，某个类可能包含一个需要修改的静态变量。在这些情况下，你需要定义自己的拷贝构造函数。</p>
-<h3 id="赋值运算符">赋值运算符</h3>
-<p>默认的赋值运算符用于处理将一个对象赋值给同一个类的另一个对象。不要将赋值与初始化混淆。如果一条语句创建了一个新对象，那它使用的是初始化；如果一条语句更改了现有对象的值，那它就是赋值。</p>
-<p>默认赋值使用逐成员赋值。如果某个成员本身是类对象，那么默认的逐成员赋值会使用为该特定类定义的赋值运算符。如果需要显式定义复制构造函数，出于同样的原因，也需要显式定义赋值运算符。</p>
-<p>注意事项：</p>
-<ul>
-<li>由于目标对象可能已经引用了先前分配的数据，该函数应使用<code>delete []</code>来释放之前的内存占用。</li>
-<li>该函数应防止将对象赋值给自身；否则，前面描述的内存释放操作可能会在对象内容被重新赋值之前就将其清除。</li>
-<li>该函数返回对调用对象的引用。</li>
-</ul>
-<p>示例：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">StringBad &amp; StringBad::<span class="keyword">operator</span>=(<span class="type">const</span> StringBad &amp; st)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == &amp;st) <span class="comment">// object assigned to itself</span></span><br><span class="line">        <span class="keyword">return</span> *<span class="keyword">this</span>; <span class="comment">// all done</span></span><br><span class="line">    <span class="keyword">delete</span> [] str; <span class="comment">// free old string</span></span><br><span class="line">    len = st.len;</span><br><span class="line">    str = <span class="keyword">new</span> <span class="type">char</span> [len + <span class="number">1</span>]; <span class="comment">// get space for new string</span></span><br><span class="line">    std::<span class="built_in">strcpy</span>(str, st.str); <span class="comment">// copy the string</span></span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>; <span class="comment">// return reference to invoking object</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>赋值不会创建新对象，因此不必调整静态数据成员<code>num_strings</code>的值。</p>
-<hr />
-<h2 id="动态内存分配">动态内存分配</h2>
-<p>通常情况下，在程序运行时决定许多事情（例如使用多少存储空间）要比在编译时决定好得多。</p>
-<p>静态数据成员在类声明中声明，并在包含类方法的文件中初始化。初始化时使用作用域运算符来指明该静态成员属于哪个类。不过，如果静态成员是<code>const</code>整数类型或枚举类型，则可以在类声明中直接初始化。</p>
-<h3 id="构造函数中使用new">构造函数中使用new</h3>
-<p>在使用<code>new</code>来初始化对象的指针成员时，必须格外小心。具体来说，应该执行以下操作：</p>
-<ul>
-<li>如果你在构造函数中使用<code>new</code>来初始化指针成员，那么你应该在析构函数中使用<code>delete</code>。</li>
-<li><code>new</code>和<code>delete</code>的使用应当兼容。你应当将<code>new</code>与<code>delete</code>配对使用，将<code>new []</code>与<code>delete []</code>配对使用。</li>
-<li>如果存在多个构造函数，所有构造函数都应采用相同的方式使用<code>new</code>（要么都带括号，要么都不带括号）。析构函数只有一个，因此所有构造函数都必须与该析构函数兼容。不过，在一个构造函数中用<code>new</code>初始化指针，而在另一个构造函数中用空指针（<code>0</code>，或者在C++11中用<code>nullptr</code>）初始化指针是允许的，因为对空指针执行<code>delete</code>操作（带或不带括号）都是可行的。</li>
-<li>应该定义一个拷贝构造函数，通过深拷贝将一个对象初始化为另一个对象。</li>
-<li>应该定义一个赋值运算符，通过深拷贝将一个对象复制到另一个对象。</li>
-</ul>
-<p>示例：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">StringBad::<span class="built_in">StringBad</span>(<span class="type">const</span> StringBad &amp; st)</span><br><span class="line">&#123;</span><br><span class="line">    num_strings++; <span class="comment">// handle static member update</span></span><br><span class="line">    len = st.len; <span class="comment">// same length</span></span><br><span class="line">    str = <span class="keyword">new</span> <span class="type">char</span> [len + <span class="number">1</span>]; <span class="comment">// allot space</span></span><br><span class="line">    std::<span class="built_in">strcpy</span>(str, st.str); <span class="comment">// copy string to new location</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr />
-<h2 id="成员变量初始化">成员变量初始化</h2>
-<h3 id="构造函数初始化列表">构造函数初始化列表</h3>
-<p>如果<strong>成员是<code>const</code>、引用，或者属于某种未提供默认构造函数</strong>的类类型，必须通过构造函数初始值列表为这些成员提供初值。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 成员初始化列表语法</span></span><br><span class="line">TableTennisPlayer::<span class="built_in">TableTennisPlayer</span> (<span class="type">const</span> string &amp; fn, <span class="type">const</span> string &amp; ln, <span class="type">bool</span> ht) : <span class="built_in">firstname</span>(fn),</span><br><span class="line"><span class="built_in">lastname</span>(ln), <span class="built_in">hasTable</span>(ht) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数体内赋值</span></span><br><span class="line">TableTennisPlayer::<span class="built_in">TableTennisPlayer</span> (<span class="type">const</span> string &amp; fn,</span><br><span class="line">                                      <span class="type">const</span> string &amp; ln, <span class="type">bool</span> ht)</span><br><span class="line">&#123;</span><br><span class="line">    firstname = fn;</span><br><span class="line">    lastname = ln;</span><br><span class="line">    hasTable = ht;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>成员初始化列表语法通过直接使用拷贝构造函数初始化，只用一个步骤。效率更高。</p>
-<p>函数体内赋值是先为类内成员调用默认的构造函数构造出一个对象，然后调用赋值运算符对齐赋值。多了一个赋值的动作。</p>
-<p>对于基本类型的成员而言没有区别。</p>
-<h3 id="类内初始化">类内初始化</h3>
-<p>C++11允许类内初始化（即在类定义中进行初始化）：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Queue</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    ...</span><br><span class="line">    Node * front = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">enum</span> &#123;Q_SIZE = <span class="number">10</span>&#125;;</span><br><span class="line">    Node * rear = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="type">int</span> items = <span class="number">0</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> qsize = Q_SIZE;</span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>这相当于使用成员初始化列表。不过，任何使用成员初始化列表的构造函数都会覆盖相应的类内初始化。</p>
-<hr />
-<h2 id="友元">友元</h2>
-<p>C++控制对类对象私有部分的访问。通常，公共类方法是唯一的访问途径，但有时这种限制对于特定的编程问题来说过于严格。在这种情况下，C++提供了另一种访问形式：友元。友元分为三种类型：</p>
-<ul>
-<li>友元函数</li>
-<li>友元类</li>
-<li>友元成员函数</li>
-</ul>
-<!-- flag of hidden posts -->
+      
+    <div class="collection-year">
+      <span class="collection-header">2024<span class="collection-year-count">34</span></span>
     </div>
 
-    
-    
-    
-
-    <footer class="post-footer"><div>
-    
-        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
-    
-</div>
-
-          <div class="reward-container">
-  <div>请我一杯咖啡吧！</div>
-  <button>
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
-        <span>支付宝</span>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-01-01T05:12:18+08:00"
+              content="2024-01-01">
+          01-01
+        </time>
       </div>
 
-  </div>
-</div>
-
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>本文作者： </strong>Neozhuang
-  </li>
-  <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/" title="对象和类（八）">https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/</a>
-  </li>
-  <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-          <div class="followme">
-  <span>欢迎关注我的其它发布渠道</span>
-
-  <div class="social-list">
-
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
+      <div class="post-title">
+          <a class="post-title-link" href="/notes-reading/excerpts-and-reflections/master-quotes/" itemprop="url">
+            <span itemprop="name">大师语录</span>
           </a>
       </div>
 
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-
-            <span class="label">GitHub</span>
-          </a>
-      </div>
-
-      <div class="social-item">
-          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
-            <span class="icon">
-              <i class="fas fa-blog"></i>
-            </span>
-
-            <span class="label">博客园</span>
-          </a>
-      </div>
-  </div>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/%E6%8A%BD%E8%B1%A1/" rel="tag"><i class="fa fa-tag"></i> 抽象</a>
-              <a href="/tags/c-primer-plus/" rel="tag"><i class="fa fa-tag"></i> C++ Primer Plus</a>
-              <a href="/tags/oop/" rel="tag"><i class="fa fa-tag"></i> OOP</a>
-          </div>
-
-        
-  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
-    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
-      <a class="a2a_button_copy_link"></a>
-      <a class="a2a_button_email"></a>
-      <a class="a2a_button_wechat"></a>
-      <a class="a2a_button_qzone"></a>
-      <a class="a2a_button_sina_weibo"></a>
-      <a class="a2a_button_facebook"></a>
-  </div>
-
-    </footer>
+      
+    </header>
   </article>
-</div>
 
 
-
-
-
-
-    
-  
-  <div class="comments giscus-container">
+    </div>
   </div>
   
   
+  
+
 </div>
   </main>
 

@@ -124,7 +124,7 @@
 <meta property="og:description" content="本文介绍了如何写Makefile文件。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-19T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.774Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.347Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="Makefile">
 <meta name="twitter:card" content="summary">
@@ -924,7 +924,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1068,29 +1068,29 @@ data-cites="字符">@字符</span></strong>在命令行前，那么，这个命�
 <col style="width: 48%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>赋值方式</th>
 <th>示例</th>
 <th>特点</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong><code>=</code></strong>（递归展开）</td>
 <td><code>A = $(B)</code></td>
 <td>使用时才展开，可能受后续赋值影响</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong><code>:=</code></strong>（立即展开）</td>
 <td><code>A := $(B)</code></td>
 <td>定义时立即展开，后续赋值不影响</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong><code>?=</code></strong>（条件赋值）</td>
 <td><code>A ?= default</code></td>
 <td>仅当变量未定义时赋值</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong><code>+=</code></strong>（追加赋值）</td>
 <td><code>A += value</code></td>
 <td>向已有变量追加值</td>
@@ -1114,7 +1114,7 @@ data-cites="字符">@字符</span></strong>在命令行前，那么，这个命�
 把字符串<code>&lt;text&gt;</code>中的<code>&lt;from&gt;</code>字符串替换成<code>&lt;to&gt;</code>。</li>
 <li>返回：函数返回被替换过后的字符串。</li>
 <li>示例：<code>$(subst ee,EE,feet on the street)</code>，结果返回 <span
-class="math inline">\(\textrm{fEEt on the strEEt}\)</span>。</li>
+class="math inline">fEEt on the strEEt</span>。</li>
 </ul>
 <h4 id="patsubst">patsubst</h4>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$(<span class="built_in">patsubst</span> &lt;pattern&gt;,&lt;replacement&gt;,&lt;text&gt;)</span></span><br></pre></td></tr></table></figure>
@@ -1444,96 +1444,96 @@ bar.c 符合模式%.c 的单词替换成%.o ，返回结果是x.c.o bar.o</li>
 <col style="width: 88%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">命令变量</th>
 <th style="text-align: left;">解释 | 默认命令</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">AR</td>
 <td style="text-align: left;">函数库打包程序。默认命令是ar</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">AS</td>
 <td style="text-align: left;">汇编语言编译程序。默认命令是as</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">CC</td>
 <td style="text-align: left;">C 语言编译程序。默认命令是cc</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">CXX</td>
 <td style="text-align: left;">C++ 语言编译程序。默认命令是g++</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">CO</td>
 <td style="text-align: left;">从RCS
 文件中扩展文件程序。默认命令是co</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">CPP</td>
 <td style="text-align: left;">C
 程序的预处理器（输出是标准输出设备）。默认命令是$(CC) –E</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">FC</td>
 <td style="text-align: left;">Fortran 和Ratfor
 的编译器和预处理程序。默认命令是f77</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">GET</td>
 <td style="text-align: left;">从SCCS
 文件中扩展文件的程序。默认命令是get</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">LEX</td>
 <td style="text-align: left;">Lex 方法分析器程序（针对于C
 或Ratfor）。默认命令是lex</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">PC</td>
 <td style="text-align: left;">Pascal 语言编译程序。默认命令是pc</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">YACC</td>
 <td style="text-align: left;">Yacc 文法分析器（针对于C
 程序）。默认命令是yacc</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">YACCR</td>
 <td style="text-align: left;">Yacc 文法分析器（针对于Ratfor
 程序）。默认命令是yacc –r</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">MAKEINFO</td>
 <td style="text-align: left;">转换Texinfo 源文件（.texi）到Info
 文件程序。默认命令是makeinfo</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">TEX</td>
 <td style="text-align: left;">从TeX 源文件创建TeX DVI
 文件的程序。默认命令是tex</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">TEXI2DVI</td>
 <td style="text-align: left;">从Texinfo 源文件创建TeX DVI
 文件的程序。默认命令是texi2dvi</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">WEAVE</td>
 <td style="text-align: left;">转换Web 到TeX 的程序。默认命令是weave</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">CWEAVE</td>
 <td style="text-align: left;">转换C Web 到TeX
 的程序。默认命令是cweave</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">CTANGLE</td>
 <td style="text-align: left;">转换C Web 到C。默认命令是ctangle</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">RM</td>
 <td style="text-align: left;">删除文件命令。默认命令是rm –f</td>
 </tr>
@@ -1543,64 +1543,64 @@ bar.c 符合模式%.c 的单词替换成%.o ，返回结果是x.c.o bar.o</li>
 <p>下面的这些变量都是相关上面的命令的参数。如果没有指明其默认值，那么其默认值都是空。</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">命令参数的变量</th>
 <th style="text-align: left;">解释 | 默认命令</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">ARFLAGS</td>
 <td style="text-align: left;">函数库打包程序AR
 命令的参数。默认值是rv</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">ASFLAGS</td>
 <td style="text-align: left;">汇编语言编译器参数。（当明显地调用.s 或.S
 文件时）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">CFLAGS</td>
 <td style="text-align: left;">C 语言编译器参数</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">CXXFLAGS</td>
 <td style="text-align: left;">C++ 语言编译器参数</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">COFLAGS</td>
 <td style="text-align: left;">RCS 命令参数</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">CPPFLAGS</td>
 <td style="text-align: left;">C 预处理器参数（C 和Fortran
 编译器也会用到）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">FFLAGS</td>
 <td style="text-align: left;">Fortran 语言编译器参数</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">GFLAGS</td>
 <td style="text-align: left;">SCCS “get”程序参数</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">LDFLAGS</td>
 <td style="text-align: left;">链接器参数（如：ld ）</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">LFLAGS</td>
 <td style="text-align: left;">Lex 文法分析器参数</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">PFLAGS</td>
 <td style="text-align: left;">Pascal 语言编译器参数</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">RFLAGS</td>
 <td style="text-align: left;">Ratfor 程序的Fortran 编译器参数</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">YFLAGS</td>
 <td style="text-align: left;">Yacc 文法分析器参数</td>
 </tr>
@@ -1615,44 +1615,44 @@ bar.c 符合模式%.c 的单词替换成%.o ，返回结果是x.c.o bar.o</li>
 <col style="width: 85%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">自动化变量</th>
 <th style="text-align: left;">说明</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><code>$@</code></td>
 <td style="text-align: left;">表示规则中的目标文件集。</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><code>$%</code></td>
 <td
 style="text-align: left;">仅当目标是函数库文件中，表示规则中的目标成员名。例如，如果一个目标是foo.a(bar.o)，那么，<code>$%</code>
 就是bar.o ，<code>$@</code> 就是foo.a 。如果目标不是函数库文件（Unix
 下是.a ，Windows下是.lib），那么，其值为空。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><code>$&lt;</code></td>
 <td
 style="text-align: left;">依赖目标中的第一个目标名字。如果依赖目标是以模式（即<code>%</code>）定义的，那么<code>$&lt;</code>将是符合模式的一系列的文件集。注意，其是一个一个取出来的。</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><code>$?</code></td>
 <td
 style="text-align: left;">所有比目标新的依赖目标的集合。以空格分隔。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><code>$^</code></td>
 <td
 style="text-align: left;">所有的依赖目标的集合。以空格分隔。如果在依赖目标中有多个重复的，那个这个变量会去除重复的依赖目标，只保留一份。</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;"><code>$+</code></td>
 <td style="text-align: left;">这个变量很像<code>$^</code>
 ，也是所有依赖目标的集合。只是它不去除重复的依赖目标。</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;"><code>$*</code></td>
 <td style="text-align: left;">这个变量表示目标模式中<code>%</code>
 及其之前的部分。如果目标是<code>dir/a.foo.b</code>

@@ -124,7 +124,7 @@
 <meta property="og:description" content="在计算机中，原码、反码、补码 是用于表示有符号整数的三种编码方式，主要用于解决二进制数的 正负表示 和 加减运算 问题。它们的核心区别在于 符号位的处理 和 负数的表示方法。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-04T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.774Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.344Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="编码">
 <meta name="twitter:card" content="summary">
@@ -926,7 +926,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -989,17 +989,17 @@ if(canvas.getContext){
 <h3 id="示例8位二进制">示例（8位二进制）</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>十进制</th>
 <th>原码表示（8位）</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>+5</td>
 <td><code>0000 0101</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td>-5</td>
 <td><code>1000 0101</code></td>
 </tr>
@@ -1029,17 +1029,17 @@ if(canvas.getContext){
 <h3 id="示例8位二进制-1">示例（8位二进制）</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>十进制</th>
 <th>反码表示（8位）</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>+5</td>
 <td><code>0000 0101</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td>-5</td>
 <td><code>1111 1010</code></td>
 </tr>
@@ -1052,26 +1052,26 @@ if(canvas.getContext){
 <col style="width: 23%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: center;">十进制运算</th>
 <th style="text-align: center;">反码计算</th>
 <th style="text-align: center;">反码计算结果（十进制）</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: center;">1 +（-1）= 0</td>
 <td style="text-align: center;">[0000 0001]反 + [1111 1110]反 = [1111
 1111]反 = [1000 0000]原</td>
 <td style="text-align: center;">-0</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: center;">1 +（-2）= -1</td>
 <td style="text-align: center;">[0000 0001]反 + [1111 1101]反 = [1111
 1110]反 = [1000 0001]原</td>
 <td style="text-align: center;">-1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: center;">-1 +（2）= 1</td>
 <td style="text-align: center;">[1111 1110]反 + [0000 0010]反 = [0000
 0000]反<strong>（溢出）</strong> = [0000 0000]原</td>
@@ -1105,17 +1105,17 @@ Complement）⭐（现代计算机标准）</h2>
 <h3 id="示例8位二进制-2">示例（8位二进制）</h3>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>十进制</th>
 <th>补码表示（8位）</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>+5</td>
 <td><code>0000 0101</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td>-5</td>
 <td><code>1111 1011</code></td>
 </tr>
@@ -1140,26 +1140,26 @@ Complement）⭐（现代计算机标准）</h2>
 <col style="width: 23%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: center;">十进制运算</th>
 <th style="text-align: center;">补码计算</th>
 <th style="text-align: center;">补码计算结果（十进制）</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: center;">1 +（-1）= 0</td>
 <td style="text-align: center;">[0000 0001]补 + [1111 1111]补 = [0000
 0000]补 = [0000 0000]原</td>
 <td style="text-align: center;">0（<strong>溢出位舍弃</strong>）</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: center;">1 +（-2）= -1</td>
 <td style="text-align: center;">[0000 0001]补 + [1111 1110]补 = [1111
 1111]补 = [1111 1110]反 = [1000 0001]原</td>
 <td style="text-align: center;">-1</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: center;">-1 +（2）= 1</td>
 <td style="text-align: center;">[1111 1111]补 + [0000 0010]补 = [0000
 0001]补 = [0000 0001]原</td>
@@ -1199,7 +1199,7 @@ Complement）⭐（现代计算机标准）</h2>
 <h2 id="三种编码对比8位二进制">三种编码对比（8位二进制）</h2>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>十进制</th>
 <th>原码</th>
 <th>反码</th>
@@ -1207,31 +1207,31 @@ Complement）⭐（现代计算机标准）</h2>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>+5</td>
 <td><code>0000 0101</code></td>
 <td><code>0000 0101</code></td>
 <td><code>0000 0101</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td>-5</td>
 <td><code>1000 0101</code></td>
 <td><code>1111 1010</code></td>
 <td><code>1111 1011</code></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>+0</td>
 <td><code>0000 0000</code></td>
 <td><code>0000 0000</code></td>
 <td><code>0000 0000</code></td>
 </tr>
-<tr>
+<tr class="even">
 <td>-0</td>
 <td><code>1000 0000</code></td>
 <td><code>1111 1111</code></td>
 <td><code>0000 0000</code></td>
 </tr>
-<tr>
+<tr class="odd">
 <td>-128</td>
 <td>无法表示</td>
 <td>无法表示</td>
@@ -1277,7 +1277,7 @@ Complement）⭐（现代计算机标准）</h2>
 <col style="width: 27%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>编码</th>
 <th>优点</th>
 <th>缺点</th>
@@ -1285,19 +1285,19 @@ Complement）⭐（现代计算机标准）</h2>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td><strong>原码</strong></td>
 <td>直观</td>
 <td><code>±0</code> 问题，运算复杂</td>
 <td>早期计算机（已淘汰）</td>
 </tr>
-<tr>
+<tr class="even">
 <td><strong>反码</strong></td>
 <td>改进负数表示</td>
 <td><code>±0</code> 仍存在，运算需调整</td>
 <td>过渡方案（基本不用）</td>
 </tr>
-<tr>
+<tr class="odd">
 <td><strong>补码</strong></td>
 <td>无 <code>±0</code> 问题，运算简单</td>
 <td>负数计算稍复杂</td>

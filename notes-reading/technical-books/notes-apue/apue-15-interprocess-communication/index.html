@@ -135,7 +135,7 @@
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260312204310928.png">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260312204403792.png">
 <meta property="article:published_time" content="2025-08-21T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.772Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.337Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="APUE">
 <meta name="twitter:card" content="summary">
@@ -937,7 +937,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1207,33 +1207,33 @@ IPC的IPC：<strong>消息队列、信号量以及共享内存</strong>。它们
 字段的值都不存在执行权限。另外，消息队列和共享内存使用术语“读”和“写”，而信号量则用术语“读”和“更改”（alter）。下表显示了每种IPC的6种权限。</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Permission</th>
 <th>Bit</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>user-read</td>
 <td>0400</td>
 </tr>
-<tr>
+<tr class="even">
 <td>user-write (alter)</td>
 <td>0200</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>group-read</td>
 <td>0040</td>
 </tr>
-<tr>
+<tr class="even">
 <td>group-write (alter)</td>
 <td>0020</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>other-read</td>
 <td>0004</td>
 </tr>
-<tr>
+<tr class="even">
 <td>other-write (alter)</td>
 <td>0002</td>
 </tr>
@@ -1279,7 +1279,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 <col style="width: 28%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th style="text-align: left;">IPC type</th>
 <th style="text-align: center;">Connectionless?</th>
 <th style="text-align: center;">Reliable?</th>
@@ -1289,7 +1289,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">message queues</td>
 <td style="text-align: center;">no</td>
 <td style="text-align: center;">yes</td>
@@ -1297,7 +1297,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 <td style="text-align: center;">yes</td>
 <td style="text-align: center;">yes</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">STREAMS</td>
 <td style="text-align: center;">no</td>
 <td style="text-align: center;">yes</td>
@@ -1305,7 +1305,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 <td style="text-align: center;">yes</td>
 <td style="text-align: center;">yes</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">UNIX domain stream socket</td>
 <td style="text-align: center;">no</td>
 <td style="text-align: center;">yes</td>
@@ -1313,7 +1313,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 <td style="text-align: center;">no</td>
 <td style="text-align: center;">no</td>
 </tr>
-<tr>
+<tr class="even">
 <td style="text-align: left;">UNIX domain datagram socket</td>
 <td style="text-align: center;">yes</td>
 <td style="text-align: center;">yes</td>
@@ -1321,7 +1321,7 @@ IPC的另一个问题是，这些IPC结构在文件系统中没有名称标识�
 <td style="text-align: center;">yes</td>
 <td style="text-align: center;">no</td>
 </tr>
-<tr>
+<tr class="odd">
 <td style="text-align: left;">FIFOs (non-STREAMS)</td>
 <td style="text-align: center;">no</td>
 <td style="text-align: center;">yes</td>

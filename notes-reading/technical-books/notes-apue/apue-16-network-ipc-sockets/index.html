@@ -125,7 +125,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20260315104627639.png">
 <meta property="article:published_time" content="2025-08-28T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-18T17:36:05.772Z">
+<meta property="article:modified_time" content="2026-05-19T11:10:32.337Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="APUE">
 <meta name="twitter:card" content="summary">
@@ -926,7 +926,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 01:36:05" itemprop="dateModified" datetime="2026-05-19T01:36:05+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -995,25 +995,25 @@ if(canvas.getContext){
 family）开头，因为每个域都有其自身的地址表示格式。</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Domain</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>AF_INET</td>
 <td>IPv4 Internet domain</td>
 </tr>
-<tr>
+<tr class="even">
 <td>AF_INET6</td>
 <td>IPv6 Internet domain (optional in POSIX.1)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>AF_UNIX</td>
 <td>UNIX domain</td>
 </tr>
-<tr>
+<tr class="even">
 <td>AF_UNSPEC</td>
 <td>unspecified</td>
 </tr>
@@ -1030,25 +1030,25 @@ family）开头，因为每个域都有其自身的地址表示格式。</p>
 <col style="width: 80%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>SOCK_DGRAM</td>
 <td>fixed-length, connectionless, unreliable messages</td>
 </tr>
-<tr>
+<tr class="even">
 <td>SOCK_RAW</td>
 <td>datagram interface to IP (optional in POSIX.1)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>SOCK_SEQPACKET</td>
 <td>fixed-length, sequenced, reliable, connection-oriented messages</td>
 </tr>
-<tr>
+<tr class="even">
 <td>SOCK_STREAM</td>
 <td>sequenced, reliable, bidirectional, connection-oriented byte
 streams</td>
@@ -1065,33 +1065,33 @@ streams</td>
 <code>UDP</code>。下表列出了为因特网域套接字定义的协议。</p>
 <table>
 <thead>
-<tr>
+<tr class="header">
 <th>Protocol</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>IPPROTO_IP</td>
 <td>IPv4 Internet Protocol</td>
 </tr>
-<tr>
+<tr class="even">
 <td>IPPROTO_IPV6</td>
 <td>IPv6 Internet Protocol (optional in POSIX.1)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>IPPROTO_ICMP</td>
 <td>Internet Control Message Protocol</td>
 </tr>
-<tr>
+<tr class="even">
 <td>IPPROTO_RAW</td>
 <td>Raw IP packets protocol (optional in POSIX.1)</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>IPPROTO_TCP</td>
 <td>Transmission Control Protocol</td>
 </tr>
-<tr>
+<tr class="even">
 <td>IPPROTO_UDP</td>
 <td>User Datagram Protocol</td>
 </tr>
@@ -1215,40 +1215,40 @@ streams</td>
 <col style="width: 81%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Flag</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>AI_ADDRCONFIG</td>
 <td>Query for whichever address type (IPv4 or IPv6) is configured.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>AI_ALL</td>
 <td>Look for both IPv4 and IPv6 addresses (used only with
 AI_V4MAPPED).</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>AI_CANONNAME</td>
 <td>Request a canonical name (as opposed to an alias).</td>
 </tr>
-<tr>
+<tr class="even">
 <td>AI_NUMERICHOST</td>
 <td>The host address is specified in numeric format; don’t try to
 translate it.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>AI_NUMERICSERV</td>
 <td>The service is specified as a numeric port number; don’t try to
 translate it.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>AI_PASSIVE</td>
 <td>Socket address is intended to be bound for listening.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>AI_V4MAPPED</td>
 <td>If no IPv6 addresses are found, return IPv4 addresses mapped in IPv6
 format.</td>
@@ -1273,36 +1273,36 @@ format.</td>
 <col style="width: 43%" />
 </colgroup>
 <thead>
-<tr>
+<tr class="header">
 <th>Flag</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>NI_DGRAM</td>
 <td>The service is datagram based instead of stream based.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>NI_NAMEREQD</td>
 <td>If the host name can’t be found, treat this as an error.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>NI_NOFQDN</td>
 <td>Return only the node name portion of the fully qualified domain name
 for local hosts.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>NI_NUMERICHOST</td>
 <td>Return the numeric form of the host address instead of the
 name.</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>NI_NUMERICSCOPE</td>
 <td>For IPv6, return the numeric form of the scope ID instead of the
 name.</td>
 </tr>
-<tr>
+<tr class="even">
 <td>NI_NUMERICSERV</td>
 <td>Return the numeric form of the service address (i.e., the port
 number) instead of the name.</td>
