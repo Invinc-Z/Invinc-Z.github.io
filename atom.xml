@@ -11,38 +11,38 @@
   <rights>All rights reserved 2026, Neozhuang</rights>
   <subtitle>Plain Life and Wonderful Moments</subtitle>
   <title>Neozhuang's Blog</title>
-  <updated>2026-05-19T11:10:32.336Z</updated>
+  <updated>2026-05-19T17:42:52.430Z</updated>
   <entry>
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
-    <category term="摘录与思考" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%91%98%E5%BD%95%E4%B8%8E%E6%80%9D%E8%80%83/"/>
-    <category term="摘录" scheme="https://invinc-z.com/tags/%E6%91%98%E5%BD%95/"/>
-    <id>https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-wangxiaobo/</id>
-    <link href="https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-wangxiaobo/"/>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Fiction" scheme="https://invinc-z.com/categories/reading-notes/fiction/"/>
+    <category term="王小波" scheme="https://invinc-z.com/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/"/>
+    <id>https://invinc-z.com/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/</id>
+    <link href="https://invinc-z.com/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/"/>
     <published>2026-04-18T21:12:18.000Z</published>
     <summary>
       <![CDATA[<p>本文摘录了王小波作品中一些自己喜欢的句子。</p>]]>
     </summary>
     <title>王小波作品摘录</title>
-    <updated>2026-05-19T11:10:32.336Z</updated>
+    <updated>2026-05-19T17:42:52.430Z</updated>
   </entry>
   <entry>
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
-    <category term="非技术阅读" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E9%9D%9E%E6%8A%80%E6%9C%AF%E9%98%85%E8%AF%BB/"/>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Fiction" scheme="https://invinc-z.com/categories/reading-notes/fiction/"/>
     <category term="三体" scheme="https://invinc-z.com/tags/%E4%B8%89%E4%BD%93/"/>
-    <id>https://invinc-z.com/notes-reading/non-technical-reading/notes-three-body/notes-three-body-intro/</id>
-    <link href="https://invinc-z.com/notes-reading/non-technical-reading/notes-three-body/notes-three-body-intro/"/>
+    <id>https://invinc-z.com/notes-reading/fiction/three-body/notes-three-body-intro/</id>
+    <link href="https://invinc-z.com/notes-reading/fiction/three-body/notes-three-body-intro/"/>
     <published>2026-04-10T21:12:18.000Z</published>
     <summary>
       <![CDATA[<p>本文是阅读三体后个人思考与感悟这一系列的开端。</p>]]>
     </summary>
     <title>读三体：开始</title>
-    <updated>2026-05-19T11:10:32.336Z</updated>
+    <updated>2026-05-19T17:42:52.430Z</updated>
   </entry>
   <entry>
     <author>
@@ -57,7 +57,7 @@
       <![CDATA[<p>本文按使用场景整理了一份简洁版 MySQL 常用命令速查表。</p>]]>
     </summary>
     <title>MySQL常用命令速查</title>
-    <updated>2026-05-19T11:10:32.347Z</updated>
+    <updated>2026-05-19T17:42:52.434Z</updated>
   </entry>
   <entry>
     <author>
@@ -66,8 +66,8 @@
     <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
     <category term="技术书籍" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/"/>
     <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-04-text-output/</id>
-    <link href="https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-04-text-output/"/>
+    <id>https://invinc-z.com/notes-reading/computer/programming-windows/win32-04-text-output/</id>
+    <link href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-04-text-output/"/>
     <published>2026-03-21T21:12:18.000Z</published>
     <summary>
       <![CDATA[<blockquote>
@@ -76,7 +76,7 @@
 </blockquote>]]>
     </summary>
     <title>Programming Windows 笔记：Text Output（四）</title>
-    <updated>2026-05-19T11:10:32.343Z</updated>
+    <updated>2026-05-19T17:42:52.429Z</updated>
   </entry>
   <entry>
     <author>
@@ -85,8 +85,8 @@
     <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
     <category term="技术书籍" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/"/>
     <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-03-windows-messages/</id>
-    <link href="https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-03-windows-messages/"/>
+    <id>https://invinc-z.com/notes-reading/computer/programming-windows/win32-03-windows-messages/</id>
+    <link href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-03-windows-messages/"/>
     <published>2026-03-14T21:12:18.000Z</published>
     <summary>
       <![CDATA[<blockquote>
@@ -95,7 +95,7 @@
 </blockquote>]]>
     </summary>
     <title>Programming Windows 笔记：Windows and Messages （三）</title>
-    <updated>2026-05-19T11:10:32.343Z</updated>
+    <updated>2026-05-19T17:42:52.429Z</updated>
   </entry>
   <entry>
     <author>
@@ -104,8 +104,8 @@
     <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
     <category term="技术书籍" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/"/>
     <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-02-intro-unicode/</id>
-    <link href="https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-02-intro-unicode/"/>
+    <id>https://invinc-z.com/notes-reading/computer/programming-windows/win32-02-intro-unicode/</id>
+    <link href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-02-intro-unicode/"/>
     <published>2026-03-07T21:12:18.000Z</published>
     <summary>
       <![CDATA[<blockquote>
@@ -114,7 +114,7 @@
 </blockquote>]]>
     </summary>
     <title>Programming Windows 笔记：An Introduction to Unicode （二）</title>
-    <updated>2026-05-19T11:10:32.343Z</updated>
+    <updated>2026-05-19T17:42:52.429Z</updated>
   </entry>
   <entry>
     <author>
@@ -123,8 +123,8 @@
     <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
     <category term="技术书籍" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/"/>
     <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-01-getting-started/</id>
-    <link href="https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-01-getting-started/"/>
+    <id>https://invinc-z.com/notes-reading/computer/programming-windows/win32-01-getting-started/</id>
+    <link href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-01-getting-started/"/>
     <published>2026-02-28T21:12:18.000Z</published>
     <summary>
       <![CDATA[<blockquote>
@@ -133,7 +133,7 @@
 </blockquote>]]>
     </summary>
     <title>Programming Windows 笔记：Getting Started （一）</title>
-    <updated>2026-05-19T11:10:32.341Z</updated>
+    <updated>2026-05-19T17:42:52.428Z</updated>
   </entry>
   <entry>
     <author>
@@ -153,7 +153,7 @@
 在文件描述符数量较大、活跃连接较多的情况下通常具有更好的性能表现。</p>]]>
     </summary>
     <title>Linux 中 epoll 的用法与底层实现</title>
-    <updated>2026-05-19T11:10:32.344Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
@@ -173,7 +173,7 @@
 <code>select</code> 在 fd 表示方式上的一些局限。</p>]]>
     </summary>
     <title>Linux 中 poll 的用法与底层实现</title>
-    <updated>2026-05-19T11:10:32.344Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
@@ -192,7 +192,7 @@
 替代，但 <code>select</code> 依然是理解 I/O 多路复用思想的重要起点。</p>]]>
     </summary>
     <title>Linux 中 select 的用法与底层实现</title>
-    <updated>2026-05-19T11:10:32.344Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
@@ -207,7 +207,7 @@
       <![CDATA[<p>字符编码看起来像是一个“文本存储格式”问题，但它实际上贯穿了<strong>计算机输入、存储、传输、显示、编程语言运行时、文件系统、终端和操作系统接口</strong>的各个层面。很多开发者第一次真正意识到字符编码的重要性，往往不是在学习理论的时候，而是在遇到“乱码”时：同一个文件在一个系统里正常、在另一个系统里却变成了问号、方框或者一串莫名其妙的符号。</p>]]>
     </summary>
     <title>从 ASCII 到 Unicode：字符编码的发展历程</title>
-    <updated>2026-05-19T11:10:32.344Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
@@ -226,7 +226,7 @@
 这几个最核心的套接字函数，梳理它们执行时<strong>用户进程可见的对象</strong>与<strong>内核中对应数据结构</strong>是如何一步步建立、关联和变化的；同时也顺着这个过程说明什么是用户态、什么是内核态，以及为什么这些调用本质上都是通过系统调用进入内核完成工作的。</p>]]>
     </summary>
     <title>socket、bind、listen、connect、accept 执行过程中的用户态/内核态与结构变化</title>
-    <updated>2026-05-19T11:10:32.346Z</updated>
+    <updated>2026-05-19T17:42:52.432Z</updated>
   </entry>
   <entry>
     <author>
@@ -242,7 +242,7 @@
 是两种不同的多字节数据存储方式，主要区别在于字节在内存中的排列顺序。它们在计算机体系结构、网络通信和文件存储中非常重要。</p>]]>
     </summary>
     <title>字节序</title>
-    <updated>2026-05-19T11:10:32.345Z</updated>
+    <updated>2026-05-19T17:42:52.432Z</updated>
   </entry>
   <entry>
     <author>
@@ -260,23 +260,24 @@
 相关的五个函数，并说明它们为什么能够作为父子进程同步的方法；同时也补充梳理几种常见的父子进程同步手段，方便横向比较。</p>]]>
     </summary>
     <title>APUE 中 TELL_WAIT 五个函数方法总结</title>
-    <updated>2026-05-19T11:10:32.346Z</updated>
+    <updated>2026-05-19T17:42:52.432Z</updated>
   </entry>
   <entry>
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
-    <category term="摘录与思考" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%91%98%E5%BD%95%E4%B8%8E%E6%80%9D%E8%80%83/"/>
-    <category term="摘录" scheme="https://invinc-z.com/tags/%E6%91%98%E5%BD%95/"/>
-    <id>https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-the-big-bang-theory/</id>
-    <link href="https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-the-big-bang-theory/"/>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Misc" scheme="https://invinc-z.com/categories/reading-notes/misc/"/>
+    <category term="Sitcom" scheme="https://invinc-z.com/tags/sitcom/"/>
+    <id>https://invinc-z.com/notes-reading/misc/excerpts-the-big-bang-theory/</id>
+    <link href="https://invinc-z.com/notes-reading/misc/excerpts-the-big-bang-theory/"/>
     <published>2026-01-02T21:12:18.000Z</published>
     <summary>
-      <![CDATA[<p>本文摘录了美剧《生活大爆炸》中一些自己喜欢的句子。</p>]]>
+      <![CDATA[<p>This post collects some of my favorite lines from the American sitcom
+The Big Bang Theory.</p>]]>
     </summary>
-    <title>《生活大爆炸》经典语录</title>
-    <updated>2026-05-19T11:10:32.336Z</updated>
+    <title>Classic Quotes from The Big Bang Theory</title>
+    <updated>2026-05-19T17:42:52.430Z</updated>
   </entry>
   <entry>
     <author>
@@ -293,7 +294,7 @@
       <![CDATA[<p>本文总结了 WSL2 与 VMware 虚拟化冲突的解决方案。</p>]]>
     </summary>
     <title>WSL2与VMware冲突解决方案</title>
-    <updated>2026-05-19T11:10:32.345Z</updated>
+    <updated>2026-05-19T17:42:52.432Z</updated>
   </entry>
   <entry>
     <author>
@@ -310,7 +311,7 @@
       <![CDATA[<p>本文总结了 WSL 常用的命令。</p>]]>
     </summary>
     <title>WSL命令速查表</title>
-    <updated>2026-05-19T11:10:32.344Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
@@ -328,7 +329,7 @@
 发行版时如何将根文件系统安装到其他盘。</p>]]>
     </summary>
     <title>WSL如何将Linux发行版安装到其他盘</title>
-    <updated>2026-05-19T11:10:32.345Z</updated>
+    <updated>2026-05-19T17:42:52.432Z</updated>
   </entry>
   <entry>
     <author>
@@ -343,23 +344,23 @@
       <![CDATA[<p>本文介绍一些计算机硬件方面的基础知识，旨在为电脑组装、配置升级、检测维修等提供一些帮助。</p>]]>
     </summary>
     <title>计算机硬件基础知识</title>
-    <updated>2026-05-19T11:10:32.343Z</updated>
+    <updated>2026-05-19T17:42:52.431Z</updated>
   </entry>
   <entry>
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="学习笔记与读书（Notes &amp; Reading）" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/"/>
-    <category term="技术书籍" scheme="https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/"/>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
     <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
-    <id>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-19-pseudo-terminals/</id>
-    <link href="https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-19-pseudo-terminals/"/>
+    <id>https://invinc-z.com/notes-reading/computer/apue/apue-19-pseudo-terminals/</id>
+    <link href="https://invinc-z.com/notes-reading/computer/apue/apue-19-pseudo-terminals/"/>
     <published>2025-09-18T21:12:18.000Z</published>
     <summary>
       <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第19章 Pseudo Terminals
 的一些知识点。</p>]]>
     </summary>
     <title>APUE笔记：Pseudo Terminals（十九）</title>
-    <updated>2026-05-19T11:10:32.337Z</updated>
+    <updated>2026-05-19T17:42:52.425Z</updated>
   </entry>
 </feed>

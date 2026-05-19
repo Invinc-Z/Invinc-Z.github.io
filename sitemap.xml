@@ -47,51 +47,6 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tooling-engineering/software-engineering/linux-static-dynamic-lib/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tooling-engineering/version-control-system/git-common-command-reference/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tooling-engineering/version-control-system/git-github-usage/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tooling-engineering/version-control-system/version-control-system-intro/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tooling-engineering/vim-neovim/install-vimplus/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/tooling-engineering/vim-neovim/vim-common-commands/</loc>
     
     <lastmod>2026-05-19</lastmod>
@@ -164,15 +119,6 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tooling-engineering/build-compile-system/how-to-write-makefile/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/tooling-engineering/productivity-tools/computer-keyboard-shortcuts/</loc>
     
     <lastmod>2026-05-19</lastmod>
@@ -191,6 +137,24 @@
   </url>
   
   <url>
+    <loc>https://invinc-z.com/tooling-engineering/build-compile-system/how-to-write-makefile/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tooling-engineering/software-engineering/linux-static-dynamic-lib/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://invinc-z.com/tooling-engineering/software-engineering/common-configurations-after-installing-ubuntu/</loc>
     
     <lastmod>2026-05-19</lastmod>
@@ -200,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/systems/unix-posix/child/</loc>
+    <loc>https://invinc-z.com/tooling-engineering/version-control-system/git-common-command-reference/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -209,7 +173,25 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/systems/unix-posix/socket-user-kernel/</loc>
+    <loc>https://invinc-z.com/tooling-engineering/version-control-system/git-github-usage/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tooling-engineering/version-control-system/version-control-system-intro/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tooling-engineering/vim-neovim/install-vimplus/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -245,6 +227,24 @@
   </url>
   
   <url>
+    <loc>https://invinc-z.com/systems/unix-posix/child/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/systems/unix-posix/socket-user-kernel/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://invinc-z.com/systems/linux/wsl/wsl2-install-tutorial/</loc>
     
     <lastmod>2026-05-19</lastmod>
@@ -255,6 +255,15 @@
   
   <url>
     <loc>https://invinc-z.com/systems/linux/wsl/wsl2-vmware-conflict-solution/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/systems/computer-system/basic-knowledge-of-computer-hardware/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -317,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/systems/computer-system/basic-knowledge-of-computer-hardware/</loc>
+    <loc>https://invinc-z.com/notes-reading/misc/excerpts-the-big-bang-theory/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -326,7 +335,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-02-intro-unicode/</loc>
+    <loc>https://invinc-z.com/notes-reading/misc/master-quotes/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -335,7 +344,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-03-windows-messages/</loc>
+    <loc>https://invinc-z.com/notes-reading/misc/notes-stanford-efficient-sleep-methods/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -344,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-04-text-output/</loc>
+    <loc>https://invinc-z.com/notes-reading/fiction/three-body/notes-three-body-intro/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -353,7 +362,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-08-custom/</loc>
+    <loc>https://invinc-z.com/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -362,7 +371,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-09-install/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/programming-windows/win32-02-intro-unicode/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -371,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-10-error-help/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/programming-windows/win32-03-windows-messages/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -380,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-11-reference-books/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/programming-windows/win32-04-text-output/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -389,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-symbol-tables/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-10-error-help/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -398,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-programming-windows/win32-01-getting-started/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-11-reference-books/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -407,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-02-typeset-text/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-symbol-tables/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -416,7 +425,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-03-document-elements/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/programming-windows/win32-01-getting-started/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -425,7 +434,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-04-math-equation/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-01-basic-concepts/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -434,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-05-layout-style/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-02-typeset-text/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -443,7 +452,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-06-features-tools/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-03-document-elements/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -452,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-07-graphic/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-04-math-equation/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -461,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/03-cpp-variables-and-basic-types/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-05-layout-style/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -470,7 +479,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/04-cpp-compound-types/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-06-features-tools/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -479,7 +488,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/05-cpp-loops-expressions-statements/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-07-graphic/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -488,7 +497,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/06-cpp-functions/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-08-custom/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -497,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/07-cpp-memory-models-namespaces/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/lshort/lshort-09-install/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -506,7 +515,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/08-cpp-objects-classes/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cs-app/02-info-representation-manipulation/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -515,7 +524,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/09-cpp-class-inheritance/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cs-app/03-machine-level-representation-of-programs/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -524,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/10-cpp-reusing-code/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/03-cpp-variables-and-basic-types/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -533,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/11-cpp-friends-exceptions/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/04-cpp-compound-types/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -542,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cs-app/01-computer-system-tour/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/05-cpp-loops-expressions-statements/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -551,7 +560,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cs-app/02-info-representation-manipulation/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/06-cpp-functions/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -560,7 +569,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cs-app/03-machine-level-representation-of-programs/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/07-cpp-memory-models-namespaces/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -569,7 +578,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-01-basic-concepts/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/08-cpp-objects-classes/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -578,7 +587,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-computer-networking-top-down/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/09-cpp-class-inheritance/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -587,7 +596,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-13-daemon-processes/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/10-cpp-reusing-code/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -596,7 +605,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-14-advanced-io/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/11-cpp-friends-exceptions/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -605,7 +614,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-15-interprocess-communication/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cs-app/01-computer-system-tour/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -614,7 +623,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-16-network-ipc-sockets/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-14-advanced-io/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -623,7 +632,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-17-advanced-ipc/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-15-interprocess-communication/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -632,7 +641,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-18-terminal-io/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-16-network-ipc-sockets/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -641,7 +650,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-19-pseudo-terminals/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-17-advanced-ipc/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -650,7 +659,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-cpp-primer-plus/02-cpp-begin-study/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-18-terminal-io/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -659,7 +668,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-the-big-bang-theory/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-19-pseudo-terminals/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -668,7 +677,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/excerpts-and-reflections/excerpts-wangxiaobo/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/cpp-primer-plus/02-cpp-begin-study/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -677,7 +686,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/excerpts-and-reflections/master-quotes/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-01-unix-system-overview/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -686,7 +695,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/non-technical-reading/notes-stanford-efficient-sleep-methods/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-03-file-io/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -695,7 +704,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/non-technical-reading/notes-three-body/notes-three-body-intro/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-02-unix-standardization-and-implementations/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -704,7 +713,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-00-about-the-book/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-04-files-and-directories/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -713,7 +722,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-01-unix-system-overview/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-05-standard-io-library/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -722,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-02-unix-standardization-and-implementations/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-07-process-environment/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -731,7 +740,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-03-file-io/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-06-system-data-files-and-information/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -740,7 +749,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-04-files-and-directories/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-08-process-control/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -749,7 +758,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-05-standard-io-library/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-09-process-relationships/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -758,7 +767,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-06-system-data-files-and-information/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-10-signals/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -767,7 +776,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-07-process-environment/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-11-threads/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -776,7 +785,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-08-process-control/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-12-thread-control/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -785,34 +794,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-09-process-relationships/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-10-signals/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-11-threads/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/notes-reading/technical-books/notes-apue/apue-12-thread-control/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-13-daemon-processes/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -822,15 +804,6 @@
   
   <url>
     <loc>https://invinc-z.com/misc/get-video-music-resource/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/markdown/markdown-writing-widgets/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -884,7 +857,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-control-title-newline/</loc>
+    <loc>https://invinc-z.com/notes-reading/computer/apue/apue-00-about-the-book/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -893,52 +866,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-figure-tutorial/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-how-to-accelerate-the-compilation-process/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-minted-tutorial/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-table-tutorial/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/blog-build/hexo-next-theme-configure/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/environment-configuration/latex-compile-error-solutions/</loc>
+    <loc>https://invinc-z.com/documentation-and-typesetting/markdown/markdown-writing-widgets/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -1019,15 +947,6 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/documentation-and-typesetting/latex/project-templates/latex-template-repository/</loc>
-    
-    <lastmod>2026-05-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-bat-makefile-latexmk/</loc>
     
     <lastmod>2026-05-19</lastmod>
@@ -1037,7 +956,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/data-structure-algorithm/algorithm/binary-search-algorithm/</loc>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/project-templates/latex-template-repository/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -1046,7 +965,61 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/data-structure-algorithm/algorithm/recursion/</loc>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-control-title-newline/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-figure-tutorial/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-how-to-accelerate-the-compilation-process/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-minted-tutorial/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/usage-skills/latex-table-tutorial/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/blog-build/hexo-next-theme-configure/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/data-structure-algorithm/data-structure/common-data-structure/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -1064,7 +1037,25 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/data-structure-algorithm/data-structure/common-data-structure/</loc>
+    <loc>https://invinc-z.com/data-structure-algorithm/algorithm/recursion/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/documentation-and-typesetting/latex/environment-configuration/latex-compile-error-solutions/</loc>
+    
+    <lastmod>2026-05-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/data-structure-algorithm/algorithm/binary-search-algorithm/</loc>
     
     <lastmod>2026-05-19</lastmod>
     
@@ -1113,76 +1104,6 @@
   
   <url>
     <loc>https://invinc-z.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E9%80%92%E5%BD%92/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%8E%92%E5%BA%8F/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%95%B0%E7%BB%84/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%A0%88/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E9%98%9F%E5%88%97/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1273,14 +1194,21 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tags/%E6%91%98%E5%BD%95/</loc>
+    <loc>https://invinc-z.com/tags/sitcom/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tags/network/</loc>
+    <loc>https://invinc-z.com/tags/thoughts/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/lifestyle/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1329,6 +1257,55 @@
   </url>
   
   <url>
+    <loc>https://invinc-z.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E6%95%B0%E7%BB%84/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E9%93%BE%E8%A1%A8/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E6%A0%88/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E9%98%9F%E5%88%97/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://invinc-z.com/tags/socket/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1343,14 +1320,14 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tags/makefile/</loc>
+    <loc>https://invinc-z.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <loc>https://invinc-z.com/tags/makefile/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1393,6 +1370,27 @@
   
   <url>
     <loc>https://invinc-z.com/tags/vim/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E9%80%92%E5%BD%92/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1497,91 +1495,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/tags/%E4%B8%89%E4%BD%93/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/tags/c-primer-plus/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/main/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%8F%98%E9%87%8F/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%8C%87%E9%92%88/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E9%87%8D%E8%BD%BD/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/oop/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E7%BB%A7%E6%89%BF/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%8F%8B%E5%85%83/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/tags/%E5%BC%82%E5%B8%B8/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1596,6 +1510,27 @@
   
   <url>
     <loc>https://invinc-z.com/tags/programming-windows/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/cs-app/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E4%B8%89%E4%BD%93/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1625,13 +1560,6 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1646,28 +1574,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://invinc-z.com/categories/reading-notes/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1681,14 +1588,14 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/markdown/</loc>
+    <loc>https://invinc-z.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/</loc>
+    <loc>https://invinc-z.com/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/markdown/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1702,7 +1609,14 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/%E6%9E%84%E5%BB%BA%E4%B8%8E%E7%BC%96%E8%AF%91%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1716,7 +1630,21 @@
   </url>
   
   <url>
+    <loc>https://invinc-z.com/categories/reading-notes/misc/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://invinc-z.com/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/%E6%9E%84%E5%BB%BA%E4%B8%8E%E7%BC%96%E8%AF%91%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1737,28 +1665,7 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%91%98%E5%BD%95%E4%B8%8E%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://invinc-z.com/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E9%9D%9E%E6%8A%80%E6%9C%AF%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2026-05-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1779,6 +1686,20 @@
   </url>
   
   <url>
+    <loc>https://invinc-z.com/categories/reading-notes/computer/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/windows/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1787,6 +1708,13 @@
   
   <url>
     <loc>https://invinc-z.com/categories/linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1814,14 +1742,21 @@
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/c-primer-plus/</loc>
+    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://invinc-z.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/cs-app%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://invinc-z.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://invinc-z.com/categories/reading-notes/fiction/</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

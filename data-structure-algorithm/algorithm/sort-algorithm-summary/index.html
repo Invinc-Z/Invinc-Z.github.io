@@ -129,7 +129,7 @@
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/202312122153960.png">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/202312122257230.png">
 <meta property="article:published_time" content="2024-01-30T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-19T11:10:32.333Z">
+<meta property="article:modified_time" content="2026-05-19T17:42:52.421Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="排序">
 <meta name="twitter:card" content="summary">
@@ -323,7 +323,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">74</span>
+        <span class="site-state-item-count">66</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -930,7 +930,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-19 19:10:32" itemprop="dateModified" datetime="2026-05-19T19:10:32+08:00">2026-05-19</time>
+      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1000,10 +1000,11 @@ if(canvas.getContext){
 <img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/202401151901805.png" alt="不同级别大O表示法的增加趋势-图" style="zoom: 50%;" />
 </div>
 <p>其中，常数级别<span
-class="math inline"><em>O</em>(1)</span>和对数级别<span
-class="math inline"><em>O</em>(log<em>n</em>)</span>被认为是特别优秀的，稳定且高效。</p>
+class="math inline">\(O(1)\)</span>和对数级别<span
+class="math inline">\(O(\log
+n)\)</span>被认为是特别优秀的，稳定且高效。</p>
 <p>而从<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>开始，就表示算法随着数据规模的增大而迅速变得低效，在实际应用中要尽量避免选择这样的算法去进行大数据集的处理。</p>
+class="math inline">\(O(n^2)\)</span>开始，就表示算法随着数据规模的增大而迅速变得低效，在实际应用中要尽量避免选择这样的算法去进行大数据集的处理。</p>
 <hr />
 <h2 id="冒泡排序">冒泡排序</h2>
 <h3 id="算法思想">算法思想</h3>
@@ -1078,20 +1079,19 @@ int main(void) {
 <p>比较次数： (n - 1)</p>
 <p>交换次数： 0</p>
 <p><strong>所以最佳情况下的时间复杂度是 <span
-class="math inline"><em>O</em>(<em>n</em>)</span>。</strong></p>
+class="math inline">\(O(n)\)</span>。</strong></p>
 <p>最坏情况：</p>
 <p>在最坏的情况下（当数组完全逆序时），冒泡排序第一轮需要执行( n - 1)
 次比较和交换，第二次执行( n - 2 )次，依此类推，直到最后一次执行 1
 次。所以，总的执行次数是等差数列求和：n * ( n - 1) /
 2。所以<strong>最坏情况下的时间复杂度是<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>
-。</strong></p>
+class="math inline">\(O(n^2)\)</span> 。</strong></p>
 <p>平均情况：<strong>在平均情况下，时间复杂度也是<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>
+class="math inline">\(O(n^2)\)</span>
 。</strong>虽然不是所有的元素都需要交换，但总体而言，性能接近最坏情况。</p>
 <p><strong>空间复杂度分析：</strong></p>
 <p>冒泡排序是一种原地排序算法，不需要占用额外内存空间。空间复杂度是<span
-class="math inline"><em>O</em>(1)</span>。</p>
+class="math inline">\(O(1)\)</span>。</p>
 <p><strong>稳定性分析：</strong></p>
 <p>冒泡排序显然是一种稳定的排序算法，因为交换的过程中不会交换任何两个相同的元素。</p>
 <hr />
@@ -1170,10 +1170,10 @@ int main(void) {
 <p>将两者加起来就是总的指令执行数量。</p>
 <p>除此之外，选择排序，在数组已经有序、逆序还是完全无序的各种情况下，这些比较和交换都不会减少。</p>
 <p>所以用大O表示法，<strong>选择排序的时间复杂度是<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>，任何情况下都一样。</strong></p>
+class="math inline">\(O(n^2)\)</span>，任何情况下都一样。</strong></p>
 <p><strong>空间复杂度分析：</strong></p>
 <p>选择排序是一种原地排序算法，不需要占用额外内存空间。空间复杂度是<span
-class="math inline"><em>O</em>(1)</span>。</p>
+class="math inline">\(O(1)\)</span>。</p>
 <p><strong>稳定性分析：</strong></p>
 <p>选择排序稳定吗？答：不稳定！</p>
 <p>选择排序在每轮中选择最小元素，并与未排序部分的第一个元素交换。如果存在相等的元素，选择排序可能会改变它们的相对顺序。所以选择排序不是稳定的排序算法。</p>
@@ -1274,14 +1274,14 @@ int main(void) {
 <li>移动次数：0</li>
 </ol>
 <p><strong>所以最佳情况下的时间复杂度是 <span
-class="math inline"><em>O</em>(<em>n</em>)</span>。</strong></p>
+class="math inline">\(O(n)\)</span>。</strong></p>
 <p>最坏情况：</p>
 <ol type="1">
 <li>在最坏的情况下，即数组完全逆序时。</li>
 <li>比较和交换的次数是相同的，第一轮需要比较和移动1次，第二轮需要比较和移动2次….最后一个元素需要比较和移动
 (n - 1)次。</li>
 <li>等比数列求和：需要比较和移动各n(n-1)/2次，加起来就是<strong><span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>−<em>n</em>)</span></strong>。</li>
+class="math inline">\(O(n^2 - n)\)</span></strong>。</li>
 </ol>
 <p>所以<strong>最坏情况下的时间复杂度是$ O(n^2)$。</strong></p>
 <p>平均情况：</p>
@@ -1291,7 +1291,7 @@ class="math inline"><em>O</em>(<em>n</em><sup>2</sup>−<em>n</em>)</span></stro
 </ol>
 <p><strong>空间复杂度分析：</strong></p>
 <p>插入排序是一种原地排序算法，不需要占用额外内存空间。空间复杂度是<span
-class="math inline"><em>O</em>(1)</span>。</p>
+class="math inline">\(O(1)\)</span>。</p>
 <p><strong>稳定性分析：</strong></p>
 <p>插入排序显然也是一种稳定的排序算法，因为对于两个相同的元素，我们始终都不会交换它们的相对位置。</p>
 <p>注意：如果判断的条件改成<code>arr[j] &gt;= arr[j + 1]</code>，即在前后元素相等时也交换/移动元素，算法就会变成不稳定的。</p>
@@ -1301,10 +1301,10 @@ class="math inline"><em>O</em>(1)</span>。</p>
 <p>这里对它们做一个总结分析：</p>
 <ol type="1">
 <li><strong>选择排序</strong>在任何情况下时间复杂度都是<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>，且它是一个不稳定的排序算法。比起作为算法去使用，它更具有教学意义，一般不推荐去使用它。</li>
+class="math inline">\(O(n^2)\)</span>，且它是一个不稳定的排序算法。比起作为算法去使用，它更具有教学意义，一般不推荐去使用它。</li>
 <li><strong>冒泡排序</strong>和<strong>插入排序</strong>看起来很类似，它们都有最坏和平均情况下<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>的时间复杂度，都有最优情况下<span
-class="math inline"><em>O</em>(<em>n</em>)</span>的时间复杂度。但<strong>在小数据集或者数据集基本有序的情况下，仍然更推荐使用插入排序。</strong></li>
+class="math inline">\(O(n^2)\)</span>的时间复杂度，都有最优情况下<span
+class="math inline">\(O(n)\)</span>的时间复杂度。但<strong>在小数据集或者数据集基本有序的情况下，仍然更推荐使用插入排序。</strong></li>
 </ol>
 <p>这是因为：</p>
 <ol type="1">
@@ -1381,11 +1381,11 @@ int main(void) {
 <p><strong>时间复杂度：</strong></p>
 <p>希尔排序的时间复杂度，和选择的增量序列有密切的关联：</p>
 <p>若使用希尔本人提出的减半序列，时间复杂度通常会小于<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>，但在最坏情况也会接近<span
-class="math inline"><em>O</em>(<em>n</em><sup>2</sup>)</span>。</p>
+class="math inline">\(O(n^2)\)</span>，但在最坏情况也会接近<span
+class="math inline">\(O(n^2)\)</span>。</p>
 <p><strong>空间复杂度分析：</strong></p>
 <p>希尔排序是一种原地排序算法，不需要占用额外内存空间。空间复杂度是<span
-class="math inline"><em>O</em>(1)</span>。</p>
+class="math inline">\(O(1)\)</span>。</p>
 <p><strong>稳定性分析：</strong></p>
 <p>希尔排序显然不是一种稳定的排序算法，因为它先分组再插入排序的方式，使得相同元素可能会由于分组不同改变位置。</p>
 <p>比如：</p>
@@ -1553,28 +1553,28 @@ int main(void) {
 <h3 id="性能分析-4">性能分析</h3>
 <p><strong>时间复杂度：</strong></p>
 <p>无论原始数组处在什么状态，归并排序都会按照既定步骤分解、合并。所以<strong>在最好，最坏，平均情况下，归并排序的时间复杂度都是一样的，都是<span
-class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span>。</strong></p>
+class="math inline">\(O(n \log n)\)</span>。</strong></p>
 <p>归并排序的时间复杂度分析需要考虑它的两个主要操作，分解和合并：</p>
 <ol type="1">
 <li>分解过程也就是递归调用的过程，这个过程大概分解了<span
-class="math inline">log<sub>2</sub><em>n</em></span>次（每次都将数组折半，也就是递归的深度）</li>
+class="math inline">\(\log_{2}n\)</span>次（每次都将数组折半，也就是递归的深度）</li>
 <li>在合并的过程中，需要遍历并比较子数组的元素，然后将它们按顺序复制回原数组。每次合并操作的时间复杂度都是<span
-class="math inline"><em>O</em>(<em>n</em>)</span>，因为它涉及到整个数组的遍历。合并的次数和分解的次数是一样的，都是<span
-class="math inline">log<sub>2</sub><em>n</em></span>次，所以对于合并操作，总的时间复杂度是<span
-class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span>。</li>
+class="math inline">\(O(n)\)</span>，因为它涉及到整个数组的遍历。合并的次数和分解的次数是一样的，都是<span
+class="math inline">\(\log_{2}n\)</span>次，所以对于合并操作，总的时间复杂度是<span
+class="math inline">\(O(n\log n)\)</span>。</li>
 </ol>
-<p>综合起来，时间复杂度就是<span
-class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span>。</p>
+<p>综合起来，时间复杂度就是<span class="math inline">\(O(n\log
+n)\)</span>。</p>
 <p><strong>空间复杂度：</strong></p>
 <p>归并排序显然不是一个原地算法。它需要额外的内存空间：</p>
 <ol type="1">
 <li>需要一个与原始数组大小相同的，长度是<span
-class="math inline"><em>n</em></span>的辅助数组来进行合并操作。</li>
+class="math inline">\(n\)</span>的辅助数组来进行合并操作。</li>
 <li>递归调用，占用额外的栈空间。因为每次递归调用都会将数组分为两个大致相等的部分，所以每次都将问题的规模减半。递归深度大致是<span
-class="math inline">log<sub>2</sub><em>n</em></span>。</li>
+class="math inline">\(\log_{2}{n}\)</span>。</li>
 </ol>
 <p><strong>所以空间复杂度是<span
-class="math inline"><em>O</em>(<em>n</em>)</span>。</strong></p>
+class="math inline">\(O(n)\)</span>。</strong></p>
 <p><strong>稳定性：</strong></p>
 <p><strong>归并排序是稳定的排序算法。</strong>这是因为如果两个元素相等，归并排序不会改变它们的相对顺序。</p>
 <hr />
@@ -1784,15 +1784,15 @@ int main(void) {
 <h3 id="性能分析-5">性能分析</h3>
 <p><strong>时间复杂度：</strong></p>
 <p>一般提起快速排序算法，不管采取单双向哪一种分区策略，都只会说它的时间复杂度是<span
-class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span>级别。</p>
+class="math inline">\(O(n\log n)\)</span>级别。</p>
 <p><strong>空间复杂度：</strong></p>
 <p>快速排序，无论什么分区策略，都不需要额外的数组空间来辅助排序，但考虑到需要使用递归来实现算法。</p>
 <p><strong>在最佳和平均情况下，递归深度大约是<span
-class="math inline">log<sub>2</sub><em>n</em></span>，空间复杂度是<span
-class="math inline"><em>O</em>(log<em>n</em>)</span></strong>。</p>
+class="math inline">\(\log_{2}{n}\)</span>，空间复杂度是<span
+class="math inline">\(O(\log n)\)</span></strong>。</p>
 <p>但如果是在最坏情况下，递归深度接近<span
-class="math inline"><em>n</em></span>，此时空间复杂度为<span
-class="math inline"><em>O</em>(<em>n</em>)</span>。</p>
+class="math inline">\(n\)</span>，此时空间复杂度为<span
+class="math inline">\(O(n)\)</span>。</p>
 <p><strong>稳定性：</strong></p>
 <p>快速排序是一种不稳定的排序算法，无论选取什么分区方案，快速排序都有可能改变两个相同元素的相对位置。</p>
 <hr />
@@ -1997,7 +1997,7 @@ int main(void) {
 <h3 id="性能分析-6">性能分析</h3>
 <p><strong>时间复杂度：</strong></p>
 <p><strong>堆排序在任何情况下，时间复杂度都是<span
-class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span></strong>。</p>
+class="math inline">\(O(n\log n)\)</span></strong>。</p>
 <p><strong>空间复杂度：</strong></p>
 <p>堆排序显然是一个原地算法，不需要任何额外内存空间，空间复杂度是O(1)</p>
 <p><strong>稳定性：</strong></p>
