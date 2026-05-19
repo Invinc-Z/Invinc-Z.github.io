@@ -116,12 +116,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  文字是排版的基础。本章主要介绍如何在 $\LaTeX{}$ 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 $\LaTeX{}$ 中排版中文的方法。随着 $\LaTeX{}$ 和底层 $\TeX{}$引擎的发展，旧方式（CCT、CJK等）日渐退出舞台，xelatex 和 lualate">
+    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  文字是排版的基础。本章主要介绍如何在 \(\LaTeX{}\) 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 \(\LaTeX{}\) 中排版中文的方法。随着 \(\LaTeX{}\) 和底层 \(\TeX{}\)引擎的发展，旧方式（CCT、CJK等）日渐退出舞台，xelatex 和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lshort笔记：用 LaTeX 排版文字（二）">
 <meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-02-typeset-text/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  文字是排版的基础。本章主要介绍如何在 $\LaTeX{}$ 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 $\LaTeX{}$ 中排版中文的方法。随着 $\LaTeX{}$ 和底层 $\TeX{}$引擎的发展，旧方式（CCT、CJK等）日渐退出舞台，xelatex 和 lualate">
+<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  文字是排版的基础。本章主要介绍如何在 \(\LaTeX{}\) 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在 \(\LaTeX{}\) 中排版中文的方法。随着 \(\LaTeX{}\) 和底层 \(\TeX{}\)引擎的发展，旧方式（CCT、CJK等）日渐退出舞台，xelatex 和">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114165512239.png">
 <meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114170715995.png">
@@ -302,7 +302,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">$\LaTeX{}$中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%A0%BC%E5%92%8C%E5%88%86%E6%AE%B5"><span class="nav-number">1.1.</span> <span class="nav-text">空格和分段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97"><span class="nav-number">1.4.</span> <span class="nav-text">连字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.5.</span> <span class="nav-text">标点符号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E5%8F%B7"><span class="nav-number">1.5.1.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97%E5%8F%B7%E5%92%8C%E7%A0%B4%E6%8A%98%E5%8F%B7"><span class="nav-number">1.5.2.</span> <span class="nav-text">连字号和破折号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9C%81%E7%95%A5%E5%8F%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">省略号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%89%E4%B8%81%E6%96%87%E6%89%A9%E5%B1%95%E4%B8%8E%E9%87%8D%E9%9F%B3"><span class="nav-number">1.5.4.</span> <span class="nav-text">拉丁文扩展与重音</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#latex-%E6%A0%87%E5%BF%97"><span class="nav-number">1.5.5.</span> <span class="nav-text">$\LaTeX{}$
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex%E4%B8%AD%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">\(\LaTeX{}\)中的字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A9%BA%E6%A0%BC%E5%92%8C%E5%88%86%E6%AE%B5"><span class="nav-number">1.1.</span> <span class="nav-text">空格和分段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">1.2.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">1.3.</span> <span class="nav-text">特殊字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97"><span class="nav-number">1.4.</span> <span class="nav-text">连字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7"><span class="nav-number">1.5.</span> <span class="nav-text">标点符号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E5%8F%B7"><span class="nav-number">1.5.1.</span> <span class="nav-text">引号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9E%E5%AD%97%E5%8F%B7%E5%92%8C%E7%A0%B4%E6%8A%98%E5%8F%B7"><span class="nav-number">1.5.2.</span> <span class="nav-text">连字号和破折号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9C%81%E7%95%A5%E5%8F%B7"><span class="nav-number">1.5.3.</span> <span class="nav-text">省略号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8B%89%E4%B8%81%E6%96%87%E6%89%A9%E5%B1%95%E4%B8%8E%E9%87%8D%E9%9F%B3"><span class="nav-number">1.5.4.</span> <span class="nav-text">拉丁文扩展与重音</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#latex-%E6%A0%87%E5%BF%97"><span class="nav-number">1.5.5.</span> <span class="nav-text">\(\LaTeX{}\)
 标志</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%AD%E8%A1%8C%E5%92%8C%E6%96%AD%E9%A1%B5"><span class="nav-number">2.</span> <span class="nav-text">断行和断页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E8%AF%8D%E9%97%B4%E8%B7%9D"><span class="nav-number">2.1.</span> <span class="nav-text">单词间距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E6%96%AD%E8%A1%8C%E5%92%8C%E6%96%AD%E9%A1%B5"><span class="nav-number">2.2.</span> <span class="nav-text">手动断行和断页</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
@@ -988,17 +988,17 @@ if(canvas.getContext){
 (不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
 <p>文字是排版的基础。本章主要介绍如何在 <span
-class="math inline">$\LaTeX{}$</span>
+class="math inline">\(\LaTeX{}\)</span>
 中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在
-<span class="math inline">$\LaTeX{}$</span> 中排版中文的方法。随着 <span
-class="math inline">$\LaTeX{}$</span> 和底层 <span
-class="math inline">$\TeX{}$</span>引擎的发展，旧方式（<code>CCT</code>、<code>CJK</code>等）日渐退出舞台，<code>xelatex</code>
+<span class="math inline">\(\LaTeX{}\)</span> 中排版中文的方法。随着
+<span class="math inline">\(\LaTeX{}\)</span> 和底层 <span
+class="math inline">\(\TeX{}\)</span>引擎的发展，旧方式（<code>CCT</code>、<code>CJK</code>等）日渐退出舞台，<code>xelatex</code>
 和 <code>lualatex</code> 编译命令配合 <code>ctex</code>
 宏包/文档类的方式成为当前的主流中文排版支持方式。</p>
 <span id="more"></span>
 <hr />
 <h2 id="latex中的字符"><span
-class="math inline">$\LaTeX{}$</span>中的字符</h2>
+class="math inline">\(\LaTeX{}\)</span>中的字符</h2>
 <h3 id="空格和分段">空格和分段</h3>
 <p>空格键和 Tab
 键输入的空白字符视为“空格”。连续的若干个空白字符视为一个空格。一行开头的空格忽略不计。行末的换行符视为一个空格；但连续两个换行符，也就是空行，会将文字分段。多个空行被视为一个空行。也可以在行末使用
@@ -1028,7 +1028,7 @@ class="math inline">$\LaTeX{}$</span>中的字符</h2>
 <p>想要输入以上符号，需要使用以下带反斜线的形式输入，类似编程语言里的“转义”符号：</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114170715995.png" alt="image-20250114170715995" style="zoom: 50%;" /></p>
 <p>这些“转义”符号事实上是一些 <span
-class="math inline">$\LaTeX{}$</span> 命令。其中 <code>\^</code> 和
+class="math inline">\(\LaTeX{}\)</span> 命令。其中 <code>\^</code> 和
 <code>\~</code>两个命令需要一个参数，加一对花括号的写法相当于提供了空的参数，否则它们可能会将后面的字符作为参数，形成重音效果。<code>\\</code>被直接定义成了手动换行的命令，输入反斜线就需要用
 <code>\textbackslash</code>。</p>
 <h3 id="连字">连字</h3>
@@ -1056,20 +1056,20 @@ ff/fi/fl/ffi/ffl。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114173207428.png" alt="image-20250114173207428" style="zoom:67%;" /></p>
 <p>更多可用的符号和重音见下表。</p>
 <p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114173234392.png" alt="image-20250114173234392" style="zoom:67%;" /></p>
-<h4 id="latex-标志"><span class="math inline">$\LaTeX{}$</span>
+<h4 id="latex-标志"><span class="math inline">\(\LaTeX{}\)</span>
 标志</h4>
-<p>我们见到的所有错落有致的 <span class="math inline">$\LaTeX{}$</span>
-标志都是由以下命令输入的：</p>
+<p>我们见到的所有错落有致的 <span
+class="math inline">\(\LaTeX{}\)</span> 标志都是由以下命令输入的：</p>
 <figure>
 <img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114173523673.png"
 alt="image-20250114173523673" />
 <figcaption aria-hidden="true">image-20250114173523673</figcaption>
 </figure>
-<p>更多的 <span class="math inline">$\LaTeX{}$</span> 标志可以使用
+<p>更多的 <span class="math inline">\(\LaTeX{}\)</span> 标志可以使用
 <code>hologo</code> 宏包提供的 <code>\hologo</code> 命令输入。</p>
 <hr />
 <h2 id="断行和断页">断行和断页</h2>
-<p><span class="math inline">$\LaTeX{}$</span>
+<p><span class="math inline">\(\LaTeX{}\)</span>
 将文字段落在合适的位置进行断行，尽可能做到每行的疏密程度匀称，单词间距不会过宽或过窄。文字段落和公式、图表等内容从上到下顺序排布，并在合适的位置断页，分割成匀称的页面。在绝大多数时候，我们无需自己操心断行和断页。但偶尔会遇到需要手工调整的地方。</p>
 <h3 id="单词间距">单词间距</h3>
 <p>文字在单词间的“空格”处断行时，“空格”生成的间距随之舍去。可以使用字符
@@ -1093,7 +1093,7 @@ tie，“带子”），通常用在<strong>英文人名、图表名称</strong>
 <code>\newpage</code> 起到另起一栏的作用，<code>\clearpage</code>
 则能够另起一页；第二，在涉及浮动体的排版上行为不同。</p>
 <p>有时候我们不满足于默认的断行和断页位置，需要进行微调，可以用以下命令告诉
-<span class="math inline">$\LaTeX{}$</span>
+<span class="math inline">\(\LaTeX{}\)</span>
 哪些地方适合断行或断页，哪些地方不适合：</p>
 <p><code>\linebreak[⟨n⟩]</code> <code>\nolinebreak[⟨n⟩]</code>
 <code>\pagebreak[⟨n⟩]</code> <code>\nopagebreak[⟨n⟩]</code></p>
@@ -1109,8 +1109,8 @@ tie，“带子”），通常用在<strong>英文人名、图表名称</strong>
 会在断行/断页位置填充适当的间距，但 <code>\linebreak</code> 和
 <code>\pagebreak</code>
 不能，使用这些命令强行断行/断页可能会制造出糟糕的排版效果，并导致 <span
-class="math inline">$\LaTeX{}$</span> 报 <span
-class="math inline">$\texttt{Underfull \\hbox}$</span> 等警告。</p>
+class="math inline">\(\LaTeX{}\)</span> 报 <span
+class="math inline">\(\texttt{Underfull \\hbox}\)</span> 等警告。</p>
 <!-- flag of hidden posts -->
     </div>
 

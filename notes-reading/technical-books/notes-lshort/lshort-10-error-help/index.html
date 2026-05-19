@@ -116,12 +116,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文内容来自 一份 (不太) 简短的 LATEX2ε 介绍。  $\LaTeX{}$ 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 $\LaTeX{}$ 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
+    <meta name="description" content="本文内容来自 一份 (不太) 简短的 LATEX2ε 介绍。  \(\LaTeX{}\) 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 \(\LaTeX{}\) 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lshort笔记：排除错误和寻求帮助（十）">
 <meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-10-error-help/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文内容来自 一份 (不太) 简短的 LATEX2ε 介绍。  $\LaTeX{}$ 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 $\LaTeX{}$ 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
+<meta property="og:description" content="本文内容来自 一份 (不太) 简短的 LATEX2ε 介绍。  \(\LaTeX{}\) 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的 \(\LaTeX{}\) 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-03T21:12:18.000Z">
 <meta property="article:modified_time" content="2026-05-18T17:36:05.773Z">
@@ -291,8 +291,8 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E9%94%99%E8%AF%AF"><span class="nav-number">1.</span> <span class="nav-text">$\LaTeX{}$
-错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">处理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-latex-%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">常见的 $\LaTeX{}$ 错误信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">查找帮助文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">常用宏包简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%85%AC%E5%BC%8F%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">文字、公式和符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E7%89%88%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">排版元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A1%A8%E5%92%8C%E6%B5%AE%E5%8A%A8%E4%BD%93"><span class="nav-number">3.3.</span> <span class="nav-text">图表和浮动体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%89%88%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">修改版式</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E9%94%99%E8%AF%AF"><span class="nav-number">1.</span> <span class="nav-text">\(\LaTeX{}\)
+错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">处理方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-latex-%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">1.2.</span> <span class="nav-text">常见的 \(\LaTeX{}\) 错误信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">查找帮助文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%8C%85%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">常用宏包简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E5%AD%97%E5%85%AC%E5%BC%8F%E5%92%8C%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">文字、公式和符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E7%89%88%E5%85%83%E7%B4%A0"><span class="nav-number">3.2.</span> <span class="nav-text">排版元素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A1%A8%E5%92%8C%E6%B5%AE%E5%8A%A8%E4%BD%93"><span class="nav-number">3.3.</span> <span class="nav-text">图表和浮动体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%89%88%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">修改版式</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -976,15 +976,15 @@ if(canvas.getContext){
 <p>本文内容来自 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
 (不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
-<p><span class="math inline">$\LaTeX{}$</span>
+<p><span class="math inline">\(\LaTeX{}\)</span>
 入门用户总会为两大问题头疼：我写的代码到底哪里出错了？如果想要实现某种用法该怎么办？本章首先总结了常见的
-<span class="math inline">$\LaTeX{}$</span>
+<span class="math inline">\(\LaTeX{}\)</span>
 错误及应对办法，然后介绍了查找帮助文档的一些方法，最后简单总结了一些常用的宏包。</p>
 <span id="more"></span>
 <hr />
-<h2 id="latex-错误"><span class="math inline">$\LaTeX{}$</span>
+<h2 id="latex-错误"><span class="math inline">\(\LaTeX{}\)</span>
 错误</h2>
-<p>当用排版引擎编译 <span class="math inline">$\LaTeX{}$</span>
+<p>当用排版引擎编译 <span class="math inline">\(\LaTeX{}\)</span>
 代码时，命令行的窗口（终端）会显示大量信息（TeXworks
 等编辑器会有一个区域显示这些信息）。
 当编译过程中出现错误时，信息将会停止在出错的地方，等待我们接下来的操作。</p>
@@ -994,21 +994,21 @@ if(canvas.getContext){
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">! Undefined control sequence.</span><br><span class="line">l.3 Test <span class="keyword">\LaTEx</span></span><br><span class="line">             &#123;&#125; and it&#x27;s friends.</span><br></pre></td></tr></table></figure>
 <p>这种错误信息分两部分，前一部分提示了错误的信息，后一部分指出了错误发生的行号，以及通过错落的文字告知发生错误的命令所在位置。如上错误显示
 <code>\LaTEx</code> 位置发生了错误，错误信息是“未定义的控制序列”，意思是
-<code>\LaTEx</code> 是 <span class="math inline">$\TeX{}$</span>
+<code>\LaTEx</code> 是 <span class="math inline">\(\TeX{}\)</span>
 编译器无法识别的一个命令，很显然是把 <code>\LaTeX</code>
 的大小写写错了。</p>
 <h3 id="处理方式">处理方式</h3>
 <p>出现错误时，编译过程将暂停，等待用户输入命令。用户可以直接敲回车跳过当前的错误，继续编译，相当于丢掉了写错的命令，将“Test
 and it’s
 friends.”排版出来。但这个例子过于简单，有些复杂的代码中，有可能会由于一个小问题导致一连串的错误。此时可以选择按
-<span class="math inline"><strong>S/R/Q</strong></span>
+<span class="math inline">\(\textbf{S/R/Q}\)</span>
 选择跳过接下来的所有错误，或者按 <span
-class="math inline"><strong>X</strong></span>
+class="math inline">\(\textbf{X}\)</span>
 直接退出编译，将源代码中的错误修改后重新编译。</p>
 <h3 id="常见的-latex-错误信息">常见的 <span
-class="math inline">$\LaTeX{}$</span> 错误信息</h3>
+class="math inline">\(\LaTeX{}\)</span> 错误信息</h3>
 <p>在此总结一些经常发生、问题比较明确的 <span
-class="math inline">$\LaTeX{}$</span> 错误：</p>
+class="math inline">\(\LaTeX{}\)</span> 错误：</p>
 <ul>
 <li><p><span style="color:red;">! Undefined control
 sequences.</span></p>
@@ -1018,7 +1018,7 @@ undefined.</span></p>
 <p>使用了未定义的环境。</p></li>
 <li><p><span style="color:red;">! Missing $ inserted.</span></p>
 <p>缺少数学环境的符号 <span
-class="math inline"><code>$</code></span>。多由于将数学符号用在公式之外而导致。</p></li>
+class="math inline">\(\texttt\$\)</span>。多由于将数学符号用在公式之外而导致。</p></li>
 <li><p><span style="color:red;">Runaway argument? </span></p>
 <p><span style="color:red;"> ! Paragraph ended before … was
 complete.</span></p></li>
@@ -1026,7 +1026,7 @@ complete.</span></p></li>
 definition/use of …</span></p>
 <p>这两个错误主要是由于漏写了包裹命令参数的花括号，导致识别参数时出现错误。许多编辑器的括号配对功能有助于检查和消除这类错误。</p>
 <p>这类错误还有可能是由于前一次编译中断导致 <span
-class="math inline"><code>.aux</code></span>
+class="math inline">\(\texttt{.aux}\)</span>
 等辅助文件不完整，再次编译读入不完整的文件产生错误。解决办法是删除辅助文件并重新编译。</p></li>
 <li><p><span style="color:red;">! Extra alignment tab has been changed
 to .</span></p></li>
@@ -1034,8 +1034,8 @@ to .</span></p></li>
 <p>两个错误信息都与表格有关。</p>
 <ul>
 <li>前者的字面意义是“一行中使用的列分隔符 <span
-class="math inline"><code>&amp;</code></span> 太多”，有时可能确实是
-<span class="math inline"><code>&amp;</code></span>
+class="math inline">\(\texttt\&amp;\)</span> 太多”，有时可能确实是 <span
+class="math inline">\(\texttt\&amp;\)</span>
 的个数和列格式不匹配，但多数情况是漏掉了行尾的 <code>\\</code>
 命令。</li>
 <li>后者常出现于漏掉了行尾的 <code>\\</code> 命令而接着使用
@@ -1057,8 +1057,8 @@ found.</span></p>
 <li>如果使用 <code>\input</code> 或者 <code>\include</code>
 命令添加文件，出现上述错误的原因当然是文件不存在或者文件名不对；</li>
 <li>如果错误提示里的文件名带 <span
-class="math inline"><code>.sty</code></span> 或者 <span
-class="math inline"><code>.cls</code></span> 扩展名，那么很显然，是因为
+class="math inline">\(\texttt{.sty}\)</span> 或者 <span
+class="math inline">\(\texttt{.cls}\)</span> 扩展名，那么很显然，是因为
 <strong>没有安装所需的宏包或文档类</strong>。</li>
 </ul></li>
 <li><p><span style="color:red;">! LaTeX Error: Missing
@@ -1097,27 +1097,28 @@ package `…’. </span></p>
 </ul>
 <hr />
 <h2 id="查找帮助文档">查找帮助文档</h2>
-<p>无论是 <span class="math inline">TeX Live</span> 还是 <span
-class="math inline">MiKTeX</span>，都提供了一个命令行模式的程序 <span
-class="math inline"><code>texdoc</code></span>。比如对
+<p>无论是 <span class="math inline">\(\textrm{TeX Live}\)</span> 还是
+<span
+class="math inline">\(\textrm{MiKTeX}\)</span>，都提供了一个命令行模式的程序
+<span class="math inline">\(\texttt{texdoc}\)</span>。比如对
 <code>fancyhdr</code> 宏包感兴趣，这时在 Windows 命令提示符或者 Linux
 终端输入以下命令，则会弹出宏包的帮助文档 <span
-class="math inline"><code>fancyhdr.pdf</code></span>：</p>
+class="math inline">\(\texttt{fancyhdr.pdf}\)</span>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">texdoc fancyhdr</span><br></pre></td></tr></table></figure>
-<p>除了宏包的帮助文档外，<span class="math inline">$\TeX{}$</span>
+<p>除了宏包的帮助文档外，<span class="math inline">\(\TeX{}\)</span>
 发行版还包括了各类有用的文档，有一部分在参考文献中给出。</p>
 <p>对于初学者，有一个现实而棘手的问题：<strong>某个命令到底是 <span
-class="math inline">$\LaTeX{}$</span>
+class="math inline">\(\LaTeX{}\)</span>
 自有的，还是哪个宏包提供的？</strong>
 很遗憾地说，除了通过慢慢积累、熟悉较多宏包之外，没有很方便的办法解决这个问题，因为
-<span class="math inline">$\LaTeX{}$</span> 的宏包实在太丰富了。</p>
+<span class="math inline">\(\LaTeX{}\)</span> 的宏包实在太丰富了。</p>
 <p>解决这个问题有几点可行的办法：</p>
 <ol type="1">
 <li><p>查询一些综述性的资料，如总结所有 <span
-class="math inline">$\LaTeX{}$</span> 自带命令的文档 <a href="#fn1"
+class="math inline">\(\LaTeX{}\)</span> 自带命令的文档 <a href="#fn1"
 class="footnote-ref" id="fnref1"
 role="doc-noteref"><sup>1</sup></a>、、<span
-class="math inline">$\LaTeX{}$</span> 符号大全 <a href="#fn2"
+class="math inline">\(\LaTeX{}\)</span> 符号大全 <a href="#fn2"
 class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 等；</p></li>
 <li><p>在互联网上搜索自己不清楚的命令；</p></li>
@@ -1140,56 +1141,56 @@ class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>amsmath</code></span></td>
+class="math inline">\(\texttt{amsmath}\)</span></td>
 <td style="text-align: left;">AMS 数学公式扩展。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>mathtools</code></span></td>
+class="math inline">\(\texttt{mathtools}\)</span></td>
 <td
 style="text-align: left;">数学公式扩展宏包，提供了公式编号定制和更多的符号、矩阵等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>amsfonts</code></span></td>
+class="math inline">\(\texttt{amsfonts}\)</span></td>
 <td style="text-align: left;">AMS 扩展符号的基础字体支持。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>amssymb</code></span></td>
+class="math inline">\(\texttt{amssymb}\)</span></td>
 <td style="text-align: left;">在 <span
-class="math inline"><code>amsfonts</code></span> 基础上将 AMS
+class="math inline">\(\texttt{amsfonts}\)</span> 基础上将 AMS
 扩展符号定义成命令。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>bm</code></span></td>
+class="math inline">\(\texttt{bm}\)</span></td>
 <td style="text-align: left;">提供将数学符号加粗的命令
 <code>\bm</code>。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>unicode-math</code></span></td>
+class="math inline">\(\texttt{unicode-math}\)</span></td>
 <td style="text-align: left;">使用 Unicode 数学字体。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>nicematrix</code></span></td>
+class="math inline">\(\texttt{nicematrix}\)</span></td>
 <td style="text-align: left;">排版复杂矩阵。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>siunitx</code></span></td>
+class="math inline">\(\texttt{siunitx}\)</span></td>
 <td style="text-align: left;">以国际单位规范排版物理量的单位。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>mhchem</code></span></td>
+class="math inline">\(\texttt{mhchem}\)</span></td>
 <td style="text-align: left;">排版化学式和方程式。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>tipa</code></span></td>
+class="math inline">\(\texttt{tipa}\)</span></td>
 <td style="text-align: left;">排版国际音标。</td>
 </tr>
 </tbody>
@@ -1209,96 +1210,96 @@ class="math inline"><code>tipa</code></span></td>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>ulem</code></span></td>
+class="math inline">\(\texttt{ulem}\)</span></td>
 <td style="text-align: left;">提供排版可断行下划线的命令
 <code>\uline</code> 以及其它装饰文字的命令。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>endnote</code></span></td>
+class="math inline">\(\texttt{endnote}\)</span></td>
 <td style="text-align: left;">排版尾注。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>marginnote</code></span></td>
+class="math inline">\(\texttt{marginnote}\)</span></td>
 <td style="text-align: left;">改善的边注排版功能。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>multicol</code></span></td>
+class="math inline">\(\texttt{multicol}\)</span></td>
 <td style="text-align: left;">提供将内容自由分栏的 <span
-class="math inline"><code>multicols</code></span> 环境。</td>
+class="math inline">\(\texttt{multicols}\)</span> 环境。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>multitoc</code></span></td>
+class="math inline">\(\texttt{multitoc}\)</span></td>
 <td style="text-align: left;">生成多栏排版的目录。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>minitoc</code></span></td>
+class="math inline">\(\texttt{minitoc}\)</span></td>
 <td style="text-align: left;">为章节生成独立的小目录。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>glossaries</code></span></td>
+class="math inline">\(\texttt{glossaries}\)</span></td>
 <td style="text-align: left;">生成词汇表。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>verbatim</code></span></td>
+class="math inline">\(\texttt{verbatim}\)</span></td>
 <td style="text-align: left;">对原始的 <span
-class="math inline"><code>verbatim</code></span> 环境的改善。提供了命令
+class="math inline">\(\texttt{verbatim}\)</span> 环境的改善。提供了命令
 <code>\verbatiminput</code> 调用源文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>fancyvrb</code></span></td>
+class="math inline">\(\texttt{fancyvrb}\)</span></td>
 <td style="text-align: left;">提供了代码排版环境 <span
-class="math inline"><code>Verbatim</code></span>
+class="math inline">\(\texttt{Verbatim}\)</span>
 以及对版式的自定义。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>listings</code></span></td>
+class="math inline">\(\texttt{listings}\)</span></td>
 <td style="text-align: left;">提供了排版关键字高亮的代码环境 <span
-class="math inline"><code>lstlisting</code></span>
+class="math inline">\(\texttt{lstlisting}\)</span>
 以及对版式的自定义。类似宏包有 <span
-class="math inline"><code>minted</code></span> 等。</td>
+class="math inline">\(\texttt{minted}\)</span> 等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>algorithmic</code></span></td>
+class="math inline">\(\texttt{algorithmic}\)</span></td>
 <td
 style="text-align: left;">一个简单的实现算法排版的宏包。如果要生成浮动体的话，需要搭配
-<span class="math inline"><code>algorithm</code></span> 宏包使用。</td>
+<span class="math inline">\(\texttt{algorithm}\)</span> 宏包使用。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>algorithm2e</code></span></td>
+class="math inline">\(\texttt{algorithm2e}\)</span></td>
 <td
 style="text-align: left;">较为复杂的、可定制的算法排版宏包。类似宏包有
-<span class="math inline"><code>algorithmicx</code></span> 等。</td>
+<span class="math inline">\(\texttt{algorithmicx}\)</span> 等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>amsthm</code></span></td>
+class="math inline">\(\texttt{amsthm}\)</span></td>
 <td style="text-align: left;">定制定理环境。类似宏包包括 <span
-class="math inline"><code>theorem</code></span>、<span
-class="math inline"><code>ntheorem</code></span>、<span
-class="math inline"><code>thmtools</code></span> 等。</td>
+class="math inline">\(\texttt{theorem}\)</span>、<span
+class="math inline">\(\texttt{ntheorem}\)</span>、<span
+class="math inline">\(\texttt{thmtools}\)</span> 等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>mdframed</code></span></td>
+class="math inline">\(\texttt{mdframed}\)</span></td>
 <td
 style="text-align: left;">排版可自动断页的带边框文字段落，提供边框样式的定制功能。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>tcolorbox</code></span></td>
+class="math inline">\(\texttt{tcolorbox}\)</span></td>
 <td style="text-align: left;">以 <span
-class="math inline"><code>TikZ</code></span>
+class="math inline">\(\texttt{TikZ}\)</span>
 为基础提供排版样式丰富的彩色盒子的功能。</td>
 </tr>
 </tbody>
@@ -1318,114 +1319,113 @@ class="math inline"><code>TikZ</code></span>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>array</code></span></td>
+class="math inline">\(\texttt{array}\)</span></td>
 <td style="text-align: left;">对表格列格式的扩展。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>booktabs</code></span></td>
+class="math inline">\(\texttt{booktabs}\)</span></td>
 <td style="text-align: left;">排版三线表。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>tabularx</code></span></td>
+class="math inline">\(\texttt{tabularx}\)</span></td>
 <td style="text-align: left;">提供 <span
-class="math inline"><code>tabularx</code></span>
+class="math inline">\(\texttt{tabularx}\)</span>
 环境排版定宽表格，支持自动计算宽度的 <span
-class="math inline"><code>X</code></span> 列格式。</td>
+class="math inline">\(\texttt{X}\)</span> 列格式。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>arydshln</code></span></td>
+class="math inline">\(\texttt{arydshln}\)</span></td>
 <td style="text-align: left;">支持排版虚线表格线。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>colortbl</code></span></td>
+class="math inline">\(\texttt{colortbl}\)</span></td>
 <td style="text-align: left;">支持修改表格的行、列、单元格的颜色。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>multirow</code></span></td>
+class="math inline">\(\texttt{multirow}\)</span></td>
 <td style="text-align: left;">支持合并多行单元格。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>makecell</code></span></td>
+class="math inline">\(\texttt{makecell}\)</span></td>
 <td
 style="text-align: left;">支持在单元格里排版多行内容（嵌套一个单列的小表格）。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>diagbox</code></span></td>
+class="math inline">\(\texttt{diagbox}\)</span></td>
 <td style="text-align: left;">排版斜线表头。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>longtable</code></span></td>
+class="math inline">\(\texttt{longtable}\)</span></td>
 <td style="text-align: left;">提供排版跨页长表格的 <span
-class="math inline"><code>longtable</code></span> 环境。</td>
+class="math inline">\(\texttt{longtable}\)</span> 环境。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>ltxtable</code></span></td>
+class="math inline">\(\texttt{ltxtable}\)</span></td>
 <td style="text-align: left;">为跨页长表格提供 <span
-class="math inline"><code>tabularx</code></span> 的 <span
-class="math inline"><code>X</code></span> 列格式。</td>
+class="math inline">\(\texttt{tabularx}\)</span> 的 <span
+class="math inline">\(\texttt{X}\)</span> 列格式。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>tabularray</code></span></td>
+class="math inline">\(\texttt{tabularray}\)</span></td>
 <td style="text-align: left;">排版复杂表格（基于 <span
-class="math inline">$\LaTeX3$</span> 实现）。</td>
+class="math inline">\(\LaTeX3\)</span> 实现）。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>graphicx</code></span></td>
+class="math inline">\(\texttt{graphicx}\)</span></td>
 <td style="text-align: left;">支持插图。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>bmpsize</code></span></td>
-<td style="text-align: left;"><span
-class="math inline"><code>latex</code> + <code>dvipdfmx</code></span>
-命令下支持 BMP/JPG/PNG 等格式的位图。</td>
+class="math inline">\(\texttt{bmpsize}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\texttt{latex}
++ \texttt{dvipdfmx}\)</span> 命令下支持 BMP/JPG/PNG 等格式的位图。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>epstopdf</code></span></td>
+class="math inline">\(\texttt{epstopdf}\)</span></td>
 <td style="text-align: left;"><span
-class="math inline"><code>pdflatex</code></span> 命令下支持 EPS
+class="math inline">\(\texttt{pdflatex}\)</span> 命令下支持 EPS
 格式的矢量图。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>wrapfig</code></span></td>
+class="math inline">\(\texttt{wrapfig}\)</span></td>
 <td style="text-align: left;">支持简单的文字在图片周围的绕排。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>caption</code></span></td>
+class="math inline">\(\texttt{caption}\)</span></td>
 <td style="text-align: left;">控制浮动体标题的格式。类似宏包有 <span
-class="math inline"><code>keyfloat</code></span> 等。</td>
+class="math inline">\(\texttt{keyfloat}\)</span> 等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>subcaption</code></span></td>
+class="math inline">\(\texttt{subcaption}\)</span></td>
 <td style="text-align: left;">提供子图表和子标题的排版。类似宏包有 <span
-class="math inline"><code>subfigure</code></span> 和 <span
-class="math inline"><code>subfig</code></span> 等。</td>
+class="math inline">\(\texttt{subfigure}\)</span> 和 <span
+class="math inline">\(\texttt{subfig}\)</span> 等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>bicaption</code></span></td>
+class="math inline">\(\texttt{bicaption}\)</span></td>
 <td style="text-align: left;">生成双语浮动体标题。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>float</code></span></td>
+class="math inline">\(\texttt{float}\)</span></td>
 <td style="text-align: left;">为浮动体提供不浮动的 <span
-class="math inline"><code>H</code></span>
+class="math inline">\(\texttt{H}\)</span>
 模式；提供自定义浮动体结构的功能。</td>
 </tr>
 </tbody>
@@ -1444,47 +1444,47 @@ class="math inline"><code>H</code></span>
 </thead>
 <tbody>
 <tr>
-<td><span class="math inline"><code>geometry</code></span></td>
+<td><span class="math inline">\(\texttt{geometry}\)</span></td>
 <td>修改页面尺寸、页边距、页眉页脚等参数。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>fancyhdr</code></span></td>
+<td><span class="math inline">\(\texttt{fancyhdr}\)</span></td>
 <td>修改页眉页脚格式，令页眉页脚可以左对齐、居中、右对齐。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>titlesec</code></span></td>
+<td><span class="math inline">\(\texttt{titlesec}\)</span></td>
 <td>修改章节标题 <code>\chapter</code>、<code>\section</code>
 等的格式。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>titletoc</code></span></td>
+<td><span class="math inline">\(\texttt{titletoc}\)</span></td>
 <td>修改目录中各条目的格式。类似宏包有 <span
-class="math inline"><code>tocloft</code></span> 等。</td>
+class="math inline">\(\texttt{tocloft}\)</span> 等。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>tocbibind</code></span></td>
+<td><span class="math inline">\(\texttt{tocbibind}\)</span></td>
 <td>支持将目录、参考文献、索引本身写入目录项。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>footmisc</code></span></td>
+<td><span class="math inline">\(\texttt{footmisc}\)</span></td>
 <td>修改脚注 <code>\footnote</code> 的格式。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>indentfirst</code></span></td>
+<td><span class="math inline">\(\texttt{indentfirst}\)</span></td>
 <td>令章节标题后的第一段首行缩进。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>enumerate</code></span></td>
+<td><span class="math inline">\(\texttt{enumerate}\)</span></td>
 <td>提供简单的自定义标签格式的 <span
-class="math inline"><code>enumerate</code></span> 环境。</td>
+class="math inline">\(\texttt{enumerate}\)</span> 环境。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>enumitem</code></span></td>
-<td>修改列表环境 <span class="math inline"><code>enumerate</code></span>
-和 <span class="math inline"><code>itemize</code></span> 等的格式。</td>
+<td><span class="math inline">\(\texttt{enumitem}\)</span></td>
+<td>修改列表环境 <span class="math inline">\(\texttt{enumerate}\)</span>
+和 <span class="math inline">\(\texttt{itemize}\)</span> 等的格式。</td>
 </tr>
 <tr>
-<td><span class="math inline"><code>lettrine</code></span></td>
+<td><span class="math inline">\(\texttt{lettrine}\)</span></td>
 <td>生成段落首字母大写的效果。</td>
 </tr>
 </tbody>

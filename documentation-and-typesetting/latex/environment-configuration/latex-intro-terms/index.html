@@ -116,12 +116,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文主要介绍$\LaTeX{}$的相关术语以及在文件编译过程中发生了什么。">
+    <meta name="description" content="本文主要介绍\(\LaTeX{}\)的相关术语以及在文件编译过程中发生了什么。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一份简短的LaTeX相关术语的介绍">
 <meta property="og:url" content="https://invinc-z.com/documentation-and-typesetting/latex/environment-configuration/latex-intro-terms/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文主要介绍$\LaTeX{}$的相关术语以及在文件编译过程中发生了什么。">
+<meta property="og:description" content="本文主要介绍\(\LaTeX{}\)的相关术语以及在文件编译过程中发生了什么。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-14T11:12:18.000Z">
 <meta property="article:modified_time" content="2026-05-18T17:36:05.770Z">
@@ -293,7 +293,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex%E4%B8%8Elatex"><span class="nav-number">1.</span> <span class="nav-text">$\TeX$与$\LaTeX{}$</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tex"><span class="nav-number">1.1.</span> <span class="nav-text">$\TeX{}$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex"><span class="nav-number">1.2.</span> <span class="nav-text">$\LaTeX{}$</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#texplain-texlatex-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.</span> <span class="nav-text">TeX、Plain TeX、LaTeX 的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">基础格式文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">扩展格式文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E6%93%8E"><span class="nav-number">3.</span> <span class="nav-text">引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pdftex"><span class="nav-number">3.1.</span> <span class="nav-text">pdfTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#luatex"><span class="nav-number">3.2.</span> <span class="nav-text">LuaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xetex"><span class="nav-number">3.3.</span> <span class="nav-text">XeTeX</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">编译命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.</span> <span class="nav-text">LaTeX 发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E6%88%90"><span class="nav-number">5.1.</span> <span class="nav-text">发行版的核心组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%B5%81%E7%9A%84-latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.2.</span> <span class="nav-text">主流的 LaTeX 发行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.3.</span> <span class="nav-text">为什么需要发行版？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%80%E8%A7%88"><span class="nav-number">7.</span> <span class="nav-text">$\LaTeX{}$ 用到的文件一览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">8.</span> <span class="nav-text">编译过程发生了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E7%AE%80-latex-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">8.1.</span> <span class="nav-text">最简 LaTeX 示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xelatex-%E7%BC%96%E8%AF%91%E5%85%A8%E6%B5%81%E7%A8%8B%E5%88%86%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90"><span class="nav-number">8.2.</span> <span class="nav-text">XeLaTeX
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex%E4%B8%8Elatex"><span class="nav-number">1.</span> <span class="nav-text">\(\TeX\)与\(\LaTeX{}\)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tex"><span class="nav-number">1.1.</span> <span class="nav-text">\(\TeX{}\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex"><span class="nav-number">1.2.</span> <span class="nav-text">\(\LaTeX{}\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#texplain-texlatex-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.</span> <span class="nav-text">TeX、Plain TeX、LaTeX 的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">基础格式文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">扩展格式文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E6%93%8E"><span class="nav-number">3.</span> <span class="nav-text">引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pdftex"><span class="nav-number">3.1.</span> <span class="nav-text">pdfTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#luatex"><span class="nav-number">3.2.</span> <span class="nav-text">LuaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xetex"><span class="nav-number">3.3.</span> <span class="nav-text">XeTeX</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">编译命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.</span> <span class="nav-text">LaTeX 发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E6%88%90"><span class="nav-number">5.1.</span> <span class="nav-text">发行版的核心组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%B5%81%E7%9A%84-latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.2.</span> <span class="nav-text">主流的 LaTeX 发行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.3.</span> <span class="nav-text">为什么需要发行版？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%80%E8%A7%88"><span class="nav-number">7.</span> <span class="nav-text">\(\LaTeX{}\) 用到的文件一览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">8.</span> <span class="nav-text">编译过程发生了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E7%AE%80-latex-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">8.1.</span> <span class="nav-text">最简 LaTeX 示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xelatex-%E7%BC%96%E8%AF%91%E5%85%A8%E6%B5%81%E7%A8%8B%E5%88%86%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90"><span class="nav-number">8.2.</span> <span class="nav-text">XeLaTeX
 编译全流程（分阶段解析）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-1%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BDxelatex-main.tex-%E5%90%AF%E5%8A%A8%E6%97%B6"><span class="nav-number">8.2.1.</span> <span class="nav-text">阶段
 1：初始化与格式文件加载（xelatex main.tex 启动时）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-2%E8%A7%A3%E6%9E%90-.tex-%E6%BA%90%E6%96%87%E4%BB%B6%E5%AE%8F%E5%B1%95%E5%BC%80%E4%B8%8E%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="nav-number">8.2.2.</span> <span class="nav-text">阶段 2：解析
 .tex 源文件，宏展开与结构分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-3%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90%E4%B8%AD%E9%97%B4%E6%96%87%E4%BB%B6%E6%9C%AA%E5%AE%8C%E6%88%90%E5%BC%95%E7%94%A8%E5%92%8C%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.2.3.</span> <span class="nav-text">阶段
@@ -986,15 +986,15 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody"><p>本文主要介绍<span
-class="math inline">$\LaTeX{}$</span>的相关术语以及在文件编译过程中发生了什么。</p>
+class="math inline">\(\LaTeX{}\)</span>的相关术语以及在文件编译过程中发生了什么。</p>
 <span id="more"></span>
 <hr />
 <p>新人在刚接触和使用<span
-class="math inline">$\LaTeX{}$</span>时可能会有以下一些概念的困扰：</p>
+class="math inline">\(\LaTeX{}\)</span>时可能会有以下一些概念的困扰：</p>
 <blockquote>
 <ul>
-<li>什么是<span class="math inline">$\TeX$</span>/<span
-class="math inline">$\LaTeX$</span>，它们之间有什么关系？</li>
+<li>什么是<span class="math inline">\(\TeX\)</span>/<span
+class="math inline">\(\LaTeX\)</span>，它们之间有什么关系？</li>
 <li>pdfTeX、LuaTeX、XeTeX这些是什么？</li>
 <li>pdflatex、lualatex、xelatex这些是什么？</li>
 <li>CTEX套装、TeX Live、MacTeX、MiKTeX这些是什么？</li>
@@ -1003,15 +1003,15 @@ class="math inline">$\LaTeX$</span>，它们之间有什么关系？</li>
 </ul>
 </blockquote>
 <p>了解<span
-class="math inline">$\LaTeX{}$</span>在编译过程中底层发生了哪些事情对于我们遇到问题时快速定位原因是大有帮助的，这增强了我们使用<span
-class="math inline">$\LaTeX{}$</span>的底气，使我们能够心定神闲地编写tex文件，遇到问题时心中不慌。同时，这也使我们更深入地理解<span
-class="math inline">$\LaTeX{}$</span>。</p>
+class="math inline">\(\LaTeX{}\)</span>在编译过程中底层发生了哪些事情对于我们遇到问题时快速定位原因是大有帮助的，这增强了我们使用<span
+class="math inline">\(\LaTeX{}\)</span>的底气，使我们能够心定神闲地编写tex文件，遇到问题时心中不慌。同时，这也使我们更深入地理解<span
+class="math inline">\(\LaTeX{}\)</span>。</p>
 <p>本文主要介绍<span
-class="math inline">$\LaTeX{}$</span>的相关术语以及在文件编译过程中发生了什么。</p>
+class="math inline">\(\LaTeX{}\)</span>的相关术语以及在文件编译过程中发生了什么。</p>
 <hr />
-<h2 id="tex与latex"><span class="math inline">$\TeX$</span>与<span
-class="math inline">$\LaTeX{}$</span></h2>
-<h3 id="tex"><span class="math inline">$\TeX{}$</span></h3>
+<h2 id="tex与latex"><span class="math inline">\(\TeX\)</span>与<span
+class="math inline">\(\LaTeX{}\)</span></h2>
+<h3 id="tex"><span class="math inline">\(\TeX{}\)</span></h3>
 <p>TeX 的核心程序（即“TeX 引擎”）最初由高德纳（Donald Knuth）在
 1978-1982 年间用<strong>Pascal 语言</strong>编写。TeX
 引擎的执行逻辑是通过 Pascal 代码描述，再经 Pascal
@@ -1030,8 +1030,8 @@ CPU 的硬件指令。</p>
 <p>加载格式文件的过程，就像是给一个只有基本指令的计算机安装了一个操作系统和标准库。</p>
 <p>高德纳本人还编写了一个简单的 plain TEX 格式，没有定义诸如
 <code>\documentclass</code> 和 <code>\section</code> 等等命令。</p>
-<h3 id="latex"><span class="math inline">$\LaTeX{}$</span></h3>
-<p><span class="math inline">$\LaTeX{}$</span> 也是一种格式，建立在
+<h3 id="latex"><span class="math inline">\(\LaTeX{}\)</span></h3>
+<p><span class="math inline">\(\LaTeX{}\)</span> 也是一种格式，建立在
 Plain TeX 之上的、一个更庞大、更结构化、更易用的宏包集合。它定义了像
 <code>\documentclass</code>, <code>\begin&#123;document&#125;</code>,
 <code>\section</code> 这样的高级命令。</p>
@@ -1114,15 +1114,15 @@ DVI)，其可由dvipdf或其他工具转换为PDF文件。</p>
 <h2 id="编译命令">编译命令</h2>
 <p><strong>编译命令</strong>
 是实际调用的、结合了引擎和格式的命令（可执行程序）。如 <span
-class="math inline"><code>xelatex</code></span> 命令是结合 XeTeX引擎和
+class="math inline">\(\texttt{xelatex}\)</span> 命令是结合 XeTeX引擎和
 XeLaTeX
 格式的一个编译命令（类似于选择编译器（XeTeX引擎）和链接库函数（选择XeLaTeX
 格式）的过程）。</p>
 <p>常见的引擎、格式和编译命令的关系总结于下表。 其中[xxx]<span
-class="math inline">$\LaTeX{}$</span> 格式
+class="math inline">\(\LaTeX{}\)</span> 格式
 表示与对应命令相匹配的格式，比如 <span
-class="math inline"><code>latex</code></span> 命令对应LaTeX 格式，<span
-class="math inline"><code>pdflatex</code></span>
+class="math inline">\(\texttt{latex}\)</span> 命令对应LaTeX 格式，<span
+class="math inline">\(\texttt{pdflatex}\)</span>
 命令对应PDFLaTeX格式。</p>
 <table>
 <colgroup>
@@ -1135,40 +1135,40 @@ class="math inline"><code>pdflatex</code></span>
 <tr>
 <th></th>
 <th>文档格式</th>
-<th>plain <span class="math inline">$\TeX{}$</span> 格式</th>
-<th>[xxx]<span class="math inline">$\LaTeX{}$</span> 格式</th>
+<th>plain <span class="math inline">\(\TeX{}\)</span> 格式</th>
+<th>[xxx]<span class="math inline">\(\LaTeX{}\)</span> 格式</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>TeX 引擎</td>
-<td><span class="math inline">DVI</span></td>
-<td><span class="math inline"><code>tex</code></span></td>
+<td><span class="math inline">\(\textrm{DVI}\)</span></td>
+<td><span class="math inline">\(\texttt{tex}\)</span></td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>pdfTeX 引擎</td>
-<td><span class="math inline">DVI</span></td>
-<td><span class="math inline"><code>etex</code></span></td>
-<td><span class="math inline"><code>latex</code></span></td>
+<td><span class="math inline">\(\textrm{DVI}\)</span></td>
+<td><span class="math inline">\(\texttt{etex}\)</span></td>
+<td><span class="math inline">\(\texttt{latex}\)</span></td>
 </tr>
 <tr>
 <td></td>
-<td><span class="math inline">PDF</span></td>
-<td><span class="math inline"><code>pdftex</code></span></td>
-<td><span class="math inline"><code>pdflatex</code></span></td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{pdftex}\)</span></td>
+<td><span class="math inline">\(\texttt{pdflatex}\)</span></td>
 </tr>
 <tr>
 <td>XeTeX 引擎</td>
-<td><span class="math inline">PDF</span></td>
-<td><span class="math inline"><code>xetex</code></span></td>
-<td><span class="math inline"><code>xelatex</code></span></td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{xetex}\)</span></td>
+<td><span class="math inline">\(\texttt{xelatex}\)</span></td>
 </tr>
 <tr>
 <td>LuaTeX 引擎</td>
-<td><span class="math inline">PDF</span></td>
-<td><span class="math inline"><code>luatex</code></span></td>
-<td><span class="math inline"><code>lualatex</code></span></td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{luatex}\)</span></td>
+<td><span class="math inline">\(\texttt{lualatex}\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1187,37 +1187,37 @@ class="math inline"><code>pdflatex</code></span>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>latex</code></span></td>
+class="math inline">\(\texttt{latex}\)</span></td>
 <td style="text-align: left;">虽然名为 <span
-class="math inline"><code>latex</code></span> 命令，底层调用的引擎其实是
+class="math inline">\(\texttt{latex}\)</span> 命令，底层调用的引擎其实是
 pdfTeX。 该命令生成 <span
-class="math inline"><code>dvi</code></span>（Device
+class="math inline">\(\texttt{dvi}\)</span>（Device
 Independent）格式的文档, 用 <span
-class="math inline"><code>dvipdfmx</code></span> 命令可以将其转为 <span
-class="math inline"><code>pdf</code></span>。</td>
+class="math inline">\(\texttt{dvipdfmx}\)</span> 命令可以将其转为 <span
+class="math inline">\(\texttt{pdf}\)</span>。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>pdflatex</code></span></td>
+class="math inline">\(\texttt{pdflatex}\)</span></td>
 <td style="text-align: left;">底层调用的引擎也是 pdfTeX，可以直接生成
-<span class="math inline"><code>pdf</code></span> 格式的文档。</td>
+<span class="math inline">\(\texttt{pdf}\)</span> 格式的文档。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>xelatex</code></span></td>
+class="math inline">\(\texttt{xelatex}\)</span></td>
 <td style="text-align: left;">底层调用的引擎是 XeTeX，支持 UTF-8
 编码和对 TrueType/OpenType 字体的调用。
 当前较为方便的<strong>中文排版</strong>解决方案基于 <span
-class="math inline"><code>xelatex</code></span>。</td>
+class="math inline">\(\texttt{xelatex}\)</span>。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>lualatex</code></span></td>
+class="math inline">\(\texttt{lualatex}\)</span></td>
 <td style="text-align: left;">底层调用的引擎是 LuaTeX。这个引擎在pdfTeX
 引擎基础上发展而来，除了支持 UTF-8 编码和对 TrueType/OpenType
 字体的调用外，还支持通过 Lua 语言扩展 <span
-class="math inline">$\TeX{}$</span> 的功能。 <span
-class="math inline"><code>lualatex</code></span>
+class="math inline">\(\TeX{}\)</span> 的功能。 <span
+class="math inline">\(\texttt{lualatex}\)</span>
 编译命令下的中文排版支持需要借助 <code>luatexja</code>宏包。</td>
 </tr>
 </tbody>
@@ -1310,12 +1310,12 @@ Code和TeXstudio，这两个都支持跨操作系统，WinEdt主要搭配CTeX套
 Code的推荐使用Texstudio，新手推荐使用Texstudio，原因是它职责单一，只用来编写tex文件，并且个人感觉Debug比VS
 Code好用。并且Texstudio是用QT框架编写的开源软件，如果有功能建议可以去其Github<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RleHN0dWRpby1vcmcvdGV4c3R1ZGlv">主页<i class="fa fa-external-link-alt"></i></span>提issues。</p>
 <h2 id="latex-用到的文件一览"><span
-class="math inline">$\LaTeX{}$</span> 用到的文件一览</h2>
-<p>除了源代码文件 <span class="math inline"><code>.tex</code></span>
-以外，使用 <span class="math inline">$\LaTeX{}$</span>
+class="math inline">\(\LaTeX{}\)</span> 用到的文件一览</h2>
+<p>除了源代码文件 <span class="math inline">\(\texttt{.tex}\)</span>
+以外，使用 <span class="math inline">\(\LaTeX{}\)</span>
 时还可能接触到各种格式的文件。本节简单介绍一下经常见到的文件。</p>
 <p>每个宏包和文档类都是带特定扩展名的文件，除此之外也有一些文件出现于
-<span class="math inline">$\LaTeX{}$</span> 模板中：</p>
+<span class="math inline">\(\LaTeX{}\)</span> 模板中：</p>
 <table>
 <thead>
 <tr>
@@ -1326,22 +1326,22 @@ class="math inline">$\LaTeX{}$</span> 用到的文件一览</h2>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.sty</code></span></td>
+class="math inline">\(\texttt{.sty}\)</span></td>
 <td style="text-align: left;">宏包文件。宏包的名称与文件名一致。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.cls</code></span></td>
+class="math inline">\(\texttt{.cls}\)</span></td>
 <td style="text-align: left;">文档类文件。文档类名称与文件名一致。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.bib</code></span></td>
+class="math inline">\(\texttt{.bib}\)</span></td>
 <td style="text-align: left;">参考文献数据库文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.bst</code></span></td>
+class="math inline">\(\texttt{.bst}\)</span></td>
 <td style="text-align: left;">用到的参考文献格式模板。</td>
 </tr>
 </tbody>
@@ -1361,63 +1361,63 @@ class="math inline"><code>.bst</code></span></td>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.log</code></span></td>
+class="math inline">\(\texttt{.log}\)</span></td>
 <td
 style="text-align: left;">排版引擎生成的日志文件，供排查错误使用。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.aux</code></span></td>
+class="math inline">\(\texttt{.aux}\)</span></td>
 <td
 style="text-align: left;">生成的主辅助文件，记录交叉引用、目录、参考文献的引用等。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.toc</code></span></td>
+class="math inline">\(\texttt{.toc}\)</span></td>
 <td style="text-align: left;">生成的目录记录文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.lof</code></span></td>
+class="math inline">\(\texttt{.lof}\)</span></td>
 <td style="text-align: left;">生成的图片目录记录文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.lot</code></span></td>
+class="math inline">\(\texttt{.lot}\)</span></td>
 <td style="text-align: left;">生成的表格目录记录文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.bbl</code></span></td>
+class="math inline">\(\texttt{.bbl}\)</span></td>
 <td style="text-align: left;">BibTeX生成的参考文献记录文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.blg</code></span></td>
+class="math inline">\(\texttt{.blg}\)</span></td>
 <td style="text-align: left;">BibTeX生成的日志文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.idx</code></span></td>
+class="math inline">\(\texttt{.idx}\)</span></td>
 <td style="text-align: left;">生成的供 <code>makeindex</code>
 处理的索引记录文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.ind</code></span></td>
+class="math inline">\(\texttt{.ind}\)</span></td>
 <td style="text-align: left;"><code>makeindex</code> 处理 <span
-class="math inline"><code>.idx</code></span>
+class="math inline">\(\texttt{.idx}\)</span>
 生成的用于排版的格式化索引文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.ilg</code></span></td>
+class="math inline">\(\texttt{.ilg}\)</span></td>
 <td style="text-align: left;"><code>makeindex</code>
 生成的日志文件。</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>.out</code></span></td>
+class="math inline">\(\texttt{.out}\)</span></td>
 <td style="text-align: left;"><code>hyperref</code> 宏包生成的 PDF
 书签记录文件。</td>
 </tr>

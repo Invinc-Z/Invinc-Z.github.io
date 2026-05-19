@@ -116,12 +116,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章会简单介绍如何安装 $\TeX{}$ 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 $\LaTeX{}$ 宏包是不断更新换代的。">
+    <meta name="description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lshort笔记：安装TEX发行版（九）">
 <meta property="og:url" content="https://invinc-z.com/notes-reading/technical-books/notes-lshort/lshort-09-install/index.html">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章会简单介绍如何安装 $\TeX{}$ 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 $\LaTeX{}$ 宏包是不断更新换代的。">
+<meta property="og:description" content="本文内容来自一份 (不太) 简短的 LATEX2ε 介绍。  本章会简单介绍如何安装 \(\TeX{}\) 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 \(\LaTeX{}\) 宏包是不断更新换代的。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-02-25T21:12:18.000Z">
 <meta property="article:modified_time" content="2026-05-18T17:36:05.773Z">
@@ -291,9 +291,9 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex-%E5%8F%91%E8%A1%8C%E7%89%88%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">$\TeX{}$
-发行版简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.1.</span> <span class="nav-text">安装发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftex-live"><span class="nav-number">1.1.1.</span> <span class="nav-text">TeX
-Live</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfmiktex"><span class="nav-number">1.1.2.</span> <span class="nav-text">MiKTeX</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装和更新宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装宏包</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex-%E5%8F%91%E8%A1%8C%E7%89%88%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">\(\TeX{}\)
+发行版简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">1.1.</span> <span class="nav-text">安装发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#textbftex-live"><span class="nav-number">1.1.1.</span> <span class="nav-text">\(\textbf{TeX
+Live}\)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#textbfmiktex"><span class="nav-number">1.1.2.</span> <span class="nav-text">\(\textbf{MiKTeX}\)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%92%8C%E6%9B%B4%E6%96%B0%E5%AE%8F%E5%8C%85"><span class="nav-number">2.</span> <span class="nav-text">安装和更新宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E5%AE%8F%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">手动安装宏包</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -977,126 +977,135 @@ if(canvas.getContext){
 <p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
 (不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
-<p>本章会简单介绍如何安装 <span class="math inline">$\TeX{}$</span>
+<p>本章会简单介绍如何安装 <span class="math inline">\(\TeX{}\)</span>
 发行版，以及保持发行版的内容紧跟最新。后者非常重要，因为 <span
-class="math inline">$\LaTeX{}$</span> 宏包是不断更新换代的。</p>
+class="math inline">\(\LaTeX{}\)</span> 宏包是不断更新换代的。</p>
 <span id="more"></span>
 <hr />
-<h2 id="tex-发行版简介"><span class="math inline">$\TeX{}$</span>
+<h2 id="tex-发行版简介"><span class="math inline">\(\TeX{}\)</span>
 发行版简介</h2>
-<p>一个 <strong><span class="math inline">$\TeX{}$</span>
-发行版</strong> 是 <span class="math inline">$\TeX{}$</span>
+<p>一个 <strong><span class="math inline">\(\TeX{}\)</span>
+发行版</strong> 是 <span class="math inline">\(\TeX{}\)</span>
 排版引擎、支持排版的文件（基本格式、<span
-class="math inline">$\LaTeX{}$</span>
+class="math inline">\(\LaTeX{}\)</span>
 宏包、字体等）以及一些辅助工具的集合。各式各样的 <span
-class="math inline">$\TeX{}$</span>
+class="math inline">\(\TeX{}\)</span>
 发行版经过十多年的发展，大浪淘沙，现今的两个主流发行版为：</p>
 <ul>
-<li><p><span class="math inline"><strong>TeX Live</strong></span> <span
-class="math inline">TeX Live</span> 由类 UNIX 系统上的 <span
-class="math inline">teTEX</span> 发展并取而代之，最终成为跨平台的 <span
-class="math inline">$\TeX{}$</span> 发行版。<span
-class="math inline">TeX Live</span> 自 2011
+<li><p><span class="math inline">\(\textbf{TeX Live}\)</span> <span
+class="math inline">\(\textrm{TeX Live}\)</span> 由类 UNIX 系统上的
+<span class="math inline">\(\textrm{teTEX}\)</span>
+发展并取而代之，最终成为跨平台的 <span
+class="math inline">\(\TeX{}\)</span> 发行版。<span
+class="math inline">\(\textrm{TeX Live}\)</span> 自 2011
 年起以年份作为发行版的版本号，保持了一年一更的频率。</p>
-<p><span class="math inline">MacTeX</span> 是 macOS（OS
-X）系统下的一个定制化的 <span class="math inline">TeX Live</span>
-版本，与 <span class="math inline">TeX Live</span> 同步更新。</p></li>
-<li><p><span class="math inline"><strong>MiKTeX</strong></span> <span
-class="math inline">MiKTeX</span> 是主要用于 Windows
-平台的一个稳定发展的 <span class="math inline">$\TeX{}$</span>
-发行版。在中国大陆曾经发行过“<span class="math inline">CTeX</span>
+<p><span class="math inline">\(\textrm{MacTeX}\)</span> 是 macOS（OS
+X）系统下的一个定制化的 <span class="math inline">\(\textrm{TeX
+Live}\)</span> 版本，与 <span class="math inline">\(\textrm{TeX
+Live}\)</span> 同步更新。</p></li>
+<li><p><span class="math inline">\(\textbf{MiKTeX}\)</span> <span
+class="math inline">\(\textrm{MiKTeX}\)</span> 是主要用于 Windows
+平台的一个稳定发展的 <span class="math inline">\(\TeX{}\)</span>
+发行版。在中国大陆曾经发行过“<span
+class="math inline">\(\textrm{CTeX}\)</span>
 套装”，它是一个经过本地化配置的 <span
-class="math inline">MiKTeX</span>，不过其配置较为过时，也不再有更新支持，使用起来可能有诸多问题，现已不推荐使用。</p></li>
+class="math inline">\(\textrm{MiKTeX}\)</span>，不过其配置较为过时，也不再有更新支持，使用起来可能有诸多问题，现已不推荐使用。</p></li>
 </ul>
-<p><span class="math inline">TeX Live</span> 和 <span
-class="math inline">MiKTeX</span> 都集成了一个简单的 <span
-class="math inline">$\LaTeX{}$</span> 源代码编辑器
-<strong>TeXworks</strong>（<span class="math inline">MacTeX</span>
-则集成了类似的 TeXShop）。用户在安装完毕后，可直接使用 TeXworks
-编写和编译 <span class="math inline">$\LaTeX{}$</span> 源代码。</p>
+<p><span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
+class="math inline">\(\textrm{MiKTeX}\)</span> 都集成了一个简单的 <span
+class="math inline">\(\LaTeX{}\)</span> 源代码编辑器
+<strong>TeXworks</strong>（<span
+class="math inline">\(\textrm{MacTeX}\)</span> 则集成了类似的
+TeXShop）。用户在安装完毕后，可直接使用 TeXworks 编写和编译 <span
+class="math inline">\(\LaTeX{}\)</span> 源代码。</p>
 <h3 id="安装发行版">安装发行版</h3>
-<h4 id="textbftex-live"><span class="math inline"><strong>TeX
-Live</strong></span></h4>
-<p><span class="math inline">TeX Live</span> 的安装和使用指南可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlL2RvYy90ZXhsaXZlLXpoLWNuL3RleGxpdmUtemgtY24ucGRm">文档<i class="fa fa-external-link-alt"></i></span>,
+<h4 id="textbftex-live"><span class="math inline">\(\textbf{TeX
+Live}\)</span></h4>
+<p><span class="math inline">\(\textrm{TeX Live}\)</span>
+的安装和使用指南可参考<span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlL2RvYy90ZXhsaXZlLXpoLWNuL3RleGxpdmUtemgtY24ucGRm">文档<i class="fa fa-external-link-alt"></i></span>,
 可用 <code>texdoc texlive-zh-cn</code> 在本地打开。</p>
-<p><span class="math inline">TeX Live</span> 的光盘镜像发布于 <span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==">texlive官网<i class="fa fa-external-link-alt"></i></span>，下载镜像到本地，挂载到虚拟光驱，或者用压缩工具解压后，在其根目录有几个用于安装的脚本：</p>
+<p><span class="math inline">\(\textrm{TeX Live}\)</span>
+的光盘镜像发布于 <span class="exturl" data-url="aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==">texlive官网<i class="fa fa-external-link-alt"></i></span>，下载镜像到本地，挂载到虚拟光驱，或者用压缩工具解压后，在其根目录有几个用于安装的脚本：</p>
 <ul>
 <li><p>用于 <strong>Windows</strong> 的批处理文件：</p>
 <ul>
 <li><p><span
-class="math inline"><code>install-tl-windows.bat</code></span>
+class="math inline">\(\texttt{install-tl-windows.bat}\)</span>
 双击启动图形界面安装程序，可以在图形安装界面的 Advanced
 选项中定制安装；</p></li>
 <li><p>在命令提示符中输入 <span
-class="math inline"><code>install-tl-windows.bat -no-gui</code></span>
+class="math inline">\(\texttt{install-tl-windows.bat -no-gui}\)</span>
 启动文本界面安装程序。</p></li>
 </ul></li>
 <li><p>用于 <strong>Linux</strong> 的 Perl 脚本 <span
-class="math inline"><code>install-tl</code></span> ：</p>
+class="math inline">\(\texttt{install-tl}\)</span> ：</p>
 <ul>
-<li><p><span class="math inline"><code>install-tl</code></span>
+<li><p><span class="math inline">\(\texttt{install-tl}\)</span>
 启动文本界面安装程序；</p></li>
-<li><p><span class="math inline"><code>install-tl -gui</code></span>
+<li><p><span class="math inline">\(\texttt{install-tl -gui}\)</span>
 启动图形界面安装程序。</p></li>
 </ul></li>
 </ul>
 <p>另外也可以下载在线安装程序 <span
-class="math inline"><code>install-tl.zip</code></span>，包含以上所有安装脚本。安装过程中会从
+class="math inline">\(\texttt{install-tl.zip}\)</span>，包含以上所有安装脚本。安装过程中会从
 CTAN 软件源下载所有组件。</p>
-<p>Linux 下 <span class="math inline">TeX Live</span>
+<p>Linux 下 <span class="math inline">\(\textrm{TeX Live}\)</span>
 安装完毕后，一般还需要在 root 权限下进行以下操作，使得 <span
-class="math inline">XeLaTeX</span> 能正确通过
+class="math inline">\(\textrm{XeLaTeX}\)</span> 能正确通过
 <code>fontspec</code>等宏包使用字体：</p>
 <ol type="1">
 <li>将 <span
-class="math inline"><code>texlive-fontconfig.conf</code></span>
+class="math inline">\(\texttt{texlive-fontconfig.conf}\)</span>
 文件复制到 <span
-class="math inline"><code>/etc/fonts/conf.d/09-texlive.conf</code></span>。</li>
-<li>运行 <span
-class="math inline"><code>fc-cache -fsv</code></span>。</li>
+class="math inline">\(\texttt{/etc/fonts/conf.d/09-texlive.conf}\)</span>。</li>
+<li>运行 <span class="math inline">\(\texttt{fc-cache
+-fsv}\)</span>。</li>
 </ol>
 <h4 id="textbfmiktex"><span
-class="math inline"><strong>MiKTeX</strong></span></h4>
-<p>从 <span class="math inline">MiKTeX</span> <span class="exturl" data-url="aHR0cHM6Ly93d3cubWlrdGV4Lm9yZy8=">官网<i class="fa fa-external-link-alt"></i></span> 下载名为 <span
-class="math inline"><code>basic-miktex-***.exe</code></span> 的 Windows
+class="math inline">\(\textbf{MiKTeX}\)</span></h4>
+<p>从 <span class="math inline">\(\textrm{MiKTeX}\)</span> <span class="exturl" data-url="aHR0cHM6Ly93d3cubWlrdGV4Lm9yZy8=">官网<i class="fa fa-external-link-alt"></i></span> 下载名为 <span
+class="math inline">\(\texttt{basic-miktex-***.exe}\)</span> 的 Windows
 安装包。下载后直接双击打开，按照程序的提示进行安装即可。</p>
 <hr />
 <h2 id="安装和更新宏包">安装和更新宏包</h2>
-<p><span class="math inline">TeX Live</span> 和 <span
-class="math inline">MiKTeX</span> 分别提供了图形界面的宏包管理器 <span
-class="math inline">TEX Live Manager</span> 和 <span
-class="math inline">MiKTeX Package
-Manager</span>，用于安装、管理和更新宏包。一般情况下，直接在图形界面的工具下按提示操作即可（<span
-class="math inline">MiKTeX Package Manager</span>
+<p><span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
+class="math inline">\(\textrm{MiKTeX}\)</span>
+分别提供了图形界面的宏包管理器 <span class="math inline">\(\textrm{TEX
+Live Manager}\)</span> 和 <span class="math inline">\(\textrm{MiKTeX
+Package
+Manager}\)</span>，用于安装、管理和更新宏包。一般情况下，直接在图形界面的工具下按提示操作即可（<span
+class="math inline">\(\textrm{MiKTeX Package Manager}\)</span>
 有普通权限和管理员权限的版本，建议<strong>总是使用管理员权限</strong>的版本）。</p>
 <p>两者也可以通过各自的命令行工具安装和更新宏包：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% TeX Live 命令行工具 tlmgr 的使用示例</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">tlmgr install &lt;package-name&gt;</span><br><span class="line">tlmgr remove &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包（包括 tlmgr 本身）</span><br><span class="line">tlmgr update --all --self</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">tlmgr update --list</span><br><span class="line">% 指定更新源地址</span><br><span class="line">% &lt;CTAN mirrors&gt; 形如 https://mirrors.tuna.tsinghua.edu.cn/CTAN</span><br><span class="line">tlmgr repository <span class="built_in">set</span> &lt;CTAN mirrors&gt;/systems/texlive/tlnet</span><br><span class="line">% 查看宏包信息，加 --list 参数可列出宏包的所有文件</span><br><span class="line">tlmgr info &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">% MiKTeX 命令行工具 mpm 的使用示例</span><br><span class="line">% 建议始终加 --admin 参数使用</span><br><span class="line">% 安装/卸载宏包</span><br><span class="line">mpm --admin --install &lt;package-name&gt;</span><br><span class="line">mpm --admin --uninstall &lt;package-name&gt;</span><br><span class="line">% 更新所有宏包</span><br><span class="line">mpm --admin --update</span><br><span class="line">% 列出所有可更新的宏包</span><br><span class="line">mpm --admin --find-updates</span><br><span class="line">% 指定更新源地址</span><br><span class="line">mpm --admin --set-repository=&lt;CTAN mirrors&gt;/systems/win32/miktex/tm/packages</span><br><span class="line">% 查看宏包信息</span><br><span class="line">mpm --admin --print-package-info &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
-<p><span class="math inline">TeX Live</span> 默认安装所有宏包， <span
-class="math inline">MiKTeX</span> 的安装程序只包含了 <span
-class="math inline">$\LaTeX{}$</span> 的一些基本宏包。从 <span
-class="math inline">TeX Live</span> 的光盘镜像和 <span
-class="math inline">MiKTeX</span> 的安装包体积可见一斑。
+<p><span class="math inline">\(\textrm{TeX Live}\)</span>
+默认安装所有宏包， <span class="math inline">\(\textrm{MiKTeX}\)</span>
+的安装程序只包含了 <span class="math inline">\(\LaTeX{}\)</span>
+的一些基本宏包。从 <span class="math inline">\(\textrm{TeX
+Live}\)</span> 的光盘镜像和 <span
+class="math inline">\(\textrm{MiKTeX}\)</span> 的安装包体积可见一斑。
 默认情况下，编译过程中如果遇到宏包未安装而报错的情况下，<span
-class="math inline">MiKTeX</span>
+class="math inline">\(\textrm{MiKTeX}\)</span>
 会弹出一个对话框，让用户可以选择临时安装宏包，安装成功后继续编译。</p>
 <h3 id="手动安装宏包">手动安装宏包</h3>
 <p><span
-class="math inline">$\textcolor{red}{如非万不得已，尽量不要手动安装宏包}$</span>。绝大多数宏包都已打包到
-<span class="math inline">TeX Live</span> 和 <span
-class="math inline">MiKTeX</span>
+class="math inline">\(\textcolor{red}{如非万不得已，尽量不要手动安装宏包}\)</span>。绝大多数宏包都已打包到
+<span class="math inline">\(\textrm{TeX Live}\)</span> 和 <span
+class="math inline">\(\textrm{MiKTeX}\)</span>
 两大发行版的安装源，可用宏包管理器安装。如果用户知道某个宏包的名称，但不确定是否在发行版中已打包，可在
-<span class="math inline">CTAN</span> 中搜索。</p>
+<span class="math inline">\(\textrm{CTAN}\)</span> 中搜索。</p>
 <p>如果确实有手动安装宏包的需要，本小节的内容将有所帮助。在手动安装之前，有必要了解一下
-<span class="math inline">$\TeX{}$</span> 目录结构（<span
-class="math inline">$\TeX{}$</span> Directory Structure, TDS）。它是
-<span class="math inline">$\TeX{}$</span>
+<span class="math inline">\(\TeX{}\)</span> 目录结构（<span
+class="math inline">\(\TeX{}\)</span> Directory Structure, TDS）。它是
+<span class="math inline">\(\TeX{}\)</span>
 发行版中宏包、字体、帮助文档等文件的组织结构。TDS 有时也称为 <span
-class="math inline">TEXMF</span> 树，取 <span
-class="math inline">$\TeX+\textrm{METAFONT}$</span> 之意。</p>
-<p>以 <span class="math inline">TeX Live</span> 为例，假设系统的 <span
-class="math inline">TEXMF</span> 树根目录为 <span
-class="math inline">$\textrm{C:\\texlive\\2020\\texmf-dist}$</span>，其下有很多子目录，仅举几例：</p>
+class="math inline">\(\textrm{TEXMF}\)</span> 树，取 <span
+class="math inline">\(\TeX+\textrm{METAFONT}\)</span> 之意。</p>
+<p>以 <span class="math inline">\(\textrm{TeX Live}\)</span>
+为例，假设系统的 <span class="math inline">\(\textrm{TEXMF}\)</span>
+树根目录为 <span
+class="math inline">\(\textrm{C:\\texlive\\2020\\texmf-dist}\)</span>，其下有很多子目录，仅举几例：</p>
 <table>
 <colgroup>
 <col style="width: 29%" />
@@ -1105,65 +1114,68 @@ class="math inline">$\textrm{C:\\texlive\\2020\\texmf-dist}$</span>，其下有�
 <thead>
 <tr>
 <th style="text-align: left;"><span
-class="math inline"><code>tex/latex</code></span></th>
+class="math inline">\(\texttt{tex/latex}\)</span></th>
 <th style="text-align: left;"><span
-class="math inline">$\LaTeX{}$</span> 宏包</th>
+class="math inline">\(\LaTeX{}\)</span> 宏包</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>doc/latex</code></span></td>
+class="math inline">\(\texttt{doc/latex}\)</span></td>
 <td style="text-align: left;"><span
-class="math inline">$\LaTeX{}$</span> 宏包的帮助文档</td>
+class="math inline">\(\LaTeX{}\)</span> 宏包的帮助文档</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>source/latex</code></span></td>
+class="math inline">\(\texttt{source/latex}\)</span></td>
 <td style="text-align: left;"><span
-class="math inline">$\LaTeX{}$</span> 宏包的源代码</td>
+class="math inline">\(\LaTeX{}\)</span> 宏包的源代码</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>bibtex</code></span></td>
-<td style="text-align: left;"><span class="math inline">BibTeX</span>
-工具相关文件，许多宏包配套的 <span class="math inline">BibTeX</span>
-格式文件位于子目录 <span class="math inline"><code>bst</code></span>
-中</td>
+class="math inline">\(\texttt{bibtex}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(\textrm{BibTeX}\)</span>
+工具相关文件，许多宏包配套的 <span
+class="math inline">\(\textrm{BibTeX}\)</span> 格式文件位于子目录 <span
+class="math inline">\(\texttt{bst}\)</span> 中</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>fonts/tfm</code></span></td>
+class="math inline">\(\texttt{fonts/tfm}\)</span></td>
 <td style="text-align: left;">$ $ 使用的字体文件，<span
-class="math inline">TFM</span> 格式</td>
+class="math inline">\(\textrm{TFM}\)</span> 格式</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>fonts/type1</code></span></td>
+class="math inline">\(\texttt{fonts/type1}\)</span></td>
 <td style="text-align: left;"><span
-class="math inline">PostScript</span> 字体文件（<span
-class="math inline">Type1</span>），<span class="math inline">PFB</span>
-格式</td>
+class="math inline">\(\textrm{PostScript}\)</span> 字体文件（<span
+class="math inline">\(\textrm{Type1}\)</span>），<span
+class="math inline">\(\textrm{PFB}\)</span> 格式</td>
 </tr>
 <tr>
 <td style="text-align: left;"><span
-class="math inline"><code>fonts/opentype</code></span></td>
-<td style="text-align: left;"><span class="math inline">OpenType</span>
-格式的字体文件</td>
+class="math inline">\(\texttt{fonts/opentype}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(\textrm{OpenType}\)</span> 格式的字体文件</td>
 </tr>
 </tbody>
 </table>
 <p>需要手动安装的宏包，一般已经按照上述目录结构打包完成。手动安装时，尽量不要拷贝到系统的
-<span class="math inline">TEXMF</span> 树，而是拷贝到发行版提供的用户
-<span class="math inline">TEXMF</span> 树，如 <span
-class="math inline">TeX Live</span> 的 <span
-class="math inline">$\textrm{C:\\texlive\\texmf-local}$</span>。安装完成后，还需<strong>刷新
-<span class="math inline">$\TeX{}$</span>
+<span class="math inline">\(\textrm{TEXMF}\)</span>
+树，而是拷贝到发行版提供的用户 <span
+class="math inline">\(\textrm{TEXMF}\)</span> 树，如 <span
+class="math inline">\(\textrm{TeX Live}\)</span> 的 <span
+class="math inline">\(\textrm{C:\\texlive\\texmf-local}\)</span>。安装完成后，还需<strong>刷新
+<span class="math inline">\(\TeX{}\)</span>
 发行版的文件名数据库</strong>，令新安装的宏包文件能够被系统找到。<span
-class="math inline">TeX Live</span> 用户须在 Windows 命令行或者 Linux
-终端执行命令：</p>
+class="math inline">\(\textrm{TeX Live}\)</span> 用户须在 Windows
+命令行或者 Linux 终端执行命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mktexlsr</span><br></pre></td></tr></table></figure>
-<p><span class="math inline">MiKTeX</span> 用户的命令为：</p>
+<p><span class="math inline">\(\textrm{MiKTeX}\)</span>
+用户的命令为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">initexmf --update-fndb</span><br></pre></td></tr></table></figure>
 <!-- flag of hidden posts -->
     </div>
