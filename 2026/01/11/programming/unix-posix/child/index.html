@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文总结 APUE 中 TELL_WAIT 相关的五个函数，并说明它们为什么能够作为父子进程同步的方法；同时也补充梳理几种常见的父子进程同步手段，方便横向比较。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="APUE 中 TELL_WAIT 五个函数方法总结">
+<meta property="og:url" content="https://invinc-z.com/2026/01/11/programming/unix-posix/child/">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文总结 APUE 中 TELL_WAIT 相关的五个函数，并说明它们为什么能够作为父子进程同步的方法；同时也补充梳理几种常见的父子进程同步手段，方便横向比较。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-11T03:17:51.000Z">
+<meta property="article:modified_time" content="2026-05-22T17:21:12.060Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="APUE">
+<meta property="article:tag" content="进程与线程">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://invinc-z.com/2026/01/11/programming/unix-posix/child/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/2026/01/11/programming/unix-posix/child/","path":"2026/01/11/programming/unix-posix/child/","title":"APUE 中 TELL_WAIT 五个函数方法总结"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>APUE 中 TELL_WAIT 五个函数方法总结 | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/2026/01/11/programming/unix-posix/child/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80tell_wait-%E4%BA%94%E4%B8%AA%E5%87%BD%E6%95%B0%E6%A6%82%E8%A7%88"><span class="nav-number">1.</span> <span class="nav-text">一、TELL_WAIT 五个函数概览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%99%E4%BA%94%E4%B8%AA%E5%87%BD%E6%95%B0%E5%88%86%E5%88%AB%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">二、这五个函数分别做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tell_waitvoid"><span class="nav-number">3.</span> <span class="nav-text">TELL_WAIT(void)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8%E7%90%86%E8%A7%A3"><span class="nav-number">3.1.</span> <span class="nav-text">作用理解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tell_parentpid_t-pid"><span class="nav-number">4.</span> <span class="nav-text">TELL_PARENT(pid_t pid)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">4.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8"><span class="nav-number">4.2.</span> <span class="nav-text">本质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wait_parentvoid"><span class="nav-number">5.</span> <span class="nav-text">WAIT_PARENT(void)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84-pause"><span class="nav-number">5.1.</span> <span class="nav-text">为什么不用简单的
+pause()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8-1"><span class="nav-number">5.2.</span> <span class="nav-text">本质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tell_childpid_t-pid"><span class="nav-number">6.</span> <span class="nav-text">TELL_CHILD(pid_t pid)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-number">6.1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8-2"><span class="nav-number">6.2.</span> <span class="nav-text">本质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wait_childvoid"><span class="nav-number">7.</span> <span class="nav-text">WAIT_CHILD(void)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%94%A8%E9%80%94"><span class="nav-number">7.1.</span> <span class="nav-text">典型用途</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E8%B4%A8-3"><span class="nav-number">7.2.</span> <span class="nav-text">本质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E4%BA%94%E4%B8%AA%E5%87%BD%E6%95%B0%E4%B9%8B%E9%97%B4%E7%9A%84%E9%85%8D%E5%90%88%E5%85%B3%E7%B3%BB"><span class="nav-number">8.</span> <span class="nav-text">三、五个函数之间的配合关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AF%B4%E8%BF%99%E6%98%AF%E7%88%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">9.</span> <span class="nav-text">四、为什么说这是父子进程同步的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E8%BF%99%E7%A7%8D%E6%96%B9%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">10.</span> <span class="nav-text">五、这种方法的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%98%E7%82%B9"><span class="nav-number">11.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%80%E9%99%90"><span class="nav-number">12.</span> <span class="nav-text">局限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E5%85%B6%E4%BB%96%E7%88%B6%E5%AD%90%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E7%9A%84%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93"><span class="nav-number">13.</span> <span class="nav-text">六、其他父子进程同步的方法总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wait-waitpid"><span class="nav-number">14.</span> <span class="nav-text">1. wait() &#x2F;
+waitpid()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8"><span class="nav-number">14.1.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9"><span class="nav-number">14.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-1"><span class="nav-number">14.3.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%A1%E5%8F%B7"><span class="nav-number">15.</span> <span class="nav-text">2. 信号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-1"><span class="nav-number">15.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-2"><span class="nav-number">15.2.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E9%81%93pipe"><span class="nav-number">16.</span> <span class="nav-text">3. 管道（pipe）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8-1"><span class="nav-number">16.1.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">16.2.</span> <span class="nav-text">同步方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-2"><span class="nav-number">16.3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-3"><span class="nav-number">16.4.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fifo%E5%91%BD%E5%90%8D%E7%AE%A1%E9%81%93"><span class="nav-number">17.</span> <span class="nav-text">4. FIFO（命名管道）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-3"><span class="nav-number">17.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">17.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#system-v-%E4%BF%A1%E5%8F%B7%E9%87%8F-posix-%E4%BF%A1%E5%8F%B7%E9%87%8F"><span class="nav-number">18.</span> <span class="nav-text">5. System V 信号量 &#x2F; POSIX
+信号量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E7%94%A8-2"><span class="nav-number">18.1.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-4"><span class="nav-number">18.2.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-4"><span class="nav-number">18.3.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98-%E5%90%8C%E6%AD%A5%E5%8E%9F%E8%AF%AD"><span class="nav-number">19.</span> <span class="nav-text">6. 共享内存 + 同步原语</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-5"><span class="nav-number">19.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-5"><span class="nav-number">19.2.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#socketpair"><span class="nav-number">20.</span> <span class="nav-text">7. socketpair</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-6"><span class="nav-number">20.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF-1"><span class="nav-number">20.2.</span> <span class="nav-text">适用场景</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E9%94%81-%E8%AE%B0%E5%BD%95%E9%94%81"><span class="nav-number">21.</span> <span class="nav-text">8. 文件锁 &#x2F; 记录锁</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E7%82%B9-7"><span class="nav-number">21.1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%80%E9%99%90-6"><span class="nav-number">21.2.</span> <span class="nav-text">局限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95%E7%9A%84%E7%AE%80%E8%A6%81%E6%AF%94%E8%BE%83"><span class="nav-number">22.</span> <span class="nav-text">七、几种方法的简要比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AB%E5%B0%8F%E7%BB%93"><span class="nav-number">23.</span> <span class="nav-text">八、小结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/01/11/programming/unix-posix/child/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="APUE 中 TELL_WAIT 五个函数方法总结 | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          APUE 中 TELL_WAIT 五个函数方法总结
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-01-11 11:17:51" itemprop="dateCreated datePublished" datetime="2026-01-11T11:17:51+08:00">2026-01-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">操作系统与系统编程（Systems）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/unix-posix/" itemprop="url" rel="index"><span itemprop="name">Unix & POSIX</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>15 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文总结 APUE 中 <code>TELL_WAIT</code>
+相关的五个函数，并说明它们为什么能够作为父子进程同步的方法；同时也补充梳理几种常见的父子进程同步手段，方便横向比较。</p>
+<span id="more"></span>
+<hr />
+<p>在 APUE 中，<code>TELL_WAIT</code>
+这一组函数的目标非常明确：<strong>为父进程和子进程提供一种简单、可靠的同步机制</strong>。其典型用途是让父进程先做某件事，再通知子进程继续；或者让子进程先完成某一步，再通知父进程继续。</p>
+<p>这种机制本质上解决的是：</p>
+<ul>
+<li>父子进程虽然有亲缘关系，但调度顺序是不确定的；</li>
+<li>如果不做同步，就可能出现竞态条件（race condition）；</li>
+<li>因而需要一种“你先做完、再叫我”的协调方式。</li>
+</ul>
+<h2 id="一tell_wait-五个函数概览">一、TELL_WAIT 五个函数概览</h2>
+<p>APUE 中通常定义如下五个接口：</p>
+<ul>
+<li><code>TELL_WAIT(void)</code></li>
+<li><code>TELL_PARENT(pid_t pid)</code></li>
+<li><code>WAIT_PARENT(void)</code></li>
+<li><code>TELL_CHILD(pid_t pid)</code></li>
+<li><code>WAIT_CHILD(void)</code></li>
+</ul>
+<p>它们通常结合信号机制实现，常见做法是使用：</p>
+<ul>
+<li><code>SIGUSR1</code></li>
+<li><code>SIGUSR2</code></li>
+<li>信号屏蔽字</li>
+<li><code>sigsuspend</code></li>
+</ul>
+<p>这样做的关键目的，是避免“信号先到、进程后等待”导致的丢失唤醒问题。</p>
+<hr />
+<h2 id="二这五个函数分别做什么">二、这五个函数分别做什么</h2>
+<h2 id="tell_waitvoid"><code>TELL_WAIT(void)</code></h2>
+<p>这是初始化函数，用来在父子进程同步开始之前完成准备工作。</p>
+<p>它通常负责：</p>
+<ul>
+<li>为同步所用的信号安装处理函数；</li>
+<li>将相关信号加入阻塞集合；</li>
+<li>初始化全局标志变量；</li>
+<li>为后续 <code>WAIT_PARENT</code> / <code>WAIT_CHILD</code>
+的等待逻辑创造安全条件。</li>
+</ul>
+<h3 id="作用理解">作用理解</h3>
+<p>可以把它看成“搭建同步环境”。</p>
+<p>如果没有这一步，后面的等待与通知很容易因为时序问题出错。例如：</p>
+<ul>
+<li>子进程还没开始等待，父进程就已经发出了信号；</li>
+<li>结果信号被错过，子进程可能永久阻塞。</li>
+</ul>
+<p>因此 <code>TELL_WAIT()</code>
+的重点不是“通知”，而是<strong>预先建立不会错过通知的机制</strong>。</p>
+<hr />
+<h2 id="tell_parentpid_t-pid"><code>TELL_PARENT(pid_t pid)</code></h2>
+<p>该函数由<strong>子进程调用</strong>，用于通知父进程：“我已经完成了当前阶段，你可以继续了。”</p>
+<p>典型实现通常是向父进程发送一个约定好的信号，例如：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">kill(pid, SIGUSR2);</span><br></pre></td></tr></table></figure>
+<p>其中 <code>pid</code> 一般就是父进程的 PID。</p>
+<h3 id="使用场景">使用场景</h3>
+<p>例如：</p>
+<ul>
+<li>子进程先修改某个共享资源；</li>
+<li>修改完成后调用 <code>TELL_PARENT(getppid())</code>；</li>
+<li>父进程在 <code>WAIT_CHILD()</code>
+或对应等待流程结束后再继续执行。</li>
+</ul>
+<h3 id="本质">本质</h3>
+<p>它扮演的是“<strong>子 -&gt; 父 的完成通知</strong>”角色。</p>
+<hr />
+<h2 id="wait_parentvoid"><code>WAIT_PARENT(void)</code></h2>
+<p>该函数由<strong>子进程调用</strong>，表示：“我要先停下来，等父进程通知我以后再继续。”</p>
+<p>它一般会：</p>
+<ul>
+<li>检查同步标志是否已被置位；</li>
+<li>若没有，则通过 <code>sigsuspend()</code>
+临时切换信号掩码并挂起；</li>
+<li>收到父进程发来的同步信号后恢复执行。</li>
+</ul>
+<h3 id="为什么不用简单的-pause">为什么不用简单的
+<code>pause()</code></h3>
+<p>因为 <code>pause()</code> 容易产生竞态问题：</p>
+<ul>
+<li>如果信号在调用 <code>pause()</code> 之前已经送达，</li>
+<li>那么后续 <code>pause()</code> 可能就会一直阻塞。</li>
+</ul>
+<p>而 APUE 的写法通常通过“<strong>先阻塞信号，再用
+<code>sigsuspend()</code>
+原子地解除阻塞并等待</strong>”来避免这个问题。</p>
+<h3 id="本质-1">本质</h3>
+<p>它是“<strong>子等父</strong>”的等待入口。</p>
+<hr />
+<h2 id="tell_childpid_t-pid"><code>TELL_CHILD(pid_t pid)</code></h2>
+<p>该函数由<strong>父进程调用</strong>，用于通知子进程：“我这边已经完成了，你可以继续执行了。”</p>
+<p>典型实现通常是：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">kill(pid, SIGUSR1);</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>pid</code> 一般是 <code>fork()</code> 返回得到的子进程
+PID。</p>
+<h3 id="使用场景-1">使用场景</h3>
+<p>例如：</p>
+<ul>
+<li>父进程先完成初始化；</li>
+<li>完成后调用 <code>TELL_CHILD(child_pid)</code>；</li>
+<li>子进程原本在 <code>WAIT_PARENT()</code>
+中阻塞，收到信号后继续运行。</li>
+</ul>
+<h3 id="本质-2">本质</h3>
+<p>它扮演的是“<strong>父 -&gt; 子 的完成通知</strong>”角色。</p>
+<hr />
+<h2 id="wait_childvoid"><code>WAIT_CHILD(void)</code></h2>
+<p>该函数由<strong>父进程调用</strong>，表示：“我要先等待，直到子进程通知我再继续。”</p>
+<p>它的实现思想与 <code>WAIT_PARENT()</code> 类似，也是通过：</p>
+<ul>
+<li>全局标志位；</li>
+<li>信号阻塞；</li>
+<li><code>sigsuspend()</code>；</li>
+</ul>
+<p>来可靠地等待子进程的通知。</p>
+<h3 id="典型用途">典型用途</h3>
+<p>例如：</p>
+<ul>
+<li>父进程希望等子进程先写完一段数据；</li>
+<li>于是父进程调用 <code>WAIT_CHILD()</code>；</li>
+<li>子进程完成后调用 <code>TELL_PARENT()</code>；</li>
+<li>父进程被唤醒并继续执行。</li>
+</ul>
+<h3 id="本质-3">本质</h3>
+<p>它是“<strong>父等子</strong>”的等待入口。</p>
+<hr />
+<h2 id="三五个函数之间的配合关系">三、五个函数之间的配合关系</h2>
+<p>这五个函数并不是孤立的，而是两两配合使用：</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>方向</th>
+<th>通知函数</th>
+<th>等待函数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>父通知子</td>
+<td><code>TELL_CHILD(pid)</code></td>
+<td><code>WAIT_PARENT()</code></td>
+<td>子进程等待父进程发令</td>
+</tr>
+<tr class="even">
+<td>子通知父</td>
+<td><code>TELL_PARENT(pid)</code></td>
+<td><code>WAIT_CHILD()</code></td>
+<td>父进程等待子进程发令</td>
+</tr>
+</tbody>
+</table>
+<p>而 <code>TELL_WAIT()</code> 则是整个同步机制的初始化入口。</p>
+<p>可以把它们理解成一套小型协议：</p>
+<ol type="1">
+<li>先 <code>TELL_WAIT()</code>，把通信规则搭起来；</li>
+<li>谁需要等，就调用对应的 <code>WAIT_*()</code>；</li>
+<li>谁完成了，就调用对应的 <code>TELL_*()</code> 发通知。</li>
+</ol>
+<hr />
+<h2
+id="四为什么说这是父子进程同步的方法">四、为什么说这是父子进程同步的方法</h2>
+<p>因为这组函数专门用于协调<strong>父进程与 <code>fork()</code>
+出来的子进程</strong>之间的执行先后关系。</p>
+<p>“同步”在这里并不是指数据完全共享，而是指：</p>
+<ul>
+<li>某个进程先执行到某一步；</li>
+<li>另一个进程必须等它完成后才能继续；</li>
+<li>这种“顺序约束”正是同步的核心。</li>
+</ul>
+<p>例如下面这种逻辑：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">TELL_WAIT();</span><br><span class="line">pid = fork();</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (pid == <span class="number">0</span>) &#123;</span><br><span class="line">    WAIT_PARENT();</span><br><span class="line">    <span class="comment">/* 子进程继续执行 */</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">/* 父进程先做一些事 */</span></span><br><span class="line">    TELL_CHILD(pid);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里就明确规定了：</p>
+<ul>
+<li>父进程先执行某一步；</li>
+<li>子进程必须等到父进程通知后才能继续。</li>
+</ul>
+<p>因此，<code>TELL_WAIT</code>
+这一组函数就是一种<strong>基于信号的父子进程同步方法</strong>。</p>
+<hr />
+<h2 id="五这种方法的特点">五、这种方法的特点</h2>
+<h2 id="优点">优点</h2>
+<ul>
+<li><strong>轻量</strong>：不需要额外创建复杂 IPC 对象；</li>
+<li><strong>适合父子关系</strong>：<code>fork()</code> 后天然就知道对方
+PID；</li>
+<li><strong>可表达顺序控制</strong>：尤其适合演示和处理简单同步场景；</li>
+<li><strong>APUE
+风格典型</strong>：很好地展示了如何安全地用信号避免竞态。</li>
+</ul>
+<h2 id="局限">局限</h2>
+<ul>
+<li><strong>只适合较简单的同步</strong>，不适合复杂状态机；</li>
+<li><strong>信号只适合表达事件，不适合携带大量数据</strong>；</li>
+<li>编写不当容易出现竞态、信号丢失、可重入等问题；</li>
+<li>可读性和可维护性通常不如更结构化的 IPC 机制。</li>
+</ul>
+<p>因此在工程实践里，<code>TELL_WAIT</code>
+更多是一个经典教学模型，帮助理解“如何安全地使用信号完成同步”。</p>
+<hr />
+<h2
+id="六其他父子进程同步的方法总结">六、其他父子进程同步的方法总结</h2>
+<p>除了 APUE 里的 <code>TELL_WAIT</code>
+方案，父子进程还可以通过很多方式同步。下面按常见程度做一个总结。</p>
+<h2 id="wait-waitpid">1. <code>wait()</code> /
+<code>waitpid()</code></h2>
+<p>这是最基础、最常见的父子同步方式。</p>
+<h3 id="作用">作用</h3>
+<p>父进程通过 <code>wait()</code> 或 <code>waitpid()</code>：</p>
+<ul>
+<li>等待子进程结束；</li>
+<li>回收子进程资源；</li>
+<li>获取子进程退出状态。</li>
+</ul>
+<h3 id="特点">特点</h3>
+<ul>
+<li>非常适合“<strong>父等子结束</strong>”这一类同步；</li>
+<li>语义清晰；</li>
+<li>是处理僵尸进程的标准方式。</li>
+</ul>
+<h3 id="局限-1">局限</h3>
+<ul>
+<li>它只能表达“等子进程终止”，</li>
+<li>不适合“子进程做到一半通知父进程继续”这种更细粒度的同步。</li>
+</ul>
+<p>所以，<code>wait()/waitpid()</code>
+更像是<strong>生命周期终点同步</strong>。</p>
+<hr />
+<h2 id="信号">2. 信号</h2>
+<p><code>TELL_WAIT</code> 本身就是信号同步的一个精心封装版本。</p>
+<p>父子进程还可以直接使用：</p>
+<ul>
+<li><code>SIGUSR1</code></li>
+<li><code>SIGUSR2</code></li>
+<li><code>SIGCHLD</code></li>
+</ul>
+<p>来做事件通知。</p>
+<h3 id="特点-1">特点</h3>
+<ul>
+<li>响应快；</li>
+<li>实现简单；</li>
+<li>适合“一次事件通知”。</li>
+</ul>
+<h3 id="局限-2">局限</h3>
+<ul>
+<li>需要认真处理屏蔽、竞态和中断；</li>
+<li>不适合传输复杂数据；</li>
+<li>稍不注意就容易写出脆弱代码。</li>
+</ul>
+<hr />
+<h2 id="管道pipe">3. 管道（pipe）</h2>
+<p>管道是父子进程之间极常见的同步与通信方式。</p>
+<h3 id="作用-1">作用</h3>
+<p>父进程和子进程共享同一个管道端点关系：</p>
+<ul>
+<li>一方写；</li>
+<li>另一方读；</li>
+<li>当读操作阻塞时，就形成了同步效果。</li>
+</ul>
+<h3 id="同步方式">同步方式</h3>
+<p>例如：</p>
+<ul>
+<li>父进程先阻塞读；</li>
+<li>子进程写入一个字节作为“完成信号”；</li>
+<li>父进程读到后继续执行。</li>
+</ul>
+<h3 id="特点-2">特点</h3>
+<ul>
+<li>既能同步，又能顺便传递少量数据；</li>
+<li>语义直观；</li>
+<li>非常适合父子进程。</li>
+</ul>
+<h3 id="局限-3">局限</h3>
+<ul>
+<li>需要管理读写端关闭；</li>
+<li>稍复杂一些；</li>
+<li>主要适合有亲缘关系的进程。</li>
+</ul>
+<hr />
+<h2 id="fifo命名管道">4. FIFO（命名管道）</h2>
+<p>FIFO 是带名字的管道。</p>
+<h3 id="特点-3">特点</h3>
+<ul>
+<li>不要求必须由同一个父进程 <code>fork()</code> 出来；</li>
+<li>父子进程当然也可以使用；</li>
+<li>可以借助打开、读写阻塞特性实现同步。</li>
+</ul>
+<h3 id="适用场景">适用场景</h3>
+<p>如果你希望同步机制不仅限于当前父子进程，还能扩展到其他无亲缘关系进程，FIFO
+比匿名管道更灵活。</p>
+<hr />
+<h2 id="system-v-信号量-posix-信号量">5. System V 信号量 / POSIX
+信号量</h2>
+<p>信号量是更通用、更正式的同步手段。</p>
+<h3 id="作用-2">作用</h3>
+<p>通过 <code>P/V</code>
+操作（或等待/投递操作）控制临界资源访问和执行顺序。</p>
+<h3 id="特点-4">特点</h3>
+<ul>
+<li>非常适合严格同步和互斥；</li>
+<li>能表达计数资源；</li>
+<li>比简单信号更结构化。</li>
+</ul>
+<h3 id="局限-4">局限</h3>
+<ul>
+<li>接口相对复杂；</li>
+<li>对于只做一次父子通知的场景，显得偏重。</li>
+</ul>
+<p>如果同步逻辑比较复杂，比如多进程竞争多个资源，信号量通常比
+<code>TELL_WAIT</code> 更合适。</p>
+<hr />
+<h2 id="共享内存-同步原语">6. 共享内存 + 同步原语</h2>
+<p>共享内存本身更偏向“通信”，不是天然同步工具；但配合：</p>
+<ul>
+<li>信号量；</li>
+<li>互斥锁；</li>
+<li>条件变量；</li>
+<li>futex；</li>
+</ul>
+<p>就可以实现高效同步。</p>
+<h3 id="特点-5">特点</h3>
+<ul>
+<li>数据交换效率高；</li>
+<li>适合高性能、多数据量场景；</li>
+<li>工程上很常见。</li>
+</ul>
+<h3 id="局限-5">局限</h3>
+<ul>
+<li>设计和调试难度较高；</li>
+<li>必须额外引入同步机制，否则容易出现数据竞争。</li>
+</ul>
+<hr />
+<h2 id="socketpair">7. socketpair</h2>
+<p><code>socketpair()</code> 可以创建一对相互连通的本地套接字。</p>
+<h3 id="特点-6">特点</h3>
+<ul>
+<li>父子进程之间使用方便；</li>
+<li>支持双向通信；</li>
+<li>既能传数据，也能通过阻塞读写实现同步。</li>
+</ul>
+<h3 id="适用场景-1">适用场景</h3>
+<p>如果你既需要同步，又需要双向消息交互，<code>socketpair()</code>
+往往比单向管道更灵活。</p>
+<hr />
+<h2 id="文件锁-记录锁">8. 文件锁 / 记录锁</h2>
+<p>父子进程也可以借助文件锁来同步，例如：</p>
+<ul>
+<li><code>fcntl</code> 记录锁；</li>
+<li><code>flock</code> 文件锁。</li>
+</ul>
+<h3 id="特点-7">特点</h3>
+<ul>
+<li>适合围绕某个共享文件进行协调；</li>
+<li>在某些守护进程、单实例控制场景里很有用。</li>
+</ul>
+<h3 id="局限-6">局限</h3>
+<ul>
+<li>不如信号量和管道直观；</li>
+<li>更适合资源访问控制，而不是简单的“你先我后”通知。</li>
+</ul>
+<hr />
+<h2 id="七几种方法的简要比较">七、几种方法的简要比较</h2>
+<table>
+<thead>
+<tr class="header">
+<th>方法</th>
+<th>是否适合父子进程</th>
+<th>是否能传数据</th>
+<th>适合的同步粒度</th>
+<th>复杂度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>TELL_WAIT</code>（信号）</td>
+<td>是</td>
+<td>否/极弱</td>
+<td>事件级</td>
+<td>低到中</td>
+</tr>
+<tr class="even">
+<td><code>wait()/waitpid()</code></td>
+<td>是</td>
+<td>否</td>
+<td>子进程结束级</td>
+<td>低</td>
+</tr>
+<tr class="odd">
+<td>管道 <code>pipe</code></td>
+<td>是</td>
+<td>是</td>
+<td>事件级/数据级</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td>FIFO</td>
+<td>是</td>
+<td>是</td>
+<td>事件级/数据级</td>
+<td>中</td>
+</tr>
+<tr class="odd">
+<td>信号量</td>
+<td>是</td>
+<td>否</td>
+<td>严格同步/互斥</td>
+<td>中到高</td>
+</tr>
+<tr class="even">
+<td>共享内存 + 锁</td>
+<td>是</td>
+<td>是</td>
+<td>高性能复杂同步</td>
+<td>高</td>
+</tr>
+<tr class="odd">
+<td><code>socketpair</code></td>
+<td>是</td>
+<td>是</td>
+<td>双向事件/数据级</td>
+<td>中</td>
+</tr>
+<tr class="even">
+<td>文件锁</td>
+<td>可用</td>
+<td>否</td>
+<td>资源访问级</td>
+<td>中</td>
+</tr>
+</tbody>
+</table>
+<p>如果只是在 APUE
+语境下理解“父子进程同步”，可以先记住下面这条主线：</p>
+<ul>
+<li><strong>等子进程结束</strong>：优先想到
+<code>wait()/waitpid()</code>；</li>
+<li><strong>做轻量级顺序通知</strong>：优先想到 <code>TELL_WAIT</code>
+这种信号方案；</li>
+<li><strong>既要同步又要传数据</strong>：优先想到 <code>pipe</code> 或
+<code>socketpair</code>；</li>
+<li><strong>同步关系更复杂</strong>：优先想到信号量或共享内存配合同步原语。</li>
+</ul>
+<hr />
+<h2 id="八小结">八、小结</h2>
+<p><code>TELL_WAIT</code>
+这一组五个函数，本质上是一套基于信号的父子进程同步接口：</p>
+<ul>
+<li><code>TELL_WAIT()</code>：初始化同步环境；</li>
+<li><code>TELL_PARENT()</code>：子通知父；</li>
+<li><code>WAIT_PARENT()</code>：子等父；</li>
+<li><code>TELL_CHILD()</code>：父通知子；</li>
+<li><code>WAIT_CHILD()</code>：父等子。</li>
+</ul>
+<p>它们解决的是父子进程执行顺序不确定带来的竞态问题，是 APUE
+中非常经典的一种同步设计。</p>
+<p>从更大的视角看，父子进程同步并不只有这一种方法。<code>wait()/waitpid()</code>、信号、管道、FIFO、信号量、共享内存、<code>socketpair</code>、文件锁等都可以承担同步职责。不同方法适合不同粒度和复杂度的场景，而
+<code>TELL_WAIT</code>
+的价值在于：<strong>它用一个简洁而经典的模型，展示了如何安全地利用信号完成父子进程同步。</strong></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/2026/01/11/programming/unix-posix/child/" title="APUE 中 TELL_WAIT 五个函数方法总结">https://invinc-z.com/2026/01/11/programming/unix-posix/child/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 进程与线程</a>
+              <a href="/tags/apue/" rel="tag"><i class="fa fa-tag"></i> APUE</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/" rel="prev" title="Classic Quotes from The Big Bang Theory">
+                  <i class="fa fa-angle-left"></i> Classic Quotes from The Big Bang Theory
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/01/17/programming/unix-posix/byte-ordering/" rel="next" title="字节序">
+                  字节序 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">308k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">25:38</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

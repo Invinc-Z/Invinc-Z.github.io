@@ -1,100 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: 400px;
-}
-
-.douban-card {
-    display: flex;
-    margin: 30px 10px;
-    padding: 15px;
-    border-radius: 15px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    color: antiquewhite;
-    text-decoration: none;
-}
-
-.douban-card:hover {
-    text-decoration: none;
-}
-
-.douban-card-bgimg {
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    filter: blur(15px) brightness(0.6);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-img {
-    position: relative;
-    height: 130px;
-    width: 80px;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-left:hover .douban-card-img {
-    filter: blur(5px) brightness(0.6);
-    transform: perspective(800px) rotateX(180deg);
-}
-
-.douban-card-left .douban-card-img {
-    transition: all 500ms ease;
-}
-
-.douban-card-left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.douban-card-left .douban-card-status {
-    height: 130px;
-    width: 80px;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 30%;
-    transform: rotateX(180deg);
-    backface-visibility: hidden;
-    transition: all 500ms ease;
-}
-
-.douban-card-left:hover .douban-card-status {
-    transform: perspective(800px) rotateX(0deg);
-}
-
-.douban-card-right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.3;
-    color: antiquewhite;
-}
-
-.douban-card-item {
-    margin-top: 4px;
-}
-</style><!-- hexo injector head_begin end -->
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -114,26 +24,26 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="这里的内容加密了，需要密码哦。">
+    <meta name="description" content="2025 2025.09.20 ​ 前些日子做了几个怪梦，梦中的一些景象可能是我目前生活状态和心情的一个反映，具体的已经忘了好些了，趁还没忘记之前将它记录下来。 ​ 第一个场景好像是自己的孩童时期，我正在无忧无虑的独自玩耍着，不知道从哪里树上爬过来一条蛇，我看见之后害怕紧张极了，拿着树枝把它挑的远些。没过一会它又爬过来了，又用树枝把它挑开，然后这蛇就跟我耗上了，反反复复想要来攻击我，每次都用树枝将">
 <meta property="og:type" content="website">
 <meta property="og:title" content="日记">
-<meta property="og:url" content="https://invinc-z.com/life/diary/index.html">
+<meta property="og:url" content="https://invinc-z.com/life/diary/">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
-<meta property="og:description" content="这里的内容加密了，需要密码哦。">
+<meta property="og:description" content="2025 2025.09.20 ​ 前些日子做了几个怪梦，梦中的一些景象可能是我目前生活状态和心情的一个反映，具体的已经忘了好些了，趁还没忘记之前将它记录下来。 ​ 第一个场景好像是自己的孩童时期，我正在无忧无虑的独自玩耍着，不知道从哪里树上爬过来一条蛇，我看见之后害怕紧张极了，拿着树枝把它挑的远些。没过一会它又爬过来了，又用树枝把它挑开，然后这蛇就跟我耗上了，反反复复想要来攻击我，每次都用树枝将">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-24T07:31:36.000Z">
-<meta property="article:modified_time" content="2026-05-19T17:42:52.436Z">
+<meta property="article:modified_time" content="2026-05-22T17:21:12.064Z">
 <meta property="article:author" content="Neozhuang">
-<meta property="article:tag" content="编程技术,C,C++,Linux,LaTeX">
+<meta property="article:tag" content="Programming, Tools">
 <meta name="twitter:card" content="summary">
 
 
 <link rel="canonical" href="https://invinc-z.com/life/diary/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/life/diary/index.html","path":"life/diary/index.html","title":"日记"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/life/diary/","path":"life/diary/index.html","title":"日记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>日记 | Neozhuang's Blog
@@ -241,7 +151,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -279,7 +189,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -292,6 +202,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#section"><span class="nav-number">1.</span> <span class="nav-text">2025</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#section-1"><span class="nav-number">1.1.</span> <span class="nav-text">2025.09.20</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section-2"><span class="nav-number">1.2.</span> <span class="nav-text">2025.11.25</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -300,19 +211,19 @@
     <img class="site-author-image" itemprop="image" alt="Neozhuang"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">Neozhuang</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -919,31 +830,21 @@ if(canvas.getContext){
       
       
       <div class="post-body">
-          <div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重试。"
-     data-whm="密码错误，请重试。"
-     data-salt="98af69fe3514e6a5b13634c8e08f705c900aa701eed687223ab8aea2e9037c16"
-     data-nonce="5b033e736e5560f44400d8b6"
-     data-kdf-iterations="600000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    571c7790a4644b1b8966be97c9325b259935c8c55bcf24d293ebc1ffd8e10fd3eafaee6db156607e81b84fa39d004b8af149d3d8e229b2937818a27daa6c355746076a7db3e3c70ac74ac5a4e7d17a5789a9d926f086d161a4078dd076d741c11cbf7b75d7a9c3521f9bb1677fb62537bac6b3e0ad01a5e7d614aca49780ac96df58866d400e1f579f03848a8f2b069917abd0351619db9a05af3f61ae357b928325b1b592267db437290c0d2c7e540c7afd5f900b376e02bb4d20dbaae7afe128b388a746a14f12c65d7d8a279027962a0c15d534a43cccd804afd3bfde05ca2cd666077af3f4ec03a6e0026498baeb33257dce7e3febff16ccafea638e119ce48c165d0eceb49800225464cbac70d770bafa07ecf040279348decee9736158fff69897161478586929c6cd8a4648b0c0db501469dc05c465f1b82509bea97b5c9d2bafab210fad9599ff25925dd690e58ee7998520a0b21ce3aa0664a24aa3484dd4dde46abd882b90c6f92def6a0a428cc9861c3053f5c31dd16b21f46f5af5ef05641f08a6c57303edad3c456710a69a89c93cba014577ef610e35ac8eac85f01f6cbf6c9c792b200e611bd5bc843aeec1974ade76fe50467a0d17d0cab745c9a4f28b1d16112eb8de840c1abc5cafcb4bfb5b9379092708c134270c517b242ea2e8242932ded19e4af46dc3e65ab10c4752d311831860fec55a9b1ba831aa0b4d59459e83f55c419902f30db7c3901c5b3917368bb3a2d06978dc5a3027c8cb595e380ddf8004263b86b06a015a351935b0edc0c532cb6243309a2cc2d3f6b2a1675a98b2d8c72316b8008a8e2d9c08ac7551fd65d17c66ee849845db0b87fef1861317af83d0f5f4f99718985ee7078a599803d880992c25c2f54a756ca82232a55ea9b73dfdb9c8f98242c49961bedfe8e7ffe443a665ad1547ab7a0d73243e53e791d379b2e6a9c298ca3597cd0d343f990b898f046ef632837faa264ea6b74c1ca52e0aca412718b6f51cd01368c6b8b05007db996554ff2aec67793a934791bd11fb3da35134be35eccd049b0e8acf1f41484adf9fbc884fa0d8cf14a7d2a76cda50abaab3831d7c89c3263e353744e05e00fbb986fd6fc7049d374efa4190e1fa27f6452fe81d13f751defc3185f6f56128ed08dcc4b48b8cf74690ea0fdad6be3ebd53bafae0b298b6c1a909e7e5747f485e7b3803da343731e68b3015e593328c432b5a9c8ce2a52b2910ea03c428badb0146b303cd0f62f5771b4dd116321dc92fe4f5f2a46fdd201ebdf217000ebb46302c66c480efc298e9e42235addb24def069791978e4ff59f549dde141afef31dcd228388fff2ac101bc70230c5f520fd1b569c34a04c2eab431ccde24b18a1c7d19cca392ac073356d65f0cfc91b0aba294fb6a1449d4176db93f16e8a76b9169d0c939973545cde982dbf7bb03ebbdc6808717b5681425f9619aa48c3e44bd10cbd3ccb953f140269b8eaa53fa23bf2b90eb67c5f1b67b8e9e7d0a53bafe45b7ee06ce1cde1b43c889b4660eec8cf2e3c2080933739779d4d6a4ef7952922a0c9440f8a1d1d11a9d3d247ee4834ef13b23e0364b8abc8919d848b06bfb671058ee53cc99bed962fbb2c646a3597b16888e1c852051ec68ddc6bedcd97a1ceabffadcb868b486c2571186c9277fa94d7ef368ed24b94578bc6377d909e0eab2d7195c6ee6a35737c91486c44d8ee80b0f3ace19716a12120e15eed26993ad5b93e6bcb849ef5163ad8feccc3c6f67547fea89215a259d59dadcdbcbaecbbce615eee9da0432fb953b9f0e436deb543bdeb1f68fe34bf1939a8275450fac5bb369591302289a7658526c86f5e9f9d54f07143fac9aadaf40dd56d989e643153fa3a8eb1d88f4a484f8f439b272422d14267154b935a2e4e39190984a386664d9d245c72563d19e6dd84a35c46171393ab923ecd86b715e1ef0e125beac1e98ae5a1419bf469dc996be309a7d3b5d3dc73e9d56803eee39c7b45d7a1298f730a93bbf94e51a28c12953f3552e7db2ccdafdb3079fcc3ad2b13c1ad0a86f8201ab7fe378de0c318cd367512bd5ac20f87a5ec83e193c6b2f87a4b0d15bab631da40053b384278c48a5a28b2f401c9864f035aebecfa7c58d2794f538697a02455a71654feced142049b8617544cf6eabeb001e3fc9cc94d12e7f5da04b1e2c683f625ba960f41b72eef96ba60afa5aa0a0872640cf7c37f019f6dbd563b7679306c661d055ab05ba0034e19df17a86dd6d5af9c3d382f2e8f624fbc7bada93383a1eb63c47a471cb0cb2f813a13a9891e15ef4f24a4ddd0d78ac1577a0484465fccfdab74f5c982cfd1e531fb941f7162b7bb04dd5c7e07575e40141f18a25490cd9128735e3510c7a1d9e4dce8cf43f70fda42d9b2250a99fed23c76e93ed5f40566e1090775b3c8ea72e5cd9cf048c96e3273876ac7e771d9dbc07dd0e345b4a8d26cc4716fa86c7833a173106909e9c217c76f328e03bfe285609ab71b2ef992ba4d31cd1b6f118764ffcabccddf747ba76b76b072d310b0a491a31af42834f37fbd3e848a91e8c56551b9f24ba4fcd558c1948e7683121f5da6e88b5e18cf6bc8b026cf92d2ae782c67a6b7762a7ce2c210c1a9bde55a33938b1748a9de06f53ba80313baf122a45e2603919f2daf2750cc591e50da59422435c032a1d1a936cee4bbdbd10f3992422857b2b4f7f878c1cda00e731acb2b1d8d67e0267130dfa1fb972ddaf0b2ffd08a4e25fcc80e06b22d8af311a2c8e8347fc40a2557c92c51aa9584c2a910372925937374321a07bb1826bcdcb2a8e7deac2d2c2ee78c6cc06eecf554f2e19b4a3bbe9c95e6abd66be76a3c3947f7891a33179cf4fc9ea6872fa5b46963cc7f758d991e41c635cf4f54127e3e82c87a2711c30485f8914c6e6c0f36fba1d39ec12e41035ab5408d54aa873b314437ac9456e1e
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form" onsubmit="return false">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码查看本文。</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">Decrypt</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.9a88ff0505.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+          <h2 id="section">2025</h2>
+<h3 id="section-1">2025.09.20</h3>
+<p>​
+前些日子做了几个怪梦，梦中的一些景象可能是我目前生活状态和心情的一个反映，具体的已经忘了好些了，趁还没忘记之前将它记录下来。</p>
+<p>​
+第一个场景好像是自己的孩童时期，我正在无忧无虑的独自玩耍着，不知道从哪里树上爬过来一条蛇，我看见之后害怕紧张极了，拿着树枝把它挑的远些。没过一会它又爬过来了，又用树枝把它挑开，然后这蛇就跟我耗上了，反反复复想要来攻击我，每次都用树枝将其挑开，但这不是长久之计。我愈加紧张，这蛇攻势越来越凶猛，我逐渐招架不住它了，好想有人来帮帮我。突然这蛇跳到我身上了，此时无比绝望，这蛇张开大口想来咬我，我不想让它咬到，只能一边哭着一边用自己的两只小手一上一下的托着蛇的上下颚。我内心害怕、恐惧，又哭又喊地使劲掰蛇嘴，这蛇被我从嘴那里整个身子撕成了两半，蛇血溅到我的身上脸上，我坐在地上哭泣了一会后就离开了这里。</p>
+<p>​
+第二个场景已经变得模糊不清了，只记得整个城市下着好大的雨，闪电不断，好多地方都被淹了，仿佛世界末日一般。女朋友问我，这么大的雨路上怎么还会有消防车，我和她说这个消防车不是用来洒水的，而是用来抽水的，当时在想这么多雨水被抽走后又要放到哪里呢？</p>
+<p>​
+最近这两天早晨刚醒的瞬间胸中总有一股痛苦悲伤涌来，等到完全醒来才能不见。</p>
+<h3 id="section-2">2025.11.25</h3>
+<p>早上被她叫醒，又说还是无法和我在一起，一抹悲痛就这样灌进我的心头，不知道这样多少次了。</p>
+<p>每次满怀欣喜去往盛泽，却都带着一颗破碎的心回来。</p>
+<p>也许该许你自由，让你奔向新生活，不再纠结与痛苦。同时这也能让我不再破碎，有时间去治愈自己，成长为我心目中的我。</p>
+
       </div>
       
       
@@ -983,13 +884,13 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">142k</span>
+    <span title="站点总字数">308k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11:50</span>
+    <span title="站点阅读时长">25:38</span>
   </span>
 </div>
 <div class="busuanzi-count">

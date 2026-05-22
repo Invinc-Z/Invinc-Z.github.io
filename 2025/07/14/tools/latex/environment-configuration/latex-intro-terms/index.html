@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文主要介绍\(\LaTeX{}\)的相关术语以及在文件编译过程中发生了什么。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一份简短的LaTeX相关术语的介绍">
+<meta property="og:url" content="https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文主要介绍\(\LaTeX{}\)的相关术语以及在文件编译过程中发生了什么。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-07-14T11:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-22T17:21:12.061Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="发行版">
+<meta property="article:tag" content="术语">
+<meta property="article:tag" content="编译">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/","path":"2025/07/14/tools/latex/environment-configuration/latex-intro-terms/","title":"一份简短的LaTeX相关术语的介绍"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>一份简短的LaTeX相关术语的介绍 | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tex%E4%B8%8Elatex"><span class="nav-number">1.</span> <span class="nav-text">\(\TeX\)与\(\LaTeX{}\)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tex"><span class="nav-number">1.1.</span> <span class="nav-text">\(\TeX{}\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#latex"><span class="nav-number">1.2.</span> <span class="nav-text">\(\LaTeX{}\)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#texplain-texlatex-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.</span> <span class="nav-text">TeX、Plain TeX、LaTeX 的关系</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">基础格式文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%A9%E5%B1%95%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">扩展格式文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E6%93%8E"><span class="nav-number">3.</span> <span class="nav-text">引擎</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pdftex"><span class="nav-number">3.1.</span> <span class="nav-text">pdfTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#luatex"><span class="nav-number">3.2.</span> <span class="nav-text">LuaTeX</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xetex"><span class="nav-number">3.3.</span> <span class="nav-text">XeTeX</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">编译命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.</span> <span class="nav-text">LaTeX 发行版</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E8%A1%8C%E7%89%88%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E6%88%90"><span class="nav-number">5.1.</span> <span class="nav-text">发行版的核心组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E6%B5%81%E7%9A%84-latex-%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.2.</span> <span class="nav-text">主流的 LaTeX 发行版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%91%E8%A1%8C%E7%89%88"><span class="nav-number">5.3.</span> <span class="nav-text">为什么需要发行版？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">6.</span> <span class="nav-text">编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#latex-%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%80%E8%A7%88"><span class="nav-number">7.</span> <span class="nav-text">\(\LaTeX{}\) 用到的文件一览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88"><span class="nav-number">8.</span> <span class="nav-text">编译过程发生了什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E7%AE%80-latex-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="nav-number">8.1.</span> <span class="nav-text">最简 LaTeX 示例代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xelatex-%E7%BC%96%E8%AF%91%E5%85%A8%E6%B5%81%E7%A8%8B%E5%88%86%E9%98%B6%E6%AE%B5%E8%A7%A3%E6%9E%90"><span class="nav-number">8.2.</span> <span class="nav-text">XeLaTeX
+编译全流程（分阶段解析）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-1%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BDxelatex-main.tex-%E5%90%AF%E5%8A%A8%E6%97%B6"><span class="nav-number">8.2.1.</span> <span class="nav-text">阶段
+1：初始化与格式文件加载（xelatex main.tex 启动时）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-2%E8%A7%A3%E6%9E%90-.tex-%E6%BA%90%E6%96%87%E4%BB%B6%E5%AE%8F%E5%B1%95%E5%BC%80%E4%B8%8E%E7%BB%93%E6%9E%84%E5%88%86%E6%9E%90"><span class="nav-number">8.2.2.</span> <span class="nav-text">阶段 2：解析
+.tex 源文件，宏展开与结构分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-3%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BC%96%E8%AF%91%E7%94%9F%E6%88%90%E4%B8%AD%E9%97%B4%E6%96%87%E4%BB%B6%E6%9C%AA%E5%AE%8C%E6%88%90%E5%BC%95%E7%94%A8%E5%92%8C%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.2.3.</span> <span class="nav-text">阶段
+3：第一次编译生成中间文件（未完成引用和参考文献）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-4%E8%B0%83%E7%94%A8%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%B7%A5%E5%85%B7biber%E5%A4%84%E7%90%86%E5%BC%95%E7%94%A8"><span class="nav-number">8.2.4.</span> <span class="nav-text">阶段
+4：调用参考文献工具（Biber）处理引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-5%E7%AC%AC%E4%BA%8C%E6%AC%A1-xelatex-%E7%BC%96%E8%AF%91%E8%A7%A3%E5%86%B3%E5%BC%95%E7%94%A8%E5%92%8C%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">8.2.5.</span> <span class="nav-text">阶段 5：第二次
+XeLaTeX 编译（解决引用和参考文献）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%B6%E6%AE%B5-6%E8%BD%AC%E6%8D%A2-.xdv-%E4%B8%BA-pdf%E6%9C%80%E7%BB%88%E8%BE%93%E5%87%BA"><span class="nav-number">8.2.6.</span> <span class="nav-text">阶段 6：转换 .xdv
+为 PDF（最终输出）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%A4%9A%E8%BD%AE%E7%BC%96%E8%AF%91"><span class="nav-number">8.3.</span> <span class="nav-text">为什么需要多轮编译？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E9%97%B4%E6%96%87%E4%BB%B6%E6%B1%87%E6%80%BB%E5%8F%8A%E4%BD%9C%E7%94%A8"><span class="nav-number">8.4.</span> <span class="nav-text">中间文件汇总及作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%95%E5%B1%82%E6%8A%80%E6%9C%AF%E8%A1%A5%E5%85%85%E6%B1%87%E7%BC%96-%E7%BC%96%E8%AF%91%E5%99%A8%E8%A7%86%E8%A7%92"><span class="nav-number">8.5.</span> <span class="nav-text">底层技术补充（汇编 &#x2F;
+编译器视角）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">9.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="一份简短的LaTeX相关术语的介绍 | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一份简短的LaTeX相关术语的介绍
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-07-14 19:12:18" itemprop="dateCreated datePublished" datetime="2025-07-14T19:12:18+08:00">2025-07-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">LaTeX环境配置</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>31 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文主要介绍<span
+class="math inline">\(\LaTeX{}\)</span>的相关术语以及在文件编译过程中发生了什么。</p>
+<span id="more"></span>
+<hr />
+<p>新人在刚接触和使用<span
+class="math inline">\(\LaTeX{}\)</span>时可能会有以下一些概念的困扰：</p>
+<blockquote>
+<ul>
+<li>什么是<span class="math inline">\(\TeX\)</span>/<span
+class="math inline">\(\LaTeX\)</span>，它们之间有什么关系？</li>
+<li>pdfTeX、LuaTeX、XeTeX这些是什么？</li>
+<li>pdflatex、lualatex、xelatex这些是什么？</li>
+<li>CTEX套装、TeX Live、MacTeX、MiKTeX这些是什么？</li>
+<li>tex文件所在目录里面一大堆不同后缀名的文件都是什么东西？</li>
+<li>如何通过一堆代码就能生成优雅的pdf文件，底层究竟发生了什么？</li>
+</ul>
+</blockquote>
+<p>了解<span
+class="math inline">\(\LaTeX{}\)</span>在编译过程中底层发生了哪些事情对于我们遇到问题时快速定位原因是大有帮助的，这增强了我们使用<span
+class="math inline">\(\LaTeX{}\)</span>的底气，使我们能够心定神闲地编写tex文件，遇到问题时心中不慌。同时，这也使我们更深入地理解<span
+class="math inline">\(\LaTeX{}\)</span>。</p>
+<p>本文主要介绍<span
+class="math inline">\(\LaTeX{}\)</span>的相关术语以及在文件编译过程中发生了什么。</p>
+<hr />
+<h2 id="tex与latex"><span class="math inline">\(\TeX\)</span>与<span
+class="math inline">\(\LaTeX{}\)</span></h2>
+<h3 id="tex"><span class="math inline">\(\TeX{}\)</span></h3>
+<p>TeX 的核心程序（即“TeX 引擎”）最初由高德纳（Donald Knuth）在
+1978-1982 年间用<strong>Pascal 语言</strong>编写。TeX
+引擎的执行逻辑是通过 Pascal 代码描述，再经 Pascal
+编译器转换为汇编语言，最终汇编为机器码运行。其核心功能（如字符处理、排版算法、文件
+IO）都对应底层汇编级的内存操作、分支跳转和系统调用。</p>
+<p>当你启动一个纯粹的、未经任何初始化的 TeX 引擎时，它只认识大约 300
+个原始指令，比如 <code>\def</code>, <code>\hbox</code>,
+<code>\vskip</code>,
+<code>\advance</code>等。在此时，这些原始指令本身不是宏。它们是引擎的内置功能，是原子操作，无法被展开或分解。可以把它们想象成
+CPU 的硬件指令。</p>
+<p>纯粹的 TeX 太难用了。因此，每次你运行 tex 或 latex
+命令时，引擎做的第一件事不是读你的 .tex
+文件，而是先加载一个“格式文件”。</p>
+<p>这个格式文件是一个宏定义的集合，它是由 TeX
+原始指令预先编写好的、并被引擎预编译成了一种高效加载的二进制形式。</p>
+<p>加载格式文件的过程，就像是给一个只有基本指令的计算机安装了一个操作系统和标准库。</p>
+<p>高德纳本人还编写了一个简单的 plain TEX 格式，没有定义诸如
+<code>\documentclass</code> 和 <code>\section</code> 等等命令。</p>
+<h3 id="latex"><span class="math inline">\(\LaTeX{}\)</span></h3>
+<p><span class="math inline">\(\LaTeX{}\)</span> 也是一种格式，建立在
+Plain TeX 之上的、一个更庞大、更结构化、更易用的宏包集合。它定义了像
+<code>\documentclass</code>, <code>\begin&#123;document&#125;</code>,
+<code>\section</code> 这样的高级命令。</p>
+<p>所有这些 LaTeX 命令，最终都会被一步步展开，转换成 Plain TeX
+的宏，然后再展开成 TeX 的原始指令，最后由引擎执行。</p>
+<h3 id="texplain-texlatex-的关系">TeX、Plain TeX、LaTeX 的关系</h3>
+<p>三者本质是<strong>不同抽象层次的排版工具</strong>，从底层技术看，三者的关系类似“汇编
+→ C 标准库 → 高级语言”，宏的展开过程类似编译中的预处理和代码生成，最终由
+TeX 引擎（二进制程序）执行底层操作：</p>
+<ol type="1">
+<li><p><strong>TeX</strong>：最底层的“排版引擎”<br />
+它是一个<strong>编程语言解释器</strong>，自带一套极简的排版原语（如字符输出、行距控制、页面分割等）和语法规则（变量、条件判断、循环、宏定义等）。但直接用
+TeX 原语写文档非常繁琐（类似用汇编语言写程序）。</p></li>
+<li><p><strong>Plain TeX</strong>：TeX 的“标准宏包”<br />
+为简化使用，高德纳在 TeX
+基础上定义了一套<strong>预定义宏（macro）</strong>，封装了常用功能（如段落格式、标题、列表等），形成了“Plain
+TeX 格式”。<br />
+它相当于给 TeX 内核加了一层“标准库”，类似 C
+语言的标准库（<code>stdio.h</code>
+等）对汇编的封装，让用户无需重复编写基础功能。</p></li>
+<li><p><strong>LaTeX</strong>：基于 TeX 的“高级文档排版系统”<br />
+LaTeX 由 Leslie Lamport 设计，是更高层的“应用框架”，是在 Plain TeX
+之上进一步封装的<strong>宏集合</strong>，提供了更高层次的语义（如
+<code>\section</code>、<code>\begin&#123;document&#125;</code>
+等），专注于“文档结构”而非底层排版细节。<br />
+它的定位类似高级编程语言，而 TeX 内核相当于它的“解释器/虚拟机”，Plain
+TeX 则是其依赖的底层库之一。</p></li>
+</ol>
+<hr />
+<h2 id="格式">格式</h2>
+<p>对于TeX系统，其在编译.tex源文件前，会预加载一个格式文件，其中包含各种提前定义好的宏，以被用户在源文件中调用。</p>
+<p><strong>格式文件（.fmt）</strong>
+是预编译的宏集合与状态信息的二进制文件，用于加速 TeX
+引擎的启动和执行。它们本质是将常用格式（宏）（如 Plain TeX、LaTeX
+等的核心定义）预先解析、展开并存储，避免每次运行时重复处理，类似“预编译的标准库”。</p>
+<p>常见的格式文件如下：</p>
+<h3 id="基础格式文件">基础格式文件</h3>
+<ul>
+<li><p><strong>plain.fmt</strong> 对应 Plain TeX
+格式的格式文件，包含高德纳定义的基础宏集合（如段落、标题、列表等基础排版功能）。</p></li>
+<li><p><strong>latex.fmt</strong><br />
+对应 <strong>LaTeX</strong> 格式的基础格式文件，是由Leslie
+Lamport设计的格式，属于Plain TeX的套娃，实现了很多强大的宏。包含 LaTeX
+核心宏（如
+<code>\documentclass</code>、<code>\section</code>、文档环境等）。</p></li>
+</ul>
+<h3 id="扩展格式文件">扩展格式文件</h3>
+<ul>
+<li><p><strong>pdflatex.fmt</strong><br />
+对应 <strong>PDFLaTeX</strong> 格式的格式文件，是 LaTeX
+格式的变体，直接生成 PDF 而非 DVI（需配合 pdfTeX 引擎），格式中包含 PDF
+相关的宏定义（如图片嵌入、字体映射等）。</p></li>
+<li><p><strong>xelatex.fmt</strong><br />
+对应 <strong>XeLaTeX</strong> 格式的格式文件，基于 XeTeX 引擎，支持
+Unicode 和系统原生字体，格式中包含 Unicode 处理、OpenType
+字体支持等宏。</p></li>
+<li><p><strong>lualatex.fmt</strong><br />
+对应 <strong>LuaLaTeX</strong> 格式的格式文件，基于 LuaTeX 引擎，集成
+Lua 脚本功能，格式中包含 Lua 交互、高级字体处理等宏。</p></li>
+<li><p><strong>amstex.fmt</strong><br />
+对应 <strong>AMS-TeX</strong>
+格式的格式文件，专注于数学公式排版，提供更丰富的数学宏（如复杂方程、定理环境等）。</p></li>
+</ul>
+<hr />
+<h2 id="引擎">引擎</h2>
+<p><strong>pdfTeX、LuaTeX、XeTeX是由TeX衍生的排版引擎</strong>，是用于编译源代码并生成文档的程序，有时也称为<strong>编译器</strong>。</p>
+<p>高纳德将TeX的排版引擎设计得如此开放且易扩展，以至于出现了一些由全球社区在此基础上编写的新排版引擎，它们虽然拓展了若干高级特性，但仍严格兼容TeX引擎本身的严谨性。</p>
+<h3 id="pdftex">pdfTeX</h3>
+<p>pdfTeX 是 TeX 引擎的一个重要扩展版本。您可以把它理解为 TeX
+程序的一个“升级版”，它最革命性的功能是能够直接输出 PDF
+文件，而不仅仅是传统的 DVI 文件。</p>
+<h3 id="luatex">LuaTeX</h3>
+<p>LuaTeX于pdfTeX的基础上开发而来，主要特性是内置Lua脚本引擎，理论上能利用Lua获得更灵活的扩展性，但其流行性及性能均不如XeTeX。</p>
+<h3 id="xetex">XeTeX</h3>
+<p>由Jonathan
+Kew开发，在TeX基础上增加了对unicode的支持，同时增加若干高级字体渲染技术、高级数学排版功能，其预载的为Plain
+TeX格式。XeTeX生成的目标文件为.xdv(extend
+DVI)，其可由dvipdf或其他工具转换为PDF文件。</p>
+<hr />
+<h2 id="编译命令">编译命令</h2>
+<p><strong>编译命令</strong>
+是实际调用的、结合了引擎和格式的命令（可执行程序）。如 <span
+class="math inline">\(\texttt{xelatex}\)</span> 命令是结合 XeTeX引擎和
+XeLaTeX
+格式的一个编译命令（类似于选择编译器（XeTeX引擎）和链接库函数（选择XeLaTeX
+格式）的过程）。</p>
+<p>常见的引擎、格式和编译命令的关系总结于下表。 其中[xxx]<span
+class="math inline">\(\LaTeX{}\)</span> 格式
+表示与对应命令相匹配的格式，比如 <span
+class="math inline">\(\texttt{latex}\)</span> 命令对应LaTeX 格式，<span
+class="math inline">\(\texttt{pdflatex}\)</span>
+命令对应PDFLaTeX格式。</p>
+<table>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 27%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>文档格式</th>
+<th>plain <span class="math inline">\(\TeX{}\)</span> 格式</th>
+<th>[xxx]<span class="math inline">\(\LaTeX{}\)</span> 格式</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TeX 引擎</td>
+<td><span class="math inline">\(\textrm{DVI}\)</span></td>
+<td><span class="math inline">\(\texttt{tex}\)</span></td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>pdfTeX 引擎</td>
+<td><span class="math inline">\(\textrm{DVI}\)</span></td>
+<td><span class="math inline">\(\texttt{etex}\)</span></td>
+<td><span class="math inline">\(\texttt{latex}\)</span></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{pdftex}\)</span></td>
+<td><span class="math inline">\(\texttt{pdflatex}\)</span></td>
+</tr>
+<tr class="even">
+<td>XeTeX 引擎</td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{xetex}\)</span></td>
+<td><span class="math inline">\(\texttt{xelatex}\)</span></td>
+</tr>
+<tr class="odd">
+<td>LuaTeX 引擎</td>
+<td><span class="math inline">\(\textrm{PDF}\)</span></td>
+<td><span class="math inline">\(\texttt{luatex}\)</span></td>
+<td><span class="math inline">\(\texttt{lualatex}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>在此介绍一下几个编译命令的基本特点：</p>
+<table>
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">编译命令</th>
+<th style="text-align: left;">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{latex}\)</span></td>
+<td style="text-align: left;">虽然名为 <span
+class="math inline">\(\texttt{latex}\)</span> 命令，底层调用的引擎其实是
+pdfTeX。 该命令生成 <span
+class="math inline">\(\texttt{dvi}\)</span>（Device
+Independent）格式的文档, 用 <span
+class="math inline">\(\texttt{dvipdfmx}\)</span> 命令可以将其转为 <span
+class="math inline">\(\texttt{pdf}\)</span>。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{pdflatex}\)</span></td>
+<td style="text-align: left;">底层调用的引擎也是 pdfTeX，可以直接生成
+<span class="math inline">\(\texttt{pdf}\)</span> 格式的文档。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{xelatex}\)</span></td>
+<td style="text-align: left;">底层调用的引擎是 XeTeX，支持 UTF-8
+编码和对 TrueType/OpenType 字体的调用。
+当前较为方便的<strong>中文排版</strong>解决方案基于 <span
+class="math inline">\(\texttt{xelatex}\)</span>。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{lualatex}\)</span></td>
+<td style="text-align: left;">底层调用的引擎是 LuaTeX。这个引擎在pdfTeX
+引擎基础上发展而来，除了支持 UTF-8 编码和对 TrueType/OpenType
+字体的调用外，还支持通过 Lua 语言扩展 <span
+class="math inline">\(\TeX{}\)</span> 的功能。 <span
+class="math inline">\(\texttt{lualatex}\)</span>
+编译命令下的中文排版支持需要借助 <code>luatexja</code>宏包。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="latex-发行版">LaTeX 发行版</h2>
+<p>LaTeX 发行版（LaTeX Distribution）是一套<strong>预打包的 TeX/LaTeX
+系统集合</strong>，包含了编译文档所需的所有核心组件（引擎、宏包、字体、工具等），目的是让用户无需手动零散安装各种组件就能直接使用
+LaTeX（类似于Linux的发行版）。</p>
+<p>简单说，它类似 “软件套件”—— 就像 “Office 套件” 包含 Word、Excel
+等工具，LaTeX 发行版包含了排版所需的 “引擎、宏包、字体、编译工具”
+等一整套工具链。</p>
+<h3 id="发行版的核心组成">发行版的核心组成</h3>
+<p>一个完整的 LaTeX 发行版通常包含：</p>
+<ol type="1">
+<li><strong>TeX 引擎</strong>：如 pdfTeX、XeTeX、LuaTeX
+等，负责解析代码并生成输出文件（PDF 或 DVI）；</li>
+<li><strong>基础宏包与文档类</strong>：如 LaTeX
+核心宏包（<code>latex.ltx</code>）、标准文档类（<code>article.cls</code>、<code>book.cls</code>）、常用扩展宏包（<code>amsmath</code>、<code>graphicx</code>
+等）；</li>
+<li><strong>字体文件</strong>：包括 TeX 原生字体（如 Computer Modern
+系列）和现代字体（OpenType/TrueType 等，供 XeLaTeX/LuaLaTeX
+使用）；</li>
+<li><strong>辅助工具</strong>：如文献管理工具（BibTeX、Biber）、索引生成工具（MakeIndex）、格式文件生成工具（iniTeX）等；</li>
+<li><strong>配置文件与搜索路径</strong>：定义宏包、字体的存储位置，确保引擎能正确找到所需文件。</li>
+</ol>
+<p>宏包就是别人通过编写宏集造的轮子，直接拿来用就可以了。类似C的标准库或者第三方库。</p>
+<h3 id="主流的-latex-发行版">主流的 LaTeX 发行版</h3>
+<p>不同发行版针对不同操作系统优化，核心功能一致，但安装和维护方式略有差异：</p>
+<ol type="1">
+<li><strong>TeX Live</strong>
+<ul>
+<li>最主流、跨平台（Windows、macOS、Linux）的发行版，由国际 TeX
+用户组（TUG）维护；</li>
+<li>每年更新一次，包含几乎所有常用宏包和工具，兼容性极强；</li>
+<li>适合多数用户，尤其是需要跨平台一致性的场景（如团队协作）。</li>
+</ul></li>
+<li><strong>MiKTeX</strong>
+<ul>
+<li>主要面向 Windows 系统（也支持 macOS/Linux），特点是 “按需安装”——
+初始安装体积小，使用时自动下载缺失的宏包；</li>
+<li>适合初学者或对磁盘空间敏感的用户，但跨平台兼容性略逊于 TeX
+Live。</li>
+</ul></li>
+<li><strong>MacTeX</strong>
+<ul>
+<li>基于 TeX Live 的 macOS 专用发行版，预装了针对 macOS 优化的组件（如
+PDF 预览工具 Skim、字体管理器等）；</li>
+<li>是 macOS 用户的首选，无需手动配置系统适配。</li>
+</ul></li>
+<li><strong>CTeX 套装</strong>
+<ul>
+<li>针对中文用户的 Windows 发行版，集成了中文支持宏包（如
+CJK）和字体；</li>
+<li>逐渐被 TeX Live + 现代中文宏包（如 <code>ctex</code>）替代。</li>
+</ul></li>
+</ol>
+<h3 id="为什么需要发行版">为什么需要发行版？</h3>
+<p>LaTeX
+系统的组件极其庞大（宏包数千个，字体和工具繁多），手动收集、安装和维护这些组件会非常繁琐，且容易出现版本冲突（如宏包依赖不兼容）。发行版通过预打包和统一管理，解决了这些问题：</p>
+<ul>
+<li>确保所有组件版本匹配，减少 “编译报错”；</li>
+<li>提供统一的更新机制（如 TeX Live 的 <code>tlmgr</code> 工具）；</li>
+<li>内置中文、日文等多语言支持（现代发行版中已默认集成）。</li>
+</ul>
+<p>LaTeX 发行版是 “开箱即用” 的 TeX/LaTeX
+工具集合，包含了编译文档所需的引擎、宏包、字体和工具。主流选择是跨平台的
+<strong>TeX Live</strong>（适合多数用户）和 macOS 专用的
+<strong>MacTeX</strong>，Windows 用户也可考虑
+<strong>MiKTeX</strong>。安装发行版后，即可通过
+<code>pdflatex</code>、<code>xelatex</code> 等命令编译 LaTeX 文档。</p>
+<hr />
+<h2 id="编辑器">编辑器</h2>
+<p>所谓编辑器就是可以编辑和书写latex源码的程序软件，比如Notepad（记事本）、NotePad3、Vim等。在这些简单的编辑器中写好代码保存后，需要到命令行中输入编译命令进行编译（熟练之后可以编写批处理文件和Makefile文件到命令行编译）。</p>
+<blockquote>
+<p>“四十岁后，不滞于物，草木竹石均可为剑。自此精修，渐进于无剑胜有剑之境。”——《神雕侠侣》独孤求败</p>
+</blockquote>
+<p>为了简化书写和编译的复杂度，一些集成开发环境（IDE，Integrated
+Development Environment）被开发出用于帮助用户提高效率。 在 LaTeX
+领域，常见的 IDE 有 VS Code、TeXstudio、WinEdt、Texworks、TeXShop
+等，它们集成了 LaTeX 代码编辑、语法高亮、一键编译、PDF
+预览等功能，方便用户编写和排版文档。</p>
+<blockquote>
+<p>IDE是一种集成了代码编辑、编译、调试、项目管理等多种功能的软件工具，旨在为开发者提供一个统一的工作环境，提高开发效率。</p>
+</blockquote>
+<p>较为常用的是VS
+Code和TeXstudio，这两个都支持跨操作系统，WinEdt主要搭配CTeX套装在Windows环境下使用。</p>
+<p>个人建议WinEdt只搭配CTEX使用，原因有三个，其一，CTEX套装默认集成了WinEdt编辑器。其二，WinEdt为商用软件，需要付费，虽然免费版也能使用全部功能。其三，软件闭源，更新缓慢。</p>
+<p>VS Code和Texstudio看个人习惯，没使用过VS
+Code的推荐使用Texstudio，新手推荐使用Texstudio，原因是它职责单一，只用来编写tex文件，并且个人感觉Debug比VS
+Code好用。并且Texstudio是用QT框架编写的开源软件，如果有功能建议可以去其Github<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RleHN0dWRpby1vcmcvdGV4c3R1ZGlv">主页<i class="fa fa-external-link-alt"></i></span>提issues。</p>
+<h2 id="latex-用到的文件一览"><span
+class="math inline">\(\LaTeX{}\)</span> 用到的文件一览</h2>
+<p>除了源代码文件 <span class="math inline">\(\texttt{.tex}\)</span>
+以外，使用 <span class="math inline">\(\LaTeX{}\)</span>
+时还可能接触到各种格式的文件。本节简单介绍一下经常见到的文件。</p>
+<p>每个宏包和文档类都是带特定扩展名的文件，除此之外也有一些文件出现于
+<span class="math inline">\(\LaTeX{}\)</span> 模板中：</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">文件扩展名</th>
+<th style="text-align: left;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.sty}\)</span></td>
+<td style="text-align: left;">宏包文件。宏包的名称与文件名一致。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.cls}\)</span></td>
+<td style="text-align: left;">文档类文件。文档类名称与文件名一致。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.bib}\)</span></td>
+<td style="text-align: left;">参考文献数据库文件。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.bst}\)</span></td>
+<td style="text-align: left;">用到的参考文献格式模板。</td>
+</tr>
+</tbody>
+</table>
+<p>在编译过程中可能会生成相当多的辅助文件和日志。一些功能如交叉引用、参考文献、目录、索引等，需要先通过编译生成辅助文件，然后再次编译时读入辅助文件得到正确的结果，所以复杂的源代码可能要编译多次。</p>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">中间文件</th>
+<th style="text-align: left;">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.log}\)</span></td>
+<td
+style="text-align: left;">排版引擎生成的日志文件，供排查错误使用。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.aux}\)</span></td>
+<td
+style="text-align: left;">生成的主辅助文件，记录交叉引用、目录、参考文献的引用等。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.toc}\)</span></td>
+<td style="text-align: left;">生成的目录记录文件。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.lof}\)</span></td>
+<td style="text-align: left;">生成的图片目录记录文件。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.lot}\)</span></td>
+<td style="text-align: left;">生成的表格目录记录文件。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.bbl}\)</span></td>
+<td style="text-align: left;">BibTeX生成的参考文献记录文件。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.blg}\)</span></td>
+<td style="text-align: left;">BibTeX生成的日志文件。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.idx}\)</span></td>
+<td style="text-align: left;">生成的供 <code>makeindex</code>
+处理的索引记录文件。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.ind}\)</span></td>
+<td style="text-align: left;"><code>makeindex</code> 处理 <span
+class="math inline">\(\texttt{.idx}\)</span>
+生成的用于排版的格式化索引文件。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.ilg}\)</span></td>
+<td style="text-align: left;"><code>makeindex</code>
+生成的日志文件。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(\texttt{.out}\)</span></td>
+<td style="text-align: left;"><code>hyperref</code> 宏包生成的 PDF
+书签记录文件。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="编译过程发生了什么">编译过程发生了什么</h2>
+<p>以<code>xelatex</code>编译命令为例（其他编译命令类似），结合一个包含参考文献、图表的最简示例，详细描述编译流程，并说明中间文件的作用。</p>
+<h3 id="最简-latex-示例代码">最简 LaTeX 示例代码</h3>
+<p>先定义一个包含文档结构、图表、参考文献的示例文件
+<code>main.tex</code>：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>&#123;article&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;graphicx&#125;  <span class="comment">% 插入图片</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;caption&#125;   <span class="comment">% 图表标题</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;biblatex&#125;  <span class="comment">% 参考文献管理</span></span><br><span class="line"><span class="keyword">\addbibresource</span>&#123;refs.bib&#125;  <span class="comment">% 关联参考文献库</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;document&#125;</span><br><span class="line"><span class="keyword">\section</span>&#123;引言&#125;</span><br><span class="line">这是一个示例文档，包含图<span class="keyword">\ref</span>&#123;fig:example&#125;和参考文献<span class="keyword">\cite</span>&#123;knuth1984tex&#125;。</span><br><span class="line"></span><br><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[h]</span><br><span class="line">  <span class="keyword">\centering</span></span><br><span class="line">  <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>]&#123;example.png&#125;  <span class="comment">% 插入图片</span></span><br><span class="line">  <span class="keyword">\caption</span>&#123;示例图片&#125;</span><br><span class="line">  <span class="keyword">\label</span>&#123;fig:example&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\printbibliography</span>  <span class="comment">% 输出参考文献列表</span></span><br><span class="line"><span class="keyword">\end</span>&#123;document&#125;</span><br></pre></td></tr></table></figure>
+<p>配套文件：</p>
+<ul>
+<li><code>refs.bib</code>（参考文献库，包含一条条目）；</li>
+<li><code>example.png</code>（图片文件）。</li>
+</ul>
+<h3 id="xelatex-编译全流程分阶段解析">XeLaTeX
+编译全流程（分阶段解析）</h3>
+<p>XeLaTeX 编译本质是 <strong>XeTeX 引擎加载 <code>xelatex.fmt</code>
+格式文件，解析 <code>.tex</code>
+源文件，经宏展开、排版计算、调用外部工具（如 Biber），最终生成
+PDF</strong> 的过程。核心步骤如下：</p>
+<h4 id="阶段-1初始化与格式文件加载xelatex-main.tex-启动时">阶段
+1：初始化与格式文件加载（<code>xelatex main.tex</code> 启动时）</h4>
+<ol type="1">
+<li><p><strong>XeTeX 引擎启动</strong></p>
+<p>XeLaTeX 是 XeTeX 引擎的 “前端命令”，执行
+<code>xelatex main.tex</code> 时，实际启动的是 XeTeX
+二进制程序（底层为汇编指令实现的机器码，如内存分配、文件 IO
+等系统调用）。</p></li>
+<li><p><strong>加载 <code>xelatex.fmt</code> 格式文件</strong></p>
+<ul>
+<li><code>xelatex.fmt</code> 是预编译的二进制格式文件（类似
+“预编译的宏库”），包含 LaTeX 核心宏定义（如
+<code>\documentclass</code>、<code>\section</code>）、XeTeX 特有的
+Unicode 和字体处理宏（如 <code>fontspec</code> 基础定义）。</li>
+<li>加载目的：避免每次编译重新解析 LaTeX 核心宏，加速启动（类似 C
+程序加载预编译的标准库 <code>.so</code>/<code>.dll</code>）。</li>
+</ul></li>
+</ol>
+<h4 id="阶段-2解析-.tex-源文件宏展开与结构分析">阶段 2：解析
+<code>.tex</code> 源文件，宏展开与结构分析</h4>
+<p>XeTeX 引擎逐行读取
+<code>main.tex</code>，对指令进行<strong>宏展开</strong>（文本替换）和<strong>语义分析</strong>（识别文档结构、图表、引用等）。</p>
+<ol type="1">
+<li><strong>预处理与宏展开</strong>
+<ul>
+<li>遇到 <code>\documentclass&#123;article&#125;</code>：展开为
+<code>article.cls</code>
+文档类的宏定义（如页面大小、字体默认设置等），本质是一系列底层 TeX
+原语（如 <code>\textwidth=345pt</code> 等长度设置）。</li>
+<li>遇到 <code>\usepackage&#123;graphicx&#125;</code>：加载
+<code>graphicx.sty</code> 宏包，展开为图片处理的宏（如
+<code>\includegraphics</code> 对应处理图片路径、缩放的底层指令）。</li>
+<li>遇到
+<code>\begin&#123;document&#125;</code>：标志文档内容开始，触发页面初始化（如页眉页脚、页边距设置）。</li>
+</ul></li>
+<li><strong>处理交叉引用与标签</strong>
+<ul>
+<li>遇到 <code>\label&#123;fig:example&#125;</code>：将标签
+<code>fig:example</code> 与当前图号（如 “1”）关联，写入
+<strong><code>.aux</code>
+辅助文件</strong>（文本格式），供后续编译解析引用（如
+<code>\ref&#123;fig:example&#125;</code> 需要读取 <code>.aux</code>
+中的图号）。</li>
+<li>此时 <code>\ref&#123;fig:example&#125;</code>
+暂时无法确定具体数值（因标签定义和引用可能跨页），会先记录为占位符（如
+<code>??</code>）。</li>
+</ul></li>
+<li><strong>处理图片</strong>
+<ul>
+<li><code>\includegraphics&#123;example.png&#125;</code>：调用 XeTeX
+内置的图片处理模块（底层为图像处理库的汇编指令，如解析 PNG
+格式、计算像素与 TeX 单位的转换），记录图片在 PDF
+中的位置和尺寸，但不直接嵌入（需后续步骤生成时写入）。</li>
+</ul></li>
+</ol>
+<h4 id="阶段-3第一次编译生成中间文件未完成引用和参考文献">阶段
+3：第一次编译生成中间文件（未完成引用和参考文献）</h4>
+<p>XeTeX 引擎完成源文件解析后，进行排版计算（如行间距、分页），生成
+<strong><code>.xdv</code> 中间文件</strong> 和其他辅助文件：</p>
+<ol type="1">
+<li><strong><code>.xdv</code> 文件</strong>
+<ul>
+<li>全称 “eXtended Device Independent”，是 XeTeX
+特有的中间格式，包含排版后的文本、字体、图形位置信息（但未包含实际图片和完整字体数据），类似
+“排版指令清单”。</li>
+</ul></li>
+<li><strong>其他辅助文件</strong>
+<ul>
+<li><code>.aux</code>：记录交叉引用（标签与编号的映射，如
+<code>\newlabel&#123;fig:example&#125;&#123;&#123;1&#125;&#123;1&#125;&#125;</code> 表示图 1 在第 1
+页）、参考文献引用信息（如
+<code>\abx@aux@cite&#123;knuth1984tex&#125;</code>）。</li>
+<li><code>.log</code>：编译日志，包含宏展开过程、错误信息（如宏未定义、图片缺失）、加载的宏包和字体列表（用于调试）。</li>
+<li><code>.out</code>：部分图表位置信息（如浮动体位置计算结果）。</li>
+</ul></li>
+</ol>
+<h4 id="阶段-4调用参考文献工具biber处理引用">阶段
+4：调用参考文献工具（Biber）处理引用</h4>
+<p>由于 LaTeX 无法直接解析 <code>.bib</code>
+文件，需通过外部工具生成可识别的参考文献列表：</p>
+<ol type="1">
+<li><strong>执行 <code>biber main</code></strong>
+<ul>
+<li>Biber 读取 <code>.aux</code> 中记录的引用条目（如
+<code>knuth1984tex</code>），解析 <code>refs.bib</code> 中的 BibTeX
+格式数据（如 <code>@book&#123;knuth1984tex, ...&#125;</code>），生成
+<strong><code>.bbl</code> 文件</strong>（LaTeX
+可识别的参考文献列表宏代码）。</li>
+<li>例如，<code>refs.bib</code> 中的条目会被转换为 <code>\bibitem</code>
+或 <code>biblatex</code> 专用的宏定义，包含作者、标题、出版信息等。</li>
+</ul></li>
+</ol>
+<h4 id="阶段-5第二次-xelatex-编译解决引用和参考文献">阶段 5：第二次
+XeLaTeX 编译（解决引用和参考文献）</h4>
+<p>再次执行 <code>xelatex main.tex</code>，目的是读取第一次编译生成的
+<code>.aux</code>（交叉引用）和
+<code>.bbl</code>（参考文献），填充占位符：</p>
+<ol type="1">
+<li><strong>解析 <code>.aux</code> 中的交叉引用</strong>
+<ul>
+<li><code>\ref&#123;fig:example&#125;</code> 读取 <code>.aux</code> 中的
+<code>\newlabel</code> 指令，替换为实际编号 “1”。</li>
+</ul></li>
+<li><strong>插入参考文献列表</strong>
+<ul>
+<li><code>\printbibliography</code> 展开为 <code>.bbl</code>
+中的宏代码，将参考文献条目排版到文档末尾。</li>
+</ul></li>
+<li><strong>更新 <code>.aux</code> 和生成最终 <code>.xdv</code></strong>
+<ul>
+<li>此时交叉引用和参考文献已确定，<code>.aux</code>
+会被更新（确保无遗漏），生成包含完整内容的 <code>.xdv</code> 文件。</li>
+</ul></li>
+</ol>
+<h4 id="阶段-6转换-.xdv-为-pdf最终输出">阶段 6：转换 <code>.xdv</code>
+为 PDF（最终输出）</h4>
+<p>XeTeX 引擎调用内置的 PDF 生成模块，将 <code>.xdv</code> 转换为
+PDF：</p>
+<ol type="1">
+<li><strong>嵌入字体</strong>
+<ul>
+<li>XeTeX 基于 <code>xelatex.fmt</code>
+中的字体配置，调用系统字体库（如计算机中的 <code>Times New Roman</code>
+或中文字体），将文档中使用的字体轮廓数据（TrueType/OpenType）嵌入
+PDF（避免字体缺失导致乱码）。</li>
+</ul></li>
+<li><strong>嵌入图片</strong>
+<ul>
+<li>读取 <code>example.png</code> 的二进制数据，按 <code>.xdv</code>
+中记录的位置和尺寸嵌入 PDF，底层通过图像压缩算法（如 PNG
+解码）处理像素数据。</li>
+</ul></li>
+<li><strong>生成 PDF 结构</strong>
+<ul>
+<li>构建 PDF
+的页面树、目录（若有）、交叉引用表（点击引用跳转）等结构，最终生成
+<code>main.pdf</code>。</li>
+</ul></li>
+</ol>
+<h3 id="为什么需要多轮编译">为什么需要多轮编译？</h3>
+<p>核心原因是 <strong>LaTeX 是 “单遍扫描”
+引擎</strong>，无法在一次编译中同时确定 “引用” 和 “被引用对象” 的位置 /
+编号：</p>
+<ul>
+<li>第一次编译：识别 “被引用对象”（如图、文献条目），记录到
+<code>.aux</code>，但无法知道它们最终的编号 / 页码。</li>
+<li>第二次编译（或调用 BibTeX/Biber 后）：读取 <code>.aux</code> 或
+<code>.bbl</code> 中的记录，反向填充 “引用” 的内容。</li>
+<li>若内容长度导致页码变化（如参考文献列表增加新页），需额外编译一次同步页码引用。</li>
+</ul>
+<p>调用参考文献工具处理引用的参考文献工具通常有两种：BibTeX和Biber。</p>
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 40%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>工具</th>
+<th>编译流程（标准轮次）</th>
+<th>核心中间文件变化</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BibTeX</td>
+<td>xelatex → xelatex → bibtex → xelatex</td>
+<td>.aux（记录引用）→ .bbl（BibTeX 生成）→ 最终 PDF</td>
+</tr>
+<tr class="even">
+<td>Biber</td>
+<td>xelatex → biber → xelatex</td>
+<td>.aux（记录引用）→ .bbl（Biber 生成）→ 最终 PDF</td>
+</tr>
+</tbody>
+</table>
+<p><em>注：Biber 流程通常比 BibTeX 少一轮初始 <code>xelatex</code>，因为
+<code>biblatex</code> 对 <code>.aux</code> 的处理更高效。</em></p>
+<p><strong>使用 BibTeX 时，标准流程需要 “xelatex 两次 → bibtex → xelatex
+一次（或多次）”</strong>，这是因为传统 BibTeX 对 <code>.aux</code>
+的依赖更严格，需要两次初始编译确保标签信息完整。而现代 Biber 配合
+<code>biblatex</code> 可简化流程，但本质仍是通过多轮编译解决 “引用 -
+被引用” 的依赖关系。</p>
+<p>实际使用中，无论哪种工具，<strong>最终目标都是确保交叉引用、页码、参考文献列表完全同步</strong>，因此建议在复杂文档中多编译
+1-2 次，避免遗漏。</p>
+<h3 id="中间文件汇总及作用">中间文件汇总及作用</h3>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 19%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>文件名</th>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>main.aux</code></td>
+<td>辅助文件</td>
+<td>记录交叉引用（标签与编号）、参考文献引用信息，供多轮编译同步数据</td>
+</tr>
+<tr class="even">
+<td><code>main.log</code></td>
+<td>日志文件</td>
+<td>记录编译过程（宏加载、错误信息、字体使用），用于调试</td>
+</tr>
+<tr class="odd">
+<td><code>main.xdv</code></td>
+<td>中间格式</td>
+<td>包含排版后的文本、图形位置信息，是 XeTeX 特有的 “排版指令集”</td>
+</tr>
+<tr class="even">
+<td><code>main.bbl</code></td>
+<td>参考文献</td>
+<td>BibTeX/Biber 生成的 LaTeX 宏代码，包含格式化后的参考文献条目</td>
+</tr>
+<tr class="odd">
+<td><code>main.blg</code></td>
+<td>BibTeX/Biber 日志</td>
+<td>记录 BibTeX/Biber 处理参考文献的过程（如条目解析、格式转换）</td>
+</tr>
+<tr class="even">
+<td><code>main.out</code></td>
+<td>浮动体信息</td>
+<td>记录图表等浮动体的位置计算结果，辅助排版优化</td>
+</tr>
+</tbody>
+</table>
+<h3 id="底层技术补充汇编-编译器视角">底层技术补充（汇编 /
+编译器视角）</h3>
+<ul>
+<li><strong>XeTeX 引擎的本质</strong>：是用 C 语言编写的程序（最终编译为
+x86-64/ARM 汇编指令），核心逻辑包括：
+<ul>
+<li>词法分析（识别 <code>\section</code> 等指令为 “宏” token）；</li>
+<li>语法分析（解析宏的嵌套结构，如 <code>\begin&#123;figure&#125;</code> 与
+<code>\end&#123;figure&#125;</code> 的匹配）；</li>
+<li>内存管理（分配缓冲区存储宏展开结果、排版数据）。</li>
+</ul></li>
+<li><strong>宏展开的底层</strong>：类似 C 预处理器的
+<code>#define</code> 替换，但更复杂（支持参数、条件判断），由 XeTeX
+引擎中的 “宏处理器” 模块通过字符串操作指令（汇编层面的
+<code>mov</code>、<code>cmp</code>）实现。</li>
+<li><strong>PDF 生成</strong>：最终调用系统的文件写入指令（如
+<code>write</code> 系统调用，对应汇编的
+<code>sys_write</code>），将二进制数据（字体、图片、文本）按 PDF
+规范组织成 <code>main.pdf</code>。</li>
+</ul>
+<p>(PS：这样的编译器我们能写出来吗，怎么都是老外写的？)</p>
+<hr />
+<h2 id="参考文章">参考文章</h2>
+<ol type="1">
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份 (不太)
+简短的 LaTeX2ε 介绍<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZmlqaWlzbGFuZC9wLzE1Njk3NDcyLmh0bWw=">杂谈：
+Tex 排版系统历史及各引擎版本梳理<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xODE1NTcyNTM=">LaTeX引擎、格式、宏包、发行版大梳理<i class="fa fa-external-link-alt"></i></span></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/" title="一份简短的LaTeX相关术语的介绍">https://invinc-z.com/2025/07/14/tools/latex/environment-configuration/latex-intro-terms/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E8%AF%91/" rel="tag"><i class="fa fa-tag"></i> 编译</a>
+              <a href="/tags/%E5%8F%91%E8%A1%8C%E7%89%88/" rel="tag"><i class="fa fa-tag"></i> 发行版</a>
+              <a href="/tags/%E6%9C%AF%E8%AF%AD/" rel="tag"><i class="fa fa-tag"></i> 术语</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/07/07/programming/misc/general-code-review-checklist/" rel="prev" title="代码审查清单">
+                  <i class="fa fa-angle-left"></i> 代码审查清单
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/07/21/tools/latex/environment-configuration/solutions-latex-templetes-compile-errors/" rel="next" title="国内外期刊和学位论文等LaTeX模板编译报错如何解决">
+                  国内外期刊和学位论文等LaTeX模板编译报错如何解决 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">308k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">25:38</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

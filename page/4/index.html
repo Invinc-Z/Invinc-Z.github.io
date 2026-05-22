@@ -1,100 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: 400px;
-}
-
-.douban-card {
-    display: flex;
-    margin: 30px 10px;
-    padding: 15px;
-    border-radius: 15px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    color: antiquewhite;
-    text-decoration: none;
-}
-
-.douban-card:hover {
-    text-decoration: none;
-}
-
-.douban-card-bgimg {
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    filter: blur(15px) brightness(0.6);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-img {
-    position: relative;
-    height: 130px;
-    width: 80px;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-left:hover .douban-card-img {
-    filter: blur(5px) brightness(0.6);
-    transform: perspective(800px) rotateX(180deg);
-}
-
-.douban-card-left .douban-card-img {
-    transition: all 500ms ease;
-}
-
-.douban-card-left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.douban-card-left .douban-card-status {
-    height: 130px;
-    width: 80px;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 30%;
-    transform: rotateX(180deg);
-    backface-visibility: hidden;
-    transition: all 500ms ease;
-}
-
-.douban-card-left:hover .douban-card-status {
-    transform: perspective(800px) rotateX(0deg);
-}
-
-.douban-card-right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.3;
-    color: antiquewhite;
-}
-
-.douban-card-item {
-    margin-top: 4px;
-}
-</style><!-- hexo injector head_begin end -->
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -114,15 +24,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
+    <meta name="description" content="Programming notes, technical records, reading notes, and life moments.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Neozhuang&#39;s Blog">
-<meta property="og:url" content="https://invinc-z.com/page/4/index.html">
+<meta property="og:url" content="https://invinc-z.com/page/4/">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="Programming notes, technical records, reading notes, and life moments.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Neozhuang">
-<meta property="article:tag" content="编程技术,C,C++,Linux,LaTeX">
+<meta property="article:tag" content="Programming, Tools">
 <meta name="twitter:card" content="summary">
 
 
@@ -236,7 +148,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -295,19 +207,19 @@
     <img class="site-author-image" itemprop="image" alt="Neozhuang"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">Neozhuang</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -882,7 +794,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/languages/C/c-variable-argument-lists/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/02/05/notes-reading/computer/lshort/lshort-06-features-tools/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -891,7 +803,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -900,7 +812,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/languages/C/c-variable-argument-lists/" class="post-title-link" itemprop="url">C语言之可变参数列表</a>
+          <a href="/2025/02/05/notes-reading/computer/lshort/lshort-06-features-tools/" class="post-title-link" itemprop="url">lshort笔记：特色工具和功能（六）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -911,14 +823,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-02-12 05:12:18" itemprop="dateCreated datePublished" datetime="2024-02-12T05:12:18+08:00">2024-02-12</time>
+      <time title="创建时间：2025-02-06 05:12:18" itemprop="dateCreated datePublished" datetime="2025-02-06T05:12:18+08:00">2025-02-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -926,11 +838,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">编程语言（Languages）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/c/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -941,14 +853,14 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>989</span>
+      <span>5.1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>25 分钟</span>
     </span>
 </div>
 
@@ -959,14 +871,16 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>在 C 语言中，可变参数列表（Variable Argument List）通过
-<code>stdarg.h</code>
-头文件提供的宏和函数来实现。它允许函数接受可变数量的参数，类似于
-<code>printf</code> 和 <code>scanf</code>
-这样的函数。本文介绍与可变参数列表相关的函数和用法。</p>
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本文介绍一些特色的 <span class="math inline">\(\LaTeX{}\)</span>
+辅助功能。前两个功能 BibTeX 和 makeindex
+依靠一些辅助程序自动生成参考文献、索引等；后面使用颜色、超链接等则生成美观易用的电子文档。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/languages/C/c-variable-argument-lists/#more" rel="contents">
+              <a class="btn" href="/2025/02/05/notes-reading/computer/lshort/lshort-06-features-tools/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -997,7 +911,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/data-structure-algorithm/algorithm/binary-search-algorithm/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/30/notes-reading/computer/lshort/lshort-05-layout-style/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1006,7 +920,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1015,7 +929,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/data-structure-algorithm/algorithm/binary-search-algorithm/" class="post-title-link" itemprop="url">二分查找算法设计与实现</a>
+          <a href="/2025/01/30/notes-reading/computer/lshort/lshort-05-layout-style/" class="post-title-link" itemprop="url">lshort笔记：排版样式设定（五）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1026,14 +940,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-02-06 05:12:18" itemprop="dateCreated datePublished" datetime="2024-02-06T05:12:18+08:00">2024-02-06</time>
+      <time title="创建时间：2025-01-31 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-31T05:12:18+08:00">2025-01-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1041,11 +955,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法（DSA）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1056,7 +970,470 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>5.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>27 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本章内容将一览如何修改 <span class="math inline">\(\LaTeX{}\)</span>
+的排版样式，具体包括设置字体和字号，修饰和强调文字，调整段落格式和间距，设定页面参数和分栏，以及如何更改页眉页脚的样式和内容。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/30/notes-reading/computer/lshort/lshort-05-layout-style/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/24/notes-reading/computer/lshort/lshort-symbol-tables/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/24/notes-reading/computer/lshort/lshort-symbol-tables/" class="post-title-link" itemprop="url">lshort笔记：数学符号表</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-25 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-25T05:12:18+08:00">2025-01-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>535</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本文介绍了在 <span class="math inline">\(\LaTeX{}\)</span>
+中常用的符号。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/24/notes-reading/computer/lshort/lshort-symbol-tables/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/18/notes-reading/computer/lshort/lshort-04-math-equation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/18/notes-reading/computer/lshort/lshort-04-math-equation/" class="post-title-link" itemprop="url">lshort笔记：排版数学公式（四）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-19 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-19T05:12:18+08:00">2025-01-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>32 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本章将见识到 <span class="math inline">\(\LaTeX{}\)</span>
+闻名的强项——排版数学公式。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/18/notes-reading/computer/lshort/lshort-04-math-equation/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/12/notes-reading/computer/lshort/lshort-03-document-elements/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/12/notes-reading/computer/lshort/lshort-03-document-elements/" class="post-title-link" itemprop="url">lshort笔记：文档元素（三）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-13 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-13T05:12:18+08:00">2025-01-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>39 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>在知道了如何输入文字后，本章介绍一个结构化的文档所依赖的各种元素——章节、目录、列表、图表、交叉引用、脚注等等。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2025/01/12/notes-reading/computer/lshort/lshort-03-document-elements/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/06/notes-reading/computer/lshort/lshort-02-typeset-text/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/01/06/notes-reading/computer/lshort/lshort-02-typeset-text/" class="post-title-link" itemprop="url">lshort笔记：用 LaTeX 排版文字（二）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-07 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-07T05:12:18+08:00">2025-01-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1074,10 +1451,21 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>本文介绍了二分查找算法，首先分析了算法的基本实现思想，接着使用C语言以递归和循环两种方式进行代码实现，并且给出了一些二分查找的变体代码，最后简述了其典型的应用场景。</p>
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>文字是排版的基础。本章主要介绍如何在 <span
+class="math inline">\(\LaTeX{}\)</span>
+中输入各种文字符号，包括标点符号、连字符、重音等，以及控制文字断行和断页的方式。本章简要介绍了在
+<span class="math inline">\(\LaTeX{}\)</span> 中排版中文的方法。随着
+<span class="math inline">\(\LaTeX{}\)</span> 和底层 <span
+class="math inline">\(\TeX{}\)</span>引擎的发展，旧方式（<code>CCT</code>、<code>CJK</code>等）日渐退出舞台，<code>xelatex</code>
+和 <code>lualatex</code> 编译命令配合 <code>ctex</code>
+宏包/文档类的方式成为当前的主流中文排版支持方式。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/data-structure-algorithm/algorithm/binary-search-algorithm/#more" rel="contents">
+              <a class="btn" href="/2025/01/06/notes-reading/computer/lshort/lshort-02-typeset-text/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1108,7 +1496,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/data-structure-algorithm/algorithm/sort-algorithm-summary/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/01/03/programming/unix-posix/unix-like-filesystem-hierarchy-standard-overview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1117,7 +1505,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1126,7 +1514,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/data-structure-algorithm/algorithm/sort-algorithm-summary/" class="post-title-link" itemprop="url">七大排序算法总结</a>
+          <a href="/2025/01/03/programming/unix-posix/unix-like-filesystem-hierarchy-standard-overview/" class="post-title-link" itemprop="url">UNIX-like 文件系统层次结构标准</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1137,14 +1525,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-31 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-31T05:12:18+08:00">2024-01-31</time>
+      <time title="创建时间：2025-01-04 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-04T05:12:18+08:00">2025-01-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1152,11 +1540,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法（DSA）</span></a>
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">操作系统与系统编程（Systems）</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+          <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/unix-posix/" itemprop="url" rel="index"><span itemprop="name">Unix & POSIX</span></a>
         </span>
     </span>
 
@@ -1167,14 +1555,14 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>14k</span>
+      <span>362</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1:09</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -1185,10 +1573,10 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>本文介绍了七种经典的基于比较的排序算法，其中基础排序算法包括冒泡排序、选择排序和插入排序三种，高级排序包括快速排序、归并排序、堆排序和希尔排序四种。文中首先对每个排序算法分析了其设计思想，接着使用C语言进行代码实现，然后从时间复杂度、空间复杂度和稳定性三个方面对各个算法进行分析，最后对这七种排序算法的性能和适用场景方面进行总结。</p>
+          <p>本文总结了 UNIX-like 操作系统下的文件系统目录的层次结构。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/data-structure-algorithm/algorithm/sort-algorithm-summary/#more" rel="contents">
+              <a class="btn" href="/2025/01/03/programming/unix-posix/unix-like-filesystem-hierarchy-standard-overview/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1219,7 +1607,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/languages/C/c-string-operation/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/31/notes-reading/computer/lshort/lshort-01-basic-concepts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1228,7 +1616,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1237,7 +1625,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/languages/C/c-string-operation/" class="post-title-link" itemprop="url">C语言之字符串操作</a>
+          <a href="/2024/12/31/notes-reading/computer/lshort/lshort-01-basic-concepts/" class="post-title-link" itemprop="url">lshort笔记：LaTeX 的基本概念（一）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1248,14 +1636,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-25 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-25T05:12:18+08:00">2024-01-25</time>
+      <time title="创建时间：2025-01-01 05:12:18" itemprop="dateCreated datePublished" datetime="2025-01-01T05:12:18+08:00">2025-01-01</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1263,11 +1651,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">编程语言（Languages）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/c/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1278,7 +1666,7 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>3.8k</span>
+      <span>3.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1296,13 +1684,22 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>C
-语言提供了丰富的字符串处理相关的库函数，这些函数基本上，都声明在头文件
-<code>string.h</code>
-当中，所以使用它们需要包含这个头文件。这里只介绍几种最基本的和最常用的，以及自己实现这些函数的方式。</p>
+          <blockquote>
+<p>本文内容来自<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0NUZVgtb3JnL2xzaG9ydC16aC1jbg==">一份
+(不太) 简短的 LATEX2ε 介绍<i class="fa fa-external-link-alt"></i></span>。</p>
+</blockquote>
+<p>本章对 TeX 与 LaTeX 的基本概念和整体结构作了简要介绍。首先说明了 TeX
+与 LaTeX 的来源和优缺点。随后通过一个简单的 Hello, World 示例，展示了
+LaTeX 文档的基本组成形式。</p>
+<p>在此基础上，进一步介绍了 LaTeX
+中的命令与环境，以及源代码在逻辑和结构上的组织方式。同时，对文档类与宏包的作用进行了说明，并列举了
+LaTeX 编译过程中涉及的常见文件类型与文件组织方式。最后，对 TeX / LaTeX
+中常见的术语和相关概念进行了集中说明。</p>
+<p>本章旨在帮助读者对 LaTeX
+建立整体性的认识，为后续章节中更深入的排版细节与宏包使用奠定基础。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/languages/C/c-string-operation/#more" rel="contents">
+              <a class="btn" href="/2024/12/31/notes-reading/computer/lshort/lshort-01-basic-concepts/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1333,7 +1730,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/languages/C/c-file-stream-stdlib-func/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/30/notes-reading/misc/notes-stanford-efficient-sleep-methods/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1342,7 +1739,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1351,7 +1748,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/languages/C/c-file-stream-stdlib-func/" class="post-title-link" itemprop="url">C语言之文件流常用标准库函数</a>
+          <a href="/2024/12/30/notes-reading/misc/notes-stanford-efficient-sleep-methods/" class="post-title-link" itemprop="url">《斯坦福高效睡眠法》读书笔记</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1362,14 +1759,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-19 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-19T05:12:18+08:00">2024-01-19</time>
+      <time title="创建时间：2024-12-31 05:12:18" itemprop="dateCreated datePublished" datetime="2024-12-31T05:12:18+08:00">2024-12-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1377,11 +1774,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">编程语言（Languages）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/c/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+          <a href="/categories/reading-notes/misc/" itemprop="url" rel="index"><span itemprop="name">Misc</span></a>
         </span>
     </span>
 
@@ -1392,7 +1789,7 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>979</span>
+      <span>956</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1410,10 +1807,11 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>本文总结了在C语言中与文件流相关的标准库函数。</p>
+          <p>本文对《斯坦福高效睡眠法》一书做了一些归纳整理
+，主要从不睡觉的危害、睡眠的作用、以及如何提升睡眠质量和清醒战略这几个方面总结。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/languages/C/c-file-stream-stdlib-func/#more" rel="contents">
+              <a class="btn" href="/2024/12/30/notes-reading/misc/notes-stanford-efficient-sleep-methods/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1444,7 +1842,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/languages/C/c-dynamic-memory-allocation-free/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/23/tools/latex/project-templates/latex-resume-template/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1453,7 +1851,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1462,7 +1860,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/languages/C/c-dynamic-memory-allocation-free/" class="post-title-link" itemprop="url">C语言之动态内存分配与释放</a>
+          <a href="/2024/12/23/tools/latex/project-templates/latex-resume-template/" class="post-title-link" itemprop="url">LaTeX 个人简历模板</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1473,14 +1871,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-13 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-13T05:12:18+08:00">2024-01-13</time>
+      <time title="创建时间：2024-12-24 05:12:18" itemprop="dateCreated datePublished" datetime="2024-12-24T05:12:18+08:00">2024-12-24</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1488,11 +1886,15 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">编程语言（Languages）</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%88languages%EF%BC%89/c/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">LaTeX项目模板</span></a>
         </span>
     </span>
 
@@ -1503,14 +1905,14 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.7k</span>
+      <span>582</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>14 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -1521,13 +1923,10 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>本文首先介绍了通用指针类型 <code>void</code>
-的特点，接着给出了在堆上动态分配内存空间主要依赖的三个函数（<code>malloc</code>、<code>calloc</code>和
-<code>realloc</code>）和内存释放函数 <code>free</code>
-的使用方法和注意事项。</p>
+          <p>本文给出了一个简单的LaTeX个人简历模板，使用xelatex编译。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/languages/C/c-dynamic-memory-allocation-free/#more" rel="contents">
+              <a class="btn" href="/2024/12/23/tools/latex/project-templates/latex-resume-template/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1558,7 +1957,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/data-structure-algorithm/data-structure/common-data-structure/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/17/tools/latex/usage-skills/latex-how-to-accelerate-the-compilation-process/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1567,7 +1966,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1576,7 +1975,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/data-structure-algorithm/data-structure/common-data-structure/" class="post-title-link" itemprop="url">常用数据结构设计与实现</a>
+          <a href="/2024/12/17/tools/latex/usage-skills/latex-how-to-accelerate-the-compilation-process/" class="post-title-link" itemprop="url">LaTeX之如何加快编译速度</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1587,14 +1986,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-07 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-07T05:12:18+08:00">2024-01-07</time>
+      <time title="创建时间：2024-12-18 05:12:18" itemprop="dateCreated datePublished" datetime="2024-12-18T05:12:18+08:00">2024-12-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1602,11 +2001,15 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法（DSA）</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%EF%BC%88dsa%EF%BC%89/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">LaTeX使用技巧</span></a>
         </span>
     </span>
 
@@ -1617,14 +2020,14 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>22k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1:48</span>
+      <span>8 分钟</span>
     </span>
 </div>
 
@@ -1635,10 +2038,11 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>日常工作开发中常用的数据结构主要包括数组、链表、栈、队列、哈希表和二叉搜索树，本文介绍这些数据结构的设计思路，并且给出了C语言版本的代码实现。</p>
+          <p>本文首先介绍了在 LaTeX
+大文件编译过程中影响编译速度的一些原因，然后根据这些原因介绍了相关的方法来加快编译速度以提高效率，最后结合实验数据对比分析了这些方法的实际提升效果。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/data-structure-algorithm/data-structure/common-data-structure/#more" rel="contents">
+              <a class="btn" href="/2024/12/17/tools/latex/usage-skills/latex-how-to-accelerate-the-compilation-process/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1669,7 +2073,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/tooling-engineering/productivity-tools/computer-keyboard-shortcuts/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/10/tools/latex/environment-configuration/latex-vsode-config/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1678,7 +2082,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1687,7 +2091,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/tooling-engineering/productivity-tools/computer-keyboard-shortcuts/" class="post-title-link" itemprop="url">电脑常用键盘快捷键整理</a>
+          <a href="/2024/12/10/tools/latex/environment-configuration/latex-vsode-config/" class="post-title-link" itemprop="url">在VS Code中简洁高效配置LaTeX编译链</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1698,14 +2102,14 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2024-01-03 05:12:18" itemprop="dateCreated datePublished" datetime="2024-01-03T05:12:18+08:00">2024-01-03</time>
+      <time title="创建时间：2024-12-11 05:12:18" itemprop="dateCreated datePublished" datetime="2024-12-11T05:12:18+08:00">2024-12-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1713,11 +2117,15 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">工具与工程实践（Tooling & Engineering）</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">效率工具</span></a>
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">LaTeX环境配置</span></a>
         </span>
     </span>
 
@@ -1728,7 +2136,234 @@ if(canvas.getContext){
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>121</span>
+      <span>501</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文给出一种在VS
+Code中简洁高效配置LaTeX编译链的方案，旨在提高编译和写作的效率。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/10/tools/latex/environment-configuration/latex-vsode-config/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/12/04/programming/computer-system/code-original-inverse-complement/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/12/04/programming/computer-system/code-original-inverse-complement/" class="post-title-link" itemprop="url">有符号整数的三种编码方式：原码、反码和补码</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-05 05:12:18" itemprop="dateCreated datePublished" datetime="2024-12-05T05:12:18+08:00">2024-12-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="index"><span itemprop="name">计算机系统</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>在计算机中，<strong>原码、反码、补码</strong>
+是用于表示有符号整数的三种编码方式，主要用于解决二进制数的
+<strong>正负表示</strong> 和 <strong>加减运算</strong>
+问题。它们的核心区别在于 <strong>符号位的处理</strong> 和
+<strong>负数的表示方法</strong>。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/12/04/programming/computer-system/code-original-inverse-complement/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/11/27/tools/latex/project-templates/latex-template-repository/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/11/27/tools/latex/project-templates/latex-template-repository/" class="post-title-link" itemprop="url">LaTeX 模板合集</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-28 05:12:18" itemprop="dateCreated datePublished" datetime="2024-11-28T05:12:18+08:00">2024-11-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E9%A1%B9%E7%9B%AE%E6%A8%A1%E6%9D%BF/" itemprop="url" rel="index"><span itemprop="name">LaTeX项目模板</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>69</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -1746,10 +2381,680 @@ if(canvas.getContext){
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>本文总结日常电脑使用中好用的键盘快捷键操作。</p>
+          <p>本文收集各类LaTeX模板。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/tooling-engineering/productivity-tools/computer-keyboard-shortcuts/#more" rel="contents">
+              <a class="btn" href="/2024/11/27/tools/latex/project-templates/latex-template-repository/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/11/13/tools/latex/environment-configuration/latex-vscode-sumatrapdf/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/11/13/tools/latex/environment-configuration/latex-vscode-sumatrapdf/" class="post-title-link" itemprop="url">VS Code中 LaTeX 与 SumatraPDF 正反向跳转配置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-11-14 05:12:18" itemprop="dateCreated datePublished" datetime="2024-11-14T05:12:18+08:00">2024-11-14</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">LaTeX环境配置</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>618</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文介绍如何在 VSCode 中实现 LaTeX 与 SumatraPDF 正反向跳转功能。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/11/13/tools/latex/environment-configuration/latex-vscode-sumatrapdf/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/08/29/notes-reading/computer/cpp-primer-plus/11-cpp-friends-exceptions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/29/notes-reading/computer/cpp-primer-plus/11-cpp-friends-exceptions/" class="post-title-link" itemprop="url">友元和异常（十一）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-30 05:12:18" itemprop="dateCreated datePublished" datetime="2024-08-30T05:12:18+08:00">2024-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>37</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录了C++中与 友元和异常 相关的容易遗忘的一些知识。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/29/notes-reading/computer/cpp-primer-plus/11-cpp-friends-exceptions/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/08/21/notes-reading/computer/cpp-primer-plus/10-cpp-reusing-code/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/21/notes-reading/computer/cpp-primer-plus/10-cpp-reusing-code/" class="post-title-link" itemprop="url">代码复用（十）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-22 05:12:18" itemprop="dateCreated datePublished" datetime="2024-08-22T05:12:18+08:00">2024-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录了C++中与 代码复用 相关的容易遗忘的一些知识。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/21/notes-reading/computer/cpp-primer-plus/10-cpp-reusing-code/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/08/14/notes-reading/computer/cpp-primer-plus/09-cpp-class-inheritance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/14/notes-reading/computer/cpp-primer-plus/09-cpp-class-inheritance/" class="post-title-link" itemprop="url">类的继承（九）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-15 05:12:18" itemprop="dateCreated datePublished" datetime="2024-08-15T05:12:18+08:00">2024-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录了C++中与 类的继承 相关的容易遗忘的一些知识。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/14/notes-reading/computer/cpp-primer-plus/09-cpp-class-inheritance/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/08/07/notes-reading/computer/cpp-primer-plus/08-cpp-objects-classes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/08/07/notes-reading/computer/cpp-primer-plus/08-cpp-objects-classes/" class="post-title-link" itemprop="url">对象和类（八）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-08-08 05:12:18" itemprop="dateCreated datePublished" datetime="2024-08-08T05:12:18+08:00">2024-08-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>15 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录了C++中与 对象和类 相关的容易遗忘的一些知识。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/07/notes-reading/computer/cpp-primer-plus/08-cpp-objects-classes/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/07/30/notes-reading/computer/cpp-primer-plus/07-cpp-memory-models-namespaces/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/07/30/notes-reading/computer/cpp-primer-plus/07-cpp-memory-models-namespaces/" class="post-title-link" itemprop="url">内存模型和命名空间（七）</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-07-31 05:12:18" itemprop="dateCreated datePublished" datetime="2024-07-31T05:12:18+08:00">2024-07-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文记录了C++中与 内存模型和命名空间 相关的容易遗忘的一些知识。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/07/30/notes-reading/computer/cpp-primer-plus/07-cpp-memory-models-namespaces/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1773,7 +3078,7 @@ if(canvas.getContext){
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1795,13 +3100,13 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">142k</span>
+    <span title="站点总字数">308k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11:50</span>
+    <span title="站点阅读时长">25:38</span>
   </span>
 </div>
 <div class="busuanzi-count">

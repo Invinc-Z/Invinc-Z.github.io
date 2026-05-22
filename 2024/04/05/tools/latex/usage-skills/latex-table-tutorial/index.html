@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文介绍了在 \(\LaTeX{}\) 中插入表格的基本语法和一些常用的技巧，并且给出了一些在排版中常用的模板样例。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX之表格使用技巧">
+<meta property="og:url" content="https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文介绍了在 \(\LaTeX{}\) 中插入表格的基本语法和一些常用的技巧，并且给出了一些在排版中常用的模板样例。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114222501332.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115130809432.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115131115056.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115131903387.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132303588.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132526382.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132953911.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115133221441.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115133628644.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115140704162.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142430321.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142135335.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142824913.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143114195.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143416039.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143537544.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115155105789.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250529120855733.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250529121102129.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809091710630.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809092038553.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809092539328.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093452734.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093623659.png">
+<meta property="og:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093829774.png">
+<meta property="article:published_time" content="2024-04-05T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-22T17:21:12.061Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="表格">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114222501332.png">
+
+
+<link rel="canonical" href="https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/","path":"2024/04/05/tools/latex/usage-skills/latex-table-tutorial/","title":"LaTeX之表格使用技巧"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>LaTeX之表格使用技巧 | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">列格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%AE%BD"><span class="nav-number">1.2.</span> <span class="nav-text">列宽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%AA%E7%BA%BF"><span class="nav-number">1.3.</span> <span class="nav-text">横线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC"><span class="nav-number">1.4.</span> <span class="nav-text">合并单元格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97%E8%A1%A8%E6%A0%BC"><span class="nav-number">1.5.</span> <span class="nav-text">嵌套表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E8%B7%9D%E6%8E%A7%E5%88%B6"><span class="nav-number">1.6.</span> <span class="nav-text">行距控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">浮动体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E5%8A%A8%E4%BD%93%E7%9A%84%E6%A0%87%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">浮动体的标题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86-excel-%E8%A1%A8%E6%A0%BC%E8%BD%AC%E6%8D%A2%E4%B8%BA-latex-%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">将 Excel 表格转换为 LaTeX
+代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#excel2latex-%E6%8F%92%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="nav-number">3.1.</span> <span class="nav-text">Excel2LaTeX 插件（推荐）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#table-generator-%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7"><span class="nav-number">3.2.</span> <span class="nav-text">Table Generator 在线工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pandoc%E9%80%82%E5%90%88%E6%89%B9%E9%87%8F%E8%BD%AC%E6%8D%A2"><span class="nav-number">3.3.</span> <span class="nav-text">pandoc（适合批量转换）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-%E8%84%9A%E6%9C%AC%E9%80%82%E5%90%88%E8%87%AA%E5%AE%9A%E4%B9%89%E9%9C%80%E6%B1%82"><span class="nav-number">3.4.</span> <span class="nav-text">Python 脚本（适合自定义需求）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E8%A1%A8%E6%A0%BC%E6%A8%A1%E6%9D%BF"><span class="nav-number">4.</span> <span class="nav-text">几种常见表格模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E8%A8%80%E5%8C%BA%E5%8C%85%E5%90%AB%E5%AE%8F%E5%8C%85%E5%92%8C%E5%91%BD%E4%BB%A4"><span class="nav-number">4.1.</span> <span class="nav-text">导言区包含宏包和命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E4%B8%89%E7%BA%BF%E8%A1%A8"><span class="nav-number">4.2.</span> <span class="nav-text">普通三线表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AD%89%E9%A1%B5%E5%AE%BD%E4%B8%89%E7%BA%BF%E8%A1%A8"><span class="nav-number">4.3.</span> <span class="nav-text">等页宽三线表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E8%A1%8C%E8%B7%A8%E5%88%97%E8%A1%A8%E6%A0%BC"><span class="nav-number">4.4.</span> <span class="nav-text">跨行跨列表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC%E4%B8%AD%E5%8C%85%E5%90%AB%E5%9B%BE"><span class="nav-number">4.5.</span> <span class="nav-text">表格中包含图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E9%A1%B5%E9%95%BF%E8%A1%A8%E6%A0%BC"><span class="nav-number">4.6.</span> <span class="nav-text">跨页长表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%A8%E9%A1%B5%E9%95%BF%E8%A1%A8%E6%A0%BC%E5%AE%BD%E5%BA%A6%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%A1%B5%E9%9D%A2%E5%AE%BD%E5%BA%A6"><span class="nav-number">4.7.</span> <span class="nav-text">跨页长表格宽度设置为页面宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E6%8E%92%E8%A1%A8%E6%A0%BC"><span class="nav-number">4.8.</span> <span class="nav-text">并排表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B6%E6%8E%92%E5%AD%90%E8%A1%A8%E6%A0%BC"><span class="nav-number">4.9.</span> <span class="nav-text">并排子表格</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="LaTeX之表格使用技巧 | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          LaTeX之表格使用技巧
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-04-06 05:12:18" itemprop="dateCreated datePublished" datetime="2024-04-06T05:12:18+08:00">2024-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">文档与排版（Documentation）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/" itemprop="url" rel="index"><span itemprop="name">LaTeX</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%96%87%E6%A1%A3%E4%B8%8E%E6%8E%92%E7%89%88%EF%BC%88documentation%EF%BC%89/latex/latex%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">LaTeX使用技巧</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>25 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文介绍了在 <span class="math inline">\(\LaTeX{}\)</span>
+中插入表格的基本语法和一些常用的技巧，并且给出了一些在排版中常用的模板样例。</p>
+<span id="more"></span>
+<hr />
+<h2 id="基本语法">基本语法</h2>
+<p>排版表格最基本的 <span
+class="math inline">\(\textrm{tabular}\)</span> 环境用法为：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[⟨align⟩]&#123;⟨column-spec⟩&#125;</span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line">⟨item1⟩ <span class="built_in">&amp;</span> ⟨item2⟩ <span class="built_in">&amp;</span> … <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 <code>&lt;column-spec&gt;</code>
+是列格式标记，在接下来的内容将仔细介绍；<span
+class="math inline">\(\textrm\&amp;\)</span>
+用来分隔单元格；<code>\\</code> 用来换行；<code>\hline</code>
+用来在行与行之间绘制横线。</p>
+<p>直接使用 <span class="math inline">\(\textrm{tabular}\)</span>
+环境的话，会 <strong>和周围的文字混排</strong>。此时可用一个可选参数
+<code>&lt;align&gt;</code> 控制垂直对齐：<span
+class="math inline">\(\verb|t|\)</span> 和 <span
+class="math inline">\(\verb|b|\)</span>
+分别表示按表格顶部、底部对齐，其他参数或省略不写（默认）表示居中对齐。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  center-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[t]&#123;|c|&#125;</span><br><span class="line">  top-<span class="keyword">\\</span> aligned <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;,</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;[b]&#123;|c|&#125;</span><br><span class="line">  bottom-<span class="keyword">\\</span> aligned<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125; tabulars.</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250114222501332.png" alt="image-20250114222501332" style="zoom:67%;" /></p>
+<p>但是通常情况下 <span class="math inline">\(\textrm{tabular}\)</span>
+环境很少与文字直接混排，而是会放在 <span
+class="math inline">\(\textrm{table}\)</span> 浮动体环境中，并用
+<code>\caption</code> 命令加标题。</p>
+<h3 id="列格式">列格式</h3>
+<p><span class="math inline">\(\textrm{tabular}\)</span> 环境使用
+&lt;column-spec&gt;
+参数指定表格的列数以及每列的格式。基本的列格式见下表。</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>列格式</strong></th>
+<th style="text-align: left;"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\textrm{l/c/r
+}\)</span></td>
+<td style="text-align: left;">单元格内容左对齐/居中/右对齐，不折行</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(\textrm{p\{&lt;width&gt;\}}\)</span></td>
+<td style="text-align: left;">单元格宽度固定为
+&lt;width&gt;，可自动折行</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span
+class="math inline">\(|\)</span></td>
+<td style="text-align: left;">绘制竖线</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span
+class="math inline">\(@\{&lt;string&gt;\}\)</span></td>
+<td style="text-align: left;">自定义内容 &lt;string&gt;</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;lcr|p&#123;6em&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  left <span class="built_in">&amp;</span> center <span class="built_in">&amp;</span> right</span><br><span class="line">       <span class="built_in">&amp;</span> par box with fixed width<span class="keyword">\\</span></span><br><span class="line">  L    <span class="built_in">&amp;</span> C      <span class="built_in">&amp;</span> R     <span class="built_in">&amp;</span> P <span class="keyword">\\</span></span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115130809432.png" alt="image-20250115130809432" style="zoom:67%;" /></p>
+<p>表格中每行的单元格数目不能多于列格式里 $ $
+的总数（可以少于这个总数），否则出错。</p>
+<p><span class="math inline">\(\textrm{@}\)</span>
+格式可在单元格前后插入任意的文本，但同时它也消除了单元格前后额外添加的间距。<span
+class="math inline">\(\textrm{@}\)</span>
+格式可以适当使用以充当“竖线”。特别地，<span
+class="math inline">\(\textrm{@\{\}}\)</span>
+可直接用来消除单元格前后的间距：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;@&#123;&#125; r@&#123;:&#125;lr @&#123;&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1  <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> one <span class="keyword">\\</span></span><br><span class="line">  11 <span class="built_in">&amp;</span> 3 <span class="built_in">&amp;</span> eleven <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115131115056.png" alt="image-20250115131115056" style="zoom:67%;" /></p>
+<p>另外还提供了简便的将格式参数重复的写法 <span
+class="math inline">\(\textrm*\{&lt;n&gt;\}\{&lt;columnspec&gt;\}\)</span>，比如以下两种写法是等效的：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|c|c|p&#123;4em&#125;|p&#123;4em&#125;|&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|*&#123;5&#125;&#123;c|&#125;*&#123;2&#125;&#123;p&#123;4em&#125;|&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>有时需要为整列修饰格式，比如整列改变为粗体，如果每个单元格都加上
+<code>\bfseries}</code> 命令会比较麻烦。<code>array</code>
+宏包提供了辅助格式 <span class="math inline">\(\textrm&gt;\)</span> 和
+<span
+class="math inline">\(\textrm&lt;\)</span>，用于给列格式前后加上修饰命令：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;&gt;&#123;<span class="keyword">\itshape</span>&#125;r&lt;&#123;*&#125;l&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  italic <span class="built_in">&amp;</span> normal <span class="keyword">\\</span></span><br><span class="line">  column <span class="built_in">&amp;</span> column <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115131903387.png" alt="image-20250115131903387" style="zoom:67%;" /></p>
+<p>辅助格式甚至支持插入 <code>\centering</code> 等命令改变 <span
+class="math inline">\(\textrm{p}\)</span>
+列格式的对齐方式，一般还要加额外的命令 <code>\arraybackslash</code>
+以免出错。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;<span class="comment">%</span></span><br><span class="line">&#123;&gt;&#123;<span class="keyword">\centering</span><span class="keyword">\arraybackslash</span>&#125;p&#123;9em&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Some center-aligned long text. <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132303588.png" alt="image-20250115132303588" style="zoom:67%;" /></p>
+<p><code>array</code> 宏包还提供了类似 <span
+class="math inline">\(\textrm{p}\)</span> 格式的 <span
+class="math inline">\(\textrm{m}\)</span> 格式和 <span
+class="math inline">\(\textrm{b}\)</span>
+格式，三者分别在垂直方向上靠顶端对齐、居中以及底端对齐。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array&#125;</span></span><br><span class="line"><span class="keyword">\newcommand</span><span class="keyword">\txt</span>&#123;a b c d e f g h i&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;cp&#123;2em&#125;m&#123;2em&#125;b&#123;2em&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  pos <span class="built_in">&amp;</span> <span class="keyword">\txt</span> <span class="built_in">&amp;</span> <span class="keyword">\txt</span> <span class="built_in">&amp;</span> <span class="keyword">\txt</span> <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132526382.png" alt="image-20250115132526382" style="zoom:67%;" /></p>
+<h3 id="列宽">列宽</h3>
+<p>在控制列宽方面，<span class="math inline">\(\LaTeX{}\)</span>
+表格有着明显的不足：<span class="math inline">\(\textrm{l/c/r}\)</span>
+格式的列宽是由文字内容的自然宽度决定的，而 <span
+class="math inline">\(\textrm{p}\)</span>
+格式给定了列宽却不好控制对齐（可用 <code>array</code>
+宏包的辅助格式），更何况列与列之间通常还有间距，所以直接生成给定总宽度的表格并不容易。</p>
+<p><span class="math inline">\(\LaTeX{}\)</span> 本身提供了 <span
+class="math inline">\(\textrm{tabular*}\)</span>
+环境用来排版定宽表格，但是不太方便使用，比如要用到 <span
+class="math inline">\(\textrm{@}\)</span>
+格式插入额外命令，令单元格之间的间距为
+<code>\fill</code>，但即使这样仍然有瑕疵：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular*&#125;&#123;14em&#125;<span class="comment">%</span></span><br><span class="line">&#123;@&#123;<span class="keyword">\extracolsep</span>&#123;<span class="keyword">\fill</span>&#125;&#125;|c|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="built_in">&amp;</span> D <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="built_in">&amp;</span> d <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular*&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115132953911.png" alt="image-20250115132953911" style="zoom:67%;" /></p>
+<p><code>tabularx</code> 宏包提供了方便的解决方案。它引入了一个 <span
+class="math inline">\(\textrm{X}\)</span> 列格式，类似 <span
+class="math inline">\(\textrm{p}\)</span>
+列格式，不过会根据表格宽度自动计算列宽，多个 <span
+class="math inline">\(\textrm{X}\)</span> 列格式平均分配列宽。 <span
+class="math inline">\(\textrm{X}\)</span> 列格式也可以用
+<code>array</code> 里的辅助格式修饰对齐方式：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;array,tabularx&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabularx&#125;&#123;14em&#125;<span class="comment">%</span></span><br><span class="line">&#123;|*&#123;4&#125;&#123;&gt;&#123;<span class="keyword">\centering</span><span class="keyword">\arraybackslash</span>&#125;X|&#125;&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="built_in">&amp;</span> D <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="built_in">&amp;</span> d <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabularx&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115133221441.png" alt="image-20250115133221441" style="zoom:67%;" /></p>
+<h3 id="横线">横线</h3>
+<p>在之前的例子见过许多次绘制表格线的 <code>\hline</code> 命令。另外
+<code>\cline{&lt;i&gt;-&lt;j&gt;}</code>
+用来绘制跨越部分单元格的横线：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> 9 <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">  3 <span class="built_in">&amp;</span> 5 <span class="built_in">&amp;</span> 7 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\cline</span>&#123;1-1&#125;</span><br><span class="line">  8 <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 6 <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<figure>
+<img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115133628644.png"
+alt="image-20250115133628644" />
+<figcaption aria-hidden="true">image-20250115133628644</figcaption>
+</figure>
+<p>在科技论文排版中广泛应用的表格形式是三线表，形式干净简明。三线表由
+<code>booktabs</code> 宏包支持，它提供了
+<code>\toprule</code>、<code>\midrule</code> 和 <code>\bottomrule</code>
+命令用以排版三线表的三条线，以及和 <code>\cline</code> 对应的
+<code>\cmidrule</code>。除此之外，最好不要用其它横线以及竖线：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;booktabs&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;cccc&#125;</span><br><span class="line">  <span class="keyword">\toprule</span></span><br><span class="line">   <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;3&#125;&#123;c&#125;&#123;Numbers&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cmidrule</span>&#123;2-4&#125;</span><br><span class="line">           <span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\midrule</span></span><br><span class="line">  Alphabet <span class="built_in">&amp;</span> A <span class="built_in">&amp;</span> B <span class="built_in">&amp;</span> C <span class="keyword">\\</span></span><br><span class="line">  Roman    <span class="built_in">&amp;</span> I <span class="built_in">&amp;</span> II<span class="built_in">&amp;</span> III <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115140704162.png" alt="image-20250115140704162" style="zoom:67%;" /></p>
+<h3 id="合并单元格">合并单元格</h3>
+<p>横向合并单元格由 <code>\multicolumn</code> 命令实现：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\multicolumn</span>&#123;⟨n⟩&#125;&#123;⟨column-spec⟩&#125;&#123;⟨item⟩&#125;</span><br></pre></td></tr></table></figure>
+<p>其中<code>&lt;n&gt;</code>
+为要合并的列数，<code>&lt;column-spec&gt;</code>
+为合并单元格后的列格式，只允许出现一个 <span
+class="math inline">\(\textrm{l/c/r}\)</span> 或 <span
+class="math inline">\(\textrm{p}\)</span>
+格式。如果合并前的单元格前后带表格线 |，合并后的列格式也要带 |
+以使得表格的竖线一致。</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> Center <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;|c|&#125;&#123;3&#125; <span class="built_in">&amp;</span></span><br><span class="line">  <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;r|&#125;&#123;Right&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  4 <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;C&#125; <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142430321.png" alt="image-20250115142430321" style="zoom:67%;" /></p>
+<p>上面的例子还体现了，形如 <code>\multicolumn{1}{r|}{item}</code>的命令
+<strong>可以用来修改某一个单元格的列格式。</strong></p>
+<p><strong>纵向合并单元格</strong> 需要用到 <code>multirow</code>
+宏包提供的 <code>\multirow</code> 命令：</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\multirow</span>&#123;⟨n⟩&#125;&#123;⟨width⟩&#125;&#123;⟨item⟩&#125;</span><br></pre></td></tr></table></figure>
+<p><code>&lt;width&gt;</code> 为合并后单元格的宽度，可以填 <span
+class="math inline">\(\textrm{*}\)</span> 以使用自然宽度。</p>
+<p>我们看一个结合 <code>\cline</code>、<code>\multicolumn</code> 和
+<code>\multirow</code> 命令的例子：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;multirow&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;ccc&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\multirow</span>&#123;2&#125;&#123;*&#125;&#123;Item&#125; <span class="built_in">&amp;</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c&#125;&#123;Value&#125; <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\cline</span>&#123;2-3&#125;</span><br><span class="line">    <span class="built_in">&amp;</span> First <span class="built_in">&amp;</span> Second <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  A <span class="built_in">&amp;</span> 1     <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142135335.png" alt="image-20250115142135335" style="zoom:67%;" /></p>
+<h3 id="嵌套表格">嵌套表格</h3>
+<p>在以下的例子中，注意要用 <code>\multicolumn</code> 命令配合 <span
+class="math inline">\(\textrm{@\{\}}\)</span>
+格式把单元格的额外边距去掉，使得嵌套的表格线能和外层的表格线正确相连：</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"> a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"> a <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;@&#123;&#125;c@&#123;&#125;|&#125;</span><br><span class="line"> &#123;<span class="keyword">\begin</span>&#123;tabular&#125;&#123;c|c&#125;</span><br><span class="line">   e <span class="built_in">&amp;</span> f <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">   e <span class="built_in">&amp;</span> f <span class="keyword">\\</span></span><br><span class="line">  <span class="keyword">\end</span>&#123;tabular&#125;&#125;</span><br><span class="line">       <span class="built_in">&amp;</span> c <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"> a <span class="built_in">&amp;</span> b <span class="built_in">&amp;</span> c <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115142824913.png" alt="image-20250115142824913" style="zoom:67%;" /></p>
+<p>如果不需要为“拆分的单元格”画线，并且只在垂直方向“拆分”的话，<code>makecell</code>
+宏包提供的 <code>\makecell</code> 命令是一个简单的解决方案：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">% \usepackage&#123;makecell&#125;</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"> a <span class="built_in">&amp;</span> <span class="keyword">\makecell</span>&#123;d1 <span class="keyword">\\</span> d2&#125; <span class="keyword">\\</span></span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"> b <span class="built_in">&amp;</span> c <span class="keyword">\\</span></span><br><span class="line"> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143114195.png" alt="image-20250115143114195" style="zoom:67%;" /></p>
+<h3 id="行距控制">行距控制</h3>
+<p><span class="math inline">\(\LaTeX{}\)</span>
+生成的表格看起来通常比较紧凑。修改参数 <code>\arraystretch</code>
+可以得到行距更加宽松的表格。</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\renewcommand</span><span class="keyword">\arraystretch</span>&#123;1.8&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Really loose <span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line">  tabular rows.<span class="keyword">\\</span> <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;example&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143416039.png" alt="image-20250115143416039" style="zoom:67%;" /></p>
+<p>另一种增加间距的办法是给换行命令 <code>\\</code>
+添加可选参数，在这一行下面加额外的间距，适合用于在行间不加横线的表格：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;c&#125;</span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line">  Head lines <span class="keyword">\\</span>[6pt]</span><br><span class="line">  tabular lines <span class="keyword">\\</span></span><br><span class="line">  tabular lines <span class="keyword">\\</span> </span><br><span class="line">  <span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115143537544.png" alt="image-20250115143537544" style="zoom:67%;" /></p>
+<p>但是这种换行方式的存在导致了一个缺陷——从第二行开始，表格的首个单元格不能直接使用中括号
+<span class="math inline">\(\textrm{[]}\)</span>，否则 <code>\\</code>
+往往会将下一行的中括号当作自己的可选参数，因而出错。如果要使用中括号，应当放在花括号
+<code>{}</code> 里面。或者也可以选择将换行命令写成 <span
+class="math inline">\(\textrm{\\\\[0pt]}\)</span>。</p>
+<hr />
+<h2 id="浮动体">浮动体</h2>
+<p>内容丰富的文章或者书籍往往包含许多图片和表格等内容。这些内容的尺寸往往太大，导致分页困难。<span
+class="math inline">\(\LaTeX{}\)</span>
+为此引入了浮动体的机制，令大块的内容可以脱离上下文，放置在合适的位置。
+<span class="math inline">\(\LaTeX{}\)</span> 预定义了两类浮动体环境
+<span class="math inline">\(\textrm{figure}\)</span> 和 <span
+class="math inline">\(\textrm{table}\)</span>。习惯上 <span
+class="math inline">\(\textrm{figure}\)</span> 里放图片，<span
+class="math inline">\(\textrm{table}\)</span>
+里放表格，但并没有严格限制，可以在任何一个浮动体里放置文字、公式、表格、图片等等任意内容。</p>
+<p>以 <span class="math inline">\(\textrm{table}\)</span>
+环境的用法举例，<span class="math inline">\(\textrm{figure}\)</span>
+同理：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[⟨placement⟩]</span><br><span class="line">…</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure>
+<p>&lt;placement&gt; 参数提供了一些符号用来表示浮动体允许排版的位置，如
+<span class="math inline">\(\textrm{hbp}\)</span>
+允许浮动体排版在当前位置、底部或者单独成页。<span
+class="math inline">\(\textrm{table}\)</span> 和 <span
+class="math inline">\(\textrm{figure}\)</span> 浮动体的默认设置为 <span
+class="math inline">\(\textrm{tbp}\)</span>。</p>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250115155105789.png" alt="image-20250115155105789" style="zoom:67%;" /></p>
+<p>双栏排版环境下，<span class="math inline">\(\LaTeX{}\)</span> 提供了
+<span class="math inline">\(\textrm{table*}\)</span> 和 <span
+class="math inline">\(\textrm{figure*}\)</span> 环境用来排版
+<strong>跨栏</strong> 的浮动体。用法与 <span
+class="math inline">\(\textrm{table}\)</span> 和 <span
+class="math inline">\(\textrm{figure}\)</span> 一样，不同之处为双栏的
+<code>&lt;placement&gt;</code> 参数只能用 <span
+class="math inline">\(\textrm{tp}\)</span> 两个位置。</p>
+<p>浮动体的位置选取受到先后顺序的限制。如果某个浮动体由于参数限制、空间限制等原因在当前页无法放置，就要推迟到之后处理，并使得之后的同类浮动体一并推迟。<code>\clearpage</code>
+命令会在另起一页之前，先将所有推迟处理的浮动体排版成页，此时 <span
+class="math inline">\(\textrm{htbp}\)</span> 等位置限制被完全忽略。</p>
+<p><code>float</code> 宏包为浮动体提供了 <span
+class="math inline">\(\textrm{H}\)</span> 位置参数，不与 <span
+class="math inline">\(\textrm{htbp}\)</span> 及 <span
+class="math inline">\(\textrm{!}\)</span> 混用。使用 <span
+class="math inline">\(\textrm{H}\)</span>
+位置参数时，会取消浮动机制，将浮动体视为一般的盒子插入当前位置。这在一些特殊情况下很有用（如使用
+<code>multicol</code>
+宏包排版分栏内容的时候），但尺寸过大的浮动体可能使得分页比较困难。</p>
+<h3 id="浮动体的标题">浮动体的标题</h3>
+<p>图表等浮动体提供了 <code>\caption</code>
+命令加标题，并且自动给浮动体编号，可以用带星号的命令
+<code>\caption*</code>(需加载相关宏包，如 <code>caption</code>)
+生成不带编号的标题，也可以使用带可选参数的形式
+<code>\caption[...]{...}</code>，使得在目录里使用短标题。命令之后还可以紧跟
+<code>\label</code> 命令标记交叉引用。</p>
+<p><code>\caption</code> 生成的标题形如“Figure 1: …”或“Table 1:
+…”可通过修改 <code>\figurename</code> 和 <code>\tablename</code>
+的内容来修改标题的前缀。标题样式的定制功能由 <code>caption</code>
+宏包提供，详见该宏包的帮助文档，在此不作赘述。</p>
+<p><span class="math inline">\(\textrm{table}\)</span> 和 <span
+class="math inline">\(\textrm{figure}\)</span>
+两种浮动体分别有各自的生成目录的命令：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\listoftables</span></span><br><span class="line"><span class="keyword">\listoffigures</span></span><br></pre></td></tr></table></figure>
+<p>它们类似 <code>\tableofcontents</code> 生成单独的章节。</p>
+<hr />
+<h2 id="将-excel-表格转换为-latex-代码">将 Excel 表格转换为 LaTeX
+代码</h2>
+<h3 id="excel2latex-插件推荐">Excel2LaTeX 插件（推荐）</h3>
+<ul>
+<li><p><strong>特点</strong>：易用，可直接在 Excel 中将表格转换为 LaTeX
+代码并复制粘贴到文档中。</p></li>
+<li><p><strong>下载地址</strong>：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY3Rhbi5vcmcvcGtnL2V4Y2VsMmxhdGV4">Excel2LaTeX<i class="fa fa-external-link-alt"></i></span></p></li>
+<li><p>使用方法：</p>
+<ol type="1">
+<li>下载并安装 Excel2LaTeX.xla 插件。</li>
+<li>在 Excel 中打开插件后，选中表格，点击“Convert Table”按钮。</li>
+<li>复制生成的 LaTeX 代码并粘贴到你的 LaTeX 文档中。</li>
+</ol></li>
+</ul>
+<h3 id="table-generator-在线工具">Table Generator 在线工具</h3>
+<ul>
+<li><p><strong>网站</strong>：<span class="exturl" data-url="aHR0cHM6Ly93d3cudGFibGVzZ2VuZXJhdG9yLmNvbS9sYXRleF90YWJsZXM=">Table
+Generator<i class="fa fa-external-link-alt"></i></span></p></li>
+<li><p><strong>特点</strong>：支持粘贴 Excel 表格，自动转换为 LaTeX
+代码。</p></li>
+<li><p>使用方法：</p>
+<ol type="1">
+<li>复制 Excel 表格数据（Ctrl + C）。</li>
+<li>在网站中粘贴（Ctrl + V）。</li>
+<li>生成 LaTeX 代码后复制到 LaTeX 文档中。</li>
+</ol></li>
+</ul>
+<h3 id="pandoc适合批量转换">pandoc（适合批量转换）</h3>
+<ul>
+<li><p>安装：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install pandoc  <span class="comment"># Linux</span></span><br><span class="line">choco install pandoc      <span class="comment"># Windows（使用 Chocolatey）</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使用方法：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">pandoc -f csv -t latex input.csv -o output.tex</span><br></pre></td></tr></table></figure></li>
+<li><p><strong>特点</strong>：适合从 CSV 文件批量转换。</p></li>
+</ul>
+<h3 id="python-脚本适合自定义需求">Python 脚本（适合自定义需求）</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> tabulate <span class="keyword">import</span> tabulate</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&quot;your_file.xlsx&quot;</span>)</span><br><span class="line">latex_code = tabulate(df, headers=<span class="string">&quot;keys&quot;</span>, tablefmt=<span class="string">&quot;latex&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(latex_code)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>特点</strong>：灵活，可自定义格式。</li>
+</ul>
+<p>这些工具各有优缺点，<strong>如果是日常使用，推荐 Excel2LaTeX 或 Table
+Generator 在线工具；如果是批量处理，可以考虑 Pandoc 或
+Python</strong>。</p>
+<hr />
+<h2 id="几种常见表格模板">几种常见表格模板</h2>
+<h3 id="导言区包含宏包和命令">导言区包含宏包和命令</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\usepackage</span>&#123;booktabs&#125; <span class="comment">% 导入三线表</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;longtable&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;ltxtable&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;array&#125;       <span class="comment">% 基础包最先</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;tabularx&#125;    <span class="comment">% 早期加载</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;multirow&#125;    <span class="comment">% 多行处理</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;siunitx&#125;     <span class="comment">% 特殊列格式</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;makecell&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;graphicx&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;diagbox&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;rotating&#125;</span><br><span class="line"><span class="keyword">\usepackage</span>&#123;subcaption&#125; <span class="comment">% 关键宏包</span></span><br><span class="line"><span class="keyword">\usepackage</span>&#123;float&#125; <span class="comment">% 关键宏包：提供[H]选项</span></span><br><span class="line"><span class="keyword">\newcolumntype</span>&#123;L&#125;&#123;&gt;&#123;<span class="keyword">\raggedright</span><span class="keyword">\arraybackslash</span>&#125;X&#125; <span class="comment">% 左对齐</span></span><br><span class="line"><span class="keyword">\newcolumntype</span>&#123;C&#125;&#123;&gt;&#123;<span class="keyword">\centering</span><span class="keyword">\arraybackslash</span>&#125;X&#125;    <span class="comment">% 居中对齐</span></span><br><span class="line"><span class="keyword">\newcolumntype</span>&#123;R&#125;&#123;&gt;&#123;<span class="keyword">\raggedleft</span><span class="keyword">\arraybackslash</span>&#125;X&#125;   <span class="comment">% 右对齐</span></span><br></pre></td></tr></table></figure>
+<h3 id="普通三线表">普通三线表</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[H]</span><br><span class="line">  <span class="keyword">\centering</span></span><br><span class="line">  <span class="keyword">\caption</span>&#123;Five different mesh densities.&#125;</span><br><span class="line">  <span class="comment">%\renewcommand\arraystretch&#123;1.6&#125;</span></span><br><span class="line">  <span class="keyword">\begin</span>&#123;tabular&#125;&#123;cccc&#125;</span><br><span class="line">    <span class="keyword">\toprule</span></span><br><span class="line">    <span class="built_in">&amp;</span> Total cells <span class="built_in">&amp;</span> <span class="built_in">$</span><span class="keyword">\mathrm</span>&#123;C&#125;<span class="built_in">_</span><span class="keyword">\mathrm</span>&#123;L&#125;<span class="built_in">$</span> <span class="built_in">&amp;</span> <span class="built_in">$</span><span class="keyword">\mathrm</span>&#123;C&#125;<span class="built_in">_</span><span class="keyword">\mathrm</span>&#123;D&#125;<span class="built_in">$</span> <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\midrule</span></span><br><span class="line">    Mesh 1 <span class="built_in">&amp;</span> <span class="built_in">$</span>33.45 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5606 <span class="built_in">&amp;</span> 0.0225 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 2 <span class="built_in">&amp;</span> <span class="built_in">$</span>103.24 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5656 <span class="built_in">&amp;</span> 0.0202 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 3 <span class="built_in">&amp;</span> <span class="built_in">$</span>200.16 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 4 <span class="built_in">&amp;</span> <span class="built_in">$</span>305.47 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 5 <span class="built_in">&amp;</span> <span class="built_in">$</span>412.66 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    <span class="keyword">\bottomrule</span></span><br><span class="line">  <span class="keyword">\end</span>&#123;tabular&#125;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\label</span>&#123;tab:commom&#125;<span class="comment">%</span></span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;<span class="comment">%</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250529120855733.png" alt="image-20250529120855733" style="zoom:67%;" /></p>
+<h3 id="等页宽三线表">等页宽三线表</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[H]</span><br><span class="line">  <span class="keyword">\centering</span></span><br><span class="line">  <span class="keyword">\caption</span>&#123;Five different mesh densities.&#125;</span><br><span class="line">  <span class="comment">%\renewcommand\arraystretch&#123;1.6&#125;</span></span><br><span class="line">  <span class="keyword">\begin</span>&#123;tabularx&#125;&#123;<span class="keyword">\linewidth</span>&#125;&#123;CCCC&#125; <span class="comment">% C 表示自动填充列并居中</span></span><br><span class="line">    <span class="keyword">\toprule</span></span><br><span class="line">    <span class="built_in">&amp;</span> Total cells <span class="built_in">&amp;</span> <span class="built_in">$</span><span class="keyword">\mathrm</span>&#123;C&#125;<span class="built_in">_</span><span class="keyword">\mathrm</span>&#123;L&#125;<span class="built_in">$</span> <span class="built_in">&amp;</span> <span class="built_in">$</span><span class="keyword">\mathrm</span>&#123;C&#125;<span class="built_in">_</span><span class="keyword">\mathrm</span>&#123;D&#125;<span class="built_in">$</span> <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\midrule</span></span><br><span class="line">    Mesh 1 <span class="built_in">&amp;</span> <span class="built_in">$</span>33.45 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span>  <span class="built_in">&amp;</span> 0.5606 <span class="built_in">&amp;</span> 0.0225 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 2 <span class="built_in">&amp;</span> <span class="built_in">$</span>103.24 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5656 <span class="built_in">&amp;</span> 0.0202 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 3 <span class="built_in">&amp;</span> <span class="built_in">$</span>200.16 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 4 <span class="built_in">&amp;</span> <span class="built_in">$</span>305.47 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    Mesh 5 <span class="built_in">&amp;</span> <span class="built_in">$</span>412.66 <span class="keyword">\times</span> 10<span class="built_in">^</span>4<span class="built_in">$</span> <span class="built_in">&amp;</span> 0.5689 <span class="built_in">&amp;</span> 0.0197 <span class="keyword">\\</span> </span><br><span class="line">    <span class="keyword">\bottomrule</span></span><br><span class="line">  <span class="keyword">\end</span>&#123;tabularx&#125;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\label</span>&#123;tab:same<span class="built_in">_</span>textwidth&#125;<span class="comment">%</span></span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;<span class="comment">%</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250529121102129.png" alt="image-20250529121102129" style="zoom:67%;" /></p>
+<h3 id="跨行跨列表格">跨行跨列表格</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[H]</span><br><span class="line">  <span class="keyword">\centering</span></span><br><span class="line">  <span class="keyword">\caption</span>&#123;跨行跨列表格&#125;</span><br><span class="line">  <span class="keyword">\renewcommand</span><span class="keyword">\arraystretch</span>&#123;1.6&#125;</span><br><span class="line">  <span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|c|c|&#125;</span><br><span class="line">    <span class="keyword">\hline</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;3&#125;&#123;|r|&#125;&#123;&#125; <span class="built_in">&amp;</span> 转移特性曲线的象限 <span class="built_in">&amp;</span> 输出特性曲线的象限 <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\hline</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;|c|&#125;&#123;<span class="keyword">\multirow</span>&#123;4&#125;[4]&#123;*&#125;&#123;<span class="keyword">\rotatebox</span>&#123;90&#125;&#123;结型场效应管&#125;&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;N沟道&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;2&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;1&#125; <span class="keyword">\\</span></span><br><span class="line">    <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;&#125; <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\cline</span>&#123;2-5&#125;          <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;P沟道&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;4&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multirow</span>&#123;2&#125;[2]&#123;*&#125;&#123;3&#125; <span class="keyword">\\</span></span><br><span class="line">    <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;c|&#125;&#123;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;&#125; <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\hline</span></span><br><span class="line">    <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;|c|&#125;&#123;<span class="keyword">\multirow</span>&#123;4&#125;[8]&#123;*&#125;&#123;<span class="keyword">\begin</span>&#123;turn&#125;&#123;90&#125;&#123;绝缘栅型场效应管&#125;<span class="keyword">\end</span>&#123;turn&#125;&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[4]&#123;*&#125;&#123;N沟道&#125;&#125; <span class="built_in">&amp;</span> 增强型   <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;2&#125; <span class="built_in">&amp;</span> 1 <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\cline</span>&#123;3-5&#125;          <span class="built_in">&amp;</span>       <span class="built_in">&amp;</span> 耗尽型   <span class="built_in">&amp;</span> 1，2   <span class="built_in">&amp;</span> 1 <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\cline</span>&#123;2-5&#125;          <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;<span class="keyword">\multirow</span>&#123;2&#125;[4]&#123;*&#125;&#123;P沟道&#125;&#125; <span class="built_in">&amp;</span> 增强型   <span class="built_in">&amp;</span> <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;c|&#125;&#123;3&#125; <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\cline</span>&#123;3-5&#125;          <span class="built_in">&amp;</span>       <span class="built_in">&amp;</span> 耗尽型   <span class="built_in">&amp;</span> 2，4   <span class="built_in">&amp;</span> 3 <span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\hline</span></span><br><span class="line">  <span class="keyword">\end</span>&#123;tabular&#125;<span class="comment">%</span></span><br><span class="line">  <span class="keyword">\label</span>&#123;tab:addlabel&#125;<span class="comment">%</span></span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;<span class="comment">%</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809091710630.png" alt="image-20250809091710630" style="zoom:67%;" /></p>
+<h3 id="表格中包含图">表格中包含图</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[H]</span><br><span class="line"><span class="keyword">\centering</span></span><br><span class="line"><span class="keyword">\caption</span>&#123;表格中包含图&#125;</span><br><span class="line"><span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line">文字 <span class="built_in">&amp;</span> </span><br><span class="line"><span class="keyword">\begin</span>&#123;minipage&#125;[c][5cm]&#123;8cm&#125; <span class="comment">% [c] 表示垂直居中</span></span><br><span class="line">  <span class="keyword">\includegraphics</span>[width=8cm]&#123;tree.png&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;minipage&#125; <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line">跨页 <span class="built_in">&amp;</span> 表格 <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\hline</span></span><br><span class="line"><span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line"><span class="keyword">\label</span>&#123;tab:fig<span class="built_in">_</span>in<span class="built_in">_</span>tab&#125;<span class="comment">%</span></span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;<span class="comment">%</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809092038553.png" alt="image-20250809092038553" style="zoom:67%;" /></p>
+<h3 id="跨页长表格">跨页长表格</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;center&#125;</span><br><span class="line"><span class="keyword">\begingroup</span></span><br><span class="line"><span class="keyword">\small</span> <span class="comment">% 整个longtable小一号</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;longtable&#125;&#123;lccccc&#125;</span><br><span class="line"><span class="keyword">\caption</span>&#123;跨页长表格&#125;<span class="keyword">\label</span>&#123;tab:long1&#125; <span class="keyword">\\</span> </span><br><span class="line"><span class="comment">% 表格第一页表头显示内容</span></span><br><span class="line"><span class="keyword">\toprule</span></span><br><span class="line"><span class="keyword">\textbf</span>&#123;家庭特征&#125; <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;续发病例数（例）&#125;  <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;家庭密接数（例）&#125;</span><br><span class="line"><span class="built_in">&amp;</span><span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;家庭二代续发率&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[<span class="keyword">\%</span> (95<span class="keyword">\%</span>CI)]&#125;&#125; <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;<span class="built_in">$</span>x<span class="built_in">^</span>2<span class="built_in">$</span>值&#125; <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;P值&#125; <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\midrule</span></span><br><span class="line"><span class="keyword">\endfirsthead</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">%后续页面表头显示内容</span></span><br><span class="line"><span class="keyword">\multicolumn</span>&#123;6&#125;&#123;c&#125;&#123;表~<span class="keyword">\ref</span>&#123;tab:long1&#125;（续）&#125;<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\toprule</span></span><br><span class="line"><span class="keyword">\textbf</span>&#123;家庭特征&#125; <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;续发病例数（例）&#125;  <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;家庭密接数（例）&#125;</span><br><span class="line"><span class="built_in">&amp;</span><span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;家庭二代续发率&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[<span class="keyword">\%</span> (95<span class="keyword">\%</span>CI)]&#125;&#125;  <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;<span class="built_in">$</span>x<span class="built_in">^</span>2<span class="built_in">$</span>值&#125; <span class="built_in">&amp;</span> <span class="keyword">\textbf</span>&#123;P值&#125; <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\midrule</span></span><br><span class="line"><span class="keyword">\endhead</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 表格最后一页前 每页底部显示内容</span></span><br><span class="line"><span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\endfoot</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 表格最后一页尾部显示内容</span></span><br><span class="line"><span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\endlastfoot</span></span><br><span class="line"></span><br><span class="line">总体蓄发率 <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">发生传播家庭蓄发率  <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">家庭结构 <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span>        0.309 <span class="built_in">&amp;</span>	0.636 <span class="keyword">\\</span></span><br><span class="line">二代户  <span class="built_in">&amp;</span> 83 <span class="built_in">&amp;</span>	190	<span class="built_in">&amp;</span> 43.68 (36.57,51.05)	<span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="keyword">\\</span>	</span><br><span class="line">三代户  <span class="built_in">&amp;</span>118<span class="built_in">&amp;</span>	287	<span class="built_in">&amp;</span> 41.11 (35.40,47.06) <span class="built_in">&amp;</span> <span class="built_in">&amp;</span><span class="keyword">\\</span>		</span><br><span class="line">家庭规模  <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span>			5.191	<span class="built_in">&amp;</span> 0.027 <span class="keyword">\\</span></span><br><span class="line">总体蓄发率 <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">发生传播家庭蓄发率  <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">家庭结构 <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span>        0.309 <span class="built_in">&amp;</span>	0.636 <span class="keyword">\\</span></span><br><span class="line">二代户  <span class="built_in">&amp;</span> 83 <span class="built_in">&amp;</span>	190	<span class="built_in">&amp;</span> 43.68 (36.57,51.05)	<span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="keyword">\\</span>	</span><br><span class="line">三代户  <span class="built_in">&amp;</span>118<span class="built_in">&amp;</span>	287	<span class="built_in">&amp;</span> 41.11 (35.40,47.06) <span class="built_in">&amp;</span> <span class="built_in">&amp;</span><span class="keyword">\\</span>		</span><br><span class="line">家庭规模  <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span> <span class="built_in">&amp;</span>			5.191	<span class="built_in">&amp;</span> 0.027 <span class="keyword">\\</span></span><br><span class="line">总体蓄发率 <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line">发生传播家庭蓄发率  <span class="built_in">&amp;</span> 201  <span class="built_in">&amp;</span> 477 <span class="built_in">&amp;</span> 42.14 (37.69,46.72) <span class="built_in">&amp;</span>  <span class="built_in">&amp;</span>  <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\end</span>&#123;longtable&#125;</span><br><span class="line"><span class="keyword">\endgroup</span> <span class="comment">% 字号恢复</span></span><br><span class="line"><span class="keyword">\end</span>&#123;center&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809092539328.png" alt="image-20250809092539328" style="zoom:67%;" /></p>
+<h3 id="跨页长表格宽度设置为页面宽度">跨页长表格宽度设置为页面宽度</h3>
+<p>这里需要采用分文件写法，将表格内容放到<code>set_table_width.tex</code>文件中，在主文件中插入如下代码，其中<code>\textwidth</code>控制表格宽度。</p>
+<figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\LTXtable</span>&#123;<span class="keyword">\textwidth</span>&#125;&#123;set<span class="built_in">_</span>table<span class="built_in">_</span>width.tex&#125;</span><br></pre></td></tr></table></figure>
+<p>下面的内容单独放到<code>set_table_width.tex</code>中。</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% set_table_width.tex</span></span><br><span class="line"><span class="keyword">\begingroup</span></span><br><span class="line"><span class="keyword">\small</span></span><br><span class="line"><span class="keyword">\begin</span>&#123;longtable&#125;&#123;LCCC&#125;</span><br><span class="line"><span class="keyword">\caption</span>&#123;跨页长表格设置宽度&#125;<span class="keyword">\label</span>&#123;tab:set<span class="built_in">_</span>width&#125; <span class="keyword">\\</span> </span><br><span class="line"><span class="comment">% 表格第一页表头显示内容</span></span><br><span class="line"><span class="keyword">\toprule</span></span><br><span class="line"><span class="keyword">\textbf</span>&#123;家庭特征&#125; <span class="built_in">&amp;</span> <span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;发生家庭传播（n=99）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125;  <span class="built_in">&amp;</span> <span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;未发生家庭传播（n=57）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125;</span><br><span class="line"><span class="built_in">&amp;</span><span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;总计（n=156）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125;  <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\midrule</span></span><br><span class="line"><span class="keyword">\endfirsthead</span> </span><br><span class="line"></span><br><span class="line"><span class="comment">%后续页面表头显示内容</span></span><br><span class="line"><span class="keyword">\multicolumn</span>&#123;4&#125;&#123;c&#125;&#123;表~<span class="keyword">\ref</span>&#123;tab:set<span class="built_in">_</span>width&#125;（续）&#125;<span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\toprule</span></span><br><span class="line"><span class="keyword">\textbf</span>&#123;家庭特征&#125; <span class="built_in">&amp;</span> <span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;发生家庭传播（n=99）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125;  <span class="built_in">&amp;</span> <span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;未发生家庭传播（n=57）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125;</span><br><span class="line"><span class="built_in">&amp;</span><span class="keyword">\makecell</span>&#123;<span class="keyword">\textbf</span>&#123;总计（n=156）&#125;<span class="keyword">\\</span> <span class="keyword">\textbf</span>&#123;[户,百分比（<span class="keyword">\%</span>）]&#125;&#125; <span class="keyword">\\</span></span><br><span class="line"><span class="keyword">\midrule</span></span><br><span class="line"><span class="keyword">\endhead</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 表格最后一页前 每页底部显示内容</span></span><br><span class="line"><span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\endfoot</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% 表格最后一页尾部显示内容</span></span><br><span class="line"><span class="keyword">\bottomrule</span></span><br><span class="line"><span class="keyword">\endlastfoot</span></span><br><span class="line">家庭结构                    <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 二代户                 <span class="built_in">&amp;</span> 47（47.5<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 29（50.9<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 76（48.7<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 三代户                 <span class="built_in">&amp;</span> 52（52.5<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 28（49.1<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 80（51.3<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">家庭规模                    <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 2<span class="keyword">\textasciitilde</span>&#123;&#125;3 <span class="built_in">&amp;</span> 27（27.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 29（50.9<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 56（35.9<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 4<span class="keyword">\textasciitilde</span>&#123;&#125;5 <span class="built_in">&amp;</span> 60（60.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 26（45.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 86（55.1<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 6+                  <span class="built_in">&amp;</span> 12（12.1<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 2（3.5<span class="keyword">\%</span>）   <span class="built_in">&amp;</span> 14（9.0<span class="keyword">\%</span>）    <span class="keyword">\\</span></span><br><span class="line">住房类型                    <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 楼房                  <span class="built_in">&amp;</span> 74（74.7<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 41（71.9<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 115（73.7<span class="keyword">\%</span>）  <span class="keyword">\\</span></span><br><span class="line">~ ~ 平房                  <span class="built_in">&amp;</span> 22（22.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 15（26.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 37（23.7<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 其他                  <span class="built_in">&amp;</span> 3（3.0<span class="keyword">\%</span>）   <span class="built_in">&amp;</span> 1（1.8<span class="keyword">\%</span>）   <span class="built_in">&amp;</span> 4（2.6<span class="keyword">\%</span>）     <span class="keyword">\\</span></span><br><span class="line">人均住房面积（㎡）               <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ ≤20                 <span class="built_in">&amp;</span> 22（22.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 10（17.5<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 32（20.5<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 20-40               <span class="built_in">&amp;</span> 58（58.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 36（63.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 94（60.3<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ ≥40                 <span class="built_in">&amp;</span> 19（19.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 11（19.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 30（19.2<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">家庭人均年收入（元）              <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 5000                <span class="built_in">&amp;</span> 3（3.0<span class="keyword">\%</span>）   <span class="built_in">&amp;</span> 0（0<span class="keyword">\%</span>）     <span class="built_in">&amp;</span> 3（1.9<span class="keyword">\%</span>）     <span class="keyword">\\</span></span><br><span class="line">~ ~ 5000-19999          <span class="built_in">&amp;</span> 9（9.1<span class="keyword">\%</span>）   <span class="built_in">&amp;</span> 6（10.5<span class="keyword">\%</span>）  <span class="built_in">&amp;</span> 15（9.6<span class="keyword">\%</span>）    <span class="keyword">\\</span></span><br><span class="line">~ ~ 20000-49999         <span class="built_in">&amp;</span> 18（18.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 9（15.8<span class="keyword">\%</span>）  <span class="built_in">&amp;</span> 27（17.3<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 50000-99999         <span class="built_in">&amp;</span> 29（29.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 15（26.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 44（28.2<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ ≥100000             <span class="built_in">&amp;</span> 40（40.4<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 27（47.4<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 67（42.9<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">吸烟家庭                    <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 是                   <span class="built_in">&amp;</span> 57（57.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 26（45.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 83（53.2<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 否                   <span class="built_in">&amp;</span> 42（42.4<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 31（54.4<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 73（46.8<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">家庭地区                    <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~          <span class="built_in">&amp;</span> ~            <span class="keyword">\\</span></span><br><span class="line">~ ~ 富阳地区                <span class="built_in">&amp;</span> 20（20.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 21（36.8<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 41（26.3<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 嘉兴地区                <span class="built_in">&amp;</span> 29（29.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 6（10.5<span class="keyword">\%</span>）  <span class="built_in">&amp;</span> 35（22.4<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 丽水地区                <span class="built_in">&amp;</span> 34（34.3<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 14（24.6<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 48（30.8<span class="keyword">\%</span>）   <span class="keyword">\\</span></span><br><span class="line">~ ~ 温州地区                <span class="built_in">&amp;</span> 16（16.2<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 16（28.1<span class="keyword">\%</span>） <span class="built_in">&amp;</span> 32（20.5<span class="keyword">\%</span>）        </span><br><span class="line"><span class="keyword">\end</span>&#123;longtable&#125;</span><br><span class="line"><span class="keyword">\endgroup</span></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093452734.png" alt="image-20250809093452734" style="zoom:67%;" /></p>
+<h3 id="并排表格">并排表格</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[htbp]</span><br><span class="line">    <span class="keyword">\centering</span></span><br><span class="line">    <span class="comment">% 左侧表格（宽度略小于一半，留出间距）</span></span><br><span class="line">    <span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.7<span class="keyword">\textwidth</span>&#125;</span><br><span class="line">        <span class="keyword">\centering</span></span><br><span class="line">        <span class="keyword">\caption</span>&#123;道路资源花费&#125;<span class="keyword">\label</span>&#123;tab:left&#125;</span><br><span class="line">        <span class="keyword">\vspace</span>*&#123;-.5<span class="keyword">\baselineskip</span>&#125;&#123;<span class="keyword">\small</span> Table~<span class="keyword">\ref</span>&#123;tab:left&#125;<span class="keyword">\ </span><span class="keyword">\ </span>Road resource cost&#125; <span class="keyword">\\</span>[.5<span class="keyword">\baselineskip</span>]</span><br><span class="line">        <span class="keyword">\tabcolsep</span> 15pt <span class="comment">%space between two columns. 用于调整列间距</span></span><br><span class="line">        <span class="keyword">\begin</span>&#123;tabularx&#125;&#123;<span class="keyword">\linewidth</span>&#125;&#123;CCCCCCCC&#125;</span><br><span class="line">            <span class="keyword">\hline</span> </span><br><span class="line">            <span class="built_in">$</span>e<span class="built_in">_</span>&#123;l&#125;<span class="built_in">$</span><span class="built_in">&amp;</span> <span class="built_in">$</span>e<span class="built_in">_</span>&#123;1&#125;<span class="built_in">$</span> <span class="built_in">&amp;</span><span class="built_in">$</span>e<span class="built_in">_</span>&#123;2&#125;<span class="built_in">$</span><span class="built_in">&amp;</span> <span class="built_in">$</span>e<span class="built_in">_</span>&#123;3&#125;<span class="built_in">$</span><span class="built_in">&amp;</span><span class="built_in">$</span>e<span class="built_in">_</span>&#123;4&#125;<span class="built_in">$</span><span class="built_in">&amp;</span><span class="built_in">$</span>e<span class="built_in">_</span>&#123;5&#125;<span class="built_in">$</span><span class="built_in">&amp;</span><span class="built_in">$</span>e<span class="built_in">_</span>&#123;6&#125;<span class="built_in">$</span><span class="built_in">&amp;</span><span class="built_in">$</span>e<span class="built_in">_</span>&#123;7&#125;<span class="built_in">$</span>  <span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            <span class="built_in">$</span>c<span class="built_in">_</span>&#123;l&#125;(1)<span class="built_in">$</span><span class="built_in">&amp;</span> 1 <span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 2<span class="built_in">&amp;</span>3 <span class="built_in">&amp;</span>2 <span class="built_in">&amp;</span>2 <span class="built_in">&amp;</span>1<span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            <span class="built_in">$</span>c<span class="built_in">_</span>&#123;l&#125;(2)<span class="built_in">$</span> <span class="built_in">&amp;</span> 3 <span class="built_in">&amp;</span> 3 <span class="built_in">&amp;</span> 4<span class="built_in">&amp;</span>5 <span class="built_in">&amp;</span>4 <span class="built_in">&amp;</span>4 <span class="built_in">&amp;</span>5<span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            <span class="built_in">$</span>c<span class="built_in">_</span>&#123;l&#125;(3)<span class="built_in">$</span> <span class="built_in">&amp;</span> 5 <span class="built_in">&amp;</span> 6 <span class="built_in">&amp;</span> 7<span class="built_in">&amp;</span>7 <span class="built_in">&amp;</span>6 <span class="built_in">&amp;</span>6 <span class="built_in">&amp;</span>7<span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">        <span class="keyword">\end</span>&#123;tabularx&#125;</span><br><span class="line">    <span class="keyword">\end</span>&#123;minipage&#125;</span><br><span class="line">    <span class="keyword">\hfill</span> <span class="comment">% 填充间距</span></span><br><span class="line">    <span class="comment">% 右侧表格</span></span><br><span class="line">    <span class="keyword">\begin</span>&#123;minipage&#125;[t]&#123;0.26<span class="keyword">\textwidth</span>&#125;</span><br><span class="line">        <span class="keyword">\centering</span></span><br><span class="line">        <span class="keyword">\caption</span>&#123;充电资源花费&#125;<span class="keyword">\label</span>&#123;tab:right&#125;</span><br><span class="line">        <span class="keyword">\vspace</span>*&#123;-.5<span class="keyword">\baselineskip</span>&#125;&#123;<span class="keyword">\small</span> Table~<span class="keyword">\ref</span>&#123;tab:right&#125;<span class="keyword">\ </span><span class="keyword">\ </span>Charing resource cost&#125; <span class="keyword">\\</span>[.5<span class="keyword">\baselineskip</span>]</span><br><span class="line">        <span class="keyword">\tabcolsep</span> 15pt <span class="comment">%space between two columns. 用于调整列间距</span></span><br><span class="line">        <span class="keyword">\begin</span>&#123;tabularx&#125;&#123;<span class="keyword">\linewidth</span>&#125;&#123;CCC&#125;</span><br><span class="line">         <span class="keyword">\hline</span> </span><br><span class="line">         <span class="built_in">$</span>r<span class="built_in">_</span>&#123;m&#125;<span class="built_in">$</span><span class="built_in">&amp;</span> <span class="built_in">$</span>r<span class="built_in">_</span>&#123;1&#125;<span class="built_in">$</span> <span class="built_in">&amp;</span><span class="built_in">$</span>r<span class="built_in">_</span>&#123;2&#125;<span class="built_in">$</span>   <span class="keyword">\\</span></span><br><span class="line">         <span class="keyword">\hline</span></span><br><span class="line">         <span class="built_in">$</span><span class="keyword">\xi</span><span class="built_in">_</span>&#123;m&#125;(1)<span class="built_in">$</span><span class="built_in">&amp;</span> 2 <span class="built_in">&amp;</span> 3   <span class="keyword">\\</span></span><br><span class="line">         <span class="keyword">\hline</span></span><br><span class="line">         <span class="built_in">$</span><span class="keyword">\xi</span><span class="built_in">_</span>&#123;m&#125;(2)<span class="built_in">$</span> <span class="built_in">&amp;</span> 6 <span class="built_in">&amp;</span> 8  <span class="keyword">\\</span></span><br><span class="line">         <span class="keyword">\hline</span></span><br><span class="line">         <span class="built_in">$</span><span class="keyword">\xi</span><span class="built_in">_</span>&#123;m&#125;(3)<span class="built_in">$</span> <span class="built_in">&amp;</span> 7 <span class="built_in">&amp;</span> 10  <span class="keyword">\\</span></span><br><span class="line">         <span class="keyword">\hline</span></span><br><span class="line">        <span class="keyword">\end</span>&#123;tabularx&#125;        </span><br><span class="line">    <span class="keyword">\end</span>&#123;minipage&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093623659.png" alt="image-20250809093623659" style="zoom: 80%;" /></p>
+<h3 id="并排子表格">并排子表格</h3>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;table&#125;[htbp]</span><br><span class="line">    <span class="keyword">\centering</span></span><br><span class="line">    <span class="comment">% 左侧子表</span></span><br><span class="line">    <span class="keyword">\begin</span>&#123;subtable&#125;[t]&#123;0.48<span class="keyword">\textwidth</span>&#125;</span><br><span class="line">        <span class="keyword">\centering</span></span><br><span class="line">        <span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            项目 <span class="built_in">&amp;</span> 值 <span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            A <span class="built_in">&amp;</span> 1 <span class="keyword">\\</span></span><br><span class="line">            B <span class="built_in">&amp;</span> 2 <span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">        <span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line">        <span class="keyword">\caption</span>&#123;子表A&#125;</span><br><span class="line">        <span class="keyword">\label</span>&#123;tab:subA&#125;</span><br><span class="line">    <span class="keyword">\end</span>&#123;subtable&#125;</span><br><span class="line">    <span class="keyword">\hfill</span></span><br><span class="line">    <span class="comment">% 右侧子表</span></span><br><span class="line">    <span class="keyword">\begin</span>&#123;subtable&#125;[t]&#123;0.48<span class="keyword">\textwidth</span>&#125;</span><br><span class="line">        <span class="keyword">\centering</span></span><br><span class="line">        <span class="keyword">\begin</span>&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            项目 <span class="built_in">&amp;</span> 值 <span class="built_in">&amp;</span> 备注 <span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">            X <span class="built_in">&amp;</span> 10 <span class="built_in">&amp;</span> 测试 <span class="keyword">\\</span></span><br><span class="line">            Y <span class="built_in">&amp;</span> 20 <span class="built_in">&amp;</span> 示例 <span class="keyword">\\</span></span><br><span class="line">            <span class="keyword">\hline</span></span><br><span class="line">        <span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line">        <span class="keyword">\caption</span>&#123;子表B&#125;</span><br><span class="line">        <span class="keyword">\label</span>&#123;tab:subB&#125;</span><br><span class="line">    <span class="keyword">\end</span>&#123;subtable&#125;</span><br><span class="line">    <span class="keyword">\caption</span>&#123;并排子表示例&#125;</span><br><span class="line">    <span class="keyword">\label</span>&#123;tab:main&#125;</span><br><span class="line"><span class="keyword">\end</span>&#123;table&#125;</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/image-20250809093829774.png" alt="image-20250809093829774" style="zoom:80%;" /></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/" title="LaTeX之表格使用技巧">https://invinc-z.com/2024/04/05/tools/latex/usage-skills/latex-table-tutorial/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%A1%A8%E6%A0%BC/" rel="tag"><i class="fa fa-tag"></i> 表格</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/03/29/tools/latex/usage-skills/latex-figure-tutorial/" rel="prev" title="LaTeX之图片使用技巧">
+                  <i class="fa fa-angle-left"></i> LaTeX之图片使用技巧
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/04/11/tools/vim/vim-common-commands/" rel="next" title="Vim常用命令">
+                  Vim常用命令 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">308k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">25:38</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

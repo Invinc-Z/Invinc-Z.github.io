@@ -1,100 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><!-- hexo injector head_begin start --><style type="text/css">.douban-card-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: 400px;
-}
-
-.douban-card {
-    display: flex;
-    margin: 30px 10px;
-    padding: 15px;
-    border-radius: 15px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    color: antiquewhite;
-    text-decoration: none;
-}
-
-.douban-card:hover {
-    text-decoration: none;
-}
-
-.douban-card-bgimg {
-    position: absolute;
-    width: 115%;
-    height: 115%;
-    filter: blur(15px) brightness(0.6);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-img {
-    position: relative;
-    height: 130px;
-    width: 80px;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.douban-card-left:hover .douban-card-img {
-    filter: blur(5px) brightness(0.6);
-    transform: perspective(800px) rotateX(180deg);
-}
-
-.douban-card-left .douban-card-img {
-    transition: all 500ms ease;
-}
-
-.douban-card-left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.douban-card-left .douban-card-status {
-    height: 130px;
-    width: 80px;
-    text-align: center;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 30%;
-    transform: rotateX(180deg);
-    backface-visibility: hidden;
-    transition: all 500ms ease;
-}
-
-.douban-card-left:hover .douban-card-status {
-    transform: perspective(800px) rotateX(0deg);
-}
-
-.douban-card-right {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: 12px;
-    font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
-    line-height: 1.3;
-    color: antiquewhite;
-}
-
-.douban-card-item {
-    margin-top: 4px;
-}
-</style><!-- hexo injector head_begin end -->
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 8.1.2">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -114,15 +24,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
+    <meta name="description" content="Programming notes, technical records, reading notes, and life moments.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Neozhuang&#39;s Blog">
-<meta property="og:url" content="https://invinc-z.com/index.html">
+<meta property="og:url" content="https://invinc-z.com/">
 <meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="Programming notes, technical records, reading notes, and life moments.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Neozhuang">
-<meta property="article:tag" content="编程技术,C,C++,Linux,LaTeX">
+<meta property="article:tag" content="Programming, Tools">
 <meta name="twitter:card" content="summary">
 
 
@@ -236,7 +148,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -295,19 +207,19 @@
     <img class="site-author-image" itemprop="image" alt="Neozhuang"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">Neozhuang</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">68</span>
+          <span class="site-state-item-count">109</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -882,7 +794,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/misc/master-quotes/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2023/12/31/notes-reading/misc/master-quotes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -891,7 +803,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -903,7 +815,7 @@ if(canvas.getContext){
           
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/notes-reading/misc/master-quotes/" class="post-title-link" itemprop="url">大师语录</a>
+              </span><a href="/2023/12/31/notes-reading/misc/master-quotes/" class="post-title-link" itemprop="url">大师语录</a>
         </h2>
 
         <div class="post-meta-container">
@@ -921,7 +833,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -965,7 +877,7 @@ if(canvas.getContext){
           <p>本文记录了一些大师的语录，旨在帮助自己加深对工作与生活的理解，并从中获得启发。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/misc/master-quotes/#more" rel="contents">
+              <a class="btn" href="/2023/12/31/notes-reading/misc/master-quotes/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -996,7 +908,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/documentation-and-typesetting/markdown/markdown-writing-widgets/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2024/06/17/tools/misc/markdown-writing-widgets/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1005,7 +917,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1017,7 +929,7 @@ if(canvas.getContext){
           
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/documentation-and-typesetting/markdown/markdown-writing-widgets/" class="post-title-link" itemprop="url">Markdown写作常用组件</a>
+              </span><a href="/2024/06/17/tools/misc/markdown-writing-widgets/" class="post-title-link" itemprop="url">Markdown写作常用组件</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1035,7 +947,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1079,7 +991,7 @@ if(canvas.getContext){
           <p>本文总结了Markdown中一些基本的语法和经常使用的组件环境，方便在写作过程中随时复制使用。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/documentation-and-typesetting/markdown/markdown-writing-widgets/#more" rel="contents">
+              <a class="btn" href="/2024/06/17/tools/misc/markdown-writing-widgets/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1110,7 +1022,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/04/18/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1119,7 +1031,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1128,7 +1040,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/" class="post-title-link" itemprop="url">王小波作品摘录</a>
+          <a href="/2026/04/18/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/" class="post-title-link" itemprop="url">王小波作品摘录</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1146,7 +1058,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1190,7 +1102,7 @@ if(canvas.getContext){
           <p>本文摘录了王小波作品中一些自己喜欢的句子。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/#more" rel="contents">
+              <a class="btn" href="/2026/04/18/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1221,7 +1133,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/fiction/three-body/notes-three-body-intro/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1230,7 +1142,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1239,7 +1151,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/fiction/three-body/notes-three-body-intro/" class="post-title-link" itemprop="url">读三体：开始</a>
+          <a href="/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/" class="post-title-link" itemprop="url">读三体：开始</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1257,7 +1169,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1301,7 +1213,7 @@ if(canvas.getContext){
           <p>本文是阅读三体后个人思考与感悟这一系列的开端。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/fiction/three-body/notes-three-body-intro/#more" rel="contents">
+              <a class="btn" href="/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1332,7 +1244,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/tooling-engineering/mysql-common-commands/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/03/28/tools/mysql/mysql-common-commands/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1341,7 +1253,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1350,7 +1262,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/tooling-engineering/mysql-common-commands/" class="post-title-link" itemprop="url">MySQL常用命令速查</a>
+          <a href="/2026/03/28/tools/mysql/mysql-common-commands/" class="post-title-link" itemprop="url">MySQL常用命令速查</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1368,7 +1280,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1408,7 +1320,7 @@ if(canvas.getContext){
           <p>本文按使用场景整理了一份简洁版 MySQL 常用命令速查表。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/tooling-engineering/mysql-common-commands/#more" rel="contents">
+              <a class="btn" href="/2026/03/28/tools/mysql/mysql-common-commands/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1439,7 +1351,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-04-text-output/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/03/21/notes-reading/computer/programming-windows/win32-04-text-output/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1448,7 +1360,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1457,7 +1369,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/computer/programming-windows/win32-04-text-output/" class="post-title-link" itemprop="url">Programming Windows 笔记：Text Output（四）</a>
+          <a href="/2026/03/21/notes-reading/computer/programming-windows/win32-04-text-output/" class="post-title-link" itemprop="url">Programming Windows 笔记：Text Output（四）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1475,7 +1387,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1483,11 +1395,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1522,7 +1434,7 @@ if(canvas.getContext){
 </blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/computer/programming-windows/win32-04-text-output/#more" rel="contents">
+              <a class="btn" href="/2026/03/21/notes-reading/computer/programming-windows/win32-04-text-output/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1553,7 +1465,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-03-windows-messages/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/03/14/notes-reading/computer/programming-windows/win32-03-windows-messages/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1562,7 +1474,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1571,7 +1483,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/computer/programming-windows/win32-03-windows-messages/" class="post-title-link" itemprop="url">Programming Windows 笔记：Windows and Messages （三）</a>
+          <a href="/2026/03/14/notes-reading/computer/programming-windows/win32-03-windows-messages/" class="post-title-link" itemprop="url">Programming Windows 笔记：Windows and Messages （三）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1589,7 +1501,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1597,11 +1509,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1636,7 +1548,7 @@ if(canvas.getContext){
 </blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/computer/programming-windows/win32-03-windows-messages/#more" rel="contents">
+              <a class="btn" href="/2026/03/14/notes-reading/computer/programming-windows/win32-03-windows-messages/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1667,7 +1579,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-02-intro-unicode/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/03/07/notes-reading/computer/programming-windows/win32-02-intro-unicode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1676,7 +1588,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1685,7 +1597,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/computer/programming-windows/win32-02-intro-unicode/" class="post-title-link" itemprop="url">Programming Windows 笔记：An Introduction to Unicode （二）</a>
+          <a href="/2026/03/07/notes-reading/computer/programming-windows/win32-02-intro-unicode/" class="post-title-link" itemprop="url">Programming Windows 笔记：An Introduction to Unicode （二）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1703,7 +1615,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1711,11 +1623,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1750,7 +1662,7 @@ if(canvas.getContext){
 </blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/computer/programming-windows/win32-02-intro-unicode/#more" rel="contents">
+              <a class="btn" href="/2026/03/07/notes-reading/computer/programming-windows/win32-02-intro-unicode/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1781,7 +1693,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/computer/programming-windows/win32-01-getting-started/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/02/28/notes-reading/computer/programming-windows/win32-01-getting-started/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1790,7 +1702,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1799,7 +1711,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/computer/programming-windows/win32-01-getting-started/" class="post-title-link" itemprop="url">Programming Windows 笔记：Getting Started （一）</a>
+          <a href="/2026/02/28/notes-reading/computer/programming-windows/win32-01-getting-started/" class="post-title-link" itemprop="url">Programming Windows 笔记：Getting Started （一）</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1817,7 +1729,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1825,11 +1737,11 @@ if(canvas.getContext){
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">学习笔记与读书（Notes & Reading）</span></a>
+          <a href="/categories/reading-notes/" itemprop="url" rel="index"><span itemprop="name">Reading & Notes</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%8E%E8%AF%BB%E4%B9%A6%EF%BC%88notes-reading%EF%BC%89/%E6%8A%80%E6%9C%AF%E4%B9%A6%E7%B1%8D/" itemprop="url" rel="index"><span itemprop="name">技术书籍</span></a>
+          <a href="/categories/reading-notes/computer/" itemprop="url" rel="index"><span itemprop="name">Computer</span></a>
         </span>
     </span>
 
@@ -1864,7 +1776,7 @@ if(canvas.getContext){
 </blockquote>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/computer/programming-windows/win32-01-getting-started/#more" rel="contents">
+              <a class="btn" href="/2026/02/28/notes-reading/computer/programming-windows/win32-01-getting-started/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1895,7 +1807,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/epoll/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/02/21/programming/linux/epoll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -1904,7 +1816,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -1913,7 +1825,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/epoll/" class="post-title-link" itemprop="url">Linux 中 epoll 的用法与底层实现</a>
+          <a href="/2026/02/21/programming/linux/epoll/" class="post-title-link" itemprop="url">Linux 中 epoll 的用法与底层实现</a>
         </h2>
 
         <div class="post-meta-container">
@@ -1931,7 +1843,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1978,7 +1890,7 @@ if(canvas.getContext){
 在文件描述符数量较大、活跃连接较多的情况下通常具有更好的性能表现。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/epoll/#more" rel="contents">
+              <a class="btn" href="/2026/02/21/programming/linux/epoll/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2009,7 +1921,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/poll/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/02/14/programming/linux/poll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2018,7 +1930,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2027,7 +1939,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/poll/" class="post-title-link" itemprop="url">Linux 中 poll 的用法与底层实现</a>
+          <a href="/2026/02/14/programming/linux/poll/" class="post-title-link" itemprop="url">Linux 中 poll 的用法与底层实现</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2045,7 +1957,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2092,7 +2004,7 @@ if(canvas.getContext){
 <code>select</code> 在 fd 表示方式上的一些局限。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/poll/#more" rel="contents">
+              <a class="btn" href="/2026/02/14/programming/linux/poll/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2123,7 +2035,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/select/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/02/07/programming/linux/select/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2132,7 +2044,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2141,7 +2053,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/select/" class="post-title-link" itemprop="url">Linux 中 select 的用法与底层实现</a>
+          <a href="/2026/02/07/programming/linux/select/" class="post-title-link" itemprop="url">Linux 中 select 的用法与底层实现</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2159,7 +2071,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2205,7 +2117,7 @@ if(canvas.getContext){
 替代，但 <code>select</code> 依然是理解 I/O 多路复用思想的重要起点。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/select/#more" rel="contents">
+              <a class="btn" href="/2026/02/07/programming/linux/select/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2236,7 +2148,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/computer-system/from-ascii-to-unicode-character-code-development/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/02/01/programming/computer-system/from-ascii-to-unicode-character-code-development/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2245,7 +2157,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2254,7 +2166,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/computer-system/from-ascii-to-unicode-character-code-development/" class="post-title-link" itemprop="url">从 ASCII 到 Unicode：字符编码的发展历程</a>
+          <a href="/2026/02/01/programming/computer-system/from-ascii-to-unicode-character-code-development/" class="post-title-link" itemprop="url">从 ASCII 到 Unicode：字符编码的发展历程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2272,7 +2184,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2312,7 +2224,7 @@ if(canvas.getContext){
           <p>字符编码看起来像是一个“文本存储格式”问题，但它实际上贯穿了<strong>计算机输入、存储、传输、显示、编程语言运行时、文件系统、终端和操作系统接口</strong>的各个层面。很多开发者第一次真正意识到字符编码的重要性，往往不是在学习理论的时候，而是在遇到“乱码”时：同一个文件在一个系统里正常、在另一个系统里却变成了问号、方框或者一串莫名其妙的符号。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/computer-system/from-ascii-to-unicode-character-code-development/#more" rel="contents">
+              <a class="btn" href="/2026/02/01/programming/computer-system/from-ascii-to-unicode-character-code-development/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2343,7 +2255,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/unix-posix/socket-user-kernel/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/01/25/programming/unix-posix/socket-user-kernel/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2352,7 +2264,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2361,7 +2273,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/unix-posix/socket-user-kernel/" class="post-title-link" itemprop="url">socket、bind、listen、connect、accept 执行过程中的用户态/内核态与结构变化</a>
+          <a href="/2026/01/25/programming/unix-posix/socket-user-kernel/" class="post-title-link" itemprop="url">socket、bind、listen、connect、accept 执行过程中的用户态/内核态与结构变化</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2379,7 +2291,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2425,7 +2337,7 @@ if(canvas.getContext){
 这几个最核心的套接字函数，梳理它们执行时<strong>用户进程可见的对象</strong>与<strong>内核中对应数据结构</strong>是如何一步步建立、关联和变化的；同时也顺着这个过程说明什么是用户态、什么是内核态，以及为什么这些调用本质上都是通过系统调用进入内核完成工作的。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/unix-posix/socket-user-kernel/#more" rel="contents">
+              <a class="btn" href="/2026/01/25/programming/unix-posix/socket-user-kernel/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2456,7 +2368,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/unix-posix/byte-ordering/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/01/17/programming/unix-posix/byte-ordering/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2465,7 +2377,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2474,7 +2386,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/unix-posix/byte-ordering/" class="post-title-link" itemprop="url">字节序</a>
+          <a href="/2026/01/17/programming/unix-posix/byte-ordering/" class="post-title-link" itemprop="url">字节序</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2492,7 +2404,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2537,7 +2449,7 @@ if(canvas.getContext){
 是两种不同的多字节数据存储方式，主要区别在于字节在内存中的排列顺序。它们在计算机体系结构、网络通信和文件存储中非常重要。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/unix-posix/byte-ordering/#more" rel="contents">
+              <a class="btn" href="/2026/01/17/programming/unix-posix/byte-ordering/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2568,7 +2480,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/unix-posix/child/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/01/11/programming/unix-posix/child/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2577,7 +2489,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2586,7 +2498,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/unix-posix/child/" class="post-title-link" itemprop="url">APUE 中 TELL_WAIT 五个函数方法总结</a>
+          <a href="/2026/01/11/programming/unix-posix/child/" class="post-title-link" itemprop="url">APUE 中 TELL_WAIT 五个函数方法总结</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2604,7 +2516,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2649,7 +2561,7 @@ if(canvas.getContext){
 相关的五个函数，并说明它们为什么能够作为父子进程同步的方法；同时也补充梳理几种常见的父子进程同步手段，方便横向比较。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/unix-posix/child/#more" rel="contents">
+              <a class="btn" href="/2026/01/11/programming/unix-posix/child/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2680,7 +2592,7 @@ if(canvas.getContext){
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/notes-reading/misc/excerpts-the-big-bang-theory/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2689,7 +2601,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2698,7 +2610,7 @@ if(canvas.getContext){
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/notes-reading/misc/excerpts-the-big-bang-theory/" class="post-title-link" itemprop="url">Classic Quotes from The Big Bang Theory</a>
+          <a href="/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/" class="post-title-link" itemprop="url">Classic Quotes from The Big Bang Theory</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2716,7 +2628,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2761,7 +2673,7 @@ if(canvas.getContext){
 The Big Bang Theory.</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/notes-reading/misc/excerpts-the-big-bang-theory/#more" rel="contents">
+              <a class="btn" href="/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2792,7 +2704,7 @@ The Big Bang Theory.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/wsl/wsl2-vmware-conflict-solution/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/12/29/tools/wsl/wsl2-vmware-conflict-solution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2801,7 +2713,7 @@ The Big Bang Theory.</p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2810,7 +2722,7 @@ The Big Bang Theory.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/wsl/wsl2-vmware-conflict-solution/" class="post-title-link" itemprop="url">WSL2与VMware冲突解决方案</a>
+          <a href="/2025/12/29/tools/wsl/wsl2-vmware-conflict-solution/" class="post-title-link" itemprop="url">WSL2与VMware冲突解决方案</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2828,7 +2740,7 @@ The Big Bang Theory.</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2872,7 +2784,7 @@ The Big Bang Theory.</p>
           <p>本文总结了 WSL2 与 VMware 虚拟化冲突的解决方案。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/wsl/wsl2-vmware-conflict-solution/#more" rel="contents">
+              <a class="btn" href="/2025/12/29/tools/wsl/wsl2-vmware-conflict-solution/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2903,7 +2815,7 @@ The Big Bang Theory.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/wsl/wsl2-common-commands/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/12/22/tools/wsl/wsl2-common-commands/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -2912,7 +2824,7 @@ The Big Bang Theory.</p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -2921,7 +2833,7 @@ The Big Bang Theory.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/wsl/wsl2-common-commands/" class="post-title-link" itemprop="url">WSL命令速查表</a>
+          <a href="/2025/12/22/tools/wsl/wsl2-common-commands/" class="post-title-link" itemprop="url">WSL命令速查表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2939,7 +2851,7 @@ The Big Bang Theory.</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2983,7 +2895,7 @@ The Big Bang Theory.</p>
           <p>本文总结了 WSL 常用的命令。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/wsl/wsl2-common-commands/#more" rel="contents">
+              <a class="btn" href="/2025/12/22/tools/wsl/wsl2-common-commands/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -3014,7 +2926,7 @@ The Big Bang Theory.</p>
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/systems/linux/wsl/wsl2-install-tutorial/">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/12/15/tools/wsl/wsl2-install-tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
@@ -3023,7 +2935,7 @@ The Big Bang Theory.</p>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -3032,7 +2944,7 @@ The Big Bang Theory.</p>
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/systems/linux/wsl/wsl2-install-tutorial/" class="post-title-link" itemprop="url">WSL如何将Linux发行版安装到其他盘</a>
+          <a href="/2025/12/15/tools/wsl/wsl2-install-tutorial/" class="post-title-link" itemprop="url">WSL如何将Linux发行版安装到其他盘</a>
         </h2>
 
         <div class="post-meta-container">
@@ -3050,7 +2962,7 @@ The Big Bang Theory.</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-20 01:42:52" itemprop="dateModified" datetime="2026-05-20T01:42:52+08:00">2026-05-20</time>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -3095,7 +3007,7 @@ The Big Bang Theory.</p>
 发行版时如何将根文件系统安装到其他盘。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/systems/linux/wsl/wsl2-install-tutorial/#more" rel="contents">
+              <a class="btn" href="/2025/12/15/tools/wsl/wsl2-install-tutorial/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -3119,7 +3031,7 @@ The Big Bang Theory.</p>
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -3141,13 +3053,13 @@ The Big Bang Theory.</p>
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">142k</span>
+    <span title="站点总字数">308k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">11:50</span>
+    <span title="站点阅读时长">25:38</span>
   </span>
 </div>
 <div class="busuanzi-count">

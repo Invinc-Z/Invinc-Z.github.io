@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
+  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
+  <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Serif+SC:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.css" integrity="sha256-gkQVf8UKZgQ0HyuxL/VnacadJ+D2Kox2TCEBuNQg5+w=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"invinc-z.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":250,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"atom-one-dark-reasonable"},"prism":{"light":"atom-one-light","dark":"atom-one-dark-reasonable"},"copy_button":{"enable":true,"style":"flat"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="本文对版本控制系统进行简要介绍，包括版本控制系统简介、Git和SVN的区别。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="版本控制系统简介">
+<meta property="og:url" content="https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/">
+<meta property="og:site_name" content="Neozhuang&#39;s Blog">
+<meta property="og:description" content="本文对版本控制系统进行简要介绍，包括版本控制系统简介、Git和SVN的区别。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210160840152.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210161127422.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210161625132.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210171529663.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210172021355.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210172725603.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210174143740.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210174450673.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175138909.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175705835.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175934576.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210180141084.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210180257823.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210181751209.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210182055123.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210182216954.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210185334196.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202533648.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202612712.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202632437.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210203805987.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210203952605.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204134586.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204509786.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204853196.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205040201.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205445036.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205731439.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210211126149.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211131310571.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210212709899.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211133930021.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211134259384.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211140905639.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211141030289.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211141141149.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211142307778.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211144245574.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211144421946.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162649883.png">
+<meta property="og:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162716274.png">
+<meta property="article:published_time" content="2025-04-08T21:12:18.000Z">
+<meta property="article:modified_time" content="2026-05-22T17:21:12.060Z">
+<meta property="article:author" content="Neozhuang">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="SVN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210160840152.png">
+
+
+<link rel="canonical" href="https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/","path":"2025/04/08/tools/git/version-control-system-intro/","title":"版本控制系统简介"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>版本控制系统简介 | Neozhuang's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.31/dist/fancybox/fancybox.umd.js" integrity="sha256-a+H7FYzJv6oU2hfsfDGM2Ohw/cR9v+hPfxHCLdmCrE8=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/pangu@7.2.0/dist/browser/pangu.umd.js" integrity="sha256-JnmRRnJK7DC6RQJbAJb6AXOM9OmWzS6z8eYultk/48Y=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script><script src="/js/bookmark.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.5.0/dist/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+  <script class="next-config" data-name="mermaid" type="application/json">{"enable":true,"theme":{"light":"default","dark":"dark"},"js":{"url":"https://cdn.jsdelivr.net/npm/mermaid@11.10.1/dist/mermaid.min.js","integrity":"sha256-BmQmdWDS8X2OTbrwELWK366LV6escyWhHHe0XCTU/Hk="}}</script>
+  <script src="/js/third-party/tags/mermaid.js" defer></script>
+
+
+  <script src="/js/third-party/fancybox.js" defer></script>
+
+  <script src="/js/third-party/pace.js" defer></script>
+
+  <script src="/js/third-party/addtoany.js" defer></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@3.0.1/dist/quicklink.umd.js" integrity="sha256-44BednzIpUeQJcY8qtLyarFu0UCCTbgmWOvaoehiFQQ=" crossorigin="anonymous" defer></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/"}</script>
+  <script src="/js/third-party/quicklink.js" defer></script>
+ 
+
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "(oﾟvﾟ)ノ Hi~" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "(*´∇｀*) 欢迎回来！" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="Neozhuang's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Neozhuang's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-生活"><a href="/life/" rel="section"><i class="fa fa-life-ring fa-fw"></i>生活</a></li><li class="menu-item menu-item-友链"><a href="/friends/" rel="section"><i class="fa fa-users fa-fw"></i>友链</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-rss"><a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="nav-number">1.1.</span> <span class="nav-text">什么是版本控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E5%88%86%E7%B1%BB"><span class="nav-number">1.2.</span> <span class="nav-text">版本控制系统分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.1.</span> <span class="nav-text">本地版本控制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%86%E4%B8%AD%E5%8C%96%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.2.</span> <span class="nav-text">集中化的版本控制系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.3.</span> <span class="nav-text">分布式版本控制系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%E6%AF%94%E8%BE%83"><span class="nav-number">1.3.</span> <span class="nav-text">版本控制工具比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#svn"><span class="nav-number">2.</span> <span class="nav-text">SVN</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#svn-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">svn 服务端安装配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">2.1.1.</span> <span class="nav-text">官方安装包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E5%8C%96%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">2.1.2.</span> <span class="nav-text">图形化服务端</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E7%A8%8B%E7%9B%AE%E5%BD%95"><span class="nav-number">2.3.</span> <span class="nav-text">创建工程目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tortoisesvn-%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">2.4.</span> <span class="nav-text">TortoiseSVN 客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#svn-%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.4.1.</span> <span class="nav-text">SVN 客户端类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tortoisesvn-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">2.4.2.</span> <span class="nav-text">TortoiseSVN 下载安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E4%BB%93%E5%BA%93"><span class="nav-number">2.4.3.</span> <span class="nav-text">浏览仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86"><span class="nav-number">2.5.</span> <span class="nav-text">权限管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83%E6%9C%BA%E5%88%B6"><span class="nav-number">2.5.1.</span> <span class="nav-text">认证授权机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7"><span class="nav-number">2.5.2.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%BB%84"><span class="nav-number">2.5.3.</span> <span class="nav-text">创建组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%85%8D%E6%9D%83%E9%99%90"><span class="nav-number">2.5.4.</span> <span class="nav-text">分配权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tortoisesvn%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8"><span class="nav-number">2.6.</span> <span class="nav-text">TortoiseSVN日常使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E4%BB%93%E5%BA%93-1"><span class="nav-number">2.6.1.</span> <span class="nav-text">浏览仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA"><span class="nav-number">2.6.2.</span> <span class="nav-text">导入导出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%8F%90%E4%BA%A4"><span class="nav-number">2.6.3.</span> <span class="nav-text">修改提交</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#checkout"><span class="nav-number">2.6.3.1.</span> <span class="nav-text">Checkout</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#add"><span class="nav-number">2.6.3.2.</span> <span class="nav-text">add</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#commit"><span class="nav-number">2.6.3.3.</span> <span class="nav-text">Commit</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#update"><span class="nav-number">2.6.3.4.</span> <span class="nav-text">update</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#delete"><span class="nav-number">2.6.3.5.</span> <span class="nav-text">Delete</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#revert"><span class="nav-number">2.6.3.6.</span> <span class="nav-text">revert</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%B2%E7%AA%81%E5%A4%84%E7%90%86"><span class="nav-number">2.6.4.</span> <span class="nav-text">冲突处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">3.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%B7%E6%AD%A5"><span class="nav-number">3.1.</span> <span class="nav-text">起步</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFgit"><span class="nav-number">3.1.1.</span> <span class="nav-text">什么是Git?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="nav-number">3.2.</span> <span class="nav-text">git常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Neozhuang"
+      src="/uploads/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Neozhuang</p>
+  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">109</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">66</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;neozhuang"><i class="fab fa-github fa-fw"></i>GitHub</span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnpodWFuZ196aGFuZ185N0AxNjMuY29t" title="E-Mail → mailto:zhuang_zhang_97@163.com"><i class="fa fa-envelope fa-fw"></i>E-Mail</span>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+
+<div id="aplayer" style="border-radius: 20px; margin-top: 20px;"></div>
+
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: false,                 // 是否自动播放
+        fixed: false,                //是否附着页面底部，否为false
+        volume: 0.3,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        loop: 'all',
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#ee8243',           //主题颜色
+        audio: [
+        {
+            name: '乡间虫鸣',           //歌曲名称
+            artist: '白噪音',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: 'รักเดียว',           //歌曲名称
+            artist: 'Sompong uma',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: '',    // 添加歌词
+        },
+        {
+            name: '黑色柳丁',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
+        },
+        {
+            name: '讨厌红楼梦',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
+        },
+        {
+            name: 'Melody',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
+        },
+        {
+            name: '月亮代表谁的心',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
+        },
+        {
+            name: '二十二',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
+        },
+        {
+            name: '爱很简单',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
+        },
+        { 
+            name: '飞机场的10:30',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
+            cover: '',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
+        },
+        {
+            name: '望春风',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
+        },
+        { 
+            name: '心乱飞',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
+        },
+        {
+            name: '找自己',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
+        },
+        {
+            name: '小镇姑娘',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
+        },
+        {
+            name: '普通朋友',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Susan说',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
+        },
+        {
+            name: '今天你要嫁给我',           //歌曲名称
+            artist: '陶喆',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
+        },
+        { 
+            name: '春风吹',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
+        },
+        { 
+            name: 'Love Song',      //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
+        },
+        { 
+            name: '麦恩莉',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '特别的人',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
+        },
+        { 
+            name: '天气先生',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱不来',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱爱爱',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
+        },
+        { 
+            name: '爱在',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
+        },
+        { 
+            name: '才二十三',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
+        },
+        { 
+            name: '1234567',        //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
+        },
+        { 
+            name: 'BB88',           //歌曲名称
+            artist: '方大同',       //歌曲作者
+            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
+            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
+            theme: '#eeeeee',        //主题颜色（优先）
+            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
+        },
+        ]
+    });
+</script>
+
+
+<div style="">
+  <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
+</div>
+<script>
+(function(){
+
+   var digit=
+    [
+        [
+            [0,0,1,1,1,0,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,0,1,1,0],
+            [0,0,1,1,1,0,0]
+        ],//0
+        [
+            [0,0,0,1,1,0,0],
+            [0,1,1,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [1,1,1,1,1,1,1]
+        ],//1
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,1,1],
+            [1,1,1,1,1,1,1]
+        ],//2
+        [
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//3
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,0],
+            [0,0,1,1,1,1,0],
+            [0,1,1,0,1,1,0],
+            [1,1,0,0,1,1,0],
+            [1,1,1,1,1,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,1,1]
+        ],//4
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,1,1,1,1,0],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//5
+        [
+            [0,0,0,0,1,1,0],
+            [0,0,1,1,0,0,0],
+            [0,1,1,0,0,0,0],
+            [1,1,0,0,0,0,0],
+            [1,1,0,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//6
+        [
+            [1,1,1,1,1,1,1],
+            [1,1,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,0,0,1,1,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0],
+            [0,0,1,1,0,0,0]
+        ],//7
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,1,1,0]
+        ],//8
+        [
+            [0,1,1,1,1,1,0],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [1,1,0,0,0,1,1],
+            [0,1,1,1,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,0,1,1],
+            [0,0,0,0,1,1,0],
+            [0,0,0,1,1,0,0],
+            [0,1,1,0,0,0,0]
+        ],//9
+        [
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,0,0,0,0]
+        ]//:
+    ];
+
+var canvas = document.getElementById('canvas');
+
+if(canvas.getContext){
+    var cxt = canvas.getContext('2d');
+    //声明canvas的宽高
+    var H = 100,W = 700;
+    canvas.height = H;
+    canvas.width = W;
+    cxt.fillStyle = '#f00';
+    cxt.fillRect(10,10,50,50);
+
+    //存储时间数据
+    var data = [];
+    //存储运动的小球
+    var balls = [];
+    //设置粒子半径
+    var R = canvas.height/20-1;
+    (function(){
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        //存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成
+        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+    })();
+
+    /*生成点阵数字*/
+    function renderDigit(index,num){
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    cxt.beginPath();
+                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);
+                    cxt.closePath();
+                    cxt.fill();
+                }
+            }
+        }
+    }
+
+    /*更新时钟*/
+    function updateDigitTime(){
+        var changeNumArray = [];
+        var temp = /(\d)(\d):(\d)(\d):(\d)(\d)/.exec(new Date());
+        var NewData = [];
+        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);
+        for(var i = data.length-1; i >=0 ; i--){
+            //时间发生变化
+            if(NewData[i] !== data[i]){
+                //将变化的数字值和在data数组中的索引存储在changeNumArray数组中
+                changeNumArray.push(i+'_'+(Number(data[i])+1)%10);
+            }
+        }
+        //增加小球
+        for(var i = 0; i< changeNumArray.length; i++){
+            addBalls.apply(this,changeNumArray[i].split('_'));
+        }
+        data = NewData.concat();
+    }
+
+    /*更新小球状态*/
+    function updateBalls(){
+        for(var i = 0; i < balls.length; i++){
+            balls[i].stepY += balls[i].disY;
+            balls[i].x += balls[i].stepX;
+            balls[i].y += balls[i].stepY;
+            if(balls[i].x > W + R || balls[i].y > H + R){
+                balls.splice(i,1);
+                i--;
+            }
+        }
+    }
+
+    /*增加要运动的小球*/
+    function addBalls(index,num){
+        var numArray = [1,2,3];
+        var colorArray =  ["#3BE","#09C","#A6C","#93C","#9C0","#690","#FB3","#F80","#F44","#C00"];
+        for(var i = 0; i < digit[num].length; i++){
+            for(var j = 0; j < digit[num][i].length; j++){
+                if(digit[num][i][j] == 1){
+                    var ball = {
+                        x:14*(R+2)*index + j*2*(R+1)+(R+1),
+                        y:i*2*(R+1)+(R+1),
+                        stepX:Math.floor(Math.random() * 4 -2),
+                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],
+                        color:colorArray[Math.floor(Math.random()*colorArray.length)],
+                        disY:1
+                    };
+                    balls.push(ball);
+                }
+            }
+        }
+    }
+
+    /*渲染*/
+    function render(){
+        //重置画布宽度，达到清空画布的效果
+        canvas.height = 100;
+        //渲染时钟
+        for(var i = 0; i < data.length; i++){
+            renderDigit(i,data[i]);
+        }
+        //渲染小球
+        for(var i = 0; i < balls.length; i++){
+            cxt.beginPath();
+            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);
+            cxt.fillStyle = balls[i].color;
+            cxt.closePath();
+            cxt.fill();
+        }
+    }
+
+    clearInterval(oTimer);
+    var oTimer = setInterval(function(){
+        //更新时钟
+        updateDigitTime();
+        //更新小球状态
+        updateBalls();
+        //渲染
+        render();
+    },50);
+}
+
+})();
+</script>
+
+<div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+<div class="site-overview">
+    
+
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly9jaGF0Z3B0LmNvbS8=" title="https:&#x2F;&#x2F;chatgpt.com&#x2F;">ChatGPT</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=" title="https:&#x2F;&#x2F;www.google.com&#x2F;">Google</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS8=" title="https:&#x2F;&#x2F;www.runoob.com&#x2F;">菜鸟教程</span>
+            </li>
+            <li class="links-of-blogroll-item">
+              <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zaXRlbWFwLw==" title="http:&#x2F;&#x2F;c.biancheng.net&#x2F;sitemap&#x2F;">C语言中文网</span>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="Neozhuang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neozhuang's Blog">
+      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="版本控制系统简介 | Neozhuang's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          版本控制系统简介
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-04-09 05:12:18" itemprop="dateCreated datePublished" datetime="2025-04-09T05:12:18+08:00">2025-04-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-05-23 01:21:12" itemprop="dateModified" datetime="2026-05-23T01:21:12+08:00">2026-05-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">工具与工程实践（Tooling & Engineering）</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B7%A5%E5%85%B7%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%88tooling-engineering%EF%BC%89/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" itemprop="url" rel="index"><span itemprop="name">版本控制</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>19 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>本文对版本控制系统进行简要介绍，包括版本控制系统简介、Git和SVN的区别。</p>
+<span id="more"></span>
+<hr />
+<h2 id="引言">引言</h2>
+<h3 id="什么是版本控制">什么是版本控制</h3>
+<p>什么是“版本控制”？版本控制是一种<strong>记录一个或若干文件内容变化，以便将来查阅特定版本修订情况</strong>的系统。</p>
+<h3 id="版本控制系统分类">版本控制系统分类</h3>
+<h4 id="本地版本控制系统">本地版本控制系统</h4>
+<p>其中最流行的一种叫做 RCS（Version Control
+Systems），现今许多计算机系统上都还看得到它的踪影。 RCS
+的工作原理是在硬盘上保存补丁集（补丁是指文件修订前后的变化）；通过应用所有的补丁，可以重新计算出各个版本的文件内容。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210160840152.png" alt="image-20241210160840152" style="zoom:33%;" /></p>
+<h4 id="集中化的版本控制系统">集中化的版本控制系统</h4>
+<p>如何让在不同系统上的开发者协同工作？ 于是，集中化的版本控制系统（
+<strong>CVCS</strong>）应运而生。 这类系统，诸如
+<strong>CVS</strong>、<strong>Subversion</strong> 以及Perforce
+等，都有一个<strong>单一的集中管理的服务器</strong>，保存所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或者提交更新。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210161127422.png" alt="image-20241210161127422" style="zoom: 50%;" /></p>
+<p><strong>缺点</strong>：中央服务器的单点故障。</p>
+<h4 id="分布式版本控制系统">分布式版本控制系统</h4>
+<p>分布式版本控制系统（Distributed Version Control
+System，DVCS），像Git、Mercurial 以及 Darcs
+等，客户端并不只提取最新版本的文件快照，
+而是把代码仓库完整地镜像下来，包括完整的历史记录。
+这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复。
+因为每一次的克隆操作，实际上都是一次对代码仓库的完整备份。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210161625132.png" alt="image-20241210161625132" style="zoom: 25%;" /></p>
+<h3 id="版本控制工具比较">版本控制工具比较</h3>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 24%" />
+<col style="width: 25%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>特性</strong></th>
+<th><strong>VisualSVN</strong></th>
+<th><strong>纯 Subversion</strong></th>
+<th><strong>Git</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>平台</strong></td>
+<td>Windows 专用</td>
+<td>跨平台</td>
+<td>跨平台</td>
+</tr>
+<tr class="even">
+<td><strong>易用性</strong></td>
+<td>高，提供 GUI 管理工具</td>
+<td>中，需要手动配置和管理</td>
+<td>高，许多 GUI 客户端可选</td>
+</tr>
+<tr class="odd">
+<td><strong>分布式功能</strong></td>
+<td>支持主从架构（VDFS）</td>
+<td>无</td>
+<td>原生分布式版本控制</td>
+</tr>
+<tr class="even">
+<td><strong>学习曲线</strong></td>
+<td>平缓</td>
+<td>较陡</td>
+<td>平缓（客户端）/较陡（命令行）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="svn">SVN</h2>
+<p>SVN（Subversion）项目的初衷是为了替换版本控制软件CVS，在CVS
+的功能的基础上有很多的提升同时也能较好的解决CVS 系统的一些不足。</p>
+<h3 id="svn-服务端安装配置">svn 服务端安装配置</h3>
+<p>有两种服务端安装包</p>
+<h4 id="官方安装包">官方安装包</h4>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zdWJ2ZXJzaW9uLmFwYWNoZS5vcmcv">官方网站<i class="fa fa-external-link-alt"></i></span></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210171529663.png" alt="image-20241210171529663" style="zoom:50%;" /></p>
+<p>官方提供的服务端安装包，安装后需要通过命令行操作，适用于专业配置管理员使用。</p>
+<h4 id="图形化服务端">图形化服务端</h4>
+<p><strong>VisualSVN</strong> 是一款基于 <strong>Apache
+Subversion</strong> 的商业版本控制服务器解决方案，专为 <strong>Windows
+平台</strong>设计。它为 Subversion 提供了一个易于管理和部署的 GUI
+界面，并集成了许多增强功能，适合需要在 Windows 环境中使用 Subversion
+的团队和企业。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cudmlzdWFsc3ZuLmNvbS9kb3dubG9hZHMv">下载地址<i class="fa fa-external-link-alt"></i></span></p>
+<p>安装过程：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210172021355.png" alt="image-20241210172021355" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210172725603.png" alt="image-20241210172725603" style="zoom:50%;" /></p>
+<h3 id="创建仓库">创建仓库</h3>
+<p>安装完成后,启动VisualSVN Server
+Manager，可以在窗口的右边看到版本库的一些信息,比如状态,日志,用户认证,版本库等.
+要建立版本库,需要右键单击左边窗口的Repositores,如下图:</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210174143740.png" alt="image-20241210174143740" style="zoom: 50%;" /></p>
+<p>在弹出的右键菜单中选择Create New Repository 或者 新建-&gt;Repository:
+两者都一样。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210174450673.png" alt="image-20241210174450673" style="zoom:50%;" /></p>
+<p>选择仓库类型：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175138909.png" alt="image-20241210175138909" style="zoom:50%;" /></p>
+<p>在 VisualSVN 中，<strong>FSFS</strong> 和 <strong>VDFS</strong>
+是两种不同的数据存储后端，它们在用途、性能和特性上存在明显差异。以下是它们的主要区别：</p>
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 44%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>特性</strong></th>
+<th><strong>FSFS</strong></th>
+<th><strong>VDFS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>全称</strong></td>
+<td>Flat File System</td>
+<td>VisualSVN Distributed File System</td>
+</tr>
+<tr class="even">
+<td><strong>架构</strong></td>
+<td>单机存储</td>
+<td>分布式存储，支持主从架构</td>
+</tr>
+<tr class="odd">
+<td><strong>数据存储</strong></td>
+<td>数据存储为普通的平面文件，使用自定义格式</td>
+<td>使用专有的数据存储格式，支持跨服务器的双向数据复制</td>
+</tr>
+<tr class="even">
+<td><strong>部署模型</strong></td>
+<td>适合单一服务器或简单的网络共享环境</td>
+<td>适合需要多服务器同步和高可用性的分布式环境</td>
+</tr>
+<tr class="odd">
+<td><strong>功能等价性</strong></td>
+<td>是标准 Subversion 的默认后端，功能全面，适用于几乎所有使用场景</td>
+<td>功能等同于 FSFS，但支持透明的分布式数据同步</td>
+</tr>
+<tr class="even">
+<td><strong>数据复制</strong></td>
+<td>不支持内置的分布式数据复制功能，需要依赖第三方工具实现</td>
+<td>内置支持主从复制，主库的提交会自动同步到从库；从库也支持写操作，写入的数据会同步到主库及其他从库</td>
+</tr>
+<tr class="odd">
+<td><strong>数据一致性</strong></td>
+<td>单机存储，无数据一致性问题</td>
+<td>提供强一致性，确保主库和从库之间的数据同步</td>
+</tr>
+<tr class="even">
+<td><strong>扩展性</strong></td>
+<td>不适合大规模分布式环境</td>
+<td>专为分布式环境设计，适合需要高扩展性和容错能力的场景</td>
+</tr>
+<tr class="odd">
+<td><strong>配置复杂度</strong></td>
+<td>配置简单，适合小型团队或单机开发环境</td>
+<td>配置较复杂，需要设置主库和从库</td>
+</tr>
+<tr class="even">
+<td><strong>使用成本</strong></td>
+<td>开源且免费</td>
+<td>专有技术，可能需要购买 VisualSVN Server 企业版才能使用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>选择建议</strong>:</p>
+<ol type="1">
+<li><strong>选择 FSFS 的场景</strong>：
+<ul>
+<li>小型团队或单机开发环境。</li>
+<li>不需要分布式存储或高可用性。</li>
+<li>偏好使用开源工具，降低成本。</li>
+</ul></li>
+<li><strong>选择 VDFS 的场景</strong>：
+<ul>
+<li>需要多服务器分布式部署和高可用性。</li>
+<li>希望利用内置的主从复制功能简化同步操作。</li>
+<li>对性能、可靠性和一致性要求较高的大型团队或企业环境。</li>
+</ul></li>
+</ol>
+<p>可以随意取名字，或者你项目的名字</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175705835.png" alt="image-20241210175705835" style="zoom:50%;" /></p>
+<p>为新仓库选择初始布局：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210175934576.png" alt="image-20241210175934576" style="zoom:50%;" /></p>
+<p>设置用户访问仓库权限：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210180141084.png" alt="image-20241210180141084" style="zoom:50%;" /></p>
+<p>仓库创建成功： 仓库地址为
+<code>https://ip地址或计算机名/svn/仓库名称</code></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210180257823.png" alt="image-20241210180257823" style="zoom:50%;" /></p>
+<h3 id="创建工程目录">创建工程目录</h3>
+<p>仓库中存放开发项目代码、文档等，需要创建一个工程目录。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210181751209.png" alt="image-20241210181751209" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210182055123.png" alt="image-20241210182055123" style="zoom: 67%;" /></p>
+<p>创建成功：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210182216954.png" alt="image-20241210182216954" style="zoom: 67%;" /></p>
+<blockquote>
+<p>trunk：项目开发代码的主体，是从项目开始直到当前都处于活动的状态，从这里可以获得项目最新的源代码以及几乎所有的变更历史信息。</p>
+<p>branch：从trunk
+的某个点分离出来的代码拷贝，通常可以在不影响主干的前提下在这里进行重大bug
+的修改，或者做实验性的开发，以及定制功能开发等。如果分支达到了预期的目的，通常可以被合并（Merge）到主干中。</p>
+<p>tag：用来表示trunk 和branch
+的某个点的状态，以代表项目的某个稳定状态，通常为最终发布状态。</p>
+</blockquote>
+<h3 id="tortoisesvn-客户端">TortoiseSVN 客户端</h3>
+<h4 id="svn-客户端类型">SVN 客户端类型</h4>
+<p>svn 客户端需要通过网络访问svn
+服务端提交文件、查询文件等，可通过以下客户端类型访问svn服务端：</p>
+<ul>
+<li>使用Subversion
+提供的客户端命令。使用方式：在命令行下输入命令操作。</li>
+<li>使用Torotise 图形化界面操作（推荐）</li>
+<li>使用Eclipse 等开发工具插件操作（推荐）</li>
+</ul>
+<h4 id="tortoisesvn-下载安装">TortoiseSVN 下载安装</h4>
+<p>TortoiseSVN 是Subversion
+版本控制系统的一个免费开源客户端，不需要为使用它而付费。 TortoiseSVN
+是Subversion 的Windows 扩展。它使你避免接触Subversion
+枯燥而且不方便的Command Line。它完全嵌入Windows
+Explorer，使用时只需在正常的窗口里右键操作就可以了。</p>
+<p><span class="exturl" data-url="aHR0cDovL3RvcnRvaXNlc3ZuLm5ldC9kb3dubG9hZHMuaHRtbA==">下载<i class="fa fa-external-link-alt"></i></span>：提供32
+位和64 位不同版本，安装tortoiseSVN。
+需要修改客户端电脑右键菜单，安装后需要重启电脑。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210185334196.png" alt="image-20241210185334196" style="zoom:50%;" /></p>
+<h4 id="浏览仓库">浏览仓库</h4>
+<p>使用Tortoise 浏览svn 服务端的仓库的内容：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202533648.png" alt="image-20241210202533648" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202612712.png" alt="image-20241210202612712" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210202632437.png" alt="image-20241210202632437" style="zoom:50%;" /></p>
+<h3 id="权限管理">权限管理</h3>
+<h4 id="认证授权机制">认证授权机制</h4>
+<p>在企业开发中会为每位程序员、测试人员等分配一个账号，用户通过使用svn客户端连接svn
+服务时需要输入账号和密码，svn
+服务对账号和密码进行校验，输入正确可以继续访问，当用户访问仓库下某个目录时，svn
+服务对用户进行授权，如果用户拥有该目录的访问权限方可访问。
+判断账号和密码输入是否正确的过程即认证过程。
+判断用户是否拥有目录的读/写权限时即授权过程。</p>
+<h4 id="创建用户">创建用户</h4>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210203805987.png" alt="image-20241210203805987" style="zoom:50%;" /></p>
+<h4 id="创建组">创建组</h4>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210203952605.png" alt="image-20241210203952605" style="zoom:50%;" /></p>
+<h4 id="分配权限">分配权限</h4>
+<ul>
+<li>删除系统安装后默认权限：</li>
+</ul>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204134586.png" alt="image-20241210204134586" style="zoom:50%;" /></p>
+<ul>
+<li>开发人员拥有读写权限:</li>
+</ul>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204509786.png" alt="image-20241210204509786" style="zoom:50%;" /></p>
+<ul>
+<li>清除认证缓存：</li>
+</ul>
+<p>有几种情况需要清除认证缓存：
+1、本地使用多个账号登陆，每次输入的账号和密码都不一样
+2、当账号密码修改后（建议清理）</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210204853196.png" alt="image-20241210204853196" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205040201.png" alt="image-20241210205040201" style="zoom:50%;" /></p>
+<h3 id="tortoisesvn日常使用">TortoiseSVN日常使用</h3>
+<h4 id="浏览仓库-1">浏览仓库</h4>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205445036.png" alt="image-20241210205445036" style="zoom:50%;" /></p>
+<h4 id="导入导出">导入导出</h4>
+<p>Export:
+导出项目，和checkout区别（checkout检出文件后，含有.svn隐藏文件夹，会和SVN仓库交互，export导出没有隐藏文件夹）。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210205731439.png" alt="image-20241210205731439" style="zoom:67%;" /></p>
+<p>import 将本地资源导入到svn 服务器。</p>
+<h4 id="修改提交">修改提交</h4>
+<h5 id="checkout">Checkout</h5>
+<p>检出项目，复制项目的副本到本地。在要检出的目录中右键：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210211126149.png" alt="image-20241210211126149" style="zoom:50%;" /></p>
+<h5 id="add">add</h5>
+<p>在检出的目录中添加文件：</p>
+<figure>
+<img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211131310571.png"
+alt="image-20241211131310571" />
+<figcaption aria-hidden="true">image-20241211131310571</figcaption>
+</figure>
+<p>图标问号表示这是一个新文件</p>
+<p>Add to ignore list ：添加到忽略列表（标记该文件不需要版本控制）</p>
+<p>Add ： 标记这个文件添加到服务器</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241210212709899.png" alt="image-20241210212709899" style="zoom:50%;" /></p>
+<p>文件上带“+”表示已经标记要添加到版本库。</p>
+<blockquote>
+<p><strong>这里可能遇到的问题：</strong>文件夹不显示任何SVN相关的小图标了，例如：绿色打钩，红色感叹等</p>
+<p>原因： Windows Explorer Shell最多支持15个Overlay
+Icon,也就是注册表排在前15个才能显示，后面的不能显示。</p>
+<p>解决方法：</p>
+<ol type="1">
+<li><p>打开注册表：Win+R快捷键打开运行窗口，输入regedit</p></li>
+<li><p>注册表内前往这个路径：“计算机_LOCAL_MACHINE”</p></li>
+<li><p>重命名SVN相关的注册表，即原名字前面加几个空格，确保能排到前面去，空格越多越靠前（或直接删除前面没啥用的图标）。</p></li>
+<li><p>注册表重命名后，重启电脑，再进来看看是否已经排到前面，若是则完成。</p></li>
+</ol>
+<p>只要确保SVN相关的注册表排在前15的位置就能显示文件夹小图标。</p>
+</blockquote>
+<h5 id="commit">Commit</h5>
+<p>当检出目录或子目录中内容有修改，目录图标变为：<img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211133930021.png"
+alt="image-20241211133930021" /></p>
+<p>提交Commit 提交本地修改至svn 服务器：
+在检出目录或要提交修改的目录右键：</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211134259384.png" alt="image-20241211134259384" style="zoom:50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211140905639.png" alt="image-20241211140905639" style="zoom: 50%;" /></p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211141030289.png" alt="image-20241211141030289" style="zoom: 50%;" /></p>
+<p>提交后目录中的内容与svn 服务同步，目录图标变为：<img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211141141149.png"
+alt="image-20241211141141149" /></p>
+<h5 id="update">update</h5>
+<p>更新仓库的文件到本地</p>
+<h5 id="delete">Delete</h5>
+<p>删除版本库文件</p>
+<p>标记删除后，本地文件删除，标记删除后需要commit。</p>
+<h5 id="revert">revert</h5>
+<p>在检出目录或子目录操作会记录操作日志，提交前可以回滚操作。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211142307778.png" alt="image-20241211142307778" style="zoom:50%;" /></p>
+<h4 id="冲突处理">冲突处理</h4>
+<p>两个客户端同时修改同一个文件，
+改动同一个位置，发生冲突情况如果当commit
+遇到文件已经过时，说明另一个人可能改动过—– update</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211144245574.png" alt="image-20241211144245574" style="zoom:50%;" /></p>
+<p>main.c 将本地和服务器合并到一起的文件</p>
+<p>main.c.mine 我本地自己修改后的文件</p>
+<p>main.c.r9 我修改之前的文件</p>
+<p>main.c.r10别人修改后的文件</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211144421946.png" alt="image-20241211144421946" style="zoom:50%;" /></p>
+<p>冲突解决后再进行commit</p>
+<hr />
+<h2 id="git">Git</h2>
+<h3 id="起步">起步</h3>
+<h4 id="什么是git">什么是Git?</h4>
+<p>Git 和其它版本控制系统（包括 Subversion 和近似工具）的主要差别在于
+Git 对待数据的方式。
+从概念上来说，其它大部分系统以文件变更列表的方式存储信息，这类系统（CVS、Subversion、Perforce
+等等） 将它们存储的信息看作是一组基本文件和每个文件随时间逐步累积的差异
+（它们通常称作
+<strong>基于差异</strong>（delta-based）的版本控制）。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162649883.png" alt="image-20241211162649883" style="zoom: 33%;" /></p>
+<p>Git 不按照以上方式对待或保存数据。反之，Git
+更像是把数据看作是对小型文件系统的一系列快照。 在
+Git中，每当你提交更新或保存项目状态时，它基本上就会对当时的全部文件创建一个快照并保存这个快照的索引。为了效率，如果文件没有修改，Git
+不再重新存储该文件，而是只保留一个链接指向之前存储的文件。 Git
+对待数据更像是一个 <strong>快照流</strong>。</p>
+<p><img data-src="https://zzz-drawing-bed.oss-cn-nanjing.aliyuncs.com/img/image-20241211162716274.png" alt="image-20241211162716274" style="zoom: 33%;" /></p>
+<h3 id="git常用命令">git常用命令</h3>
+<p>参考<a
+href="https://invinc-z.com/version-control-system/git-common-command-reference/">博文</a></p>
+<hr />
+<h2 id="参考资料">参考资料</h2>
+<ol type="1">
+<li><span class="exturl" data-url="aHR0cHM6Ly96aC56LWxpYi5nbC9ib29rLzExOTE3MTcyL2Q3MGNiYi8lRTQlQkMlQTAlRTYlOTklQkElRTYlOTIlQUQlRTUlQUUlQTItc3ZuLSVFOCVBRSVCMiVFNCVCOSU4OS5odG1s">传智播客
+SVN 讲义<i class="fa fa-external-link-alt"></i></span></li>
+<li>S. Chacon and B. Straub, <em>Pro Git</em>, 2nd ed. New York, NY,
+USA: Apress, 2014. [Online]. <span class="exturl" data-url="aHR0cHM6Ly9naXQtc2NtLmNvbS9ib29rL3poL3Yy">Available<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ob21lLmNuYmxvZ3MuY29tL3UveGlhb2ZlaWxpbi8=">小林不会飞<i class="fa fa-external-link-alt"></i></span>，“解决TortoiseSVN或者TortoiseGit拉取的文件夹不能完整显示绿色打钩、黄色、红色感叹号、蓝色加号等小图标的问题”，<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20veGlhb2ZlaWxpbi9wLzE2NTk4ODU5Lmh0bWw=">网址<i class="fa fa-external-link-alt"></i></span></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer"><div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px; padding-top: 10px;">--------------------------------------- The End ---------------------------------------</div>
+    
+</div>
+
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/wechat_fukuan.png" alt="Neozhuang 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/img/ali_fukuan.jpg" alt="Neozhuang 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Neozhuang
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/" title="版本控制系统简介">https://invinc-z.com/2025/04/08/tools/git/version-control-system-intro/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://github.com/neozhuang">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+
+            <span class="label">GitHub</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://www.cnblogs.com/neozhuang">
+            <span class="icon">
+              <i class="fas fa-blog"></i>
+            </span>
+
+            <span class="label">博客园</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
+              <a href="/tags/svn/" rel="tag"><i class="fa fa-tag"></i> SVN</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_copy_link"></a>
+      <a class="a2a_button_email"></a>
+      <a class="a2a_button_wechat"></a>
+      <a class="a2a_button_qzone"></a>
+      <a class="a2a_button_sina_weibo"></a>
+      <a class="a2a_button_facebook"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/04/02/tools/latex/project-templates/latex-coil-diary-template/" rel="prev" title="LaTeX 线圈日记本模板">
+                  <i class="fa fa-angle-left"></i> LaTeX 线圈日记本模板
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/04/11/tools/git/git-github-usage/" rel="next" title="git与远程仓库配置和使用指南">
+                  git与远程仓库配置和使用指南 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2025 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Neozhuang</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">308k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">25:38</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">NexT.Gemini</span> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL25lb3podWFuZw==" title="在 GitHub 上关注我" aria-label="在 GitHub 上关注我"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"neozhuang/Blog-Comments-Giscus","repo_id":"R_kgDOPuIx7w","category":"Announcements","category_id":"DIC_kwDOPuIx784CvULB","mapping":"pathname","strict":1,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
