@@ -8,9 +8,10 @@
 <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/web-app-manifest-192x192.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-96x96.png">
-  <link rel="mask-icon" href="/images/web-app-manifest-512x512.png" color="#222">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+  <link rel="mask-icon" href="/images/favicon.svg" color="#222">
+  <link rel="manifest" href="/images/site.webmanifest">
   <meta name="google-site-verification" content="zd4SqF7KakEjXflIKzlQ4zyrpT_iCHck3f9Fh2vqEMQ">
   <meta name="baidu-site-verification" content="codeva-1ohZBnIdUD">
 
@@ -34,7 +35,7 @@
 <meta property="og:description" content="本文是阅读三体后个人思考与感悟这一系列的开端。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-10T21:12:18.000Z">
-<meta property="article:modified_time" content="2026-05-22T17:30:43.943Z">
+<meta property="article:modified_time" content="2026-05-27T13:07:30.016Z">
 <meta property="article:author" content="Neozhuang">
 <meta property="article:tag" content="三体">
 <meta name="twitter:card" content="summary">
@@ -137,7 +138,7 @@
       <p class="site-title">Neozhuang's Blog</p>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">Plain Life and Wonderful Moments</p>
+      <p class="site-subtitle" itemprop="description">Just enjoy it.</p>
   </div>
 
   <div class="site-nav-right">
@@ -209,7 +210,7 @@
     <img class="site-author-image" itemprop="image" alt="Neozhuang"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">Neozhuang</p>
-  <div class="site-description" itemprop="description">Programming notes, technical records, reading notes, and life moments.</div>
+  <div class="site-description" itemprop="description">Do not go gentle into that good night</div>
 </div>
 <div class="site-state-wrap animated">
   <nav class="site-state">
@@ -240,7 +241,7 @@
       </span>
   </div>
   <div class="cc-license animated" itemprop="license">
-    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></span>
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLW5kLzQuMC9kZWVkLnpo"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_nd.svg" alt="Creative Commons"></span>
   </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
@@ -261,222 +262,258 @@
         listFolded: true,          //列表默认折叠，开启为true
         theme: '#ee8243',           //主题颜色
         audio: [
-        {
-            name: '乡间虫鸣',           //歌曲名称
-            artist: '白噪音',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%99%BD%E5%99%AA%E9%9F%B3-%E4%B9%A1%E9%97%B4%E8%99%AB%E9%B8%A3.mp3', //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/white_noise_001.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: '',    // 添加歌词
-        },
-        {
-            name: 'รักเดียว',           //歌曲名称
-            artist: 'Sompong uma',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%94%AF%E4%B8%80%E7%9A%84%E7%88%B1.flac', //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/one_band.png',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: '',    // 添加歌词
-        },
-        {
-            name: '黑色柳丁',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.flac', //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BB%91%E8%89%B2%E6%9F%B3%E4%B8%81.lrc',    // 添加歌词
-        },
-        {
-            name: '讨厌红楼梦',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.flac',//歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E8%AE%A8%E5%8E%8C%E7%BA%A2%E6%A5%BC%E6%A2%A6.lrc',    // 添加歌词
-        },
-        {
-            name: 'Melody',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Melody.lrc',    // 添加歌词
-        },
-        {
-            name: '月亮代表谁的心',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.flac', //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%88%E4%BA%AE%E4%BB%A3%E8%A1%A8%E8%B0%81%E7%9A%84%E5%BF%83.lrc', // 添加歌词
-        },
-        {
-            name: '二十二',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/black_tangerine.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BA%8C%E5%8D%81%E4%BA%8C.lrc',    // 添加歌词
-        },
-        {
-            name: '爱很简单',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.flac', //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%BE%88%E7%AE%80%E5%8D%95.lrc', // 添加歌词
-        },
-        { 
-            name: '飞机场的10:30',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.flac',    //歌曲源文件地址
-            cover: '',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%A3%9E%E6%9C%BA%E5%9C%BA%E7%9A%841030.lrc',    // 添加歌词
-        },
-        {
-            name: '望春风',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%9B%E6%98%A5%E9%A3%8E.lrc',    // 添加歌词
-        },
-        { 
-            name: '心乱飞',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/David_Tao.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%BF%83%E4%B9%B1%E9%A3%9E.lrc',    // 添加歌词
-        },
-        {
-            name: '找自己',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%BE%E8%87%AA%E5%B7%B1%28Rain%29.lrc',    // 添加歌词
-        },
-        {
-            name: '小镇姑娘',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%B0%8F%E9%95%87%E5%A7%91%E5%A8%98%28Small%20Town%20Girl%29.lrc',    // 添加歌词
-        },
-        {
-            name: '普通朋友',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/IamOK.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%99%AE%E9%80%9A%E6%9C%8B%E5%8F%8B%28Regular%20Friends%29.lrc',    // 添加歌词
-        },
-        { 
-            name: 'Susan说',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%A4%AA%E5%B9%B3%E7%9B%9B%E4%B8%96.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Susan%E8%AF%B4.lrc',    // 添加歌词
-        },
-        {
-            name: '今天你要嫁给我',           //歌曲名称
-            artist: '陶喆',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/too_beautiful.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E4%BB%8A%E5%A4%A9%E4%BD%A0%E8%A6%81%E5%AB%81%E7%BB%99%E6%88%91.lrc',    // 添加歌词
-        },
-        { 
-            name: '春风吹',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/soulboy.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%98%A5%E9%A3%8E%E5%90%B9.lrc',    // 添加歌词
-        },
-        { 
-            name: 'Love Song',      //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/Love_Song.lrc',    // 添加歌词
-        },
-        { 
-            name: '麦恩莉',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg', //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E9%BA%A6%E6%81%A9%E8%8E%89.lrc',    // 添加歌词
-        },
-        { 
-            name: '特别的人',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%89%B9%E5%88%AB%E7%9A%84%E4%BA%BA.lrc',    // 添加歌词
-        },
-        { 
-            name: '天气先生',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E5%A4%A9%E6%B0%94%E5%85%88%E7%94%9F%28Mr.%20Weather%29.lrc',    // 添加歌词
-        },
-        { 
-            name: '爱不来',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%8D%B1%E9%99%A9%E4%B8%96%E7%95%8C.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%96%B9%E5%A4%A7%E5%90%8C%20-%20%E7%88%B1%E4%B8%8D%E6%9D%A5%20%28feat.%20Miss%20Ko%29%28No%20Love%29.lrc',    // 添加歌词
-        },
-        { 
-            name: '爱爱爱',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E7%88%B1%E7%88%B1.lrc',    // 添加歌词
-        },
-        { 
-            name: '爱在',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%9C%AA%E6%9D%A5.jpg',     //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E7%88%B1%E5%9C%A8.lrc',    // 添加歌词
-        },
-        { 
-            name: '才二十三',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/The_Dreamer.jpg',  //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E6%89%8D%E4%BA%8C%E5%8D%81%E4%B8%89.lrc',    // 添加歌词
-        },
-        { 
-            name: '1234567',        //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.flac',         // 歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/chengyue.jpg',  // 歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/1234567.lrc',    // 添加歌词
-        },
-        { 
-            name: 'BB88',           //歌曲名称
-            artist: '方大同',       //歌曲作者
-            url: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.flac',         //歌曲源文件地址
-            cover: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/%E5%9B%9E%E5%88%B0%E6%9C%AA%E6%9D%A5.jpg',  //歌曲封面地址
-            theme: '#eeeeee',        //主题颜色（优先）
-            lrc: 'https://invinc-z-drawing-bed.oss-cn-shanghai.aliyuncs.com/music/BB88.lrc',    // 添加歌词
-        },
+            {
+                // No.1
+                name: '乡间虫鸣',
+                artist: '白噪音',
+                url: 'https://assets.zhuang.dev/shared/music/white-noise/countryside-cricket-chirping.mp3',
+                lrc: '',
+                cover: 'https://assets.zhuang.dev/shared/music/white-noise/cover-001.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.2
+                name: 'รักเดียว',
+                artist: 'Sompong uma',
+                url: 'https://assets.zhuang.dev/shared/music/misc/only-love/only-love.flac',
+                lrc: '',
+                cover: 'https://assets.zhuang.dev/shared/music/misc/only-love/cover.png',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.3
+                name: '飞机场的10:30',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/airport-in-1030/airport-in-1030.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/airport-in-1030/airport-in-1030.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/airport-in-1030/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.4
+                name: '爱很简单',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/i-love-u/i-love-u.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/i-love-u/i-love-u.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/i-love-u/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.5
+                name: '找自己',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/rain/rain.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/rain/rain.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/rain/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.6
+                name: '小镇姑娘',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/small-town-girl/small-town-girl.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/small-town-girl/small-town-girl.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/small-town-girl/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.7
+                name: '普通朋友',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/regular-friends/regular-friends.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/regular-friends/regular-friends.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/regular-friends/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.8
+                name: '黑色柳丁',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/black-tangerine/black-tangerine.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/black-tangerine/black-tangerine.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/black-tangerine/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.9
+                name: '讨厌红楼梦',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/lets-fall-in-love/lets-fall-in-love.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/lets-fall-in-love/lets-fall-in-love.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/lets-fall-in-love/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.10
+                name: 'Melody',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/melody/melody.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/melody/melody.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/melody/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.11
+                name: '月亮代表谁的心',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/moon-over-my-heart/moon-over-my-heart.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/moon-over-my-heart/moon-over-my-heart.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/moon-over-my-heart/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.12
+                name: '二十二',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/22/22.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/22/22.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/22/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.13
+                name: 'Susan说',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/susan/susan.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/susan/susan.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/susan/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.14
+                name: '今天你要嫁给我',
+                artist: '陶喆',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/today-u-will-marry-me/today-u-will-marry-me.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/today-u-will-marry-me/today-u-will-marry-me.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/today-u-will-marry-me/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.15
+                name: '那个女孩',
+                artist: '陶喆&卢广仲',
+                url: 'https://assets.zhuang.dev/shared/music/david-tao/that-girl/that-girl.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/david-tao/that-girl/that-girl.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/david-tao/that-girl/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.16
+                name: '春风吹',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/spring-breeze/spring-breeze.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/spring-breeze/spring-breeze.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/spring-breeze/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.17
+                name: '爱爱爱',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/aiaiai/aiaiai.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/aiaiai/aiaiai.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/aiaiai/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.18
+                name: '歌手与模特儿',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/singer-model/singer-model.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/singer-model/singer-model.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/singer-model/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.19
+                name: '爱在',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-exists/love-exists.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-exists/love-exists.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-exists/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.20
+                name: 'Love Song',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-song/love-song.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-song/love-song.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/love-song/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.21
+                name: '1234567',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/1234567/1234567.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/1234567/1234567.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/1234567/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.22
+                name: '小小虫',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/small-insects/small-insects.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/small-insects/small-insects.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/small-insects/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.23
+                name: '红豆',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/red-beans/red-beans.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/red-beans/red-beans.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/red-beans/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.24
+                name: 'BB88',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/bb88/bb88.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/bb88/bb88.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/bb88/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.25
+                name: '特别的人',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/special-person/special-person.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/special-person/special-person.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/special-person/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.26
+                name: '小方',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/little-fong/little-fong.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/little-fong/little-fong.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/little-fong/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.27
+                name: '味道',
+                artist: '方大同',
+                url: 'https://assets.zhuang.dev/shared/music/khalil-fong/taste/taste.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/khalil-fong/taste/taste.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/khalil-fong/taste/cover.jpg',
+                theme: '#8aa6a3',
+            },
+            {
+                // No.28
+                name: '苏州河',
+                artist: '薛凯琪',
+                url: 'https://assets.zhuang.dev/shared/music/fiona-sit/suzhou-river/suzhou-river.flac',
+                lrc: 'https://assets.zhuang.dev/shared/music/fiona-sit/suzhou-river/suzhou-river.lrc',
+                cover: 'https://assets.zhuang.dev/shared/music/fiona-sit/suzhou-river/cover.jpg',
+                theme: '#8aa6a3',
+            },
         ]
     });
 </script>
@@ -806,7 +843,7 @@ if(canvas.getContext){
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neozhuang's Blog">
-      <meta itemprop="description" content="Programming notes, technical records, reading notes, and life moments.">
+      <meta itemprop="description" content="Do not go gentle into that good night">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
@@ -833,7 +870,7 @@ if(canvas.getContext){
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-05-23 01:30:43" itemprop="dateModified" datetime="2026-05-23T01:30:43+08:00">2026-05-23</time>
+      <time title="修改时间：2026-05-27 21:07:30" itemprop="dateModified" datetime="2026-05-27T21:07:30+08:00">2026-05-27</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -931,7 +968,7 @@ if(canvas.getContext){
       <a href="https://invinc-z.com/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/" title="读三体：开始">https://invinc-z.com/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/</a>
   </li>
   <li class="post-copyright-license">
-      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLW5kLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-ND</span> 许可协议。转载请注明出处！
   </li>
 </ul>
 </div>
