@@ -11,39 +11,7 @@
   <rights>All rights reserved 2026, Neozhuang</rights>
   <subtitle>Keep it simple.</subtitle>
   <title>Neozhuang's Blog</title>
-  <updated>2026-04-18T21:12:18.000Z</updated>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Fiction" scheme="https://invinc-z.com/categories/reading-notes/fiction/"/>
-    <category term="王小波" scheme="https://invinc-z.com/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/"/>
-    <id>https://invinc-z.com/2026/04/18/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/</id>
-    <link href="https://invinc-z.com/2026/04/18/notes-reading/fiction/wangxiaobo/excerpts-wangxiaobo/"/>
-    <published>2026-04-18T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<p>本文摘录了王小波作品中一些自己喜欢的句子。</p>]]>
-    </summary>
-    <title>王小波作品摘录</title>
-    <updated>2026-04-18T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Fiction" scheme="https://invinc-z.com/categories/reading-notes/fiction/"/>
-    <category term="三体" scheme="https://invinc-z.com/tags/%E4%B8%89%E4%BD%93/"/>
-    <id>https://invinc-z.com/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/</id>
-    <link href="https://invinc-z.com/2026/04/10/notes-reading/fiction/three-body/notes-three-body-intro/"/>
-    <published>2026-04-10T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<p>本文是阅读三体后个人思考与感悟这一系列的开端。</p>]]>
-    </summary>
-    <title>读三体：开始</title>
-    <updated>2026-04-10T21:12:18.000Z</updated>
-  </entry>
+  <updated>2026-03-28T21:12:18.000Z</updated>
   <entry>
     <author>
       <name>Neozhuang</name>
@@ -266,23 +234,6 @@
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Misc" scheme="https://invinc-z.com/categories/reading-notes/misc/"/>
-    <category term="Sitcom" scheme="https://invinc-z.com/tags/sitcom/"/>
-    <id>https://invinc-z.com/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/</id>
-    <link href="https://invinc-z.com/2026/01/02/notes-reading/misc/excerpts-the-big-bang-theory/"/>
-    <published>2026-01-02T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<p>This post collects some of my favorite lines from the American sitcom
-The Big Bang Theory.</p>]]>
-    </summary>
-    <title>Classic Quotes from The Big Bang Theory</title>
-    <updated>2026-01-02T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
     <category term="Linux" scheme="https://invinc-z.com/categories/linux/"/>
     <category term="WSL" scheme="https://invinc-z.com/categories/linux/wsl/"/>
     <category term="Linux" scheme="https://invinc-z.com/tags/linux/"/>
@@ -362,5 +313,56 @@ The Big Bang Theory.</p>]]>
     </summary>
     <title>APUE笔记：Pseudo Terminals（十九）</title>
     <updated>2025-09-18T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/09/11/notes-reading/computer/apue/apue-18-terminal-io/</id>
+    <link href="https://invinc-z.com/2025/09/11/notes-reading/computer/apue/apue-18-terminal-io/"/>
+    <published>2025-09-11T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第18章 Terminal I/O
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Terminal I/O（十八）</title>
+    <updated>2025-09-11T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/09/04/notes-reading/computer/apue/apue-17-advanced-ipc/</id>
+    <link href="https://invinc-z.com/2025/09/04/notes-reading/computer/apue/apue-17-advanced-ipc/"/>
+    <published>2025-09-04T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第17章 Advanced IPC
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Advanced IPC（十七）</title>
+    <updated>2025-09-04T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/08/28/notes-reading/computer/apue/apue-16-network-ipc-sockets/</id>
+    <link href="https://invinc-z.com/2025/08/28/notes-reading/computer/apue/apue-16-network-ipc-sockets/"/>
+    <published>2025-08-28T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第16章 Network IPC： Sockets
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Network IPC： Sockets（十六）</title>
+    <updated>2025-08-28T21:12:18.000Z</updated>
   </entry>
 </feed>
