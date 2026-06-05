@@ -50,63 +50,6 @@
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
-    <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/2026/03/14/notes-reading/computer/programming-windows/win32-03-windows-messages/</id>
-    <link href="https://invinc-z.com/2026/03/14/notes-reading/computer/programming-windows/win32-03-windows-messages/"/>
-    <published>2026-03-14T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>本文为《Programming Windows, Fifth Edition》（Charles Petzold
-著）第3章 “Windows and Messages” 的学习笔记总结。</p>
-</blockquote>]]>
-    </summary>
-    <title>Programming Windows 笔记：Windows and Messages （三）</title>
-    <updated>2026-03-14T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
-    <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/2026/03/07/notes-reading/computer/programming-windows/win32-02-intro-unicode/</id>
-    <link href="https://invinc-z.com/2026/03/07/notes-reading/computer/programming-windows/win32-02-intro-unicode/"/>
-    <published>2026-03-07T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>本文为《Programming Windows, Fifth Edition》（Charles Petzold
-著）第2章 “An Introduction to Unicode” 的学习笔记总结。</p>
-</blockquote>]]>
-    </summary>
-    <title>Programming Windows 笔记：An Introduction to Unicode （二）</title>
-    <updated>2026-03-07T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
-    <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/2026/02/28/notes-reading/computer/programming-windows/win32-01-getting-started/</id>
-    <link href="https://invinc-z.com/2026/02/28/notes-reading/computer/programming-windows/win32-01-getting-started/"/>
-    <published>2026-02-28T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>本文为《Programming Windows, Fifth Edition》（Charles Petzold
-著）第1章 “Getting Started” 的学习笔记总结。</p>
-</blockquote>]]>
-    </summary>
-    <title>Programming Windows 笔记：Getting Started （一）</title>
-    <updated>2026-02-28T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
     <category term="操作系统与系统编程（Systems）" scheme="https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/"/>
     <category term="Linux" scheme="https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/linux/"/>
     <category term="IO多路复用" scheme="https://invinc-z.com/tags/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
@@ -364,5 +307,56 @@
     </summary>
     <title>APUE笔记：Network IPC： Sockets（十六）</title>
     <updated>2025-08-28T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/08/21/notes-reading/computer/apue/apue-15-interprocess-communication/</id>
+    <link href="https://invinc-z.com/2025/08/21/notes-reading/computer/apue/apue-15-interprocess-communication/"/>
+    <published>2025-08-21T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第15章 Interprocess Communication
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Interprocess Communication（十五）</title>
+    <updated>2025-08-21T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/08/15/notes-reading/computer/apue/apue-14-advanced-io/</id>
+    <link href="https://invinc-z.com/2025/08/15/notes-reading/computer/apue/apue-14-advanced-io/"/>
+    <published>2025-08-15T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第14章 Advanced I/O
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Advanced I/O（十四）</title>
+    <updated>2025-08-15T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/08/09/notes-reading/computer/apue/apue-13-daemon-processes/</id>
+    <link href="https://invinc-z.com/2025/08/09/notes-reading/computer/apue/apue-13-daemon-processes/"/>
+    <published>2025-08-09T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第13章 Daemon Processes
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Daemon Processes（十三）</title>
+    <updated>2025-08-09T21:12:18.000Z</updated>
   </entry>
 </feed>
