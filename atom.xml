@@ -31,25 +31,6 @@
     <author>
       <name>Neozhuang</name>
     </author>
-    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
-    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
-    <category term="Programming Windows" scheme="https://invinc-z.com/tags/programming-windows/"/>
-    <id>https://invinc-z.com/2026/03/21/notes-reading/computer/programming-windows/win32-04-text-output/</id>
-    <link href="https://invinc-z.com/2026/03/21/notes-reading/computer/programming-windows/win32-04-text-output/"/>
-    <published>2026-03-21T21:12:18.000Z</published>
-    <summary>
-      <![CDATA[<blockquote>
-<p>本文为《Programming Windows, Fifth Edition》（Charles Petzold
-著）第4章 “Text Output” 的学习笔记总结。</p>
-</blockquote>]]>
-    </summary>
-    <title>Programming Windows 笔记：Text Output（四）</title>
-    <updated>2026-03-21T21:12:18.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Neozhuang</name>
-    </author>
     <category term="操作系统与系统编程（Systems）" scheme="https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/"/>
     <category term="Linux" scheme="https://invinc-z.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%BC%96%E7%A8%8B%EF%BC%88systems%EF%BC%89/linux/"/>
     <category term="IO多路复用" scheme="https://invinc-z.com/tags/io%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/"/>
@@ -358,5 +339,22 @@
     </summary>
     <title>APUE笔记：Daemon Processes（十三）</title>
     <updated>2025-08-09T21:12:18.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>Neozhuang</name>
+    </author>
+    <category term="Reading &amp; Notes" scheme="https://invinc-z.com/categories/reading-notes/"/>
+    <category term="Computer" scheme="https://invinc-z.com/categories/reading-notes/computer/"/>
+    <category term="APUE" scheme="https://invinc-z.com/tags/apue/"/>
+    <id>https://invinc-z.com/2025/08/03/notes-reading/computer/apue/apue-12-thread-control/</id>
+    <link href="https://invinc-z.com/2025/08/03/notes-reading/computer/apue/apue-12-thread-control/"/>
+    <published>2025-08-03T21:12:18.000Z</published>
+    <summary>
+      <![CDATA[<p>本文记录《UNIX环境高级编程》第3版 第12章 Thread Control
+的一些知识点。</p>]]>
+    </summary>
+    <title>APUE笔记：Thread Control（十二）</title>
+    <updated>2025-08-03T21:12:18.000Z</updated>
   </entry>
 </feed>
